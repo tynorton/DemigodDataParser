@@ -1,0 +1,117 @@
+#################################################################################################################
+# General's Shop
+# Items defined in //depot/forge/main/bindata/lua/common/Items/Generals_Items.lua
+#################################################################################################################
+UnitBlueprint {
+    Audio = {
+        UISelection = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+    },
+    Categories = {
+        'INVULNERABLE',
+        'LAND',
+        'NOSPLASHDAMAGE',
+        'PRELOADRESOURCES',
+        'SCRIPTEDACTION',
+        'SELECTABLE',
+        'SHOP',
+        'STRUCTURE',
+        'UNTARGETABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        ArmorType = 'Structure',
+        Health = 13000,
+        MaxHealth = 13000,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESC_0068>A shop selling items for Generals.',
+    Display = {
+        BuildUnitHeight = 20,
+        IconName = '/textures/ui/common/abilities/icons/ShopAgility.dds',
+        MeshBlueprint = '/units/ug/b/ugbShop07/ugbShop07_mesh',
+        MeshBlueprintEvil = '/units/ug/b/ugbShop07/ugbShop07_evil_mesh',
+        MouseOverIcon = '/textures/ui/game/mouseovers/school.dds',
+        UniformScale = 0.16,
+    },
+    Effects = {
+        Ambient = {
+            Base = 'Shop03',
+            Template = 'Ambient01',
+        },
+        BuffClassification = 'Large',
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        SelectionPriority = 50,
+    },
+    Intel = {
+        VisionRadius = 10,
+    },
+    LifeBarRender = false,
+    Name = '<LOC UNIT_NAME_0083>Generals\' Shop',
+    ScriptedAction = '/lua/user/ShopAction.lua',
+    SelectionSizeX = 5,
+    Shop = {
+        Layout = '/units/ug/b/ugbshop09/UGBShop09_ShopLayout.lua',
+        Tree = {
+            Item_Minotaur_Captain_010 = {
+                Cost = 350,
+                ItemBP = 'Item_Minotaur_Captain_010',
+            },
+            Item_Minotaur_Captain_020 = {
+                Cost = 850,
+                ItemBP = 'Item_Minotaur_Captain_020',
+            },
+            Item_Minotaur_Captain_030 = {
+                Cost = 1350,
+                ItemBP = 'Item_Minotaur_Captain_030',
+            },
+            Item_Minotaur_Captain_040 = {
+                Cost = 1850,
+                ItemBP = 'Item_Minotaur_Captain_040',
+            },
+            Item_Siege_Archer_010 = {
+                Cost = 550,
+                ItemBP = 'Item_Siege_Archer_010',
+            },
+            Item_Siege_Archer_020 = {
+                Cost = 1050,
+                ItemBP = 'Item_Siege_Archer_020',
+            },
+            Item_Siege_Archer_030 = {
+                Cost = 1550,
+                ItemBP = 'Item_Siege_Archer_030',
+            },
+            Item_Siege_Archer_040 = {
+                Cost = 2050,
+                ItemBP = 'Item_Siege_Archer_040',
+            },
+            Item_High_Priest_010 = {
+                Cost = 900,
+                ItemBP = 'Item_High_Priest_010',
+            },
+            Item_High_Priest_020 = {
+                Cost = 1500,
+                ItemBP = 'Item_High_Priest_020',
+            },
+            Item_High_Priest_030 = {
+                Cost = 2100,
+                ItemBP = 'Item_High_Priest_030',
+            },
+            Item_High_Priest_040 = {
+                Cost = 2700,
+                ItemBP = 'Item_High_Priest_040',
+            },
+        },
+    },
+    SizeX = 4,
+    SizeY = 4,
+    SizeZ = 4,
+}

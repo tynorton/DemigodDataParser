@@ -1,0 +1,799 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HEMA01SwitchFire',
+            'HTorchFrostNovaGrey01',
+            'HTorchRainIceGrey01',
+            'HTorchFreezeGrey01',
+            'HTorchFireBallGrey01',
+            'HTorchFireNovaGrey01',
+            'HEMA01SwitchIce',
+            'HTorchFireRingGrey01',
+            'HEMA01Death01',
+        },
+        Layout = '/units/heroes/HEMA01/HEMA01_SkillLayout.lua',
+        Tree = {
+            #################################################################################################################
+            # Fire Aura I
+            #################################################################################################################
+            HEMA01FireAura01 = {
+                Gains = {
+                    'HEMA01FireAura01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireAura01',
+                Level = 2,
+            },
+            #################################################################################################################
+            # Fire Aura II
+            #################################################################################################################
+            HEMA01FireAura02 = {
+                Dep = {
+                    'HEMA01FireAura01',
+                },
+                Gains = {
+                    'HEMA01FireAura02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireAura01',
+                Level = 5,
+                Loses = {
+                    'HEMA01FireAura01',
+                },
+            },
+            #################################################################################################################
+            # Fire Aura III
+            #################################################################################################################
+            HEMA01FireAura03 = {
+                Dep = {
+                    'HEMA01FireAura02',
+                },
+                Gains = {
+                    'HEMA01FireAura03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireAura01',
+                Level = 8,
+                Loses = {
+                    'HEMA01FireAura02',
+                },
+            },
+            #################################################################################################################
+            # Fire Nova I
+            #################################################################################################################
+            HEMA01FireNova01 = {
+                Gains = {
+                    'HEMA01FireNova01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireNova01',
+                Level = 5,
+                Loses = {
+                    'HTorchFireNovaGrey01',
+                },
+            },
+            #################################################################################################################
+            # Fire Nova II
+            #################################################################################################################
+            HEMA01FireNova02 = {
+                Dep = {
+                    'HEMA01FireNova01',
+                },
+                Gains = {
+                    'HEMA01FireNova02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireNova01',
+                Level = 10,
+                Loses = {
+                    'HEMA01FireNova01',
+                },
+            },
+            #################################################################################################################
+            # Fire Nova III
+            #################################################################################################################
+            HEMA01FireNova03 = {
+                Dep = {
+                    'HEMA01FireNova02',
+                },
+                Gains = {
+                    'HEMA01FireNova03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireNova01',
+                Level = 15,
+                Loses = {
+                    'HEMA01FireNova02',
+                },
+            },
+            #################################################################################################################
+            # Fireball I
+            #################################################################################################################
+            HEMA01Fireball01 = {
+                Gains = {
+                    'HEMA01Fireball01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireball01',
+                Level = 1,
+                Loses = {
+                    'HTorchFireBallGrey01',
+                },
+            },
+            #################################################################################################################
+            # Fireball II
+            #################################################################################################################
+            HEMA01Fireball02 = {
+                Dep = {
+                    'HEMA01Fireball01',
+                },
+                Gains = {
+                    'HEMA01Fireball02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireball01',
+                Level = 4,
+                Loses = {
+                    'HEMA01Fireball01',
+                },
+            },
+            #################################################################################################################
+            # Fireball III
+            #################################################################################################################
+            HEMA01Fireball03 = {
+                Dep = {
+                    'HEMA01Fireball02',
+                },
+                Gains = {
+                    'HEMA01Fireball03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireball01',
+                Level = 7,
+                Loses = {
+                    'HEMA01Fireball02',
+                },
+            },
+            #################################################################################################################
+            # Fireball IV
+            #################################################################################################################
+            HEMA01Fireball04 = {
+                Dep = {
+                    'HEMA01Fireball03',
+                },
+                Gains = {
+                    'HEMA01Fireball04',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireball01',
+                Level = 10,
+                Loses = {
+                    'HEMA01Fireball03',
+                },
+            },
+            #################################################################################################################
+            # Deep Freeze I
+            #################################################################################################################
+            HEMA01FreezeStructure01 = {
+                Gains = {
+                    'HEMA01FreezeStructure01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFreezeStructure01',
+                Level = 1,
+                Loses = {
+                    'HTorchFreezeGrey01',
+                },
+            },
+            #################################################################################################################
+            # Deep Freeze II
+            #################################################################################################################
+            HEMA01FreezeStructure02 = {
+                Dep = {
+                    'HEMA01FreezeStructure01',
+                },
+                Gains = {
+                    'HEMA01FreezeStructure02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFreezeStructure01',
+                Level = 4,
+                Loses = {
+                    'HEMA01FreezeStructure01',
+                },
+            },
+            #################################################################################################################
+            # Deep Freeze III
+            #################################################################################################################
+            HEMA01FreezeStructure03 = {
+                Dep = {
+                    'HEMA01FreezeStructure02',
+                },
+                Gains = {
+                    'HEMA01FreezeStructure03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFreezeStructure01',
+                Level = 7,
+                Loses = {
+                    'HEMA01FreezeStructure02',
+                },
+            },
+            #################################################################################################################
+            # Deep Freeze IV
+            #################################################################################################################
+            HEMA01FreezeStructure04 = {
+                Dep = {
+                    'HEMA01FreezeStructure03',
+                },
+                Gains = {
+                    'HEMA01FreezeStructure04',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFreezeStructure01',
+                Level = 10,
+                Loses = {
+                    'HEMA01FreezeStructure03',
+                },
+            },
+            #################################################################################################################
+            # Fire and Ice
+            #################################################################################################################
+            HEMA01FireandIce = {
+                Dep = {
+                    'HEMA01FreezeStructure04',
+                    'HEMA01Fireball04',
+                },
+                Gains = {
+                    'HEMA01FireandIce',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFireandIce01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Permafrost I
+            #################################################################################################################
+            HEMA01FrostAura01 = {
+                Gains = {
+                    'HEMA01FrostAura01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFrostAura01',
+                Level = 2,
+            },
+            #################################################################################################################
+            # Permafrost II
+            #################################################################################################################
+            HEMA01FrostAura02 = {
+                Dep = {
+                    'HEMA01FrostAura01',
+                },
+                Gains = {
+                    'HEMA01FrostAura02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFrostAura01',
+                Level = 5,
+                Loses = {
+                    'HEMA01FrostAura01',
+                },
+            },
+            #################################################################################################################
+            # Permafrost III
+            #################################################################################################################
+            HEMA01FrostAura03 = {
+                Dep = {
+                    'HEMA01FrostAura02',
+                },
+                Gains = {
+                    'HEMA01FrostAura03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFrostAura01',
+                Level = 8,
+                Loses = {
+                    'HEMA01FrostAura02',
+                },
+            },
+            #################################################################################################################
+            # Frost Nova I
+            #################################################################################################################
+            HEMA01FrostNova01 = {
+                Gains = {
+                    'HEMA01FrostNova01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFrostNova01',
+                Level = 5,
+                Loses = {
+                    'HTorchFrostNovaGrey01',
+                },
+            },
+            #################################################################################################################
+            # Frost Nova II
+            #################################################################################################################
+            HEMA01FrostNova02 = {
+                Dep = {
+                    'HEMA01FrostNova01',
+                },
+                Gains = {
+                    'HEMA01FrostNova02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFrostNova01',
+                Level = 10,
+                Loses = {
+                    'HEMA01FrostNova01',
+                },
+            },
+            #################################################################################################################
+            # Frost Nova III
+            #################################################################################################################
+            HEMA01FrostNova03 = {
+                Dep = {
+                    'HEMA01FrostNova02',
+                },
+                Gains = {
+                    'HEMA01FrostNova03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearFrostNova01',
+                Level = 15,
+                Loses = {
+                    'HEMA01FrostNova02',
+                },
+            },
+            #################################################################################################################
+            # Rain of Ice I
+            #################################################################################################################
+            HEMA01RainIce01 = {
+                Gains = {
+                    'HEMA01RainIce01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRainofIce01',
+                Level = 1,
+                Loses = {
+                    'HTorchRainIceGrey01',
+                },
+            },
+            #################################################################################################################
+            # Rain of Ice II
+            #################################################################################################################
+            HEMA01RainIce02 = {
+                Dep = {
+                    'HEMA01RainIce01',
+                },
+                Gains = {
+                    'HEMA01RainIce02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRainofIce01',
+                Level = 4,
+                Loses = {
+                    'HEMA01RainIce01',
+                },
+            },
+            #################################################################################################################
+            # Rain of Ice III
+            #################################################################################################################
+            HEMA01RainIce03 = {
+                Dep = {
+                    'HEMA01RainIce02',
+                },
+                Gains = {
+                    'HEMA01RainIce03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRainofIce01',
+                Level = 7,
+                Loses = {
+                    'HEMA01RainIce02',
+                },
+            },
+            #################################################################################################################
+            # Rain of Ice IV
+            #################################################################################################################
+            HEMA01RainIce04 = {
+                Dep = {
+                    'HEMA01RainIce03',
+                },
+                Gains = {
+                    'HEMA01RainIce04',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRainofIce01',
+                Level = 10,
+                Loses = {
+                    'HEMA01RainIce03',
+                },
+            },
+            #################################################################################################################
+            # Cold Clarity
+            #################################################################################################################
+            HEMA01Clarity = {
+                Dep = {
+                    'HEMA01RainIce04',
+                },
+                Gains = {
+                    'HEMA01Clarity',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearColdClarity01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Ring of Fire I
+            #################################################################################################################
+            HEMA01RingOfFire01 = {
+                Gains = {
+                    'HEMA01RingOfFire01',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRingofFire01',
+                Level = 1,
+                Loses = {
+                    'HTorchFireRingGrey01',
+                },
+            },
+            #################################################################################################################
+            # Ring of Fire II
+            #################################################################################################################
+            HEMA01RingOfFire02 = {
+                Dep = {
+                    'HEMA01RingOfFire01',
+                },
+                Gains = {
+                    'HEMA01RingOfFire02',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRingofFire01',
+                Level = 4,
+                Loses = {
+                    'HEMA01RingOfFire01',
+                },
+            },
+            #################################################################################################################
+            # Ring of Fire III
+            #################################################################################################################
+            HEMA01RingOfFire03 = {
+                Dep = {
+                    'HEMA01RingOfFire02',
+                },
+                Gains = {
+                    'HEMA01RingOfFire03',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRingofFire01',
+                Level = 7,
+                Loses = {
+                    'HEMA01RingOfFire02',
+                },
+            },
+            #################################################################################################################
+            # Ring of Fire IV
+            #################################################################################################################
+            HEMA01RingOfFire04 = {
+                Dep = {
+                    'HEMA01RingOfFire03',
+                },
+                Gains = {
+                    'HEMA01RingOfFire04',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearRingofFire01',
+                Level = 10,
+                Loses = {
+                    'HEMA01RingOfFire03',
+                },
+            },
+            #################################################################################################################
+            # Inspirational Flame
+            #################################################################################################################
+            HEMA01InspFlame = {
+                Dep = {
+                    'HEMA01RingOfFire04',
+                },
+                Gains = {
+                    'HEMA01InspFlame',
+                },
+                Icon = '/dgtorchbearer/NewTorchBearInspirationalFlame01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Stats Buffs
+            # These descriptions and names need to remain here for tooltip purposes.
+            #################################################################################################################
+            StatsBuff01 = {
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+                Name = '<LOC ABILITY_All_Stats_0001>Enhanced Attributes I',
+            },
+            StatsBuff02 = {
+                Dep = {
+                    'StatsBuff01',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+                Name = '<LOC ABILITY_All_Stats_0002>Enhanced Attributes II',
+            },
+            StatsBuff03 = {
+                Dep = {
+                    'StatsBuff02',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+                Name = '<LOC ABILITY_All_Stats_0003>Enhanced Attributes III',
+            },
+            StatsBuff04 = {
+                Dep = {
+                    'StatsBuff03',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+                Name = '<LOC ABILITY_All_Stats_0004>Enhanced Attributes IV',
+            },
+            StatsBuff05 = {
+                Dep = {
+                    'StatsBuff04',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+                Name = '<LOC ABILITY_All_Stats_0005>Enhanced Attributes V',
+            },
+            StatsBuff06 = {
+                Dep = {
+                    'StatsBuff05',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+                Name = '<LOC ABILITY_All_Stats_0006>Enhanced Attributes VI',
+            },
+        },
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/Torch_Bearer/snd_dg_torch_grunt_hurt',
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/Torch_Bearer/snd_dg_torch_bearer_select',
+        },
+    },
+    CollisionOffsetX = -0.1,
+    CollisionOffsetY = 0,
+    CollisionOffsetZ = -0.3,
+    Categories = {
+        'ASSASSIN',
+        'CANBEHEALED',
+        'CAPTURE',
+        'COMMAND',
+        'FLOATINGUNITVIEW',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MOBILE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0010>Ranged Assassin who uses fire and ice magic.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_torchbearer.dds',
+        AvatarMovie_1 = '/movies/dg_iga_tb_ice.bik',
+        AvatarMovie_2 = '/movies/dg_iga_tb_fire.bik',
+        Character = 'Mage',
+        ExtraCharacters = { 'MageFire' },
+        ExtraProjectiles = {
+            '/projectiles/Fireball03/Fireball03_proj.bp',
+            '/projectiles/fireball01/fireball01_proj.bp',
+            '/projectiles/HailBall01/HailBall01_proj.bp',
+            '/projectiles/FrostDeathEffect01/FrostDeathEffect01_proj.bp',
+        },
+        ChooserIcon = '/heroes/selection_hema01',
+        FullIcon = '/game/lobby/avatars/torchbearer_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HEMA01_0000>Strengths:\nStrong damage with fire magic\nStun and weaken enemies with frost magic\n\nWeaknesses:\nFragile\nAvailable spells limited by mode\n\nPlay Style:\nThe Torch Bearer changes between two modes, both devastating to enemies. In frost mode, he conjures powerful ice storms and slows his foes to a frozen crawl. When the Torch Bearer ignites himself, he exchanges his frost spells for fire. In this form, he conjures a wide array of army-smashing spells, from searing fireballs to explosive novas.\n\nBackground:\nAt the time that the Queen of the Vinlings gave birth to Hrundel Lightbearer, the king had been away from the kingdom for seven years. Told of his wife\'s infidelity, he returned to his hall and killed the queen and her male attendants. Moved by the innocence of his wife\'s new son, he spared the child and resolved to raise him as his own.\n\nAs the child grew, he began to demonstrate strange abilities: he could make both fire and ice do his bidding. Though the child only used his abilities to delight the girl he loved, the king saw that in time the boy might grow into a powerful usurper. The king\'s misgivings were amplified by his priests\' warnings -- the boy\'s magic portended ill tidings for the Halls of the Vinlings.\n\nOn his eighteenth birthday, Hrundel and his friends were summoned by the king to a special party, to be held inside a new wooden hall that had been erected for the occasion. The king never entered; instead, he looked on as his guards locked the partygoers inside the structure and set it aflame. Hrundel held his beloved in his arms as the two were burned alive.\n\nThe tender part of Hrundel died that night, but a dark vengeance took its place. Rising from the hall\'s ashes bearing a still-guttering torch, Hrundel\'s charred corpse rained fire and death upon the king and all his subjects.\n\nOnly after he had razed the homes and farms of all Vinlings did the Torch Bearer move on to colder places, far away.',
+        LobbyMovie = '/movies/dg_lobby_tb.bik',
+        VictoryMovie = '/movies/dg_victory_tb.bik',
+        VictoryMovieSubtitle = '/movies/dg_victory_torchbearer_subtitles.bik',
+        ScoreboardIcon = '/game/scoreboard/sbicon_hema01.dds',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'TorchbearerLevelUp',
+            'TorchbearerLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 4.25,
+        OffsetZ = 0,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        IgnoreDeathSlider = true,
+        Tournament = '/units/heroes/HEMA01/HEMA01_Tournament.lua',
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 5,
+    LifeBarSize = 1.3,
+    Name = '<LOC UNIT_NAME_0013>Torch Bearer',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.0,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        StandUpright = true,
+        TurnRadius = 1,
+        TurnRate = 720,
+    },
+    SelectionSizeX = 3,
+    SizeX = 3.5,
+    SizeY = 5,
+    SizeZ = 3.5,
+    Stats = {
+        MaxHealth       = 1410,
+        Armor           = 240,
+        MaxEnergy       = 1100,
+        RateOfFire      = 0,
+        DamageRating    = 140,
+        Regen           = 2.19,
+        EnergyRegen     = 3.63,
+        Primary         = 'Magic',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/Torch_Bearer/snd_VO_dg_TB_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_TB',
+    },
+    Weapon = {
+        {
+            AttackAction = 'AttackRanged',
+            AttackMoveAction = 'AttackRangedMove',
+            AttackStructureAction = 'AttackRanged',
+            AttackStructureMoveAction = 'AttackRangedMove',
+            BallisticArc = 'RULEUBA_LowArc',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageType = 'Hero',
+            DisplayName = 'Frost Ball',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringRandomness = 0.01,
+            FiringTolerance = 360,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 45,
+            InstaHitRange = 2,
+            Label = 'IceWeapon',
+            LeadTarget = false,
+            MaxRadius = 15,
+            MinRadius = 0,
+            MuzzleVelocity = 35,
+            ProjectileId = '/projectiles/FrostBall01/FrostBall01_proj.bp',
+            ProjectileLifetime = 20,
+            RangedWeapon = {
+                AnimEvent = 'FrostAttack',
+                MuzzleBones = {
+                    'sk_TorchBearer_RightWrist',
+                },
+            },
+            RateOfFire = 0.68,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretBoneMuzzle = 'sk_TorchBearer_Frost_Turret_REF',
+            TurretBonePitch = 'sk_TorchBearer_Frost_Turret_REF',
+            TurretBoneYaw = 'sk_TorchBearer_Frost_Turret_REF',
+            TurretPitch = 0,
+            TurretPitchRange = 360,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 360,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+        {
+            BallisticArc = 'RULEUBA_LowArc',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageType = 'Hero',
+            DisplayName = 'Flame Ball',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringRandomness = 0.01,
+            FiringTolerance = 360,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 45,
+            InstaHitRange = 2,
+            Label = 'FireWeapon',
+            LeadTarget = false,
+            MaxRadius = 15,
+            MinRadius = 0,
+            MuzzleVelocity = 35,
+            ProjectileId = '/projectiles/FireBall01/FireBall01_proj.bp',
+            ProjectileLifetime = 20,
+            RangedWeapon = {
+                AnimEvent = 'FireAttack',
+                MuzzleBones = {
+                    'sk_TorchBearer_Staff_Muzzle_REF',
+                },
+            },
+            RateOfFire = 0.68,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretBoneMuzzle = 'sk_TorchBearer_Fire_Turret_REF',
+            TurretBonePitch = 'sk_TorchBearer_Fire_Turret_REF',
+            TurretBoneYaw = 'sk_TorchBearer_Fire_Turret_REF',
+            TurretPitch = 0,
+            TurretPitchRange = 360,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 360,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+    },
+}

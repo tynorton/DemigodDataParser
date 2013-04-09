@@ -1,0 +1,788 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HQueenPack',
+            'HQueenUnpack',
+            'HQueenShamblerGrey01',
+            'HQueenConsumeShamblerGrey01',
+            'HQueenUprootGrey01',
+            'HQueenGroundSpikesGrey01',
+            'HQueenBrambleShieldGrey01',
+            'HQueenSpikeWaveGrey01',
+            'HQueenDeath01',
+        },
+        Layout = '/units/heroes/HQueen/HQueen_SkillLayout.lua',
+        Tree = {
+            #################################################################################################################
+            # Summon Shambler I
+            #################################################################################################################
+            HQueenShambler01 = {
+                Gains = {
+                    'HQueenShambler01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSummonShambler01',
+                Level = 1,
+                Loses = {
+                    'HQueenShamblerGrey01',
+                },
+            },
+            #################################################################################################################
+            # Summon Shambler II
+            #################################################################################################################
+            HQueenShambler02 = {
+                Dep = {
+                    'HQueenShambler01',
+                },
+                Gains = {
+                    'HQueenShambler02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSummonShambler01',
+                Level = 4,
+                Loses = {
+                    'HQueenShambler01',
+                },
+            },
+            #################################################################################################################
+            # Summon Shambler III
+            #################################################################################################################
+            HQueenShambler03 = {
+                Dep = {
+                    'HQueenShambler02',
+                },
+                Gains = {
+                    'HQueenShambler03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSummonShambler01',
+                Level = 7,
+                Loses = {
+                    'HQueenShambler02',
+                },
+            },
+            #################################################################################################################
+            # Summon Shambler IV
+            #################################################################################################################
+            HQueenShambler04 = {
+                Dep = {
+                    'HQueenShambler03',
+                },
+                Gains = {
+                    'HQueenShambler04',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSummonShambler01',
+                Level = 10,
+                Loses = {
+                    'HQueenShambler03',
+                },
+            },
+            #################################################################################################################
+            # Mulch Shambler I
+            #################################################################################################################
+            HQueenConsumeShambler01 = {
+                Gains = {
+                    'HQueenConsumeShambler01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenConsumeShambler01',
+                Level = 5,
+                Loses = {
+                    'HQueenConsumeShamblerGrey01',
+                },
+            },
+            #################################################################################################################
+            # Mulch Shambler II
+            #################################################################################################################
+            HQueenConsumeShambler02 = {
+                Dep = {
+                    'HQueenConsumeShambler01',
+                },
+                Gains = {
+                    'HQueenConsumeShambler02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenConsumeShambler01',
+                Level = 10,
+                Loses = {
+                    'HQueenConsumeShambler01',
+                },
+            },
+            #################################################################################################################
+            # Mulch Shambler III
+            #################################################################################################################
+            HQueenConsumeShambler03 = {
+                Dep = {
+                    'HQueenConsumeShambler02',
+                },
+                Gains = {
+                    'HQueenConsumeShambler03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenConsumeShambler01',
+                Level = 15,
+                Loses = {
+                    'HQueenConsumeShambler02',
+                },
+            },
+            #################################################################################################################
+            # Entourage I
+            #################################################################################################################
+            HQueenEntourage01 = {
+                Gains = {
+                    'HQueenEntourage01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenEntourage01',
+                Level = 2,
+            },
+            #################################################################################################################
+            # Entourage II
+            #################################################################################################################
+            HQueenEntourage02 = {
+                Dep = {
+                    'HQueenEntourage01',
+                },
+                Gains = {
+                    'HQueenEntourage02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenEntourage01',
+                Level = 5,
+                Loses = {
+                    'HQueenEntourage01',
+                },
+            },
+            #################################################################################################################
+            # Entourage III
+            #################################################################################################################
+            HQueenEntourage03 = {
+                Dep = {
+                    'HQueenEntourage02',
+                },
+                Gains = {
+                    'HQueenEntourage03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenEntourage01',
+                Level = 8,
+                Loses = {
+                    'HQueenEntourage02',
+                },
+            },
+            #################################################################################################################
+            # Tribute
+            #################################################################################################################
+            HQueenTribute = {
+                Dep = {
+                    'HQueenEntourage03',
+                },
+                Gains = {
+                    'HQueenTribute',
+                },
+                Icon = '/dgqueenofthorns/NewQueenTribute01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Uproot I
+            #################################################################################################################
+            HQueenUproot01 = {
+                Gains = {
+                    'HQueenUproot01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenUproot01',
+                Level = 1,
+                Loses = {
+                    'HQueenUprootGrey01',
+                },
+            },
+            #################################################################################################################
+            # Uproot II
+            #################################################################################################################
+            HQueenUproot02 = {
+                Dep = {
+                    'HQueenUproot01',
+                },
+                Gains = {
+                    'HQueenUproot02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenUproot01',
+                Level = 4,
+                Loses = {
+                    'HQueenUproot01',
+                },
+            },
+            #################################################################################################################
+            # Uproot III
+            #################################################################################################################
+            HQueenUproot03 = {
+                Dep = {
+                    'HQueenUproot02',
+                },
+                Gains = {
+                    'HQueenUproot03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenUproot01',
+                Level = 7,
+                Loses = {
+                    'HQueenUproot02',
+                },
+            },
+            #################################################################################################################
+            # Uproot IV
+            #################################################################################################################
+            HQueenUproot04 = {
+                Dep = {
+                    'HQueenUproot03',
+                },
+                Gains = {
+                    'HQueenUproot04',
+                },
+                Icon = '/dgqueenofthorns/NewQueenUproot01',
+                Level = 10,
+                Loses = {
+                    'HQueenUproot03',
+                },
+            },
+            #################################################################################################################
+            # Violent Siege
+            #################################################################################################################
+            HQueenViolentSiege = {
+                Dep = {
+                    'HQueenUproot04',
+                },
+                Gains = {
+                    'HQueenViolentSiege',
+                },
+                Icon = '/dgqueenofthorns/NewQueenViolentSiege01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Ground Spikes I
+            #################################################################################################################
+            HQueenGroundSpikes01 = {
+                Gains = {
+                    'HQueenGroundSpikes01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenGroundSpikes01',
+                Level = 1,
+                Loses = {
+                    'HQueenGroundSpikesGrey01',
+                },
+            },
+            #################################################################################################################
+            # Ground Spikes II
+            #################################################################################################################
+            HQueenGroundSpikes02 = {
+                Dep = {
+                    'HQueenGroundSpikes01',
+                },
+                Gains = {
+                    'HQueenGroundSpikes02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenGroundSpikes01',
+                Level = 4,
+                Loses = {
+                    'HQueenGroundSpikes01',
+                },
+            },
+            #################################################################################################################
+            # Ground Spikes III
+            #################################################################################################################
+            HQueenGroundSpikes03 = {
+                Dep = {
+                    'HQueenGroundSpikes02',
+                },
+                Gains = {
+                    'HQueenGroundSpikes03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenGroundSpikes01',
+                Level = 7,
+                Loses = {
+                    'HQueenGroundSpikes02',
+                },
+            },
+            #################################################################################################################
+            # Ground Spikes IV
+            #################################################################################################################
+            HQueenGroundSpikes04 = {
+                Dep = {
+                    'HQueenGroundSpikes03',
+                },
+                Gains = {
+                    'HQueenGroundSpikes04',
+                },
+                Icon = '/dgqueenofthorns/NewQueenGroundSpikes01',
+                Level = 10,
+                Loses = {
+                    'HQueenGroundSpikes03',
+                },
+            },
+            #################################################################################################################
+            # Goddess of Thorns
+            #################################################################################################################
+            HQueenGoddessofThorns = {
+                Dep = {
+                    'HQueenGroundSpikes04',
+                    'HQueenBrambleShield04',
+                },
+                Gains = {
+                    'HQueenGoddessofThorns',
+                },
+                Icon = '/dgqueenofthorns/NewQueenGoddessofThorns01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Compost I
+            #################################################################################################################
+            HQueenCompost01 = {
+                Gains = {
+                    'HQueenCompost01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenCompost01',
+                Level = 2,
+            },
+            #################################################################################################################
+            # Compost II
+            #################################################################################################################
+            HQueenCompost02 = {
+                Dep = {
+                    'HQueenCompost01',
+                },
+                Gains = {
+                    'HQueenCompost02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenCompost01',
+                Level = 5,
+                Loses = {
+                    'HQueenCompost01',
+                },
+            },
+            #################################################################################################################
+            # Compost III
+            #################################################################################################################
+            HQueenCompost03 = {
+                Dep = {
+                    'HQueenCompost02',
+                },
+                Gains = {
+                    'HQueenCompost03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenCompost01',
+                Level = 8,
+                Loses = {
+                    'HQueenCompost02',
+                },
+            },
+            #################################################################################################################
+            # Spike Wave I
+            #################################################################################################################
+            HQueenSpikeWave01 = {
+                Gains = {
+                    'HQueenSpikeWave01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSpikeWave01',
+                Level = 5,
+                Loses = {
+                    'HQueenSpikeWaveGrey01',
+                },
+            },
+            #################################################################################################################
+            # Spike Wave II
+            #################################################################################################################
+            HQueenSpikeWave02 = {
+                Dep = {
+                    'HQueenSpikeWave01',
+                },
+                Gains = {
+                    'HQueenSpikeWave02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSpikeWave01',
+                Level = 10,
+                Loses = {
+                    'HQueenSpikeWave01',
+                },
+            },
+            #################################################################################################################
+            # Spike Wave III
+            #################################################################################################################
+            HQueenSpikeWave03 = {
+                Dep = {
+                    'HQueenSpikeWave02',
+                },
+                Gains = {
+                    'HQueenSpikeWave03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenSpikeWave01',
+                Level = 15,
+                Loses = {
+                    'HQueenSpikeWave02',
+                },
+            },
+            #################################################################################################################
+            # Bramble Shield I
+            #################################################################################################################
+            HQueenBrambleShield01 = {
+                Gains = {
+                    'HQueenBrambleShield01',
+                },
+                Icon = '/dgqueenofthorns/NewQueenBrambleShield01',
+                Level = 1,
+                Loses = {
+                    'HQueenBrambleShieldGrey01',
+                },
+            },
+            #################################################################################################################
+            # Bramble Shield II
+            #################################################################################################################
+            HQueenBrambleShield02 = {
+                Dep = {
+                    'HQueenBrambleShield01',
+                },
+                Gains = {
+                    'HQueenBrambleShield02',
+                },
+                Icon = '/dgqueenofthorns/NewQueenBrambleShield01',
+                Level = 4,
+                Loses = {
+                    'HQueenBrambleShield01',
+                },
+            },
+            #################################################################################################################
+            # Bramble Shield III
+            #################################################################################################################
+            HQueenBrambleShield03 = {
+                Dep = {
+                    'HQueenBrambleShield02',
+                },
+                Gains = {
+                    'HQueenBrambleShield03',
+                },
+                Icon = '/dgqueenofthorns/NewQueenBrambleShield01',
+                Level = 7,
+                Loses = {
+                    'HQueenBrambleShield02',
+                },
+            },
+            #################################################################################################################
+            # Bramble Shield IV
+            #################################################################################################################
+            HQueenBrambleShield04 = {
+                Dep = {
+                    'HQueenBrambleShield03',
+                },
+                Gains = {
+                    'HQueenBrambleShield04',
+                },
+                Icon = '/dgqueenofthorns/NewQueenBrambleShield01',
+                Level = 10,
+                Loses = {
+                    'HQueenBrambleShield03',
+                },
+            },
+            #################################################################################################################
+            # Stats Buffs
+            #################################################################################################################
+            GeneralStatsBuff01 = {
+                Gains = {
+                    'GeneralStatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+            },
+            GeneralStatsBuff02 = {
+                Dep = {
+                    'GeneralStatsBuff01',
+                },
+                Gains = {
+                    'GeneralStatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+            },
+            GeneralStatsBuff03 = {
+                Dep = {
+                    'GeneralStatsBuff02',
+                },
+                Gains = {
+                    'GeneralStatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+            },
+            GeneralStatsBuff04 = {
+                Dep = {
+                    'GeneralStatsBuff03',
+                },
+                Gains = {
+                    'GeneralStatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+            },
+            GeneralStatsBuff05 = {
+                Dep = {
+                    'GeneralStatsBuff04',
+                },
+                Gains = {
+                    'GeneralStatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+            },
+            GeneralStatsBuff06 = {
+                Dep = {
+                    'GeneralStatsBuff05',
+                },
+                Gains = {
+                    'GeneralStatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+            },
+        },
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/QueenOfThorns/snd_dg_qothorns_grunt_hurt',
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/QueenOfThorns/snd_dg_qothorns_select',
+        },
+    },
+    Categories = {
+        'CANBEHEALED',
+        'CAPTURE',
+        'FLOATINGUNITVIEW',
+        'GENERAL',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MOBILE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0023>Ranged General specializing in siege damage.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_queenofthorns.dds',
+        AvatarMovie_1 = '/movies/dg_qot_iga_packed.bik',
+        AvatarMovie_2 = '/movies/dg_qot_iga_unpacked.bik',
+        Character = 'Queen',
+        ExtraCharacters = { 'Queen_Unpacked' },
+        ExtraGrannyMeshes = {
+            '/projectiles/spike02/spike02_mesh.gr2',
+        },
+        ExtraProjectiles = {
+            '/projectiles/spike01/spike01_proj.bp',
+            '/projectiles/Spike03/Spike03_proj.bp',
+        },
+        ChooserIcon = '/heroes/selection_hqueen',
+        FullIcon = '/game/lobby/avatars/queenofthorns_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HQUEEN_0000>Strengths:\nHeavy siege damage\nPowerful area damage\n\nWeaknesses:\nAbilities limited by mode\nVery mana dependent\n\nPlay Style:\nThe Queen of Thorns journeys across the battlefield atop a twisted beetle-chariot. When her rose-pedestal is open, she is a force to be reckoned with, skewering armies with forests of spikes and uprooting structures from beneath. When her rose is closed, she summons an army of tree-like Shamblers to fight and die in her name. Dying enemies fuel her, increasing her power.\n\nBackground:\nThe faeries of the forest were invisible to men, but were as plain as the sun to small creatures and growing things. The faeries did not rule the forest, but they influenced it in countless ways to help maintain a perfect, delicate balance. By asking nicely, they earned the obedience of all things that grew or moved.\n\nThen a red-haired faerie was born, and she was different from the others. She seemed heavier, more substantial than her sisters. As she grew older, she found that when she walked in the field, her feet crushed the grass while other fairies lilted along without moving a single blade. After several attempts at helping things to grow ended in disaster, she was finally assigned to insect duty -- the durable carapaces of centipedes and ladybugs withstood her harsh treatment, and for her part she seemed to have a special affection for things that skittered and stung.\n\nOne day, she happened across a man in the forest. She was surprised to discover that the man could see her. She also learned that she exerted great influence over the man, and that her nakedness somehow contributed to his agitation. Finally losing control of himself, he seized her. She had little time to resist, since the color quickly went out of his face and he dropped to the ground, dead. She felt his life force flowing inside her like some drug, and was exhilarated. She now saw that she had special gifts.\n\nThe red-haired faerie was flushed with the possibilities. No faerie had ever thought to make demands of the forest-dwellers, and she was suddenly angered by her sisters\' naivete and condescension. Thenceforth, she never moved through the forest on her own feet, riding instead upon a rose-chariot that stood upon the backs of four great beetles. In another break with faerie tradition, she gave herself a name: The Queen of Thorns.\n\nAs more searchers came to the forest in larger, better-armed groups, the Queen of Thorns commanded the elm trees to uproot themselves and savage the attackers. This they did, even though by these exertions they brought about their own deaths, for they could not get their roots back into the ground.\n\nComing upon the piles of dead men and trees, her sisters saw that a monster had grown in their midst. They gave her a choice: she could take her own life or leave the forest forever.\n\nWishing them all long winters, the Queen rode her insect-chariot away, leaving a crushed swath of fallen flowers in her wake.',
+        LobbyMovie = '/movies/dg_lobby_qot.bik',
+        VictoryMovie = '/movies/dg_victory_qot.bik',
+        VictoryMovieSubtitle = '/movies/dg_victory_queen_subtitles.bik',
+        ScoreboardIcon = '/game/scoreboard/sbicon_hqueen.dds',
+        UnpackTime = 2,
+        SpecialUnitIcon = '/GeneralsOrders/special_hqueen_shambler',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'QueenLevelUp',
+            'QueenLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 6,
+        OffsetZ = 0,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 5,
+        SizeZ = 5,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+        PreSpawnUnits = {
+            'hqueenent',
+        },
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+        Generals = 3,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 6.5,
+    LifeBarSize = 1.3,
+    Name = '<LOC UNIT_NAME_0029>Queen of Thorns',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.0,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 720,
+    },
+    SelectionSizeX = 4.5,
+    SizeX = 4,
+    SizeY = 5,
+    SizeZ = 4,
+    Stats = {
+        MaxHealth       = 1450,
+        Armor           = 330,
+        MaxEnergy       = 936,
+        RateOfFire      = 0,
+        DamageRating    = 135,
+        Regen           = 2.37,
+        EnergyRegen     = 2.92,
+        Primary = 'Magic',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/QOT/snd_VO_QOT_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_QoT',
+    },
+    Weapon = {
+        {
+            AttackAction = 'AttackRanged',
+            AttackMoveAction = 'AttackRangedMove',
+            AttackStructureAction = 'AttackRanged',
+            AttackStructureMoveAction = 'AttackRangedMove',
+            BallisticArc = 'RULEUBA_LowArc',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CanOverKill = false,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageType = 'Hero',
+            DisplayName = 'Arrows',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringRandomness = 0.1,
+            DamageFriendly = false,
+            FiringTolerance = 360,
+            Label = 'PrimaryWeapon',
+            MaxRadius = 15,
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/HQueenSpike01/HQueenSpike01_proj.bp',
+            ProjectileLifetime = 3,
+            RangedWeapon = {
+
+                # ShotDelay = 0,
+                AnimEvent = 'attack',
+                MuzzleBones = {
+                    'sk_Queen_RightWrist',
+                },
+            },
+            RateOfFire = 0.69,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.3,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretBoneMuzzle = 'sk_Queen_Root',
+            TurretBonePitch = 'sk_Queen_Root',
+            TurretBoneYaw = 'sk_Queen_Root',
+            TurretPitch = 0,
+            TurretPitchRange = 0,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 0,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+        {
+            AttackAction = 'AttackRanged',
+            AttackMoveAction = 'AttackRangedMove',
+            AttackStructureAction = 'AttackRanged',
+            AttackStructureMoveAction = 'AttackRangedMove',
+            BallisticArc = 'RULEUBA_LowArc',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CanOverKill = false,
+            CollideFriendly = false,
+            DamageFriendly = false,
+            Damage = 0,
+            DamageRadius = 1.5,
+            DamageType = 'Hero',
+            DisplayName = 'Arrows',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringRandomness = 0.1,
+            FiringTolerance = 360,
+            Label = 'PackedWeapon',
+            MaxRadius = 15,
+            MuzzleVelocity = 15,
+            ProjectileId = '/projectiles/HQueenSpike01/HQueenSpike01_proj.bp',
+            ProjectileLifetime = 3,
+            RangedWeapon = {
+                AnimEvent = 'attack',
+                MuzzleBones = {
+                    'sk_Queen_Root',
+                },
+            },
+            RateOfFire = 0.66,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.3,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretBoneMuzzle = 'sk_Queen_Root',
+            TurretBonePitch = 'sk_Queen_Root',
+            TurretBoneYaw = 'sk_Queen_Root',
+            TurretPitch = 0,
+            TurretPitchRange = 0,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 0,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
+        },
+    },
+}

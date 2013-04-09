@@ -1,0 +1,659 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HSednaPounceGrey01',
+            'HSednaHealGrey01',
+            'HSednaYetiGrey01',
+            'HSednaSilenceGrey01',
+            'HSednaDeath01',
+        },
+        Layout = '/units/heroes/HSedna/HSedna_SkillLayout.lua',
+        Tree = {
+            ###########################################################################
+            # Pounce I
+            ###########################################################################
+            HSednaPounce01 = {
+                Gains = {
+                    'HSednaPounce01',
+                },
+                Icon = '/DGSedna/NewSednaPounce01',
+                Level = 1,
+                Loses = {
+                    'HSednaPounceGrey01',
+                },
+            },
+            ###########################################################################
+            # Pounce II
+            ###########################################################################
+            HSednaPounce02 = {
+                Dep = {
+                    'HSednaPounce01',
+                },
+                Gains = {
+                    'HSednaPounce02',
+                },
+                Icon = '/DGSedna/NewSednaPounce01',
+                Level = 4,
+                Loses = {
+                    'HSednaPounce01',
+                },
+            },
+            ###########################################################################
+            # Pounce III
+            ###########################################################################
+            HSednaPounce03 = {
+                Dep = {
+                    'HSednaPounce02',
+                },
+                Gains = {
+                    'HSednaPounce03',
+                },
+                Icon = '/DGSedna/NewSednaPounce01',
+                Level = 7,
+                Loses = {
+                    'HSednaPounce02',
+                },
+            },
+            ###########################################################################
+            # Pounce IV
+            ###########################################################################
+            HSednaPounce04 = {
+                Dep = {
+                    'HSednaPounce03',
+                },
+                Gains = {
+                    'HSednaPounce04',
+                },
+                Icon = '/DGSedna/NewSednaPounce01',
+                Level = 10,
+                Loses = {
+                    'HSednaPounce03',
+                },
+            },
+            ###########################################################################
+            # Inspiring Roar
+            ###########################################################################
+            HSednaInspiringRoar = {
+                Dep = {
+                    'HSednaPounce04',
+                },
+                Gains = {
+                    'HSednaInspiringRoar',
+                },
+                Icon = '/DGSedna/NewSednaInspiringRoar01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Yeti I
+            ###########################################################################
+            HSednaYeti01 = {
+                Gains = {
+                    'HSednaYeti01',
+                },
+                Icon = '/DGSedna/NewSednaYeti01',
+                Level = 1,
+                Loses = {
+                    'HSednaYetiGrey01',
+                },
+            },
+            ###########################################################################
+            # Yeti II
+            ###########################################################################
+            HSednaYeti02 = {
+                Dep = {
+                    'HSednaYeti01',
+                },
+                Gains = {
+                    'HSednaYeti02',
+                },
+                Icon = '/DGSedna/NewSednaYeti01',
+                Level = 4,
+                Loses = {
+                    'HSednaYeti01',
+                },
+            },
+            ###########################################################################
+            # Yeti III
+            ###########################################################################
+            HSednaYeti03 = {
+                Dep = {
+                    'HSednaYeti02',
+                },
+                Gains = {
+                    'HSednaYeti03',
+                },
+                Icon = '/DGSedna/NewSednaYeti01',
+                Level = 7,
+                Loses = {
+                    'HSednaYeti02',
+                },
+            },
+            ###########################################################################
+            # Yeti IV
+            ###########################################################################
+            HSednaYeti04 = {
+                Dep = {
+                    'HSednaYeti03',
+                },
+                Gains = {
+                    'HSednaYeti04',
+                },
+                Icon = '/DGSedna/NewSednaYeti01',
+                Level = 10,
+                Loses = {
+                    'HSednaYeti03',
+                },
+            },
+            ###########################################################################
+            # Wild Swings
+            ###########################################################################
+            HSednaWildSwings = {
+                Dep = {
+                    'HSednaYeti04',
+                },
+                Gains = {
+                    'HSednaWildSwings',
+                },
+                Icon = '/DGSedna/NewSednaWildSwings01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Heal I
+            ###########################################################################
+            HSednaHeal01 = {
+                Gains = {
+                    'HSednaHeal01',
+                },
+                Icon = '/DGSedna/NewSednaHeal01',
+                Level = 1,
+                Loses = {
+                    'HSednaHealGrey01',
+                },
+            },
+            ###########################################################################
+            # Heal II
+            ###########################################################################
+            HSednaHeal02 = {
+                Dep = {
+                    'HSednaHeal01',
+                },
+                Gains = {
+                    'HSednaHeal02',
+                },
+                Icon = '/DGSedna/NewSednaHeal01',
+                Level = 4,
+                Loses = {
+                    'HSednaHeal01',
+                },
+            },
+            ###########################################################################
+            # Heal III
+            ###########################################################################
+            HSednaHeal03 = {
+                Dep = {
+                    'HSednaHeal02',
+                },
+                Gains = {
+                    'HSednaHeal03',
+                },
+                Icon = '/DGSedna/NewSednaHeal01',
+                Level = 7,
+                Loses = {
+                    'HSednaHeal02',
+                },
+            },
+            ###########################################################################
+            # Heal IV
+            ###########################################################################
+            HSednaHeal04 = {
+                Dep = {
+                    'HSednaHeal03',
+                },
+                Gains = {
+                    'HSednaHeal04',
+                },
+                Icon = '/DGSedna/NewSednaHeal01',
+                Level = 10,
+                Loses = {
+                    'HSednaHeal03',
+                },
+            },
+            ###########################################################################
+            # Life's Child
+            ###########################################################################
+            HSednaLifesChild = {
+                Dep = {
+                    'HSednaHeal04',
+                },
+                Gains = {
+                    'HSednaLifesChild',
+                },
+                Icon = '/DGSedna/NewSednaLifesChild01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Inner Grace I
+            ###########################################################################
+            HSednaInnerGrace01 = {
+                Gains = {
+                    'HSednaInnerGrace01',
+                },
+                Icon = '/DGSedna/NewSednaInnerGrace01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Inner Grace II
+            ###########################################################################
+            HSednaInnerGrace02 = {
+                Dep = {
+                    'HSednaInnerGrace01',
+                },
+                Gains = {
+                    'HSednaInnerGrace02',
+                },
+                Icon = '/DGSedna/NewSednaInnerGrace01',
+                Level = 5,
+                Loses = {
+                    'HSednaInnerGrace01',
+                },
+            },
+            ###########################################################################
+            # Inner Grace III
+            ###########################################################################
+            HSednaInnerGrace03 = {
+                Dep = {
+                    'HSednaInnerGrace02',
+                },
+                Gains = {
+                    'HSednaInnerGrace03',
+                },
+                Icon = '/DGSedna/NewSednaInnerGrace01',
+                Level = 8,
+                Loses = {
+                    'HSednaInnerGrace02',
+                },
+            },
+            ###########################################################################
+            # Magnificent Presence I
+            ###########################################################################
+            HSednaMagnificentPresence01 = {
+                Gains = {
+                    'HSednaMagnificentPresence01',
+                },
+                Icon = '/DGSedna/NewSednaMagnificentPresence01',
+                Level = 5,
+            },
+            ###########################################################################
+            # Magnificent Presence II
+            ###########################################################################
+            HSednaMagnificentPresence02 = {
+                Dep = {
+                    'HSednaMagnificentPresence01',
+                },
+                Gains = {
+                    'HSednaMagnificentPresence02',
+                },
+                Icon = '/DGSedna/NewSednaMagnificentPresence01',
+                Level = 10,
+                Loses = {
+                    'HSednaMagnificentPresence01',
+                },
+            },
+            ###########################################################################
+            # Magnificent Presence III
+            ###########################################################################
+            HSednaMagnificentPresence03 = {
+                Dep = {
+                    'HSednaMagnificentPresence02',
+                },
+                Gains = {
+                    'HSednaMagnificentPresence03',
+                },
+                Icon = '/DGSedna/NewSednaMagnificentPresence01',
+                Level = 15,
+                Loses = {
+                    'HSednaMagnificentPresence02',
+                },
+            },
+            ###########################################################################
+            # Healing Wind I
+            ###########################################################################
+            HSednaHealingWind01 = {
+                Gains = {
+                    'HSednaHealingWind01',
+                },
+                Icon = '/DGSedna/NewSednaHealingWind01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Healing Wind II
+            ###########################################################################
+            HSednaHealingWind02 = {
+                Dep = {
+                    'HSednaHealingWind01',
+                },
+                Gains = {
+                    'HSednaHealingWind02',
+                },
+                Icon = '/DGSedna/NewSednaHealingWind01',
+                Level = 5,
+                Loses = {
+                    'HSednaHealingWind01',
+                },
+            },
+            ###########################################################################
+            # Counter Healing
+            ###########################################################################
+            HSednaCounterHealing01 = {
+                Dep = {
+                    'HSednaHealingWind02',
+                },
+                Gains = {
+                    'HSednaCounterHealing01',
+                },
+                Icon = '/DGSedna/NewSednaCounterhealing01',
+                Level = 8,
+            },
+            ###########################################################################
+            # Silence I
+            ###########################################################################
+            HSednaSilence01 = {
+                Gains = {
+                    'HSednaSilence01',
+                },
+                Icon = '/DGSedna/NewSednaSilence01',
+                Level = 5,
+                Loses = {
+                    'HSednaSilenceGrey01',
+                },
+            },
+            ###########################################################################
+            # Silence II
+            ###########################################################################
+            HSednaSilence02 = {
+                Dep = {
+                    'HSednaSilence01',
+                },
+                Gains = {
+                    'HSednaSilence02',
+                },
+                Icon = '/DGSedna/NewSednaSilence01',
+                Level = 10,
+                Loses = {
+                    'HSednaSilence01',
+                },
+            },
+            ###########################################################################
+            # Silence III
+            ###########################################################################
+            HSednaSilence03 = {
+                Dep = {
+                    'HSednaSilence02',
+                },
+                Gains = {
+                    'HSednaSilence03',
+                },
+                Icon = '/DGSedna/NewSednaSilence01',
+                Level = 15,
+                Loses = {
+                    'HSednaSilence02',
+                },
+            },
+            ###########################################################################
+            # Silence III
+            ###########################################################################
+            HSednaSilence03 = {
+                Dep = {
+                    'HSednaSilence02',
+                },
+                Gains = {
+                    'HSednaSilence03',
+                },
+                Icon = '/DGSedna/NewSednaSilence01',
+                Level = 15,
+                Loses = {
+                    'HSednaSilence02',
+                },
+            },
+            #################################################################################################################
+            # Stats Buffs
+            #################################################################################################################
+            GeneralStatsBuff01 = {
+                Gains = {
+                    'GeneralStatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+            },
+            GeneralStatsBuff02 = {
+                Dep = {
+                    'GeneralStatsBuff01',
+                },
+                Gains = {
+                    'GeneralStatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+            },
+            GeneralStatsBuff03 = {
+                Dep = {
+                    'GeneralStatsBuff02',
+                },
+                Gains = {
+                    'GeneralStatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+            },
+            GeneralStatsBuff04 = {
+                Dep = {
+                    'GeneralStatsBuff03',
+                },
+                Gains = {
+                    'GeneralStatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+            },
+            GeneralStatsBuff05 = {
+                Dep = {
+                    'GeneralStatsBuff04',
+                },
+                Gains = {
+                    'GeneralStatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+            },
+            GeneralStatsBuff06 = {
+                Dep = {
+                    'GeneralStatsBuff05',
+                },
+                Gains = {
+                    'GeneralStatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+            },
+        },
+    },
+    AI = {
+        GuardScanRadius = 8,
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/Sedna/snd_dg_sedna_hurt',
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/Sedna/snd_dg_sedna_select',
+        },
+    },
+    Categories = {
+        'CANBEHEALED',
+        'CAPTURE',
+        'COMMAND',
+        'FLOATINGUNITVIEW',
+        'GENERAL',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MOBILE',
+        'MELEE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0029>Melee General who controls healing.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_sedna.dds',
+        AvatarMovie_1 = '/movies/dg_iga_sed_default.bik',
+        Character = 'Leopard_Rider',
+        ChooserIcon = '/heroes/selection_hsedna',
+        FullIcon = '/game/lobby/avatars/sedna_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HSEDNA_0000>Strengths:\nPowerful healing spells\nSilences enemies\n\nWeaknesses:\nLow health\nLittle direct damage\n\nPlay Style:\nSedna supports her team while cutting her enemies\' support. Her healing magic rescues Demigods from the brink of death, and her Yetis guard her fiercely. She enhances the healing ability of allied priests in her vicinity, and allied Demigods are able to reuse their abilities more quickly. Sedna can also silence her enemies, preventing them from using their abilities.\n\nBackground:\nFrom the moment she was born, all who saw Sedna knew that she possessed a strange abundance of vitality. Her mother predicted that she would one day become the tribe\'s angakkuq, or spiritual caretaker. The tribe\'s current angakkuq, named Koomuk, overheard this proclamation and looked with suspicion upon the girl, for he did not intend to step down from his high position among the Elders.\n\nFrom the beginning, Sedna was an independent spirit, often wandering into the frozen wastes beyond the protection of her tribe\'s snow shelters. She also inspired a deep love in everyone she knew -- even in the hearts of the frostbitten searchers who were repeatedly sent out to find her.\n\nThe girl\'s true strangeness only became apparent when she resurrected a snow hare that had been skinned and tossed into a boiling pot. Asked by her mother how she had revived the animal, Sedna replied that she had simply given it some of her extra breath. After all, she could not abide the destruction of the \"snow people,\" and would do everything in her power to revive any animal killed by human hands.\n\nSedna\'s mother immediately dragged her to Koomuk, begging him to take her into his care and to help her become the next angakkuq. Sedna interrupted Koomuk\'s reply, pointing out that Koomuk was a fraud, and that she had nothing to learn from him.\n\nKoomuk\'s heart filled with undying hatred for the girl.\n\nAs Sedna grew, she became even more independent. She sometimes spent weeks alone in the faraway lands under the Aurorae, beyond the white horizon where monsters were said to dwell.  Hunters sometimes crossed paths with her, and they told stories of how she had been seen talking to wolves, walking among the caribou, and once riding upon the back of a great leopard.\n\nReturning from one of these journeys, Sedna was incensed to discover that Koomuk and the other Elders had sacrificed a killer whale, and that it had been dead too long for her to bring it back to life. Koomuk imperiously pointed out that the gods had demanded the sacrifice. Sedna proclaimed that Koomuk hadn\'t the faintest idea what the gods wanted.\n\nStung by her insult, Koomuk flew into a rage and sank his whale-carving spear into Sedna\'s chest. As she dropped to her knees, a giant snow leopard burst from the snow-fog behind her and crushed Koomuk\'s head in its jaws. It then turned to lick Sedna\'s wounds.\n\n\"Sila, you should not have done that,\" she said. \"I will be fine.\"\n\nWithdrawing the spear from her chest, Sedna was quickly enveloped in blue aurora-light. When she rose, her wound had vanished. She went to Koomuk\'s body and held her hand above him. Reviving with a start, Koomuk screamed and ran into the nearest snow shelter. Sedna told the cowering Elders to tell Koomuk that she would never return.\n\nPicking up the spear, Sedna mounted Sila. They never looked back.',
+        ScoreboardIcon = '/game/scoreboard/sbicon_hsedna.dds',
+        LobbyMovie = '/movies/dg_lobby_sed.bik',
+        SpecialUnitIcon = '/GeneralsOrders/special_hsedna_yeti',
+		VictoryMovie = '/movies/dg_victory_sed.bik',
+		VictoryMovieSubtitle = '/movies/dg_victory_sedna_subtitles.bik',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'SednaLevelUp',
+            'SednaLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 5,
+        OffsetZ = 0.75,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 5,
+        SizeZ = 5,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+        PreSpawnUnits = {
+            'hsednayeti',
+        },
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+        Generals = 3,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 5.5,
+    LifeBarSize = 1.3,
+    Name = '<LOC UNIT_NAME_0033>Sedna',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.0,
+        RunSpeed = 11,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 450,
+    },
+    SelectionCenterOffsetZ = 1.45,
+    SelectionSizeX = 3,
+    SizeX = 4,
+    SizeY = 4,
+    SizeZ = 7,
+    Stats = {
+        MaxHealth       = 1600,
+        Armor           = 380,
+        MaxEnergy       = 884,
+        RateOfFire      = 0,
+        DamageRating    = 155,
+        Regen           = 2.82,
+        EnergyRegen     = 2.76,
+        Primary = 'Magic',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/Sedna/snd_VO_dg_sedna_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_Sedna',
+    },
+    Weapon = {
+        {
+            AttackAirAction = 'AttackAir',
+            AttackAirMoveAction = 'AttackAirMove',
+            AlwaysRecheckTarget = false,
+            BallisticArc = 'RULEUBA_None',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageDelay = 0.3,
+            DamageFriendly = false,
+            DamageType = 'Hero',
+            DisplayName = 'Cat Attack',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringTolerance = 360,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 45,
+            IsMelee = true,
+            Label = 'MeleeWeapon',
+            MaxRadius = 6,
+            RateOfFire = 0.67,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            WeaponType = 'Sword',
+        },
+    },
+}

@@ -1,0 +1,670 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HVampireBiteGrey01',
+            'HVampireMistGrey01',
+            'HVampireMassCharmGrey01',
+            'HVampireBatSwarmGrey01',
+            'HVampireCoven00',
+            'HVampireConversion00',
+            'HVampireDeath01',
+        },
+        Layout = '/units/heroes/HVampire/HVampire_SkillLayout.lua',
+        Tree = {
+            ###########################################################################
+            # Bat Swarm I
+            ###########################################################################
+            HVampireBatSwarm01 = {
+                Gains = {
+                    'HVampireBatSwarm01',
+                },
+                Icon = '/DGVamplord/NewVamplordBatSwarm01',
+                Level = 5,
+                Loses = {
+                    'HVampireBatSwarmGrey01',
+                },
+            },
+            ###########################################################################
+            # Bat Swarm II
+            ###########################################################################
+            HVampireBatSwarm02 = {
+                Dep = {
+                    'HVampireBatSwarm01',
+                },
+                Gains = {
+                    'HVampireBatSwarm02',
+                },
+                Icon = '/DGVamplord/NewVamplordBatSwarm01',
+                Level = 10,
+                Loses = {
+                    'HVampireBatSwarm01',
+                },
+            },
+            ###########################################################################
+            # Bat Swarm III
+            ###########################################################################
+            HVampireBatSwarm03 = {
+                Dep = {
+                    'HVampireBatSwarm02',
+                },
+                Gains = {
+                    'HVampireBatSwarm03',
+                },
+                Icon = '/DGVamplord/NewVamplordBatSwarm01',
+                Level = 15,
+                Loses = {
+                    'HVampireBatSwarm02',
+                },
+            },
+            ###########################################################################
+            # Bite I
+            ###########################################################################
+            HVampireBite01 = {
+                Gains = {
+                    'HVampireBite01',
+                },
+                Icon = '/DGVampLord/NewVamplordbite01',
+                Level = 1,
+                Loses = {
+                    'HVampireBiteGrey01',
+                },
+            },
+            ###########################################################################
+            # Bite II
+            ###########################################################################
+            HVampireBite02 = {
+                Dep = {
+                    'HVampireBite01',
+                },
+                Gains = {
+                    'HVampireBite02',
+                },
+                Icon = '/DGVampLord/NewVamplordbite01',
+                Level = 4,
+                Loses = {
+                    'HVampireBite01',
+                },
+            },
+            ###########################################################################
+            # Bite III
+            ###########################################################################
+            HVampireBite03 = {
+                Dep = {
+                    'HVampireBite02',
+                },
+                Gains = {
+                    'HVampireBite03',
+                },
+                Icon = '/DGVampLord/NewVamplordbite01',
+                Level = 7,
+                Loses = {
+                    'HVampireBite02',
+                },
+            },
+            ###########################################################################
+            # Bite IV
+            ###########################################################################
+            HVampireBite04 = {
+                Dep = {
+                    'HVampireBite03',
+                },
+                Gains = {
+                    'HVampireBite04',
+                },
+                Icon = '/DGVampLord/NewVamplordbite01',
+                Level = 10,
+                Loses = {
+                    'HVampireBite03',
+                },
+            },
+            ###########################################################################
+            # Conversion I
+            ###########################################################################
+            HVampireConversion01 = {
+                Gains = {
+                    'HVampireConversion01',
+                },
+                Icon = '/DGVampLord/NewVamplordconversion01',
+                Level = 2,
+                Loses = {
+                    'HVampireConversion00',
+                },
+            },
+            ###########################################################################
+            # Conversion II
+            ###########################################################################
+            HVampireConversion02 = {
+                Dep = {
+                    'HVampireConversion01',
+                },
+                Gains = {
+                    'HVampireConversion02',
+                },
+                Icon = '/DGVampLord/NewVamplordconversion01',
+                Level = 5,
+                Loses = {
+                    'HVampireConversion01',
+                },
+            },
+            ###########################################################################
+            # Conversion III
+            ###########################################################################
+            HVampireConversion03 = {
+                Dep = {
+                    'HVampireConversion02',
+                },
+                Gains = {
+                    'HVampireConversion03',
+                },
+                Icon = '/DGVampLord/NewVamplordconversion01',
+                Level = 8,
+                Loses = {
+                    'HVampireConversion02',
+                },
+            },
+            ###########################################################################
+            # Coven I
+            ###########################################################################
+            HVampireCoven01 = {
+                Gains = {
+                    'HVampireCoven01',
+                },
+                Icon = '/DGVampLord/NewVamplordCoven01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Coven II
+            ###########################################################################
+            HVampireCoven02 = {
+                Dep = {
+                    'HVampireCoven01',
+                },
+                Gains = {
+                    'HVampireCoven02',
+                },
+                Icon = '/DGVampLord/NewVamplordCoven01',
+                Level = 5,
+                Loses = {
+                    'HVampireCoven01',
+                },
+            },
+            ###########################################################################
+            # Coven III
+            ###########################################################################
+            HVampireCoven03 = {
+                Dep = {
+                    'HVampireCoven02',
+                },
+                Gains = {
+                    'HVampireCoven03',
+                },
+                Icon = '/DGVampLord/NewVamplordCoven01',
+                Level = 8,
+                Loses = {
+                    'HVampireCoven02',
+                },
+            },
+            ###########################################################################
+            # Army of the Night
+            ###########################################################################
+            HVampireArmyoftheNight = {
+                Dep = {
+                    'HVampireCoven03',
+                    'HVampireConversion03',
+                },
+                Gains = {
+                    'HVampireArmyoftheNight',
+                },
+                Icon = '/DGVampLord/NewVamplordArmyoftheNight01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Mass Charm I
+            ###########################################################################
+            HVampireMassCharm01 = {
+                Gains = {
+                    'HVampireMassCharm01',
+                },
+                Icon = '/DGVampLord/NewVamplordcharm01',
+                Level = 1,
+                Loses = {
+                    'HVampireMassCharmGrey01',
+                },
+            },
+            ###########################################################################
+            # Mass Charm II
+            ###########################################################################
+            HVampireMassCharm02 = {
+                Dep = {
+                    'HVampireMassCharm01',
+                },
+                Gains = {
+                    'HVampireMassCharm02',
+                },
+                Icon = '/DGVampLord/NewVamplordcharm01',
+                Level = 4,
+                Loses = {
+                    'HVampireMassCharm01',
+                },
+            },
+            ###########################################################################
+            # Mass Charm III
+            ###########################################################################
+            HVampireMassCharm03 = {
+                Dep = {
+                    'HVampireMassCharm02',
+                },
+                Gains = {
+                    'HVampireMassCharm03',
+                },
+                Icon = '/DGVampLord/NewVamplordcharm01',
+                Level = 7,
+                Loses = {
+                    'HVampireMassCharm02',
+                },
+            },
+            ###########################################################################
+            # Mass Charm IV
+            ###########################################################################
+            HVampireMassCharm04 = {
+                Dep = {
+                    'HVampireMassCharm03',
+                },
+                Gains = {
+                    'HVampireMassCharm04',
+                },
+                Icon = '/DGVampLord/NewVamplordcharm01',
+                Level = 10,
+                Loses = {
+                    'HVampireMassCharm03',
+                },
+            },
+            ###########################################################################
+            # Muddle
+            ###########################################################################
+            HVampireMuddle = {
+                Dep = {
+                    'HVampireMassCharm04',
+                },
+                Gains = {
+                    'HVampireMuddle',
+                },
+                Icon = '/DGVampLord/NewVamplordMuddle01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Mist I
+            ###########################################################################
+            HVampireMist01 = {
+                Gains = {
+                    'HVampireMist01',
+                    'HVampireMistAlly01',
+                },
+                Icon = '/DGVampLord/NewVamplordMist01',
+                Level = 1,
+                Loses = {
+                    'HVampireMistGrey01',
+                },
+            },
+            ###########################################################################
+            # Mist II
+            ###########################################################################
+            HVampireMist02 = {
+                Dep = {
+                    'HVampireMist01',
+                },
+                Gains = {
+                    'HVampireMist02',
+                    'HVampireMistAlly02',
+                },
+                Icon = '/DGVampLord/NewVamplordMist01',
+                Level = 4,
+                Loses = {
+                    'HVampireMist01',
+                    'HVampireMistAlly01',
+                },
+            },
+            ###########################################################################
+            # Mist III
+            ###########################################################################
+            HVampireMist03 = {
+                Dep = {
+                    'HVampireMist02',
+                },
+                Gains = {
+                    'HVampireMist03',
+                    'HVampireMistAlly03',
+                },
+                Icon = '/DGVampLord/NewVamplordMist01',
+                Level = 7,
+                Loses = {
+                    'HVampireMist02',
+                    'HVampireMistAlly02',
+                },
+            },
+            ###########################################################################
+            # Mist IV
+            ###########################################################################
+            HVampireMist04 = {
+                Dep = {
+                    'HVampireMist03',
+                },
+                Gains = {
+                    'HVampireMist04',
+                    'HVampireMistAlly04',
+                },
+                Icon = '/DGVampLord/NewVamplordMist01',
+                Level = 10,
+                Loses = {
+                    'HVampireMist03',
+                    'HVampireMistAlly03',
+                },
+            },
+            ###########################################################################
+            # Bloody Haze
+            ###########################################################################
+            HVampireBloodyHaze = {
+                Dep = {
+                    'HVampireMist04',
+                },
+                Gains = {
+                    'HVampireBloodyHaze',
+                    'HVampireBloodyHazeAlly',
+                },
+                Icon = '/DGVampLord/NewVamplordBloodyHaze01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Poisoned Blood I
+            ###########################################################################
+            HVampirePoisonedBlood01 = {
+                Gains = {
+                    'HVampirePoisonedBlood01',
+                },
+                Icon = '/DGVampLord/NewVamplordPoisonBlood01',
+                Level = 5,
+            },
+            ###########################################################################
+            # Poisoned Blood II
+            ###########################################################################
+            HVampirePoisonedBlood02 = {
+                Dep = {
+                    'HVampirePoisonedBlood01',
+                },
+                Gains = {
+                    'HVampirePoisonedBlood02',
+                },
+                Icon = '/DGVampLord/NewVamplordPoisonBlood01',
+                Level = 10,
+                Loses = {
+                    'HVampirePoisonedBlood01',
+                },
+            },
+            ###########################################################################
+            # Vampiric Aura
+            ###########################################################################
+            HVampireVampiricAura01 = {
+                Dep = {
+                    'HVampirePoisonedBlood02',
+                },
+                Gains = {
+                    'HVampireVampiricAura01',
+                },
+                Icon = '/DGVampLord/NewVamplordVampiricAura01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Stats Buffs
+            #################################################################################################################
+            GeneralStatsBuff01 = {
+                Gains = {
+                    'GeneralStatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+            },
+            GeneralStatsBuff02 = {
+                Dep = {
+                    'GeneralStatsBuff01',
+                },
+                Gains = {
+                    'GeneralStatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+            },
+            GeneralStatsBuff03 = {
+                Dep = {
+                    'GeneralStatsBuff02',
+                },
+                Gains = {
+                    'GeneralStatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+            },
+            GeneralStatsBuff04 = {
+                Dep = {
+                    'GeneralStatsBuff03',
+                },
+                Gains = {
+                    'GeneralStatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+            },
+            GeneralStatsBuff05 = {
+                Dep = {
+                    'GeneralStatsBuff04',
+                },
+                Gains = {
+                    'GeneralStatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+            },
+            GeneralStatsBuff06 = {
+                Dep = {
+                    'GeneralStatsBuff05',
+                },
+                Gains = {
+                    'GeneralStatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+            },
+        },
+    },
+    AI = {
+        GuardScanRadius = 7,
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/Vampire_Lord/snd_dg_vampirelord_hurt',
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/Vampire_Lord/snd_dg_vampirelord_select',
+        },
+    },
+    CameraTrackingYOffset = 4.5,
+    Categories = {
+        'GENERAL',
+        'CANBEHEALED',
+        'CAPTURE',
+        'COMMAND',
+        'FLOATINGUNITVIEW',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MAKEVAMPIRES',
+        'MELEE',
+        'MOBILE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0031>Melee General capable of draining life.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_vampirelord.dds',
+        AvatarMovie_1 = '/movies/dg_iga_vl_default.bik',
+        Character = 'Vampire_Lord',
+        ChooserIcon = '/heroes/selection_hvampire',
+        ExtraProjectiles = {
+            '/projectiles/BatEffect01/BatEffect01_proj.bp',
+            '/projectiles/MistEffect01/MistEffect01_proj.bp',
+            '/projectiles/MistEffect02/MistEffect02_proj.bp',
+            '/projectiles/MistEffect03/MistEffect03_proj.bp',
+            '/projectiles/MistEffect04/MistEffect04_proj.bp',
+            '/projectiles/MistEffect05/MistEffect05_proj.bp',
+            '/projectiles/MistEffect06/MistEffect06_proj.bp',
+            '/projectiles/MistEffect07/MistEffect07_proj.bp',
+        },
+        FullIcon = '/game/lobby/avatars/vampirelord_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HVAMPIRE_0000>Strengths:\nDrains health\nCan move quickly into and out of battle\n\nWeaknesses:\nFew ranged attacks\nVery dependent on health\n\nPlay Style:\nLord Erebus is a dangerous force on his own, but his army makes him even more deadly. He can bite enemies to instantly drain their health and can quickly warp himself to nearby locations. When surrounded, he can turn into a poisonous mist that harms his foes and heals his army. Soldiers who fall near him are transformed into Night Walkers, eager to obey his commands.\n\nBackground:\nErebus was insatiable from the beginning. When offered his mother\'s jugular, in what passed for nursing among the Night Walkers, the infant bled her dry. Terrified of the boy\'s appetite, his caretakers kept him in a separate cave where they fed him whole cattle. It was only when Erebus had traveled beyond the caves of the Night Walkers and had seen the technology of humans that he built himself a special suit, designed to keep his hunger in check. The suit, its interior lined with syringes, fed him a continuous supply of fresh blood.\n\nHis mind cleared, Erebus first established himself as the uncontested Lord of the Night Walkers. This was not difficult, as Erebus possessed strange powers unknown to his kin: he could move in daylight, he could travel without touching the ground, and he could kill at a distance. His position secured, Lord Erebus then concentrated on refining himself. Embarrassed by the feral, instinct-driven creature he had been, he applied himself to the study of finer things, including poetry, literature, and blood tasting. This last was his favorite -- his blood cellar contained thousands of casks of every vintage.\n\nLord Erebus soon became bored, however. Lacking a mental equal among the Night Walkers, he began to spend his nights abroad, often eavesdropping on the human aristocracy of Nordolath. They held costume balls, played music, and reveled in drunken debauchery, all of which the Night Walker found agreeable.\n\nIt was then that Lord Erebus spied a beautiful black-haired poetess and fell in love. Deciding to reveal himself to her, he composed a poem of his own to woo her.\n\nStepping from the shadows of her bedroom, he was immediately greeted with unexpected screams. Moving ahead with the plan, he attempted to recite his poem, making some progress each time she took a breath between shrieks. Finally, the palace guards broke down the girl\'s locked door and confronted Lord Erebus with their halberds. Parrying their attacks, the Night Walker begged the girl to see beyond his strange appearance.\n\nAt last, however, a lucky spear cut one of the tubes on his suit, and his entire blood supply gushed out onto the floor. Erebus\' conscious mind shrank rapidly beneath an expanding, wordless bloodlust.\n\nAfter repairing his suit and wasting many months on a period of unseemly mourning, Erebus finally acknowledged that eternal boredom was likely to be his lot in life. Perhaps he could write a poem about the whole thing.\n\nHe had to admit, even as he despised himself for it, that the girl had been delicious.',
+        ScoreboardIcon = '/game/scoreboard/sbicon_hvampire.dds',
+        LobbyMovie = '/movies/dg_lobby_vl.bik',
+        SpecialUnitIcon = '/GeneralsOrders/special_hvampire_vampire',
+		VictoryMovie = '/movies/dg_victory_vl.bik',
+        VictoryMovieSubtitle = '/movies/dg_victory_erebus_subtitles.bik',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'VampireLordLevelUp',
+            'VampireLordLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 4.5,
+        OffsetZ = 0,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+        PreSpawnUnits = {
+            'hvampirevampire01',
+        },
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+        Generals = 3,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 5.1,
+    LifeBarSize = 1.3,
+    Name = '<LOC UNIT_NAME_0035>Lord Erebus',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.3,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 720,
+    },
+    SelectionCenterOffsetZ = -.5,
+    SelectionSizeX = 3,
+    SizeX = 3.5,
+    SizeY = 5,
+    SizeZ = 3.5,
+    Stats = {
+        MaxHealth       = 1650,
+        Armor           = 220,
+        MaxEnergy       = 780,
+        RateOfFire      = 0,
+        DamageRating    = 160,
+        Regen           = 3,
+        EnergyRegen     = 2.44,
+        Primary = 'Power',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+        TargetingRepulseInfo = {
+            Land=0.5,
+            Structure=0.5,
+        },
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/Vampire_Lord/snd_VO_dg_vampirelord_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_Erebus',
+    },
+    Weapon = {
+        {
+            AlwaysRecheckTarget = false,
+            BallisticArc = 'RULEUBA_None',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageDelay = 0.6,
+            DamageFriendly = false,
+            DamageType = 'Hero',
+            DisplayName = 'Sceptre',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringTolerance = 360,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 45,
+            IsMelee = true,
+            Label = 'MeleeWeapon',
+            MaxRadius = 5,
+            RateOfFire = 0.67,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            WeaponType = 'Sword',
+        },
+    },
+}

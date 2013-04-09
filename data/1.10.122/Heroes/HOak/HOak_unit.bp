@@ -1,0 +1,636 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HOAKShieldGrey01',
+            'HOAKPenitenceGrey01',
+            'HOAKSurgeofFaithGrey01',
+            'HOAKRaiseDeadWardGrey01',
+            'HOAKDeath01',
+        },
+        Layout = '/units/heroes/HOAK/HOAK_SkillLayout.lua',
+        Tree = {
+            ###########################################################################
+            # Shield I
+            ###########################################################################
+            HOAKShield01 = {
+                Gains = {
+                    'HOAKShield01',
+                },
+                Icon = '/DGOak/NewOakShield01',
+                Level = 1,
+                Loses = {
+                    'HOAKShieldGrey01',
+                },
+            },
+            ###########################################################################
+            # Shield II
+            ###########################################################################
+            HOAKShield02 = {
+                Dep = {
+                    'HOAKShield01',
+                },
+                Gains = {
+                    'HOAKShield02',
+                },
+                Icon = '/DGOak/NewOakShield01',
+                Level = 4,
+                Loses = {
+                    'HOAKShield01',
+                },
+            },
+            ###########################################################################
+            # Shield III
+            ###########################################################################
+            HOAKShield03 = {
+                Dep = {
+                    'HOAKShield02',
+                },
+                Gains = {
+                    'HOAKShield03',
+                },
+                Icon = '/DGOak/NewOakShield01',
+                Level = 7,
+                Loses = {
+                    'HOAKShield02',
+                },
+            },
+            ###########################################################################
+            # Shield IV
+            ###########################################################################
+            HOAKShield04 = {
+                Dep = {
+                    'HOAKShield03',
+                },
+                Gains = {
+                    'HOAKShield04',
+                },
+                Icon = '/DGOak/NewOakShield01',
+                Level = 10,
+                Loses = {
+                    'HOAKShield03',
+                },
+            },
+            ###########################################################################
+            # Purity
+            ###########################################################################
+            HOakPurity = {
+                Dep = {
+                    'HOAKShield04',
+                },
+                Gains = {
+                    'HOakPurity',
+                },
+                Icon = '/DGOak/NewOakPurity01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Penitence I
+            ###########################################################################
+            HOAKPenitence01 = {
+                Gains = {
+                    'HOAKPenitence01',
+                },
+                Icon = '/DGOak/NewOakPenitence01',
+                Level = 1,
+                Loses = {
+                    'HOAKPenitenceGrey01',
+                },
+            },
+            ###########################################################################
+            # Penitence II
+            ###########################################################################
+            HOAKPenitence02 = {
+                Dep = {
+                    'HOAKPenitence01',
+                },
+                Gains = {
+                    'HOAKPenitence02',
+                },
+                Icon = '/DGOak/NewOakPenitence01',
+                Level = 4,
+                Loses = {
+                    'HOAKPenitence01',
+                },
+            },
+            ###########################################################################
+            # Penitence III
+            ###########################################################################
+            HOAKPenitence03 = {
+                Dep = {
+                    'HOAKPenitence02',
+                },
+                Gains = {
+                    'HOAKPenitence03',
+                },
+                Icon = '/DGOak/NewOakPenitence01',
+                Level = 7,
+                Loses = {
+                    'HOAKPenitence02',
+                },
+            },
+            ###########################################################################
+            # Penitence IV
+            ###########################################################################
+            HOAKPenitence04 = {
+                Dep = {
+                    'HOAKPenitence03',
+                },
+                Gains = {
+                    'HOAKPenitence04',
+                },
+                Icon = '/DGOak/NewOakPenitence01',
+                Level = 10,
+                Loses = {
+                    'HOAKPenitence03',
+                },
+            },
+            ###########################################################################
+            # Surge of Faith I
+            ###########################################################################
+            HOAKSurgeofFaith01 = {
+                Gains = {
+                    'HOAKSurgeofFaith01',
+                },
+                Icon = '/DGOak/NewOakSurgeofFaith01',
+                Level = 5,
+                Loses = {
+                    'HOAKSurgeofFaithGrey01',
+                },
+            },
+            ###########################################################################
+            # Surge of Faith II
+            ###########################################################################
+            HOAKSurgeofFaith02 = {
+                Dep = {
+                    'HOAKSurgeofFaith01',
+                },
+                Gains = {
+                    'HOAKSurgeofFaith02',
+                },
+                Icon = '/DGOak/NewOakSurgeofFaith01',
+                Level = 10,
+                Loses = {
+                    'HOAKSurgeofFaith01',
+                },
+            },
+            ###########################################################################
+            # Surge of Faith III
+            ###########################################################################
+            HOAKSurgeofFaith03 = {
+                Dep = {
+                    'HOAKSurgeofFaith02',
+                },
+                Gains = {
+                    'HOAKSurgeofFaith03',
+                },
+                Icon = '/DGOak/NewOakSurgeofFaith01',
+                Level = 15,
+                Loses = {
+                    'HOAKSurgeofFaith02',
+                },
+            },
+            ###########################################################################
+            # Last Stand I
+            ###########################################################################
+            HOAKLastStand01 = {
+                Gains = {
+                    'HOAKLastStand01',
+                },
+                Icon = '/DGOak/NewOakLastStand01',
+                Level = 8,
+                Name = '<LOC ABILITY_HOak_0035>Last Stand I',
+            },
+            ###########################################################################
+            # Last Stand II
+            ###########################################################################
+            HOAKLastStand02 = {
+                Dep = {
+                    'HOAKLastStand01',
+                },
+                Gains = {
+                    'HOAKLastStand02',
+                },
+                Icon = '/DGOak/NewOakLastStand01',
+                Level = 15,
+                Loses = {
+                    'HOAKLastStand01',
+                },
+            },
+            ###########################################################################
+            # Divine Justice I
+            ###########################################################################
+            HOAKDivineJustice01 = {
+                Gains = {
+                    'HOAKDivineJustice01',
+                },
+                Icon = '/DGOak/NewOakDevineJustice01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Divine Justice II
+            ###########################################################################
+            HOAKDivineJustice02 = {
+                Dep = {
+                    'HOAKDivineJustice01',
+                },
+                Gains = {
+                    'HOAKDivineJustice02',
+                },
+                Icon = '/DGOak/NewOakDevineJustice01',
+                Level = 5,
+                Loses = {
+                    'HOAKDivineJustice01',
+                },
+            },
+            ###########################################################################
+            # Divine Justice III
+            ###########################################################################
+            HOAKDivineJustice03 = {
+                Dep = {
+                    'HOAKDivineJustice02',
+                },
+                Gains = {
+                    'HOAKDivineJustice03',
+                },
+                Icon = '/DGOak/NewOakDevineJustice01',
+                Level = 8,
+                Loses = {
+                    'HOAKDivineJustice02',
+                },
+            },
+            ###########################################################################
+            # Rally
+            ###########################################################################
+            HOakRally = {
+                Dep = {
+                    'HOAKDivineJustice03',
+                },
+                Gains = {
+                    'HOakRally',
+                },
+                Icon = '/DGOak/NewOakRally01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Soul Power I
+            ###########################################################################
+            HOAKSoulPower01 = {
+                Gains = {
+                    'HOAKSoulPower01',
+                },
+                Icon = '/DGOak/NewOakSoulPower01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Soul Power II
+            ###########################################################################
+            HOAKSoulPower02 = {
+                Dep = {
+                    'HOAKSoulPower01',
+                },
+                Gains = {
+                    'HOAKSoulPower02',
+                },
+                Icon = '/DGOak/NewOakSoulPower01',
+                Level = 5,
+                Loses = {
+                    'HOAKSoulPower01',
+                },
+            },
+            ###########################################################################
+            # Soul Power III
+            ###########################################################################
+            HOAKSoulPower03 = {
+                Dep = {
+                    'HOAKSoulPower02',
+                },
+                Gains = {
+                    'HOAKSoulPower03',
+                },
+                Icon = '/DGOak/NewOakSoulPower01',
+                Level = 8,
+                Loses = {
+                    'HOAKSoulPower02',
+                },
+            },
+            ###########################################################################
+            # Raise Dead Ward I
+            ###########################################################################
+            HOAKRaiseDeadWard01 = {
+                Gains = {
+                    'HOAKRaiseDeadWard01',
+                },
+                Icon = '/DGOak/NewOakRaiseDead01',
+                Level = 1,
+                Loses = {
+                    'HOAKRaiseDeadWardGrey01',
+                },
+            },
+            ###########################################################################
+            # Raise Dead Ward II
+            ###########################################################################
+            HOAKRaiseDeadWard02 = {
+                Dep = {
+                    'HOAKRaiseDeadWard01',
+                },
+                Gains = {
+                    'HOAKRaiseDeadWard02',
+                },
+                Icon = '/DGOak/NewOakRaiseDead01',
+                Level = 4,
+                Loses = {
+                    'HOAKRaiseDeadWard01',
+                },
+            },
+            ###########################################################################
+            # Raise Dead Ward III
+            ###########################################################################
+            HOAKRaiseDeadWard03 = {
+                Dep = {
+                    'HOAKRaiseDeadWard02',
+                },
+                Gains = {
+                    'HOAKRaiseDeadWard03',
+                },
+                Icon = '/DGOak/NewOakRaiseDead01',
+                Level = 7,
+                Loses = {
+                    'HOAKRaiseDeadWard02',
+                },
+            },
+            ###########################################################################
+            # Raise Dead Ward IV
+            ###########################################################################
+            HOAKRaiseDeadWard04 = {
+                Dep = {
+                    'HOAKRaiseDeadWard03',
+                },
+                Gains = {
+                    'HOAKRaiseDeadWard04',
+                },
+                Icon = '/DGOak/NewOakRaiseDead01',
+                Level = 10,
+                Loses = {
+                    'HOAKRaiseDeadWard03',
+                },
+            },
+            ###########################################################################
+            # Soul Frenzy
+            ###########################################################################
+            HOakSoulFrenzy = {
+                Dep = {
+                    'HOAKRaiseDeadWard04',
+                },
+                Gains = {
+                    'HOakSoulFrenzy',
+                },
+                Icon = '/DGOak/NewOakSoulFrenzy01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Stats Buffs
+            #################################################################################################################
+            GeneralStatsBuff01 = {
+                Gains = {
+                    'GeneralStatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+            },
+            GeneralStatsBuff02 = {
+                Dep = {
+                    'GeneralStatsBuff01',
+                },
+                Gains = {
+                    'GeneralStatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+            },
+            GeneralStatsBuff03 = {
+                Dep = {
+                    'GeneralStatsBuff02',
+                },
+                Gains = {
+                    'GeneralStatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+            },
+            GeneralStatsBuff04 = {
+                Dep = {
+                    'GeneralStatsBuff03',
+                },
+                Gains = {
+                    'GeneralStatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+            },
+            GeneralStatsBuff05 = {
+                Dep = {
+                    'GeneralStatsBuff04',
+                },
+                Gains = {
+                    'GeneralStatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+            },
+            GeneralStatsBuff06 = {
+                Dep = {
+                    'GeneralStatsBuff05',
+                },
+                Gains = {
+                    'GeneralStatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+            },
+        },
+    },
+    AI = {
+        GuardScanRadius = 7,
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+         OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/Oak/snd_dg_oak_grunt_hurt',
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/Oak/snd_dg_oak_select',
+        },
+    },
+    Categories = {
+        'CANBEHEALED',
+        'CAPTURE',
+        'FLOATINGUNITVIEW',
+        'GENERAL',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MELEE',
+        'MOBILE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0021>Melee General who protects others.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_oak.dds',
+        AvatarMovie_1 = '/movies/dg_iga_oak_default.bik',
+        Character = 'Oak',
+        ChooserIcon = '/heroes/selection_hoak',
+        ExtraProjectiles = {
+            '/projectiles/OakDeathEffect01/OakDeathEffect01_proj.bp',
+        },
+        FullIcon = '/game/lobby/avatars/oak_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HOAK_0000>Strengths:\nProtects and enhances allies\nSlows and weakens enemies\n\nWeaknesses:\nNo burst damage\nLimited ranged attack abilities\n\nPlay Style:\nThe Oak is the guardian of his army and the bane of his foes. As infantry die near the Oak, his banner calls them back to rise and fight again as Spirits. He can protect his allies from harm with his shield, and he heals his compatriots when he lands killing blows. The Oak has the power to not only slow his enemies, but to increase the damage they take, making them a soft target for his army.\n\nBackground:\nThanos the Immortal, loyal captain to generations of Nimoth Kings, could not be felled in battle. He had received many death-blows, only to rise again and rally his men to victory. It was said that he had been so badly mutilated by centuries of fighting that he could no longer bear to be looked upon, and that this was why he was never seen without his helmet and armor. At court, he was a stoic, monolithic presence, only speaking when addressed.\n\nIt was therefore a shock when he refused the orders of King Nimoth XII on the eve of the Battle of Rond. Thanos knew that the men of Rond were away from their village, and that the battle would turn into a slaughter of innocent women and children. The king, unaccustomed to disloyalty from his favorite captain, became enraged, threatening to banish Thanos and his vassals for a thousand years. Thanos looked for a moment upon the king. Finally, he spoke.\n\n\"As you wish. I will go.\"\n\nThanos and the vassals of his house were banished to the Writh-tal, the Canyons of the Dead. Inhabited by terrible Dead Things that would not abide the living, the Canyons were a likely death sentence for his servants. Still, the remnants of the House of Thanos erected a fortress upon a great, tortured rock. Thanos stood watch at the gate, guarding the stronghold\'s only approach. He repelled the attacks of many Dead Things, but also came into contact with the spirits of once-living warriors, who saw in him the familiar loneliness of immortality. These spirits saw Thanos as one of their own.\n\nThanos kept his station for nine hundred years, rooted to one spot like a great dark tree. As generations passed and Thanos\' vassals looked down upon his unmoving form beneath the parapet, they gave him a new name: The Oak.\n\nThen one grey morning, a Dark Servant from beyond the Veil fell upon the stronghold. The Oak took up his axe and did battle with the many-armed abomination, but he could not bring the thing down. At last, the Servant\'s club fell upon the Oak, shattering him completely. His vassals saw his armor scatter, and also saw that it contained no body. Turning hungrily to the defenseless vassals within the fortress, the Dark Servant did not see the Oak\'s armor re-form and rise once more. For the first time in centuries, the Oak spoke aloud:\n\n\"Warrior spirits, fellow exiles, hear me! Remember the fragility of those you loved, remember the noble causes for which you fought! Here is a worthy battle and a formidable foe! Rise with me now!\"\n\nFrom the ground around the Oak rose a floating army of spectral forms that flew in a great swarm at the Dark Servant. With the demon distracted by the cloud of angry spirits, the Oak struck at the demon\'s exposed chest and pulled out its withered black heart. The Dark Servant bellowed, then fell dead to the ground.\n\nThe vassals of the House of Thanos cheered and called out his name, but he gave no response. Once again taking his place by the gate, he planted his axe-handle in the ground and set his shield before him, looking out over the hostile wastes of the Writh-tal.\n\nHe did not move.',
+        ScoreboardIcon = '/game/scoreboard/sbicon_hoak.dds',
+        LobbyMovie = '/movies/dg_lobby_oak.bik',
+        SpecialUnitIcon = '/GeneralsOrders/special_hoak_spirit',
+		VictoryMovie = '/movies/dg_victory_oak.bik',
+        VictoryMovieSubtitle = '/movies/dg_victory_oak_subtitles.bik',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'OakLevelUp',
+            'OakLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 5.5,
+        OffsetZ = 0,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 5,
+        SizeZ = 5,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        IgnoreDeathSlider = true,
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+        PreSpawnUnits = {
+            'hoakspirit',
+            'hoakraisedeadward01',
+        },
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+        Generals = 3,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 6,
+    LifeBarSize = 1.3,
+    Name = '<LOC UNIT_NAME_0026>Oak',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.0,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 720,
+    },
+    SelectionSizeX = 3,
+    SizeX = 3.25,
+    SizeY = 4.25,
+    SizeZ = 3.25,
+    Stats = {
+        MaxHealth       = 1700,
+        Armor           = 400,
+        MaxEnergy       = 832,
+        RateOfFire      = 0,
+        DamageRating    = 160,
+        Regen           = 2.82,
+        EnergyRegen     = 2.6,
+        Primary = 'Power',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/Oak/snd_VO_dg_oak_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_Oak',
+    },
+    Weapon = {
+        {
+            AttackAction = 'Attack',
+            AttackMoveAction = 'AttackMove',
+            AttackStructureAction = 'AttackStructure',
+            AttackStructureMoveAction = 'AttackStructureMove',
+            AlwaysRecheckTarget = false,
+            BallisticArc = 'RULEUBA_None',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageDelay = 0.5,
+            DamageFriendly = false,
+            DamageType = 'Hero',
+            DisplayName = 'Axe',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringTolerance = 360,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 60,
+            IsMelee = true,
+            Label = 'MeleeWeapon',
+            MaxRadius = 5,
+            MinRadius = 0,
+            RateOfFire = 0.69,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            WeaponType = 'Sword',
+        },
+    },
+}

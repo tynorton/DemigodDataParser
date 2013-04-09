@@ -1,0 +1,673 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HRegulusAngelicFuryGrey01',
+            'HRegulusSnipeGrey01',
+            'HRegulusMineGrey01',
+            'HRegulusBetrayerGrey01',
+            'HGSA01Death01',
+        },
+        Layout = '/units/heroes/HGSA01/HGSA01_SkillLayout.lua',
+        Tree = {
+            #################################################################################################################
+            # Explosive Mine I
+            #################################################################################################################
+            HGSA01ExplosiveMine01 = {
+                Gains = {
+                    'HGSA01ExplosiveMine01',
+                },
+                Icon = '/DGRegulus/NewRegulusExplosiveMine01',
+                Level = 1,
+                Loses = {
+                    'HRegulusMineGrey01',
+                },
+            },
+            #################################################################################################################
+            # Explosive Mine II
+            #################################################################################################################
+            HGSA01ExplosiveMine02 = {
+                Dep = {
+                    'HGSA01ExplosiveMine01',
+                },
+                Gains = {
+                    'HGSA01ExplosiveMine02',
+                },
+                Icon = '/DGRegulus/NewRegulusExplosiveMine01',
+                Level = 4,
+                Loses = {
+                    'HGSA01ExplosiveMine01',
+                },
+            },
+            #################################################################################################################
+            # Explosive Mine III
+            #################################################################################################################
+            HGSA01ExplosiveMine03 = {
+                Dep = {
+                    'HGSA01ExplosiveMine02',
+                },
+                Gains = {
+                    'HGSA01ExplosiveMine03',
+                },
+                Icon = '/DGRegulus/NewRegulusExplosiveMine01',
+                Level = 7,
+                Loses = {
+                    'HGSA01ExplosiveMine02',
+                },
+            },
+            #################################################################################################################
+            # Snrapnel
+            #################################################################################################################
+            HGSA01ShrapnelMine01 = {
+                Dep = {
+                    'HGSA01ExplosiveMine03',
+                },
+                Gains = {
+                    'HGSA01ShrapnelMine01',
+                },
+                Icon = '/DGRegulus/NewRegulusShrapnel01',
+                Level = 10,
+                Loses = {
+                    'HGSA01ExplosiveMine03',
+                },
+            },
+            #################################################################################################################
+            # Mark of the Betrayer I
+            #################################################################################################################
+            HGSA01Betrayer01 = {
+                Gains = {
+                    'HGSA01Betrayer01',
+                },
+                Icon = '/DGRegulus/NewRegulusMarkoftheBetrayer01',
+                Level = 5,
+                Loses = {
+                    'HRegulusBetrayerGrey01',
+                },
+            },
+            #################################################################################################################
+            # Mark of the Betrayer II
+            #################################################################################################################
+            HGSA01Betrayer02 = {
+                Dep = {
+                    'HGSA01Betrayer01',
+                },
+                Gains = {
+                    'HGSA01Betrayer02',
+                },
+                Icon = '/DGRegulus/NewRegulusMarkoftheBetrayer01',
+                Level = 10,
+                Loses = {
+                    'HGSA01Betrayer01',
+                },
+            },
+            #################################################################################################################
+            # Mark of the Betrayer III
+            #################################################################################################################
+            HGSA01Betrayer03 = {
+                Dep = {
+                    'HGSA01Betrayer02',
+                },
+                Gains = {
+                    'HGSA01Betrayer03',
+                },
+                Icon = '/DGRegulus/NewRegulusMarkoftheBetrayer01',
+                Level = 15,
+                Loses = {
+                    'HGSA01Betrayer02',
+                },
+            },
+            #################################################################################################################
+            # Maim I
+            #################################################################################################################
+            HGSA01Maim01 = {
+                Gains = {
+                    'HGSA01Maim01',
+                },
+                Icon = '/DGRegulus/NewRegulusMaim01',
+                Level = 2,
+            },
+            #################################################################################################################
+            # Maim II
+            #################################################################################################################
+            HGSA01Maim02 = {
+                Dep = {
+                    'HGSA01Maim01',
+                },
+                Gains = {
+                    'HGSA01Maim02',
+                },
+                Icon = '/DGRegulus/NewRegulusMaim01',
+                Level = 5,
+                Loses = {
+                    'HGSA01Maim01',
+                },
+            },
+            #################################################################################################################
+            # Maim III
+            #################################################################################################################
+            HGSA01Maim03 = {
+                Dep = {
+                    'HGSA01Maim02',
+                },
+                Gains = {
+                    'HGSA01Maim03',
+                },
+                Icon = '/DGRegulus/NewRegulusMaim01',
+                Level = 8,
+                Loses = {
+                    'HGSA01Maim02',
+                },
+            },
+            #################################################################################################################
+            # Impedance Bolt
+            #################################################################################################################
+            HGSA01ImpedanceBolt01 = {
+                Dep = {
+                    'HGSA01Maim03',
+                },
+                Gains = {
+                    'HGSA01ImpedanceBolt01',
+                },
+                Icon = '/DGRegulus/NewRegulusImpedenceBolt01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Sniper's Scope I
+            #################################################################################################################
+            HGSA01MaxRange01 = {
+                Gains = {
+                    'HGSA01MaxRange01',
+                },
+                Icon = '/DGRegulus/NewRegulusScope01',
+                Level = 2,
+            },
+            #################################################################################################################
+            # Sniper's Scope II
+            #################################################################################################################
+            HGSA01MaxRange02 = {
+                Dep = {
+                    'HGSA01MaxRange01',
+                },
+                Gains = {
+                    'HGSA01MaxRange02',
+                },
+                Icon = '/DGRegulus/NewRegulusScope01',
+                Level = 5,
+                Loses = {
+                    'HGSA01MaxRange01',
+                },
+            },
+            #################################################################################################################
+            # Sniper's Scope III
+            #################################################################################################################
+            HGSA01MaxRange03 = {
+                Dep = {
+                    'HGSA01MaxRange02',
+                },
+                Gains = {
+                    'HGSA01MaxRange03',
+                },
+                Icon = '/DGRegulus/NewRegulusScope01',
+                Level = 8,
+                Loses = {
+                    'HGSA01MaxRange02',
+                },
+            },
+            #################################################################################################################
+            # Deadeye
+            #################################################################################################################
+            HGSA01Deadeye01 = {
+                Dep = {
+                    'HGSA01Snipe04',
+                },
+                Gains = {
+                    'HGSA01Deadeye01',
+                },
+                Icon = '/DGRegulus/NewRegulusDeadeye01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Snipe I
+            #################################################################################################################
+            HGSA01Snipe01 = {
+                Gains = {
+                    'HGSA01Snipe01',
+                },
+                Icon = '/DGRegulus/NewRegulusSnipe01',
+                Level = 1,
+                Loses = {
+                    'HRegulusSnipeGrey01',
+                },
+            },
+            #################################################################################################################
+            # Snipe II
+            #################################################################################################################
+            HGSA01Snipe02 = {
+                Dep = {
+                    'HGSA01Snipe01',
+                },
+                Gains = {
+                    'HGSA01Snipe02',
+                },
+                Icon = '/DGRegulus/NewRegulusSnipe01',
+                Level = 4,
+                Loses = {
+                    'HGSA01Snipe01',
+                },
+            },
+            #################################################################################################################
+            # Snipe III
+            #################################################################################################################
+            HGSA01Snipe03 = {
+                Dep = {
+                    'HGSA01Snipe02',
+                },
+                Gains = {
+                    'HGSA01Snipe03',
+                },
+                Icon = '/DGRegulus/NewRegulusSnipe01',
+                Level = 7,
+                Loses = {
+                    'HGSA01Snipe02',
+                },
+            },
+            #################################################################################################################
+            # Snipe IV
+            #################################################################################################################
+            HGSA01Snipe04 = {
+                Dep = {
+                    'HGSA01Snipe03',
+                },
+                Gains = {
+                    'HGSA01Snipe04',
+                },
+                Icon = '/DGRegulus/NewRegulusSnipe01',
+                Level = 10,
+                Loses = {
+                    'HGSA01Snipe03',
+                },
+            },
+            #################################################################################################################
+            # Angelic Fury I
+            #################################################################################################################
+            HGSA01AngelicFury01 = {
+                Gains = {
+                    'HGSA01AngelicFury01',
+                },
+                Icon = '/DGRegulus/NewRegulusAngelicFury01',
+                Level = 1,
+
+                Loses = {
+                    'HRegulusAngelicFuryGrey01',
+                },
+            },
+            #################################################################################################################
+            # Angelic Fury II
+            #################################################################################################################
+            HGSA01AngelicFury02 = {
+                Dep = {
+                    'HGSA01AngelicFury01',
+                },
+                Gains = {
+                    'HGSA01AngelicFury02',
+                },
+                Icon = '/DGRegulus/NewRegulusAngelicFury01',
+                Level = 4,
+                Loses = {
+                    'HGSA01AngelicFury01',
+                },
+            },
+            #################################################################################################################
+            # Angelic Fury III
+            #################################################################################################################
+            HGSA01AngelicFury03 = {
+                Dep = {
+                    'HGSA01AngelicFury02',
+                },
+                Gains = {
+                    'HGSA01AngelicFury03',
+                },
+                Icon = '/DGRegulus/NewRegulusAngelicFury01',
+                Level = 7,
+                Loses = {
+                    'HGSA01AngelicFury02',
+                },
+            },
+            #################################################################################################################
+            # Angelic Fury IV
+            #################################################################################################################
+            HGSA01AngelicFury04 = {
+                Dep = {
+                    'HGSA01AngelicFury03',
+                },
+                Gains = {
+                    'HGSA01AngelicFury04',
+                },
+                Icon = '/DGRegulus/NewRegulusAngelicFury01',
+                Level = 10,
+                Loses = {
+                    'HGSA01AngelicFury03',
+                },
+            },
+            #################################################################################################################
+            # Vengeance I
+            #################################################################################################################
+            HGSA01Vengeance01 = {
+                Dep = {
+                    'HGSA01AngelicFury04',
+                },
+                Gains = {
+                    'HGSA01Vengeance01',
+                },
+                Icon = '/DGRegulus/NewRegulusVengence01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Tracking Device
+            #################################################################################################################
+            HGSA01Track = {
+                Gains = {
+                    'HGSA01Track',
+                },
+                Icon = '/DGRegulus/NewRegulustracking01',
+                Level = 5,
+            },
+            #################################################################################################################
+            # Stats Buffs
+            # These descriptions and names need to remain here for tooltip purposes.
+            #################################################################################################################
+            StatsBuff01 = {
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+                Name = '<LOC ABILITY_All_Stats_0001>Enhanced Attributes I',
+            },
+            StatsBuff02 = {
+                Dep = {
+                    'StatsBuff01',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+                Name = '<LOC ABILITY_All_Stats_0002>Enhanced Attributes II',
+            },
+            StatsBuff03 = {
+                Dep = {
+                    'StatsBuff02',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+                Name = '<LOC ABILITY_All_Stats_0003>Enhanced Attributes III',
+            },
+            StatsBuff04 = {
+                Dep = {
+                    'StatsBuff03',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+                Name = '<LOC ABILITY_All_Stats_0004>Enhanced Attributes IV',
+            },
+            StatsBuff05 = {
+                Dep = {
+                    'StatsBuff04',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+                Name = '<LOC ABILITY_All_Stats_0005>Enhanced Attributes V',
+            },
+            StatsBuff06 = {
+                Dep = {
+                    'StatsBuff05',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+                Name = '<LOC ABILITY_All_Stats_0006>Enhanced Attributes VI',
+            },
+        },
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/Regulus/snd_dg_regulus_grunt_hurt',    #PLACEHOLDER
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/Regulus/snd_dg_regulus_select',
+        },
+    },
+    Categories = {
+        'ASSASSIN',
+        'CANBEHEALED',
+        'CAPTURE',
+        'COMMAND',
+        'FLOATINGUNITVIEW',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MOBILE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0015>Ranged Assassin specializing in long-distance attacks.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_regulus.dds',
+        AvatarMovie_1 = '/movies/dg_iga_reg_default.bik',
+        Character = 'Sniper',
+        ChooserIcon = '/heroes/selection_hgsa01',
+        ExtraCharacters = { 'SniperFury' },
+        ExtraGrannyMeshes = {
+            '/projectiles/Bolt02/Bolt02_mesh.gr2'
+        },
+        ExtraProjectiles = {
+            '/projectiles/Bolt02/Bolt02_proj.bp',
+            '/projectiles/Mine01/Mine01_proj.bp',
+        },
+        LobbyMovie = '/movies/dg_lobby_reg.bik',
+        VictoryMovie = '/movies/dg_victory_reg.bik',
+        VictoryMovieSubtitle = '/movies/dg_victory_regulus_subtitles.bik',
+        FullIcon = '/game/lobby/avatars/regulus_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HGSA01_0000>Strengths:\nVery long range attack\nPowerful against Demigods\n\nWeaknesses:\nWeak in melee combat\nLow health\n\nPlay Style:\nArmed with a powerful crossbow, Regulus is deadliest at long range. His normal attack can be greatly enhanced, enabling him to attack from longer distances and to debilitate his enemies. He can rapidly lay down a minefield to protect either himself or an area. When faced with many enemies, he can fly into a rage, trading mana for crossbow bolts that explode on impact.\n\nBackground:\nRegulus contrasted with the other winged Thelara not only in his physical perfection but in the depth of his curiosity and intellect. While other Thelara spent their whole lives frolicking amongst the clouds, Regulus searched for knowledge. His greatest curiosity was reserved for the Grofflings, a violent but clever race of ground-dwellers whose inventions enthralled him.\n\nOne day, Regulus flew too low and was snared by a nasty Groffling named Skel. Pulled to the ground and caged, Regulus endured ridicule and then torture. While Skel\'s jeering henchmen looked on, the Groffling severed Regulus\' wings and hung them in his trophy-grotto.\n\nRegulus would have died in his cage if not for the charity of Kerrott, an old Groffling tinkerer who could not bear to see another living thing so ill-used. Kerrott broke the Thelaran free and brought him home, nursing him back to health even when, in lucid moments, Regulus begged for death.\n\nSoon, Regulus regained his strength. In an effort to distract the Thelaran from his disfigurement, Kerrott taught him how to use his metalworking tools to make trinkets. To the Groffling\'s surprise, Regulus proved a savant with hammer and anvil. Regulus worked night and day, first building an exquisite set of armor, then constructing a gigantic crossbow.\n\nOne night, Regulus donned his armor and took up his weapon. Thanking his mentor for his generosity, he disappeared into the night. The next morning, Much of Skel\'s body was found in and around the cage in which Regulus had been held. The bodies of his henchmen turned up in improbable places: pinned to rafters, hung from arches, impaled upon statuary.\n\nRegulus was never seen again.',
+        LoopingAttack = true,
+        ScoreboardIcon = '/game/scoreboard/sbicon_hgsa01.dds',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'RegulusLevelUp',
+            'RegulusLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 4,
+        OffsetZ = 0,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+        PreSpawnUnits = {
+            'hgsa01mine01',
+        },
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 4.6,
+    LifeBarSize = 1.3,
+    Mesh = {
+        IconFadeInZoom = 1000,
+        LODs = {
+            {
+                LODCutoff = 100,
+                ShaderName = 'Unit',
+            },
+            {
+                AlbedoName = 'HGSA01_lod1_albedo.dds',
+                LODCutoff = 1000,
+                Occlude = true,
+                ShaderName = 'Unit',
+                SpecularName = 'HGSA01_lod1_specteam.dds',
+            },
+        },
+    },
+    Name = '<LOC UNIT_NAME_0020>Regulus',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.0,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = false,
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 720,
+    },
+    SelectionCenterOffsetZ = 0,
+    SelectionSizeX = 3,
+    SizeX = 3.5,
+    SizeY = 5,
+    SizeZ = 3.5,
+    Stats = {
+        MaxHealth       = 1420,
+        Armor           = 250,
+        MaxEnergy       = 884,
+        RateOfFire      = 0,
+        DamageRating    = 129,
+        Regen           = 2.28,
+        EnergyRegen     = 2.76,
+        Primary = 'Agility',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/Regulus/snd_VO_dg_regulus_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_Regulus',
+    },
+    Weapon = {
+        {
+            AttackAction = 'AttackRanged',
+            AttackMoveAction = 'AttackRangedMove',
+            BallisticArc = 'RULEUBA_LowArc',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            ClosingRadius = 9,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageFriendly = false,
+            DamageType = 'Hero',
+            DisplayName = 'Arrows',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringRandomness = 0.01,
+            FiringTolerance = 180,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 45,
+            InstaHitRange = 5,
+            Label = 'Arrow01',
+            LeadTarget = true,
+            MaxRadius = 15,
+            MinRadius = 0,
+            MovementRadius = 13,
+            MuzzleVelocity = 45,
+            ProjectileId = '/projectiles/Bolt01/Bolt01_proj.bp',
+            ProjectileLifetime = 2,
+            RangedWeapon = {
+                MuzzleBones = {
+                    'sk_Sniper_Turret_Muzzle_REF',
+                },
+                MuzzleEffect = {
+                    Base = 'Projectiles',
+                    Template = 'Bolt01Launch',
+                },
+                ShotDelay = 0.15,
+            },
+            RateOfFire = 0.69,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretBoneMuzzle = 'sk_Sniper_Root',
+            TurretBonePitch = 'sk_Sniper_Root',
+            TurretBoneYaw = 'sk_Sniper_Root',
+            TurretPitch = 0,
+            TurretPitchRange = 0,
+            TurretPitchSpeed = 360,
+            TurretYaw = 0,
+            TurretYawRange = 0,
+            TurretYawSpeed = 360,
+            Turreted = true,
+            UseFiringSolutionInsteadOfAimBone = true,
+            WeaponType = 'Bow',
+        },
+    },
+}

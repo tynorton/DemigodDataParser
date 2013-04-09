@@ -1,0 +1,105 @@
+#################################################################################################################
+# Glove Shop
+# Items defined in //depot/forge/main/bindata/lua/common/Items/Glove_Items.lua
+#################################################################################################################
+UnitBlueprint {
+    Audio = {
+        UISelection = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+    },
+    Categories = {
+        'INVULNERABLE',
+        'LAND',
+        'NOSPLASHDAMAGE',
+        'OCCUPYGROUND',
+        'PRELOADRESOURCES',
+        'SELECTABLE',
+        'SCRIPTEDACTION',
+        'SHOP',
+        'STRUCTURE',
+        'UNTARGETABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        ArmorType = 'Structure',
+        Health = 13000,
+        MaxHealth = 13000,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESC_0048>A shop selling Gloves.',
+    Display = {
+        BuildUnitHeight = 20,
+        IconName = '/textures/ui/common/abilities/icons/ShopAgility.dds',
+        MeshBlueprint = '/units/ug/b/ugbShop03/ugbShop03_mesh',
+        MeshBlueprintEvil = '/units/ug/b/ugbShop03/ugbShop03_evil_mesh',
+        MouseOverIcon = 'itemshop.dds',
+        UniformScale = 0.16,
+    },
+    Effects = {
+        Ambient = {
+            Base = 'Shop03',
+            Template = 'Ambient01',
+        },
+        BuffClassification = 'Large',
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        SelectionPriority = 50,
+    },
+    Intel = {
+        VisionRadius = 10,
+    },
+    LifeBarRender = false,
+    Name = '<LOC UNIT_NAME_0052>Glove Shop',
+    ScriptedAction = '/lua/user/ShopAction.lua',
+    SelectionSizeX = 5,
+    Shop = {
+        Layout = '/units/ug/b/ugbshop03/UGBShop03_ShopLayout.lua',
+        Tree = {
+            # Gauntlets of Brutality
+            Item_Glove_010 = {
+                Cost = 400,
+                ItemBP = 'Item_Glove_010',
+            },
+            # Gladiator Gloves
+            Item_Glove_020 = {
+                Cost = 750,
+                ItemBP = 'Item_Glove_020',
+            },
+            # Wyrmskin Handguards
+            Item_Glove_040 = {
+                Cost = 1500,
+                ItemBP = 'Item_Glove_040',
+            },
+            # Gauntlets of Despair
+            Item_Glove_030 = {
+                Cost = 1750,
+                ItemBP = 'Item_Glove_030',
+            },
+            # Slayer's Grips
+            Item_Glove_070 = {
+                Cost = 3300,
+                ItemBP = 'Item_Glove_070',
+            },
+            # Gloves of Fell-Darkur
+            Item_Glove_060 = {
+                Cost = 3500,
+                ItemBP = 'Item_Glove_060',
+            },
+            # Doomspite Grips
+            Item_Glove_050 = {
+                Cost = 6750,
+                ItemBP = 'Item_Glove_050',
+            },
+        },
+    },
+    SizeX = 4,
+    SizeY = 4,
+    SizeZ = 4,
+}

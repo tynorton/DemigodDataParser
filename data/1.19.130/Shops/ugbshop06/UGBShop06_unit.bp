@@ -1,0 +1,142 @@
+#################################################################################################################
+# Ring Shop
+# Items defined in //depot/forge/main/bindata/lua/common/Items/Ring_Items.lua
+#################################################################################################################
+UnitBlueprint {
+      Audio = {
+        UISelection = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+    },
+    Categories = {
+        'INVULNERABLE',
+        'LAND',
+        'NOSPLASHDAMAGE',
+        'OCCUPYGROUND',
+        'PRELOADRESOURCES',
+        'SCRIPTEDACTION',
+        'SELECTABLE',
+        'SHOP',
+        'STRUCTURE',
+        'UNTARGETABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        ArmorType = 'Structure',
+        Health = 13000,
+        MaxHealth = 13000,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESC_0051>A shop selling Rings and Trinkets.',
+    Display = {
+        BuildUnitHeight = 20,
+        IconName = '/textures/ui/common/abilities/icons/ShopArtifact.dds',
+        MeshBlueprint = '/units/ug/b/ugbShop06/ugbShop06_mesh',
+        MeshBlueprintEvil = '/units/ug/b/ugbShop06/ugbShop06_evil_mesh',
+        MouseOverIcon = 'itemshop.dds',
+        UniformScale = 0.16,
+    },
+    Effects = {
+        Ambient = {
+            Base = 'Shop05',
+            Template = 'Ambient01',
+        },
+        BuffClassification = 'Large',
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        SelectionPriority = 50,
+    },
+    Intel = {
+        VisionRadius = 10,
+    },
+    LifeBarRender = false,
+    Name = '<LOC UNIT_NAME_0055>Trinket Shop',
+    ScriptedAction = '/lua/user/ShopAction.lua',
+    SelectionSizeX = 4.5,
+    Shop = {
+        Layout = '/units/ug/b/ugbshop06/UGBShop06_ShopLayout.lua',
+        Tree = {
+            # 11/5/2008 - Marr - Commented out
+            # Ring of Greed
+            #Item_Ring_010 = {
+            #    Cost = 1000,
+            #    ItemBP = 'Item_Ring_010',
+            #},
+
+            # Sludge Slinger
+            Item_Consumable_040 = {
+                Cost = 750,
+                ItemBP = 'Item_Consumable_040',
+            },
+            # Scroll of Sprinting
+            Item_Consumable_050 = {
+                Cost = 1750,
+                ItemBP = 'Item_Consumable_050',
+            },
+            # Forest Band
+            Item_Ring_060 = {
+                Cost = 1250,
+                ItemBP = 'Item_Ring_060',
+            },
+            # Nature's Ring
+            Item_Ring_030 = {
+                Cost = 1500,
+                ItemBP = 'Item_Ring_030',
+            },
+            # Bloodstone Ring
+            Item_Ring_020 = {
+                Cost = 1750,
+                ItemBP = 'Item_Ring_020',
+            },
+            # Warlord's Punisher
+            Item_Consumable_130 = {
+                Cost = 2250,
+                ItemBP = 'Item_Consumable_130',
+            },
+            # Twig of Life
+            Item_Consumable_120 = {
+                Cost = 3000,
+                ItemBP = 'Item_Consumable_120',
+            },
+            # Magus Rod
+            Item_Consumable_140 = {
+                Cost = 3250,
+                ItemBP = 'Item_Consumable_140',
+            },
+            # Ring of the Ancients
+            Item_Ring_040 = {
+                Cost = 3500,
+                ItemBP = 'Item_Ring_040',
+            },
+            # Orb of Defiance
+            Item_Consumable_150 = {
+                Cost = 3750,
+                ItemBP = 'Item_Consumable_150',
+            },
+            # Kudru's Ring
+            Item_Ring_050 = {
+                Cost = 4000,
+                ItemBP = 'Item_Ring_050',
+            },
+            # Parasite Egg
+            Item_Consumable_170 = {
+                Cost = 5000,
+                ItemBP = 'Item_Consumable_170',
+            },
+            # Warpstone
+            Item_Consumable_070 = {
+                Cost = 5500,
+                ItemBP = 'Item_Consumable_070',
+            },
+        },
+    },
+    SizeX = 3.5,
+    SizeY = 4,
+    SizeZ = 3.5,
+}

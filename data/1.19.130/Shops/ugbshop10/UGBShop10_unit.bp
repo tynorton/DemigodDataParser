@@ -1,0 +1,104 @@
+#################################################################################################################
+# Achievement Shop
+# Items defined in //depot/forge/main/bindata/lua/common/Items/Achievement_Items.lua
+#################################################################################################################
+UnitBlueprint {
+    Audio = {
+        UISelection = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+    },
+    Categories = {
+        'INVULNERABLE',
+        'LAND',
+        'NOSPLASHDAMAGE',
+        'PRELOADRESOURCES',
+        'SCRIPTEDACTION',
+        'SELECTABLE',
+        'SHOP',
+        'STRUCTURE',
+        'UNTARGETABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        ArmorType = 'Structure',
+        Health = 13000,
+        MaxHealth = 13000,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESC_0061>A shop selling Boots.',
+    Display = {
+        BuildUnitHeight = 20,
+        IconName = '/textures/ui/common/abilities/icons/ShopAgility.dds',
+        MeshBlueprint = '/units/ug/b/ugbShop07/ugbShop07_mesh',
+        MeshBlueprintEvil = '/units/ug/b/ugbShop07/ugbShop07_evil_mesh',
+        MouseOverIcon = '/textures/ui/game/mouseovers/school.dds',
+        UniformScale = 0.16,
+    },
+    Effects = {
+        Ambient = {
+            Base = 'Shop03',
+            Template = 'Ambient01',
+        },
+        BuffClassification = 'Large',
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        SelectionPriority = 50,
+    },
+    Intel = {
+        VisionRadius = 10,
+    },
+    LifeBarRender = false,
+    Name = '<LOC UNIT_NAME_0065>Boot Shop',
+    ScriptedAction = '/lua/user/ShopAction.lua',
+    SelectionSizeX = 5,
+    Shop = {
+        Layout = '/units/ug/b/ugbshop10/UGBShop10_ShopLayout.lua',
+        Tree = {
+            # Footman's Sabatons
+            Item_Boot_010 = {
+                Cost = 600,
+                ItemBP = 'Item_Boot_010',
+            },
+            # Boots of Speed
+            Item_Boot_020 = {
+                Cost = 1000,
+                ItemBP = 'Item_Boot_020',
+            },
+            # Unbreakable Boots
+            Item_Boot_040 = {
+                Cost = 1500,
+                ItemBP = 'Item_Boot_040',
+            },
+            # Assassin's Footguards
+            Item_Boot_030 = {
+                Cost = 1750,
+                ItemBP = 'Item_Boot_030',
+            },
+            # Journeyman Treads
+            Item_Boot_050 = {
+                Cost = 6750,
+                ItemBP = 'Item_Boot_050',
+            },
+            # Desperate Treads
+            Item_Boot_060 = {
+                Cost = 5000,
+                ItemBP = 'Item_Boot_060',
+            },
+            # Ironwalkers
+            Item_Boot_070 = {
+                Cost = 3750,
+                ItemBP = 'Item_Boot_070',
+            },
+        },
+    },
+    SizeX = 4,
+    SizeY = 4,
+    SizeZ = 4,
+}

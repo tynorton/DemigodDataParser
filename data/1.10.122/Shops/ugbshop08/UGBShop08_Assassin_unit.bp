@@ -1,0 +1,131 @@
+#################################################################################################################
+# Achievement Shop
+# Items defined in //depot/forge/main/bindata/lua/common/Items/Achievement_Items.lua
+#################################################################################################################
+UnitBlueprint {
+    Audio = {
+        BuildingLoop = {
+            Sound = 'Forge/BUILDINGS/snd_bu_create',
+        },
+        CloseShop = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+        OnHealed = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+        OnKilled = {
+            Sound = 'Forge/BUILDINGS/snd_bu_destroyed',
+        },
+        OnStartBeingBuilt = {
+            Sound = 'Forge/BUILDINGS/snd_bu_create',
+        },
+        OnStopBeingBuilt = {
+            Sound = 'Forge/BUILDINGS/snd_bu_create',
+        },
+        OnStopBuild = {
+            Sound = 'Forge/BUILDINGS/snd_bu_create',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/BUILDINGS/snd_bu_damaged',
+        },
+        OpenShop = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+        UISelection = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+    },
+    Categories = {
+        'INVULNERABLE',
+        'LAND',
+        'NOSPLASHDAMAGE',
+        'PRELOADRESOURCES',
+        'SCRIPTEDACTION',
+        'SELECTABLE',
+        'SHOP',
+        'STRUCTURE',
+        'UNTARGETABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        ArmorType = 'Structure',
+        Health = 13000,
+        MaxHealth = 13000,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESC_0065>A shop selling Achievements for Assassins.',
+    Display = {
+        BuildUnitHeight = 20,
+        IconName = '/textures/ui/common/abilities/icons/ShopAgility.dds',
+        MeshBlueprint = '/units/ug/b/ugbShop07/ugbShop07_mesh',
+        MeshBlueprintEvil = '/units/ug/b/ugbShop07/ugbShop07_evil_mesh',
+        MouseOverIcon = '/textures/ui/game/mouseovers/school.dds',
+        UniformScale = 0.16,
+    },
+    Effects = {
+        Ambient = {
+            Base = 'Shop03',
+            Template = 'Ambient01',
+        },
+        BuffClassification = 'Large',
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        SelectionPriority = 50,
+    },
+    Intel = {
+        VisionRadius = 10,
+    },
+    LifeBarRender = false,
+    Name = 'Assassin Achievement Shop',
+    ScriptedAction = '/lua/user/ShopAction.lua',
+    SelectionSizeX = 5,
+    Shop = {
+        Layout = '/units/ug/b/ugbshop08/UGBShop08_Assassin_ShopLayout.lua',
+        Tree = {
+            # Blade of the Serpent
+            AchievementManaLeech = {
+                Cost = 675,
+                ItemBP = 'AchievementManaLeech',
+            },
+            # Poisoned Dagger of Hatred
+            AchievementSnare = {
+                Cost = 800,
+                ItemBP = 'AchievementSnare',
+            },
+            # Hammer of Destruction
+            AchievementDamage = {
+                Cost = 950,
+                ItemBP = 'AchievementDamage',
+            },
+            # Staff of Renewal
+            AchievementRefreshCooldowns = {
+                Cost = 1100,
+                ItemBP = 'AchievementRefreshCooldowns',
+            },
+            # Purified Essence of Magic
+            AchievementFreeSpells = {
+                Cost = 1375,
+                ItemBP = 'AchievementFreeSpells',
+            },
+            # Sword of a Thousand Blows
+            AchievementFlurry = {
+                Cost = 1750,
+                ItemBP = 'AchievementFlurry',
+            },
+            # Heaven's Wrath
+            AchievementFinger = {
+                Cost = 2000,
+                ItemBP = 'AchievementFinger',
+            },
+        },
+    },
+    SizeX = 4,
+    SizeY = 4,
+    SizeZ = 4,
+}

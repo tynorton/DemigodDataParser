@@ -1,0 +1,105 @@
+#################################################################################################################
+# Helm Shop
+# Items defined in //depot/forge/main/bindata/lua/common/Items/Helm_Items.lua
+#################################################################################################################
+UnitBlueprint {
+    Audio = {
+        UISelection = {
+            Sound = 'Forge/UI/snd_placeholder_placeholder',
+        },
+    },
+    Categories = {
+        'INVULNERABLE',
+        'LAND',
+        'NOSPLASHDAMAGE',
+        'OCCUPYGROUND',
+        'PRELOADRESOURCES',
+        'SCRIPTEDACTION',
+        'SELECTABLE',
+        'SHOP',
+        'STRUCTURE',
+        'UNTARGETABLE',
+        'VISIBLETORECON',
+    },
+    Defense = {
+        ArmorType = 'Structure',
+        Health = 13000,
+        MaxHealth = 13000,
+        RegenRate = 1,
+        SurfaceThreatLevel = 0,
+    },
+    Description = '<LOC UNIT_DESC_0049>A shop selling Helms.',
+    Display = {
+        BuildUnitHeight = 20,
+        IconName = '/textures/ui/common/abilities/icons/ShopRune.dds',
+        MeshBlueprint = '/units/ug/b/ugbShop04/ugbShop04_mesh',
+        MeshBlueprintEvil = '/units/ug/b/ugbShop04/ugbShop04_evil_mesh',
+        MouseOverIcon = 'itemshop.dds',
+        UniformScale = 0.16,
+    },
+    Effects = {
+        Ambient = {
+            Base = 'Shop04',
+            Template = 'Ambient01',
+        },
+        BuffClassification = 'Large',
+    },
+    Footprint = {
+        SizeX = 3,
+        SizeZ = 3,
+    },
+    General = {
+        CapCost = 0,
+        SelectionPriority = 50,
+    },
+    Intel = {
+        VisionRadius = 10,
+    },
+    LifeBarRender = false,
+    Name = '<LOC UNIT_NAME_0053>Helm Shop',
+    ScriptedAction = '/lua/user/ShopAction.lua',
+    SelectionSizeX = 4,
+    Shop = {
+        Layout = '/units/ug/b/ugbshop04/UGBShop04_ShopLayout.lua',
+        Tree = {
+            # Scaled Helm
+            Item_Helm_010 = {
+                Cost = 550,
+                ItemBP = 'Item_Helm_010',
+            },
+            # Plate Visor
+            Item_Helm_020 = {
+                Cost = 600,
+                ItemBP = 'Item_Helm_020',
+            },
+            # Indra's Battleguard
+            Item_Helm_030 = {
+                Cost = 1500,
+                ItemBP = 'Item_Helm_030',
+            },
+            # Soba's Facemask
+            Item_Helm_040 = {
+                Cost = 1750,
+                ItemBP = 'Item_Helm_040',
+            },
+            # Glowing Faceguard
+            Item_Helm_050 = {
+                Cost = 3300,
+                ItemBP = 'Item_Helm_050',
+            },
+            # Anax's Crown
+            Item_Helm_060 = {
+                Cost = 6500,
+                ItemBP = 'Item_Helm_060',
+            },
+            # Theurgist's Cap
+            Item_Helm_070 = {
+                Cost = 3000,
+                ItemBP = 'Item_Helm_070',
+            },
+        },
+    },
+    SizeX = 3,
+    SizeY = 3,
+    SizeZ = 3,
+}

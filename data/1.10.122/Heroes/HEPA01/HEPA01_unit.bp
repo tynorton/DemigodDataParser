@@ -1,0 +1,658 @@
+UnitBlueprint {
+    Abilities = {
+        Default = {
+            'HUncleanVenomSpitGrey01',
+            'HUncleanOozeGrey01',
+            'HUncleanBestialWrathGrey01',
+            'HUncleanFoulGraspGrey01',
+            'HEPA01Death01',
+        },
+        Layout = '/units/heroes/HEPA01/HEPA01_SkillLayout.lua',
+        Tree = {
+            ###########################################################################
+            # Bestial Wrath I
+            ###########################################################################
+            HEPA01BestialWrath01 = {
+                Gains = {
+                    'HEPA01BestialWrath01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBestialWrath01',
+                Level = 1,
+                Loses = {
+                    'HUncleanBestialWrathGrey01',
+                },
+            },
+            ###########################################################################
+            # Bestial Wrath II
+            ###########################################################################
+            HEPA01BestialWrath02 = {
+                Dep = {
+                    'HEPA01BestialWrath01',
+                },
+                Gains = {
+                    'HEPA01BestialWrath02',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBestialWrath01',
+                Level = 4,
+                Loses = {
+                    'HEPA01BestialWrath01',
+                },
+            },
+            ###########################################################################
+            # Bestial Wrath III
+            ###########################################################################
+            HEPA01BestialWrath03 = {
+                Dep = {
+                    'HEPA01BestialWrath02',
+                },
+                Gains = {
+                    'HEPA01BestialWrath03',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBestialWrath01',
+                Level = 7,
+                Loses = {
+                    'HEPA01BestialWrath02',
+                },
+            },
+            ###########################################################################
+            # Bestial Wrath IV
+            ###########################################################################
+            HEPA01BestialWrath04 = {
+                Dep = {
+                    'HEPA01BestialWrath03',
+                },
+                Gains = {
+                    'HEPA01BestialWrath04',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBestialWrath01',
+                Level = 10,
+                Loses = {
+                    'HEPA01BestialWrath03',
+                },
+            },
+            ###########################################################################
+            # Unrelenting Wrath
+            ###########################################################################
+            HEPA01BestialWrath05 = {
+                Dep = {
+                    'HEPA01BestialWrath04',
+                },
+                Gains = {
+                    'HEPA01BestialWrath05',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastUnrelentingWrath01',
+                Level = 15,
+                Loses = {
+                    'HEPA01BestialWrath04',
+                },
+            },
+            ###########################################################################
+            # Inner Beast I
+            ###########################################################################
+            HEPA01SpeedIncrease01 = {
+                Gains = {
+                    'HEPA01SpeedIncrease01',
+                },
+                Icon = '/DGUncleanbeast/NewUncleanInnerBeast01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Inner Beast II
+            ###########################################################################
+            HEPA01SpeedIncrease02 = {
+                Dep = {
+                    'HEPA01SpeedIncrease01',
+                },
+                Gains = {
+                    'HEPA01SpeedIncrease02',
+                },
+                Icon = '/DGUncleanbeast/NewUncleanInnerBeast01',
+                Level = 5,
+                Loses = {
+                    'HEPA01SpeedIncrease01',
+                },
+            },
+            ###########################################################################
+            # Inner Beast III
+            ###########################################################################
+            HEPA01SpeedIncrease03 = {
+                Dep = {
+                    'HEPA01SpeedIncrease02',
+                },
+                Gains = {
+                    'HEPA01SpeedIncrease03',
+                },
+                Icon = '/DGUncleanbeast/NewUncleanInnerBeast01',
+                Level = 8,
+                Loses = {
+                    'HEPA01SpeedIncrease02',
+                },
+            },
+            ###########################################################################
+            # Acclimation
+            ###########################################################################
+            HEPA01Acclimation = {
+                Dep = {
+                    'HEPA01SpeedIncrease03',
+                },
+                Gains = {
+                    'HEPA01Acclimation',
+                },
+                Icon = '/DGUncleanbeast/NewUncleanBeastAcclimation01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Diseased Claws I
+            ###########################################################################
+            HEPA01DiseasedClaws01 = {
+                Gains = {
+                    'HEPA01DiseasedClaws01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastDiseasedclaw01',
+                Level = 2,
+            },
+            ###########################################################################
+            # Diseased Claws II
+            ###########################################################################
+            HEPA01DiseasedClaws02 = {
+                Dep = {
+                    'HEPA01DiseasedClaws01',
+                },
+                Gains = {
+                    'HEPA01DiseasedClaws02',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastDiseasedclaw01',
+                Level = 5,
+                Loses = {
+                    'HEPA01DiseasedClaws01',
+                },
+            },
+            ###########################################################################
+            # Diseased Claws III
+            ###########################################################################
+            HEPA01DiseasedClaws03 = {
+                Dep = {
+                    'HEPA01DiseasedClaws02',
+                },
+                Gains = {
+                    'HEPA01DiseasedClaws03',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastDiseasedclaw01',
+                Level = 8,
+                Loses = {
+                    'HEPA01DiseasedClaws02',
+                },
+            },
+            ###########################################################################
+            # Foul Grasp I
+            ###########################################################################
+            HEPA01FoulGrasp01 = {
+                Gains = {
+                    'HEPA01FoulGrasp01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanFoulGrasp01',
+                Level = 5,
+                Loses = {
+                    'HUncleanFoulGraspGrey01',
+                },
+            },
+            ###########################################################################
+            # Foul Grasp II
+            ###########################################################################
+            HEPA01FoulGrasp02 = {
+                Dep = {
+                    'HEPA01FoulGrasp01',
+                },
+                Gains = {
+                    'HEPA01FoulGrasp02',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanFoulGrasp01',
+                Level = 10,
+                Loses = {
+                    'HEPA01FoulGrasp01',
+                },
+            },
+            ###########################################################################
+            # Foul Grasp III
+            ###########################################################################
+            HEPA01FoulGrasp03 = {
+                Dep = {
+                    'HEPA01FoulGrasp02',
+                },
+                Gains = {
+                    'HEPA01FoulGrasp03',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanFoulGrasp01',
+                Level = 15,
+                Loses = {
+                    'HEPA01FoulGrasp02',
+                },
+            },
+            ###########################################################################
+            # Ooze I
+            ###########################################################################
+            HEPA01Ooze01 = {
+                Gains = {
+                    'HEPA01Ooze01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastOoze01',
+                Level = 1,
+                Loses = {
+                    'HUncleanOozeGrey01',
+                },
+            },
+            ###########################################################################
+            # Ooze II
+            ###########################################################################
+            HEPA01Ooze02 = {
+                Dep = {
+                    'HEPA01Ooze01',
+                },
+                Gains = {
+                    'HEPA01Ooze02',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastOoze01',
+                Level = 4,
+                Loses = {
+                    'HEPA01Ooze01',
+                },
+            },
+            ###########################################################################
+            # Ooze III
+            ###########################################################################
+            HEPA01Ooze03 = {
+                Dep = {
+                    'HEPA01Ooze02',
+                },
+                Gains = {
+                    'HEPA01Ooze03',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastOoze01',
+                Level = 7,
+                Loses = {
+                    'HEPA01Ooze02',
+                },
+            },
+            ###########################################################################
+            # Ooze IV
+            ###########################################################################
+            HEPA01Ooze04 = {
+                Dep = {
+                    'HEPA01Ooze03',
+                },
+                Gains = {
+                    'HEPA01Ooze04',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastOoze01',
+                Level = 10,
+                Loses = {
+                    'HEPA01Ooze03',
+                },
+            },
+            ###########################################################################
+            # Plague I
+            ###########################################################################
+            HEPA01Plague01 = {
+                Dep = {
+                    'HEPA01PostMortem01',
+                },
+                Gains = {
+                    'HEPA01Plague01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanPlague01',
+                Level = 10,
+            },
+            ###########################################################################
+            # Plague II
+            ###########################################################################
+            HEPA01Plague02 = {
+                Dep = {
+                    'HEPA01Plague01',
+                },
+                Gains = {
+                    'HEPA01Plague02',
+                },
+                Loses = {
+                    'HEPA01Plague01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanPlague01',
+                Level = 15,
+            },
+            ###########################################################################
+            # Post Mortem
+            ###########################################################################
+            HEPA01PostMortem01 = {
+                Gains = {
+                    'HEPA01PostMortem01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanPostMortem01',
+                Level = 5,
+            },
+            ###########################################################################
+            # Venom Spit I
+            ###########################################################################
+            HEPA01VenomSpit01 = {
+                Gains = {
+                    'HEPA01VenomSpit01',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanVenomSpit01',
+                Level = 1,
+                Loses = {
+                    'HUncleanVenomSpitGrey01',
+                },
+            },
+            ###########################################################################
+            # Venom Spit II
+            ###########################################################################
+            HEPA01VenomSpit02 = {
+                Dep = {
+                    'HEPA01VenomSpit01',
+                },
+                Gains = {
+                    'HEPA01VenomSpit02',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanVenomSpit01',
+                Level = 4,
+                Loses = {
+                    'HEPA01VenomSpit01',
+                },
+            },
+            ###########################################################################
+            # Venom Spit III
+            ###########################################################################
+            HEPA01VenomSpit03 = {
+                Dep = {
+                    'HEPA01VenomSpit02',
+                },
+                Gains = {
+                    'HEPA01VenomSpit03',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanVenomSpit01',
+                Level = 7,
+                Loses = {
+                    'HEPA01VenomSpit02',
+                },
+            },
+            ###########################################################################
+            # Venom Spit IV
+            ###########################################################################
+            HEPA01VenomSpit04 = {
+                Dep = {
+                    'HEPA01VenomSpit03',
+                },
+                Gains = {
+                    'HEPA01VenomSpit04',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanVenomSpit01',
+                Level = 10,
+                Loses = {
+                    'HEPA01VenomSpit03',
+                },
+            },
+            ###########################################################################
+            # Putrid Flow
+            ###########################################################################
+            HEPA01PutridFlow = {
+                Dep = {
+                    'HEPA01VenomSpit04',
+                },
+                Gains = {
+                    'HEPA01PutridFlow',
+                },
+                Icon = '/DGUncleanBeast/NewUncleanBeastPutridFlow01',
+                Level = 15,
+            },
+            #################################################################################################################
+            # Stats Buffs
+            # These descriptions and names need to remain here for tooltip purposes.
+            #################################################################################################################
+            StatsBuff01 = {
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff01',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 2,
+                Name = '<LOC ABILITY_All_Stats_0001>Enhanced Attributes I',
+            },
+            StatsBuff02 = {
+                Dep = {
+                    'StatsBuff01',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff02',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 4,
+                Name = '<LOC ABILITY_All_Stats_0002>Enhanced Attributes II',
+            },
+            StatsBuff03 = {
+                Dep = {
+                    'StatsBuff02',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff03',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 6,
+                Name = '<LOC ABILITY_All_Stats_0003>Enhanced Attributes III',
+            },
+            StatsBuff04 = {
+                Dep = {
+                    'StatsBuff03',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff04',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 8,
+                Name = '<LOC ABILITY_All_Stats_0004>Enhanced Attributes IV',
+            },
+            StatsBuff05 = {
+                Dep = {
+                    'StatsBuff04',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff05',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 10,
+                Name = '<LOC ABILITY_All_Stats_0005>Enhanced Attributes V',
+            },
+            StatsBuff06 = {
+                Dep = {
+                    'StatsBuff05',
+                },
+                Description = '<LOC ABILITY_All_Stats_0000>+115 Health\n+0.18 Health per second\n\n+2% Attack Speed\n+25 Armor\n\n+105 Mana\n+0.32 Mana per second\n\n+6 Weapon Damage',
+                Gains = {
+                    'StatsBuff06',
+                },
+                Icon = '/NewIcons/HealthIcon',
+                Level = 15,
+                Name = '<LOC ABILITY_All_Stats_0006>Enhanced Attributes VI',
+            },
+        },
+    },
+    AI = {
+        GuardScanRadius = 8,
+    },
+    Audio = {
+        OnLevelUp = {
+            Sound = 'Forge/UI/Hud/snd_ui_DG_levelup',
+        },
+        OnTakeDamage = {
+            Sound = 'Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_grunt_hurt',
+        },
+        UISelection = {
+            Sound = 'Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_beast_select',
+        },
+    },
+    Categories = {
+        'ASSASSIN',
+        'CANBEHEALED',
+        'CAPTURE',
+        'FLOATINGUNITVIEW',
+        'GRIDBASEDMOTION',
+        'HERO',
+        'INVENTORY',
+        'LAND',
+        'MELEE',
+        'MOBILE',
+        'SELECTABLE',
+        'SHOPPER',
+        'SKILLTREE',
+        'VISIBLETORECON',
+        'PRELOADRESOURCES',
+    },
+    CollisionOffsetZ = 0.5,
+    Defense = {
+        ArmorType = 'Demigod',
+        BaseArmor = 0,
+        Health = 0,
+        MaxHealth = 0,
+        RegenRate = 0,
+        SurfaceThreatLevel = 40,
+    },
+    Description = '<LOC UNIT_DESC_0011>Melee Assassin specializing in diseases.',
+    Display = {
+        Avatar = '/textures/heroes/faces/face_uncleanbeast.dds',
+        AvatarMovie_1 = '/movies/dg_iga_ub_default.bik',
+        Character = 'Unclean_Beast',
+        ChooserIcon = '/heroes/selection_hepa01',
+        ExtraProjectiles = {
+            '/projectiles/Venomspit01/Venomspit01_proj.bp',
+            '/projectiles/AfterMathEffect01/AfterMathEffect01_proj.bp',
+        },
+        FullIcon = '/game/lobby/avatars/uncleanbeast_full.dds',
+        HelpText = '<LOC LOBBY_DESCRIPTION_HEPA01_0000>Strengths:\nFast melee attacker\nDrains health\n\nWeaknesses:\nRelies on health\nLimited ranged capability\n\nPlay Style:\nThe Unclean Beast is a swift-moving creature that can quickly charge and retreat. It deploys a dizzying array of harmful effects that can cripple anyone foolish enough to come too close. If the Unclean Beast finds itself low on health, it can drain nearby enemies. Be cautious of your allies when fighting against the Unclean Beast, for your friends may be infected with its vile and contagious plague.\n\nBackground:\nPicking through the wreckage of his caravan after a sandstorm, Saam-el came across a strange, half-buried book. It contained writing, but not in any language he\'d ever seen. Suspecting it might have some value, he carried it to the next oasis, where one of his wives lived.\n\nArriving home, Saam-el was spurned by his wife because he had lost his dowry-chest in the storm. As he prepared to sleep, the book whispered to him. Though it spoke in a thousand foreign tongues, he could somehow comprehend the offer that it made: the book would give him the power to dominate all the tribes of the dunelands, in exchange for his wife. He assented, and his wife soon became pregnant.\n\nThe birth went very badly. Entering the dark, bloody birth-tent, Saam-el found a horrific, foul-smelling creature, all teeth and spikes and exposed organs. He ran from the place in terror, and the beast followed him out, fleeing into the duneland wastes.\n\nSaam-el hurried home and tried to destroy the book, but fire would not harm it. When he tried to bury the tome, the whispering voices only grew louder inside his head. Finally, he drank himself to sleep.\n\nThe next morning, a rabble gathered around his tent. Led by his wife\'s father and driven by the suspicion that Saam-el had been somehow responsible for the girl\'s death, the mob dragged him outside. As they began to beat him to death, the Unclean Beast returned. In a few moments of horrifying tumult, the creature slaughtered everyone in the camp but Saam-el. Realizing that the monster had come to protect him, Saam-el saw that this dark servant contained the power promised to him by the book.\n\nIt took only a few months for Saam-el and his new minion to kill every living thing in the dunelands. Saam-el proclaimed himself Emperor Saam-el Harra the Merciless, but the voices commanded him to spread his dominion beyond the edges of the Desert Sea. Finally seeing that he had allowed himself to become as much a servant as the Unclean Beast, he refused the book\'s demands.\n\nThe Unclean Beast devoured him and sped onward to the green lands beyond the Desert Sea.',
+        ScoreboardIcon = '/game/scoreboard/sbicon_hepa01.dds',
+        LobbyMovie = '/movies/dg_lobby_beast.bik',
+        VictoryMovie = '/movies/dg_victory_beast.bik',
+        VictoryMovieSubtitle = '/movies/dg_victory_beast_subtitles.bik',
+    },
+    Energy = {
+        EnergyMax = 0,
+        EnergyRegen = 0.01,
+        EnergyStart = 0,
+    },
+    Experience = {
+        LevelUpBuffs = {
+            'UncleanBeastLevelUp',
+            'UncleanBeastLevelUpHealthEnergyGain',
+        },
+        Radius = 20,
+        Value = 250,
+    },
+    FloatText = {
+        OffsetX = 0,
+        OffsetY = 5,
+        OffsetZ = 1.5,
+    },
+    Footprint = {
+        Flags = 'FPFLAG_IgnoreMobileUnits',
+        SizeX = 6,
+        SizeZ = 6,
+    },
+    General = {
+        CapCost = 0,
+        CommandCaps = {
+            RULEUCC_AggressiveMove = true,
+            RULEUCC_Attack = true,
+            RULEUCC_Move = true,
+            RULEUCC_Patrol = true,
+            RULEUCC_Pause = true,
+            RULEUCC_RetaliateToggle = true,
+            RULEUCC_Script = true,
+            RULEUCC_Stop = true,
+        },
+        IgnoreDeathSlider = true,
+        ProductionPerSecondGold = 0,
+        SilentProduction = true,
+    },
+    Intel = {
+        VisionRadius = 30,
+    },
+    Inventory = {
+        Equipment = 5,
+        Clickables = 3,
+        Achievement = 1,
+    },
+    LifeBarHeight = 0.5,
+    LifeBarOffset = 5,
+    LifeBarSize = 1.3,
+    Name = '<LOC UNIT_NAME_0014>Unclean Beast',
+    Physics = {
+        MaxAcceleration = 100,
+        MaxBrake = 100,
+        MaxSpeed = 6.3,
+        MaxSpeedReverse = 0,
+        MotionType = 'RULEUMT_Land',
+        RotateOnSpot = true,
+        RotateOnSpotThreshold = 0.5,
+        StandUpright = true,
+        TurnRadius = 0,
+        TurnRate = 720,
+    },
+    SelectionCenterOffsetZ = -0.7,
+    SelectionSizeX = 3.5,
+    SizeX = 3.5,
+    SizeY = 4,
+    SizeZ = 4,
+    Stats = {
+        MaxHealth       = 1550,
+        Armor           = 475,
+        MaxEnergy       = 1092,
+        RateOfFire      = 0,
+        DamageRating    = 168,
+        Regen           = 2.37,
+        EnergyRegen     = 3.4,
+        Primary         = 'Power',
+    },
+    Steering = {
+		AttractCoeff = 6.0,
+		RepulseCoeff = 30.0,
+        Manual = true,
+        Category = "Hero",
+    },
+    StrategicIconSize = 0,
+    VO = {
+        Lobby = 'Forge/VO/Unclean_Beast/snd_VO_dg_unclean_lobby',
+        TournamentVictory = 'Forge/VO/Ann/Ending_Victories/snd_vo_Announcer_Ending_Victories_Unclean',
+    },
+    Weapon = {
+        {
+            AlwaysRecheckTarget = false,
+            BallisticArc = 'RULEUBA_None',
+            CanDamageReturn = true,
+            CanFireWhileMoving = true,
+            CollideFriendly = false,
+            Damage = 0,
+            DamageDelay = 0.3,
+            DamageFriendly = false,
+            DamageType = 'Hero',
+            DisplayName = 'Fist',
+            FireTargetLayerCapsTable = {
+                Land = 'Air|Land',
+            },
+            FiringTolerance = 360,
+            HeadingArcCenter = 0,
+            HeadingArcRange = 45,
+            IsMelee = true,
+            Label = 'MeleeWeapon',
+            MaxRadius = 6,
+            MinRadius = 0,
+            RateOfFire = 0.72,
+            SlavedToBody = true,
+            TargetCheckInterval = 0.2,
+            TargetPriorities = {
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            WeaponType = 'Fist',
+        },
+    },
+}
