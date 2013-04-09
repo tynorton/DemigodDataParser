@@ -1,24 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Reflection;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml;
-using System.Xml.XPath;
 using Demigod;
 
-public partial class _Default : Headfirst.Web.UI.Page
+public partial class _Default : Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
         this.AddCssFile("static/css/styles.css");
 
         this.AddJsFile("http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js");
-        this.AddJsFile("/static/js/jquery.demigod.js");
-        this.AddJsFile("/static/js/jquery.dataTables.min.js");
+        this.AddJsFile("static/js/jquery.demigod.js");
+        this.AddJsFile("static/js/jquery.dataTables.min.js");
 
         this.AddClientScriptVariable("characterDropDownId", this.c_characterDropDown.ClientID);
         this.AddClientScriptVariable("levelDropDownId", this.c_levelDropDown.ClientID);

@@ -8,8 +8,16 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Demigod;
 
-public partial class controls_ItemGrid : Headfirst.Web.UI.UserControl
+public partial class controls_ItemGrid : UserControl
 {
+    public new Page Page
+    {
+        get
+        {
+            return base.Page as Page;
+        }
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (null == this.ActiveCharacter)
