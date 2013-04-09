@@ -1,0 +1,972 @@
+<DemigodBlueprints id="HGSA01_Abilities">
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HGSA01MaxRange01</Name>
+      <DisplayName>Sniper's Scope I</DisplayName>
+      <Description>Regulus tunes his crossbow, increasing its range by [GetRangeBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRangeBuff>function(self) return math.floor( Buffs[self.Name].Affects.MaxRadius.Add ) end</GetRangeBuff>
+      <Icon>/DGRegulus/NewRegulusScope01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HGSA01MaxRange01</Name>
+          <DisplayName>Sniper's Scope I</DisplayName>
+          <BuffType>HGSA01MAXRANGE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <MaxRadius>
+              <Add>2</Add>
+            </MaxRadius>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01MaxRange02</Name>
+      <DisplayName>Sniper's Scope II</DisplayName>
+      <Description>Regulus tunes his crossbow, increasing its range by [GetRangeBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRangeBuff>function(self) return math.floor( Buffs[self.Name].Affects.MaxRadius.Add ) end</GetRangeBuff>
+      <Icon>/DGRegulus/NewRegulusScope01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HGSA01MaxRange02</Name>
+          <DisplayName>Sniper's Scope II</DisplayName>
+          <BuffType>HGSA01MAXRANGE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <MaxRadius>
+              <Add>4</Add>
+            </MaxRadius>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01MaxRange03</Name>
+      <DisplayName>Sniper's Scope III</DisplayName>
+      <Description>Regulus tunes his crossbow, increasing its range by [GetRangeBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRangeBuff>function(self) return math.floor( Buffs[self.Name].Affects.MaxRadius.Add ) end</GetRangeBuff>
+      <Icon>/DGRegulus/NewRegulusScope01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HGSA01MaxRange03</Name>
+          <DisplayName>Sniper's Scope III</DisplayName>
+          <BuffType>HGSA01MAXRANGE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <MaxRadius>
+              <Add>6</Add>
+            </MaxRadius>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Deadeye01</Name>
+      <DisplayName>Deadeye</DisplayName>
+      <Description>Regulus has a [GetChance]% chance of stopping his enemies dead in their tracks, stunning them for [GetDuration] seconds.</Description>
+      <GetChance>function(self) return math.floor( self.WeaponProcChance ) end</GetChance>
+      <GetDuration>function(self) return string.format("%.1f", Buffs['HGSA01DeadeyeStun01'].Duration) end</GetDuration>
+      <AbilityType>WeaponProc</AbilityType>
+      <WeaponProcChance>3</WeaponProcChance>
+      <Icon>/DGRegulus/NewRegulusDeadeye01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Snipe01</Name>
+      <DisplayName>Snipe I</DisplayName>
+      <Description>Regulus takes time to set up a devastating shot, piercing a target for [GetInitialDamage] damage plus additional damage as it travels.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>450</EnergyCost>
+      <RangeMax>90</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>250</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>2.0</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <LockWeapons>true</LockWeapons>
+      <CastAction>Snipe</CastAction>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <Icon>/DGRegulus/NewRegulusSnipe01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Snipe02</Name>
+      <DisplayName>Snipe II</DisplayName>
+      <Description>Regulus takes time to set up a devastating shot, piercing a target for [GetInitialDamage] damage plus additional damage as it travels.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>550</EnergyCost>
+      <RangeMax>90</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>400</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>2.0</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <LockWeapons>true</LockWeapons>
+      <CastAction>Snipe</CastAction>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <Icon>/DGRegulus/NewRegulusSnipe01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Snipe03</Name>
+      <DisplayName>Snipe III</DisplayName>
+      <Description>Regulus takes time to set up a devastating shot, piercing a target for [GetInitialDamage] damage plus additional damage as it travels.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>650</EnergyCost>
+      <RangeMax>90</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>550</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>2.0</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <LockWeapons>true</LockWeapons>
+      <CastAction>Snipe</CastAction>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <Icon>/DGRegulus/NewRegulusSnipe01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Snipe04</Name>
+      <DisplayName>Snipe IV</DisplayName>
+      <Description>Regulus takes time to set up a devastating shot, piercing a target for [GetInitialDamage] damage plus additional damage as it travels.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>750</EnergyCost>
+      <RangeMax>90</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>700</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>2.0</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <LockWeapons>true</LockWeapons>
+      <CastAction>Snipe</CastAction>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <Icon>/DGRegulus/NewRegulusSnipe01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Maim01</Name>
+      <DisplayName>Maim I</DisplayName>
+      <Description>Regulus aims for the legs of his enemies, decreasing their Movement Speed by [GetSlowBuff]% when hit.\n\nLasts [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetSlowBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetBuffs>
+        <BuffBlueprint>
+          <Name>HGSA01Maim01</Name>
+          <DisplayName>Maim</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>HGSA01MAIM</BuffType>
+          <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <Effects>Slow03</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGRegulus/NewRegulusMaim01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.05</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </TargetBuffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Maim02</Name>
+      <DisplayName>Maim II</DisplayName>
+      <Description>Regulus aims for the legs of his enemies, decreasing their Movement Speed by [GetSlowBuff]% when hit.\n\nLasts [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetSlowBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetBuffs>
+        <BuffBlueprint>
+          <Name>HGSA01Maim02</Name>
+          <DisplayName>Maim</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>HGSA01MAIM</BuffType>
+          <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <Effects>Slow03</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGRegulus/NewRegulusMaim01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.07</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </TargetBuffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Maim03</Name>
+      <DisplayName>Maim III</DisplayName>
+      <Description>Regulus aims for the legs of his enemies, decreasing their Movement Speed by [GetSlowBuff]% when hit.\n\nLasts [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetSlowBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetBuffs>
+        <BuffBlueprint>
+          <Name>HGSA01Maim03</Name>
+          <DisplayName>Maim</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>HGSA01MAIM</BuffType>
+          <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <Effects>Slow03</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGRegulus/NewRegulusMaim01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.1</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </TargetBuffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01ImpedanceBolt01</Name>
+      <DisplayName>Impedance Bolt</DisplayName>
+      <Description>Regulus' bolts have a [GetChance]% chance to cripple the flow of Mana, doubling the cost of abilities for [GetDuration] seconds.</Description>
+      <GetChance>function(self) return math.floor( self.WeaponProcChance ) end</GetChance>
+      <GetDuration>function(self) return math.floor( Buffs['HGSA01ImpedanceBoltDebuff01'].Duration ) end</GetDuration>
+      <AbilityType>WeaponProc</AbilityType>
+      <WeaponProcChance>10</WeaponProcChance>
+      <Icon>/DGRegulus/NewRegulusImpedenceBolt01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Betrayer01</Name>
+      <DisplayName>Mark of the Betrayer I</DisplayName>
+      <Description>Regulus fires at a Demigod, marking them with a rune. When they perform an ability, they and their nearby allies take [GetDamageAmt] damage. Also, the Demigod's Movement Speed is reduced by [GetSlowBuff]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>600</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>20</Cooldown>
+      <DamageType>Spell</DamageType>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <CastAction>Mark</CastAction>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <GetDamageAmt>function(self) return math.floor( Buffs['HGSA01Betrayer01'].DamageAmt ) end</GetDamageAmt>
+      <GetDuration>function(self) return ( Buffs['HGSA01BetrayerSlow01'].Duration ) end</GetDuration>
+      <GetSlowBuff>function(self) return math.floor( Buffs['HGSA01BetrayerSlow01'].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HGSA01Betrayer01</Name>
+          <DisplayName>Mark of the Betrayer</DisplayName>
+          <Description>Will take damage and be slowed on next ability use.</Description>
+          <BuffType>HGSA01BETRAYER</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <DamageAmt>400</DamageAmt>
+          <DamageRadius>8</DamageRadius>
+          <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+          <Effects>MarkBetrayer01</Effects>
+          <EffectsBone>-2</EffectsBone>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Betrayer02</Name>
+      <DisplayName>Mark of the Betrayer II</DisplayName>
+      <Description>Regulus fires at a Demigod, marking them with a rune. When they perform an ability, they and their nearby allies take [GetDamageAmt] damage. Also, the Demigod's Movement Speed is reduced by [GetSlowBuff]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>775</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>20</Cooldown>
+      <DamageType>Spell</DamageType>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <CastAction>Mark</CastAction>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <LockWeapons>true</LockWeapons>
+      <GetDamageAmt>function(self) return math.floor( Buffs['HGSA01Betrayer02'].DamageAmt ) end</GetDamageAmt>
+      <GetDuration>function(self) return ( Buffs['HGSA01BetrayerSlow02'].Duration ) end</GetDuration>
+      <GetSlowBuff>function(self) return math.floor( Buffs['HGSA01BetrayerSlow02'].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HGSA01Betrayer02</Name>
+          <DisplayName>Mark of the Betrayer</DisplayName>
+          <Description>Will take damage and be slowed on next ability use.</Description>
+          <BuffType>HGSA01BETRAYER</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <DamageAmt>600</DamageAmt>
+          <DamageRadius>10</DamageRadius>
+          <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+          <Effects>MarkBetrayer01</Effects>
+          <EffectsBone>-2</EffectsBone>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Betrayer03</Name>
+      <DisplayName>Mark of the Betrayer III</DisplayName>
+      <Description>Regulus fires at a Demigod, marking them with a rune. When they perform an ability, they and their nearby allies take [GetDamageAmt] damage. Also, the Demigod's Movement Speed is reduced by [GetSlowBuff]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>950</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>20</Cooldown>
+      <DamageType>Spell</DamageType>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <CastAction>Mark</CastAction>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <LockWeapons>true</LockWeapons>
+      <GetDamageAmt>function(self) return math.floor( Buffs['HGSA01Betrayer03'].DamageAmt ) end</GetDamageAmt>
+      <GetDuration>function(self) return ( Buffs['HGSA01BetrayerSlow03'].Duration ) end</GetDuration>
+      <GetSlowBuff>function(self) return math.floor( Buffs['HGSA01BetrayerSlow03'].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HGSA01Betrayer03</Name>
+          <DisplayName>Mark of the Betrayer</DisplayName>
+          <Description>Will take damage and be slowed on next ability use.</Description>
+          <BuffType>HGSA01BETRAYER</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <DamageAmt>800</DamageAmt>
+          <DamageRadius>12</DamageRadius>
+          <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+          <Effects>MarkBetrayer01</Effects>
+          <EffectsBone>-2</EffectsBone>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01ExplosiveMine01</Name>
+      <DisplayName>Explosive Mine I</DisplayName>
+      <Description>Regulus sets an explosive proximity mine that deals [GetDamage] damage when it explodes.\n\nUp to [GetMineMax] mines may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <Cooldown>10</Cooldown>
+      <EnergyCost>440</EnergyCost>
+      <Icon>/DGRegulus/NewRegulusExplosiveMine01</Icon>
+      <AffectRadius>3</AffectRadius>
+      <RangeMax>15</RangeMax>
+      <RangeMin>1</RangeMin>
+      <MineMax>6</MineMax>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastingTime>1</CastingTime>
+      <DamageAmt>300</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastAction>Mine</CastAction>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetDamage>function(self) return math.floor( self.DamageAmt ) end</GetDamage>
+      <GetMineMax>function(self) return math.floor( self.MineMax ) end</GetMineMax>
+      <Reticule>AoE_Mine</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01ExplosiveMine02</Name>
+      <DisplayName>Explosive Mine II</DisplayName>
+      <Description>Regulus sets two explosive proximity mines that deals [GetDamage] damage when it explodes.\n\nUp to [GetMineMax] mines may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <Cooldown>10</Cooldown>
+      <EnergyCost>550</EnergyCost>
+      <Icon>/DGRegulus/NewRegulusExplosiveMine01</Icon>
+      <AffectRadius>4.5</AffectRadius>
+      <RangeMax>15</RangeMax>
+      <RangeMin>1</RangeMin>
+      <MineMax>6</MineMax>
+      <ArcRadius>5.2</ArcRadius>
+      <ArcSize>.18</ArcSize>
+      <ArcOffset>0.84</ArcOffset>
+      <NumMines>2</NumMines>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastingTime>1</CastingTime>
+      <DamageAmt>350</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastAction>Mine</CastAction>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetDamage>function(self) return math.floor( self.DamageAmt ) end</GetDamage>
+      <GetMineMax>function(self) return math.floor( self.MineMax ) end</GetMineMax>
+      <Reticule>AoE_Mine</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01ExplosiveMine03</Name>
+      <DisplayName>Explosive Mine III</DisplayName>
+      <Description>Regulus sets three explosive proximity mines that deals [GetDamage] damage when it explodes.\n\nUp to [GetMineMax] mines may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <Cooldown>10</Cooldown>
+      <EnergyCost>660</EnergyCost>
+      <Icon>/DGRegulus/NewRegulusExplosiveMine01</Icon>
+      <AffectRadius>6</AffectRadius>
+      <RangeMax>15</RangeMax>
+      <RangeMin>1</RangeMin>
+      <MineMax>6</MineMax>
+      <ArcRadius>5</ArcRadius>
+      <ArcSize>.28</ArcSize>
+      <ArcOffset>1.19</ArcOffset>
+      <NumMines>3</NumMines>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastingTime>1</CastingTime>
+      <DamageAmt>400</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastAction>Mine</CastAction>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetDamage>function(self) return math.floor( self.DamageAmt ) end</GetDamage>
+      <GetMineMax>function(self) return math.floor( self.MineMax ) end</GetMineMax>
+      <Reticule>AoE_Mine</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01ShrapnelMine01</Name>
+      <DisplayName>Shrapnel Mine</DisplayName>
+      <Description>Regulus sets three explosive proximity mines that deal [GetDamage] damage each and slow enemies by 30% when they explode.\n\nUp to [GetMineMax] mines may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <Cooldown>10</Cooldown>
+      <EnergyCost>770</EnergyCost>
+      <Icon>/DGRegulus/NewRegulusShrapnel01</Icon>
+      <AffectRadius>6</AffectRadius>
+      <RangeMax>15</RangeMax>
+      <RangeMin>1</RangeMin>
+      <MineMax>6</MineMax>
+      <ArcRadius>5</ArcRadius>
+      <ArcSize>.28</ArcSize>
+      <ArcOffset>1.19</ArcOffset>
+      <NumMines>3</NumMines>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastingTime>1</CastingTime>
+      <DamageAmt>450</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastAction>Mine</CastAction>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetDamage>function(self) return math.floor( self.DamageAmt ) end</GetDamage>
+      <GetMineMax>function(self) return math.floor( self.MineMax ) end</GetMineMax>
+      <Reticule>AoE_Mine</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Track</Name>
+      <DisplayName>Tracking Device</DisplayName>
+      <Description>Regulus' bolts are rigged with tracking devices that allow him and his allies to see the enemies he struck for [GetDuration] seconds. Snipe will also implant a tracking device.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDuration>function(self) return math.floor( Buffs['HGSA01Tracked'].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01AngelicFuryOn</Name>
+      <DisplayName>Angelic Fury</DisplayName>
+      <Description>Regulus enters a divine rage. His bolts deal increased damage and explode on contact. Each shot costs Mana.</Description>
+      <AbilityType>Instant</AbilityType>
+      <Cooldown>5</Cooldown>
+      <SharedCooldown>HGSA01AngelicFurySwitch</SharedCooldown>
+      <EnergyCost>0</EnergyCost>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>AngelOn</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <AbilityCategory>HGSA01ANGELICFURYON</AbilityCategory>
+      <VengAffectRadius>10</VengAffectRadius>
+      <VengMetaImpactAmount>6</VengMetaImpactAmount>
+      <VengDamageAmt>500</VengDamageAmt>
+      <VengDamageType>Spell</VengDamageType>
+      <VengDamageName>HGSA01Vengeance01</VengDamageName>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+      <Tooltip>
+        <TargetAlliance>Enemy</TargetAlliance>
+        <EnergyCost>0</EnergyCost>
+        <Cooldown>5</Cooldown>
+      </Tooltip>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01AngelicFuryOff</Name>
+      <DisplayName>Angelic Fury Off</DisplayName>
+      <Description>Regulus ceases his fury, losing his wings and extra power.</Description>
+      <AbilityType>Instant</AbilityType>
+      <Cooldown>3</Cooldown>
+      <SharedCooldown>HGSA01AngelicFurySwitch</SharedCooldown>
+      <EnergyCost>0</EnergyCost>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>AngelOff</CastAction>
+      <NotSilenceable>true</NotSilenceable>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HGSA01ANGELICFURYOFF</AbilityCategory>
+      <Icon>/DGRegulus/NewRegulusAngelicFuryOff01</Icon>
+      <Tooltip>
+        <EnergyCost>0</EnergyCost>
+        <Cooldown>3</Cooldown>
+      </Tooltip>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01AngelicFury01</Name>
+      <DisplayName>Angelic Fury I</DisplayName>
+      <Description>Regulus enters a divine rage. His bolts deal [GetDamage] extra damage and explode on contact. Costs [GetCostPerShot] Mana per shot.</Description>
+      <GetDamage>function(self) return math.floor( Buffs['HGSA01AngelicFuryBuff01'].Affects.DamageRating.Add ) end</GetDamage>
+      <GetCostPerShot>function(self) return math.floor( self.EnergyPerShotCost ) end</GetCostPerShot>
+      <AbilityType>WeaponProc</AbilityType>
+      <AbilityCategory>HGSA01ANGELICFURY</AbilityCategory>
+      <WeaponProcChance>100</WeaponProcChance>
+      <EnergyPerShotCost>40</EnergyPerShotCost>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01AngelicFury02</Name>
+      <DisplayName>Angelic Fury II</DisplayName>
+      <Description>Regulus enters a divine rage. His bolts deal [GetDamage] extra damage and explode on contact. Costs [GetCostPerShot] Mana per shot.</Description>
+      <GetDamage>function(self) return math.floor( Buffs['HGSA01AngelicFuryBuff02'].Affects.DamageRating.Add ) end</GetDamage>
+      <GetCostPerShot>function(self) return math.floor( self.EnergyPerShotCost ) end</GetCostPerShot>
+      <AbilityType>WeaponProc</AbilityType>
+      <AbilityCategory>HGSA01ANGELICFURY</AbilityCategory>
+      <WeaponProcChance>100</WeaponProcChance>
+      <EnergyPerShotCost>40</EnergyPerShotCost>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01AngelicFury03</Name>
+      <DisplayName>Angelic Fury III</DisplayName>
+      <Description>Regulus enters a divine rage. His bolts deal [GetDamage] extra damage and explode on contact. Costs [GetCostPerShot] Mana per shot.</Description>
+      <GetDamage>function(self) return math.floor( Buffs['HGSA01AngelicFuryBuff03'].Affects.DamageRating.Add ) end</GetDamage>
+      <GetCostPerShot>function(self) return math.floor( self.EnergyPerShotCost ) end</GetCostPerShot>
+      <AbilityType>WeaponProc</AbilityType>
+      <AbilityCategory>HGSA01ANGELICFURY</AbilityCategory>
+      <WeaponProcChance>100</WeaponProcChance>
+      <EnergyPerShotCost>40</EnergyPerShotCost>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01AngelicFury04</Name>
+      <DisplayName>Angelic Fury IV</DisplayName>
+      <Description>Regulus enters a divine rage. His bolts deal [GetDamage] extra damage and explode on contact. Costs [GetCostPerShot] Mana per shot.</Description>
+      <GetDamage>function(self) return math.floor( Buffs['HGSA01AngelicFuryBuff04'].Affects.DamageRating.Add ) end</GetDamage>
+      <GetCostPerShot>function(self) return math.floor( self.EnergyPerShotCost ) end</GetCostPerShot>
+      <AbilityType>WeaponProc</AbilityType>
+      <AbilityCategory>HGSA01ANGELICFURY</AbilityCategory>
+      <WeaponProcChance>100</WeaponProcChance>
+      <EnergyPerShotCost>40</EnergyPerShotCost>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Vengeance01</Name>
+      <DisplayName>Vengeance</DisplayName>
+      <Description>When Regulus uses Angelic Fury, he unleashes a nova of holy power around him, dealing [GetDamage] damage and sending nearby enemies flying.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamage>function(self) return math.floor( Ability['HGSA01AngelicFuryOn'].VengDamageAmt ) end</GetDamage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HGSA01Death01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+      <FriendlyDeathBuff>HGSA01DeathROFBoost01</FriendlyDeathBuff>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRegulusSnipeGrey01</Name>
+      <DisplayName>Snipe I</DisplayName>
+      <Description>Regulus takes time to set up a devastating shot, piercing a target for [GetInitialDamage] damage plus additional damage as it travels.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HGSA01Snipe01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HGSA01Snipe01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HGSA01Snipe01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HGSA01Snipe01'].Cooldown end</GetCooldown>
+      <GetInitialDamage>function(self) return math.floor( Ability['HGSA01Snipe01'].DamageAmt ) end</GetInitialDamage>
+      <Icon>/DGRegulus/NewRegulusSnipe01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRegulusMineGrey01</Name>
+      <DisplayName>Explosive Mine I</DisplayName>
+      <Description>Regulus sets an explosive proximity mine that deals [GetDamage] damage when it explodes.\n\nUp to [GetMineMax] mines may be active at a time.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HGSA01ExplosiveMine01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HGSA01ExplosiveMine01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HGSA01ExplosiveMine01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HGSA01ExplosiveMine01'].Cooldown end</GetCooldown>
+      <GetDamage>function(self) return math.floor( Ability['HGSA01ExplosiveMine01'].DamageAmt ) end</GetDamage>
+      <GetMineMax>function(self) return math.floor( Ability['HGSA01ExplosiveMine01'].MineMax ) end</GetMineMax>
+      <Icon>/DGRegulus/NewRegulusExplosiveMine01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRegulusBetrayerGrey01</Name>
+      <DisplayName>Mark of the Betrayer I</DisplayName>
+      <Description>Regulus fires at a Demigod, marking them with a rune. When they perform an ability, they and their nearby allies take [GetDamageAmt] damage. Also, the Demigod's Movement Speed is reduced by [GetSlowBuff]% for [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HGSA01Betrayer01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HGSA01Betrayer01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HGSA01Betrayer01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HGSA01Betrayer01'].Cooldown end</GetCooldown>
+      <GetDamageAmt>function(self) return math.floor( Buffs['HGSA01Betrayer01'].DamageAmt ) end</GetDamageAmt>
+      <GetDuration>function(self) return ( Buffs['HGSA01BetrayerSlow01'].Duration ) end</GetDuration>
+      <GetSlowBuff>function(self) return math.floor( Buffs['HGSA01BetrayerSlow01'].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRegulusAngelicFuryGrey01</Name>
+      <DisplayName>Angelic Fury</DisplayName>
+      <Description>Regulus enters a divine rage. His bolts deal [GetDamage] extra damage and explode on contact. Costs [GetCostPerShot] Mana per shot.</Description>
+      <GetMaxRange>function(self) return Ability['HGSA01AngelicFuryOn'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HGSA01AngelicFuryOn'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HGSA01AngelicFuryOn'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HGSA01AngelicFuryOn'].Cooldown end</GetCooldown>
+      <GetDamage>function(self) return math.floor( Buffs['HGSA01AngelicFuryBuff01'].Affects.DamageRating.Add ) end</GetDamage>
+      <GetCostPerShot>function(self) return math.floor( Ability['HGSA01AngelicFury01'].EnergyPerShotCost ) end</GetCostPerShot>
+      <AbilityType>Passive</AbilityType>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HGSA01DeadeyeStun01</Name>
+      <DisplayName>Deadeye</DisplayName>
+      <Description>Stunned.</Description>
+      <BuffType>HGSA01DEADEYESTUN</BuffType>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>0.3</Duration>
+      <Icon>/DGRegulus/NewRegulusDeadeye01</Icon>
+      <Affects>
+        <Stun>
+          <Add>0</Add>
+        </Stun>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01ImpedanceBoltDebuff01</Name>
+      <DisplayName>Impedance Bolt</DisplayName>
+      <Description>Ability Mana cost increased.</Description>
+      <BuffType>HGSA01IMPEDANCEINCREASE</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+      <Duration>10</Duration>
+      <Effects>Impedance01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGRegulus/NewRegulusImpedenceBolt01</Icon>
+      <Affects>
+        <SpellCostMult>
+          <Mult>2.0</Mult>
+        </SpellCostMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01BetrayerSlow01</Name>
+      <DisplayName>Mark of the Betrayer</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HGSA01BETRAYEDSLOW</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Effects>Slow03</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-.2</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01BetrayerSlow02</Name>
+      <DisplayName>Mark of the Betrayer</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HGSA01BETRAYEDSLOW</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Effects>Slow03</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.4</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01BetrayerSlow03</Name>
+      <DisplayName>Mark of the Betrayer</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HGSA01BETRAYEDSLOW</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Effects>Slow03</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGRegulus/NewRegulusMarkoftheBetrayer01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.6</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01MineSlow01</Name>
+      <DisplayName>Shrapnel Mine</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HGSA01MINESLOW</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Icon>/DGRegulus/NewRegulusShrapnel01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.3</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01Tracked</Name>
+      <DisplayName>Tracking Device</DisplayName>
+      <Description>Your position is being tracked by Regulus.</Description>
+      <BuffType>HGSA01TRACKING</BuffType>
+      <Icon>/DGRegulus/NewRegulustracking01</Icon>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>20</Duration>
+      <TrackVizRadius>5</TrackVizRadius>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01TrackedCooldown</Name>
+      <DisplayName>Can't be tracked.</DisplayName>
+      <BuffType>HGSA01TRACKING</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01AngelicFuryOnDisable</Name>
+      <DisplayName>Angelic Fury On Abilities Disabled</DisplayName>
+      <BuffType>HGSA01ANGELICFURYONDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HGSA01ANGELICFURYON</AbilityCategory>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01AngelicFuryOffDisable</Name>
+      <DisplayName>Angelic Fury Off Abilities Disabled</DisplayName>
+      <BuffType>HGSA01ANGELICFURYOFFDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HGSA01ANGELICFURYOFF</AbilityCategory>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01AngelicFuryBuff01</Name>
+      <DisplayName>Angelic Fury I</DisplayName>
+      <Description>Damage increased. Each shot drains Mana.</Description>
+      <BuffType>HGSA01ANGELICFURYBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+      <Affects>
+        <DamageRadius>
+          <Add>2</Add>
+        </DamageRadius>
+        <DamageSplash>
+          <Mult>-0.30</Mult>
+        </DamageSplash>
+        <DamageRating>
+          <Add>25</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01AngelicFuryBuff02</Name>
+      <DisplayName>Angelic Fury II</DisplayName>
+      <Description>Damage increased. Each shot drains Mana.</Description>
+      <BuffType>HGSA01ANGELICFURYBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+      <Affects>
+        <DamageRadius>
+          <Add>2.0</Add>
+        </DamageRadius>
+        <DamageSplash>
+          <Mult>-0.30</Mult>
+        </DamageSplash>
+        <DamageRating>
+          <Add>50</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01AngelicFuryBuff03</Name>
+      <DisplayName>Angelic Fury III</DisplayName>
+      <Description>Damage increased. Each shot drains Mana.</Description>
+      <BuffType>HGSA01ANGELICFURYBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+      <Affects>
+        <DamageRadius>
+          <Add>2.0</Add>
+        </DamageRadius>
+        <DamageSplash>
+          <Mult>-0.30</Mult>
+        </DamageSplash>
+        <DamageRating>
+          <Add>75</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01AngelicFuryBuff04</Name>
+      <DisplayName>Angelic Fury IV</DisplayName>
+      <Description>Damage increased. Each shot drains Mana.</Description>
+      <BuffType>HGSA01ANGELICFURYBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGRegulus/NewRegulusAngelicFury01</Icon>
+      <Affects>
+        <DamageRadius>
+          <Add>2.0</Add>
+        </DamageRadius>
+        <DamageSplash>
+          <Mult>-0.30</Mult>
+        </DamageSplash>
+        <DamageRating>
+          <Add>100</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01Vengeance01</Name>
+      <Description>Invulnerable</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HGSA01FURY</BuffType>
+      <Debuff>false</Debuff>
+      <Duration>-1</Duration>
+      <Affects>
+        <FiringRandomness>
+          <Add>20</Add>
+        </FiringRandomness>
+        <WeaponsEnable>
+          <Bool>false</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HGSA01DeathROFBoost01</Name>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <DisplayName>Pure Vision</DisplayName>
+      <Description>Attack Speed increased.</Description>
+      <BuffType>HDEATHROF</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>6</Duration>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGRegulus/NewRegulusVengence01</Icon>
+      <Affects>
+        <RateOfFire>
+          <Mult>0.20</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+</DemigodBlueprints>

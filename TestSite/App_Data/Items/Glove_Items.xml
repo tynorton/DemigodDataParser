@@ -1,0 +1,458 @@
+<DemigodBlueprints id="Glove_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Glove_010</Name>
+      <DisplayName>Gauntlets of Brutality</DisplayName>
+      <GetDamageBonus>function(self) return Buffs['Item_Glove_010'].Affects.DamageRating.Add end</GetDamageBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand1</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_010</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_010</FromItem>
+          <Icon>NewIcons/Hand/Hand1</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_010</Name>
+              <BuffType>ENCHANTDAMRADIUS</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>25</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Glove_020</Name>
+      <DisplayName>Gladiator Gloves</DisplayName>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Glove_020'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Glove_020_Minion'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand3</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_020</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_020</FromItem>
+          <Icon>NewIcons/Hand/Hand3</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_020</Name>
+              <BuffType>RUNECRITCHANCE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <RateOfFire>
+                  <Mult>0.05</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Glove_030</Name>
+      <DisplayName>Gauntlets of Despair</DisplayName>
+      <GetManaBonus>function(self) return Buffs['Item_Glove_030'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetProcChance>function(self) return Ability['Item_Glove_030_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <GetProcDrain>function(self) return math.floor( Buffs['Item_Glove_030_Drain'].Affects.Energy.Add * -1 ) end</GetProcDrain>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand5</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to drain [GetProcDrain] Mana.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_030</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_030</FromItem>
+          <Icon>NewIcons/Hand/Hand5</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_030</Name>
+              <BuffType>ENCHANTCRITMULT</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxEnergy>
+                  <Add>350</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <RateOfFire>
+                  <Mult>0.08</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Glove_030_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Glove_030</FromItem>
+          <Icon>NewIcons/Hand/Hand6</Icon>
+          <WeaponProcChance>15</WeaponProcChance>
+          <WeaponProcChanceRanged>10</WeaponProcChanceRanged>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Glove_040</Name>
+      <DisplayName>Wyrmskin Handguards</DisplayName>
+      <GetDamageBonus>function(self) return Buffs['Item_Glove_040'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetProcChance>function(self) return Ability['Item_Glove_040_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <GetProcDrain>function(self) return math.floor( Buffs['Item_Glove_040_SlowDD'].Affects.Health.Add * -1 ) end</GetProcDrain>
+      <GetSlowBuff>function(self) return math.floor( Buffs['Item_Glove_040_Slow'].Affects.RateOfFire.Mult * -100 ) end</GetSlowBuff>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand4</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to eviscerate the target dealing [GetProcDrain] damage and reducing their Attack Speed and Movement Speed [GetSlowBuff]%.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_040</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_040</FromItem>
+          <Icon>NewIcons/Hand/Hand4</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_040</Name>
+              <BuffType>ENCHANTCRITMULT</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>15</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Glove_040_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Glove_040</FromItem>
+          <Icon>NewIcons/Hand/Hand4</Icon>
+          <WeaponProcChance>15</WeaponProcChance>
+          <WeaponProcChanceRanged>8</WeaponProcChanceRanged>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Glove_050</Name>
+      <DisplayName>Doomspite Grips</DisplayName>
+      <GetDamageBonus>function(self) return Buffs['Item_Glove_050'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Glove_050'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetProcChance>function(self) return Ability['Item_Glove_050_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand6</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to perform a cleaving attack, damaging nearby enemies.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_050</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_050</FromItem>
+          <Icon>NewIcons/Hand/Hand6</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_050</Name>
+              <BuffType>ENCHANTDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Damage01</Effects>
+              <Affects>
+                <DamageRating>
+                  <Add>30.0</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>0.10</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Glove_050_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Glove_050</FromItem>
+          <Icon>NewIcons/Hand/Hand6</Icon>
+          <WeaponProcChance>25</WeaponProcChance>
+          <WeaponProcChanceRanged>16</WeaponProcChanceRanged>
+          <CleaveSize>1.5</CleaveSize>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Glove_060</Name>
+      <DisplayName>Gloves of Fell-Darkur</DisplayName>
+      <GetDamageBonus>function(self) return Buffs['Item_Glove_060'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetProcChance>function(self) return Ability['Item_Glove_060_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <GetProcDamage>function(self) return math.floor( Buffs['Item_Glove_060_FireStrike'].Affects.Health.Add * -1 ) end</GetProcDamage>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Glove_060_Minion'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <GetMinionROFBonus>function(self) return math.floor(Buffs['Item_Glove_060_Minion'].Affects.RateOfFire.Mult * 100) end</GetMinionROFBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand2</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to unleash a fiery blast, dealing [GetProcDamage] damage.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+          <Value>+[GetMinionROFBonus]% Minion Attack Speed</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_060</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_060</FromItem>
+          <Icon>NewIcons/Hand/Hand2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_060</Name>
+              <BuffType>RUNEDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>30</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Glove_060_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Glove_060</FromItem>
+          <Icon>NewIcons/Hand/Hand6</Icon>
+          <WeaponProcChance>20</WeaponProcChance>
+          <WeaponProcChanceRanged>13</WeaponProcChanceRanged>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Glove_070</Name>
+      <DisplayName>Slayer's Wraps</DisplayName>
+      <GetCritChance>function(self) return Ability['Item_Glove_070'].CritChance end</GetCritChance>
+      <GetCritDamage>function(self) return Ability['Item_Glove_070'].CritMult end</GetCritDamage>
+      <GetRegenBonus>function(self) return Buffs['Item_Glove_070_Buff'].Affects.Regen.Add end</GetRegenBonus>
+      <GetDamageBonus>function(self) return Buffs['Item_Glove_070_Buff'].Affects.DamageRating.Add end</GetDamageBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Hand/Hand3</Icon>
+      <Tooltip>
+        <Passives>[GetCritChance]% chance deal a critical strike for [GetCritDamage]x damage.</Passives>
+        <Bonuses>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Glove_070_Buff</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Glove_070</FromItem>
+          <Icon>NewIcons/Hand/Hand2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Glove_070_Buff</Name>
+              <BuffType>RUNEDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>30</Add>
+                </DamageRating>
+                <Regen>
+                  <Add>10</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Glove_070</Name>
+          <AbilityType>WeaponCrit</AbilityType>
+          <CritChance>10</CritChance>
+          <CritMult>2.0</CritMult>
+          <Icon>NewIcons/Hand/Hand3</Icon>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Glove_020_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Glove_020_Minion</Name>
+          <BuffType>GLOVE20MINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>NewIcons/Hand/Hand3</Icon>
+          <Affects>
+            <DamageRating>
+              <Add>4</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Glove_060_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Glove_060_Minion</Name>
+          <BuffType>GLOVE60MINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>NewIcons/Hand/Hand6</Icon>
+          <Affects>
+            <DamageRating>
+              <Add>8</Add>
+            </DamageRating>
+            <RateOfFire>
+              <Mult>0.05</Mult>
+            </RateOfFire>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>Item_Glove_030_Drain</Name>
+      <BuffType>ITEM_GLOVE_030_DRAIN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>0</Duration>
+      <Effects>Manadrain01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <Energy>
+          <Add>-200</Add>
+        </Energy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Glove_040_SlowDD</Name>
+      <BuffType>ITEM_GLOVE_040_STUN01</BuffType>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Debuff>true</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>0</Duration>
+      <Affects>
+        <Health>
+          <Add>-60</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Glove_040_Slow</Name>
+      <DisplayName>Wyrmskin Handguards</DisplayName>
+      <Description>Movement Speed and Attack Speed reduced.</Description>
+      <BuffType>ITEM_GLOVE_040_SLOW</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Effects>Stun01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>NewIcons/Hand/Hand4</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.15</Mult>
+        </MoveMult>
+        <RateOfFire>
+          <Mult>-0.15</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Glove_060_FireStrike</Name>
+      <BuffType>ITEM_GLOVE_060_FIRESTRIKE</BuffType>
+      <Debuff>true</Debuff>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Stacks>REPLACE</Stacks>
+      <Duration>0</Duration>
+      <Affects>
+        <Health>
+          <Add>-175</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+</DemigodBlueprints>

@@ -1,0 +1,1182 @@
+<DemigodBlueprints id="Artifact_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Artifact_010</Name>
+      <DisplayName>Bracelet of Rage</DisplayName>
+      <Description>Use: Nearby allied Demigods gain +[GetDamageBonus] Weapon Damage for [GetDuration] seconds. In addition, nearby units gain +[GetMinionDamageBonus] Weapon Damage for [GetDuration] seconds.</Description>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/braceletofrage</Icon>
+      <Useable>true</Useable>
+      <InventoryType>Clickables</InventoryType>
+      <GetDamageBonus>function(self) return Buffs['Item_Artifact_010_HERO'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetDamageBonusSelf>function(self) return Buffs['Item_Artifact_010_Self'].Affects.DamageRating.Add end</GetDamageBonusSelf>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Artifact_010_Grunts'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <GetDuration>function(self) return Buffs['Item_Artifact_010_Grunts'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['Item_Artifact_010_Activate'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Artifact_010_Activate'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Artifact_010_Activate'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Artifact_010_Activate'].Cooldown end</GetCooldown>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Artifact_010_Minion'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDamageBonusSelf] Weapon Damage</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_010_Activate</Name>
+          <Icon>NewIcons/Artifacts/braceletofrage</Icon>
+          <AbilityType>Instant</AbilityType>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <InventoryType>Clickables</InventoryType>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <AffectRadius>15</AffectRadius>
+          <FromItem>Item_Artifact_010</FromItem>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <Tooltip>
+            <TargetAlliance>Ally</TargetAlliance>
+            <Cooldown>30</Cooldown>
+          </Tooltip>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Artifact/snd_item_artifact_Item_Artifact_010</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_010_Grunts</Name>
+              <BuffType>ARTIFACTDMGINC</BuffType>
+              <DisplayName>Bracelet of Rage</DisplayName>
+              <Description>Damage increased.</Description>
+              <Icon>NewIcons/Artifacts/braceletofrage</Icon>
+              <Debuff>false</Debuff>
+              <EntityCategory>MOBILE - HERO</EntityCategory>
+              <Stacks>REPLACE</Stacks>
+              <Duration>10</Duration>
+              <Effects>Rage01</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects>
+                <DamageRating>
+                  <Add>25</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Artifact_010_HERO</Name>
+              <BuffType>ARTIFACTDMGINC_HERO</BuffType>
+              <DisplayName>Bracelet of Rage</DisplayName>
+              <Description>Damage increased.</Description>
+              <Icon>NewIcons/Artifacts/braceletofrage</Icon>
+              <Debuff>false</Debuff>
+              <EntityCategory>HERO</EntityCategory>
+              <Stacks>REPLACE</Stacks>
+              <Duration>10</Duration>
+              <Effects>Rage01</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects>
+                <DamageRating>
+                  <Add>300</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_010</FromItem>
+          <Name>Item_Artifact_010_Self</Name>
+          <Icon>NewIcons/Artifacts/braceletofrage</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>ARTIFACT_010_SELF</BuffType>
+              <Debuff>false</Debuff>
+              <Duration>-1</Duration>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Name>Item_Artifact_010_Self</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Affects>
+                <DamageRating>
+                  <Add>50</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_020</Name>
+      <DisplayName>Mage Slayer</DisplayName>
+      <GetLifeSteal>function(self) return math.floor( Buffs['Item_Artifact_020'].Affects.LifeSteal.Add * 100 ) end</GetLifeSteal>
+      <GetDamageBonus>function(self) return math.floor( Buffs['Item_Artifact_020'].Affects.DamageRating.Add ) end</GetDamageBonus>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Artifact_020'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetProcChance>function(self) return Ability['Item_Artifact_020_Proc'].WeaponProcChance end</GetProcChance>
+      <GetDuration>function(self) return string.format('%0.1f', Buffs['Item_Artifact_020_Stun'].Duration) end</GetDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/mageslayer</Icon>
+      <SlotLimit>1</SlotLimit>
+      <Tooltip>
+        <TargetAlliance>Enemy</TargetAlliance>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+          <Value>+[GetLifeSteal]% Life Steal</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_020</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_020</FromItem>
+          <Icon>NewIcons/Artifacts/mageslayer</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_020</Name>
+              <BuffType>IARTSTUN</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Lifesteal02</Effects>
+              <Affects>
+                <LifeSteal>
+                  <Add>0.12</Add>
+                </LifeSteal>
+                <DamageRating>
+                  <Add>45</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>0.25</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_040</Name>
+      <DisplayName>Cloak of Flames</DisplayName>
+      <Description>Use: Cast a ring of fire around yourself, damaging enemies for [GetDamage] damage over [GetDuration] seconds.</Description>
+      <GetManaBonus>function(self) return math.floor( Buffs['Item_Artifact_040'].Affects.MaxEnergy.Add ) end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Artifact_040'].Affects.EnergyRegen.Add ) end</GetManaRegenBonus>
+      <GetAttackSpeedBoost>function(self) return math.floor( Buffs['Item_Artifact_040'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBoost>
+      <GetDamage>function(self) return Ability['Item_Artifact_040_2'].DamageAmt * Ability['Item_Artifact_040_2'].Duration end</GetDamage>
+      <GetDuration>function(self) return Ability['Item_Artifact_040_2'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['Item_Artifact_040_2'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Artifact_040_2'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Artifact_040_2'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Artifact_040_2'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/cloakofflames</Icon>
+      <Useable>true</Useable>
+      <InventoryType>Clickables</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+          <Value>+[GetAttackSpeedBoost]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_040_2</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Artifact_040</FromItem>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>AREAARGETED</TargetingMethod>
+          <Icon>NewIcons/Artifacts/cloakofflames</Icon>
+          <AffectRadius>8</AffectRadius>
+          <Cooldown>45</Cooldown>
+          <DamageAmt>80</DamageAmt>
+          <DamageType>SpellFire</DamageType>
+          <Segments>32</Segments>
+          <Duration>10</Duration>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Artifact/snd_item_artifact_Item_Artifact_040</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_040</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_040</FromItem>
+          <Icon>NewIcons/Artifacts/cloakofflames</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_040</Name>
+              <BuffType>IARTFIRE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <RateOfFire>
+                  <Mult>0.3</Mult>
+                </RateOfFire>
+                <MaxEnergy>
+                  <Add>1050</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Add>20</Add>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_050</Name>
+      <DisplayName>Cloak of Elfinkind</DisplayName>
+      <Description>Use: Warp to a targeted location.\n</Description>
+      <GetArmorBonus>function(self) return Buffs['Item_Artifact_050'].Affects.Armor.Add end</GetArmorBonus>
+      <GetDodgeBonus>function(self) return Buffs['Item_Artifact_050'].Affects.Evasion.Add end</GetDodgeBonus>
+      <GetMovementBonus>function(self) return math.floor( Buffs['Item_Artifact_050'].Affects.MoveMult.Mult * 100 ) end</GetMovementBonus>
+      <GetMaxRange>function(self) return Ability['Item_Artifact_050_2'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Artifact_050_2'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Artifact_050_2'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Artifact_050_2'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/cloakofelfinkind</Icon>
+      <Useable>true</Useable>
+      <InventoryType>Clickables</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetArmorBonus] Armor</Value>
+          <Value>+[GetDodgeBonus]% Dodge</Value>
+          <Value>+[GetMovementBonus]% Movement Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_050_2</Name>
+          <AbilityType>TargetedArea</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <InventoryType>Clickables</InventoryType>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>AREAARGETED</TargetingMethod>
+          <AffectRadius>10</AffectRadius>
+          <RangeMax>15</RangeMax>
+          <Cooldown>20</Cooldown>
+          <FromItem>Item_Artifact_050</FromItem>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <ErrorMessage>Cannot move there.</ErrorMessage>
+          <ErrorVO>Nomove</ErrorVO>
+          <WarpToLocation>true</WarpToLocation>
+          <WarpMinions>false</WarpMinions>
+          <Icon>NewIcons/Artifacts/cloakofelfinkind</Icon>
+          <Reticule>AoE_Warp</Reticule>
+          <CasterEffect>
+            <Base>Items</Base>
+            <Group>Artifacts</Group>
+            <Template>ScrotusWarp01</Template>
+          </CasterEffect>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Artifact/snd_item_artifact_Item_Artifact_050</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_050</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_050</FromItem>
+          <Icon>NewIcons/Artifacts/cloakofelfinkind</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_050</Name>
+              <BuffType>IARTMOVEMENT</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Armor>
+                  <Add>750</Add>
+                </Armor>
+                <Evasion>
+                  <Add>15</Add>
+                </Evasion>
+                <MoveMult>
+                  <Mult>0.2</Mult>
+                </MoveMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_060</Name>
+      <DisplayName>Unmaker</DisplayName>
+      <Description>Use: Deal +[GetDamageBonus]% Weapon Damage for [GetUseDuration] seconds.</Description>
+      <GetProcChance>function(self) return Ability['Item_Artifact_060_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Artifact_060_Flurry'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetProcDuration>function(self) return Buffs['Item_Artifact_060_Flurry'].Duration end</GetProcDuration>
+      <GetUseDuration>function(self) return Buffs['Item_Artifact_060'].Duration end</GetUseDuration>
+      <GetDamageBonus>function(self) return math.floor( Buffs['Item_Artifact_060'].Affects.DamageRating.Mult * 100 ) end</GetDamageBonus>
+      <GetMaxRange>function(self) return Ability['Item_Artifact_060'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Artifact_060'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Artifact_060'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Artifact_060'].Cooldown end</GetCooldown>
+      <GetDamageBonus>function(self) return Buffs['Item_Artifact_060_Passive'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Artifact_60ARMY'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <GetMinionROFBonus>function(self) return math.floor(Buffs['Item_Artifact_60ARMY'].Affects.RateOfFire.Mult * 100) end</GetMinionROFBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/Unmaker</Icon>
+      <Useable>true</Useable>
+      <InventoryType>Clickables</InventoryType>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance to increase Attack Speed by [GetAttackSpeedBonus]% for [GetProcDuration] seconds.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+          <Value>+[GetMinionROFBonus]% Minion Attack Speed</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_060</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <InventoryType>Clickables</InventoryType>
+          <Cooldown>30</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <FromItem>Item_Artifact_060</FromItem>
+          <Icon>NewIcons/Artifacts/Unmaker</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Artifact/snd_item_artifact_Item_Artifact_060</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <CasterEffect>
+            <Base>Items</Base>
+            <Group>Artifacts</Group>
+            <Template>Agent01</Template>
+          </CasterEffect>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_060</Name>
+              <DisplayName>Unmaker</DisplayName>
+              <Description>Increased Weapon Damage.</Description>
+              <Stacks>ALWAYS</Stacks>
+              <Debuff>false</Debuff>
+              <BuffType>IARTCRIT2</BuffType>
+              <Duration>10.0</Duration>
+              <Icon>NewIcons/Artifacts/Unmaker</Icon>
+              <Affects>
+                <DamageRating>
+                  <Mult>.25</Mult>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_060_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Artifact_060</FromItem>
+          <Icon>NewIcons/Artifacts/Unmaker</Icon>
+          <WeaponProcChance>20</WeaponProcChance>
+          <WeaponProcChanceRanged>13</WeaponProcChanceRanged>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_060_Passive</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_060</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_060_Passive</Name>
+              <BuffType>IARTCRIT2PASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>20</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Deathbringer</DisplayName>
+      <Description>Use: Silence target, preventing any abilities for [GetDuration] seconds.</Description>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Artifact_070_Self'].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegenBonus>
+      <GetDamageBonus>function(self) return Buffs['Item_Artifact_070_Self'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetAttackSpeedBoost>function(self) return math.floor(Buffs['Item_Artifact_070_Self'].Affects.RateOfFire.Mult * 100) end</GetAttackSpeedBoost>
+      <GetHealthBonus>function(self) return Buffs['Item_Artifact_070_Self'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetDuration>function(self) return Buffs['Item_Artifact_070'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['Item_Artifact_070_Target01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Artifact_070_Target01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Artifact_070_Target01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Artifact_070_Target01'].Cooldown end</GetCooldown>
+      <InventoryType>Clickables</InventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Artifact_070</Name>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Cooldown>30</Cooldown>
+        <TargetAlliance>Enemy</TargetAlliance>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBoost]% Attack Speed</Value>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>30</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Artifact_070</FromItem>
+          <Icon>NewIcons/Artifacts/deathbringer</Icon>
+          <Name>Item_Artifact_070_Target01</Name>
+          <RangeMax>20</RangeMax>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <CastAction>CastItem1sec</CastAction>
+          <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Artifact/snd_item_artifact_Item_Artifact_070</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>IARTSILENCETARGET</BuffType>
+              <Debuff>true</Debuff>
+              <CanBeDispelled>true</CanBeDispelled>
+              <DisplayName>Deathbringer</DisplayName>
+              <Description>Silenced.</Description>
+              <DoNotPulseIcon>true</DoNotPulseIcon>
+              <Duration>5</Duration>
+              <Icon>NewIcons/Artifacts/deathbringer</Icon>
+              <Name>Item_Artifact_070</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Effects>Silence01</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects>
+                <Silence>
+                  <Bool>true</Bool>
+                </Silence>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_070</FromItem>
+          <Name>Item_Artifact_070_Self</Name>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>IARTSILENCESELF</BuffType>
+              <Debuff>false</Debuff>
+              <Duration>-1</Duration>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Name>Item_Artifact_070_Self</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Affects>
+                <MaxHealth>
+                  <Add>1500</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <RateOfFire>
+                  <Mult>0.2</Mult>
+                </RateOfFire>
+                <EnergyRegen>
+                  <Mult>1.5</Mult>
+                </EnergyRegen>
+                <DamageRating>
+                  <Add>80</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Stormbringer</DisplayName>
+      <GetCooldownBonus>function(self) return math.floor( Buffs['Item_Artifact_080'].Affects.Cooldown.Mult * -100 ) end</GetCooldownBonus>
+      <GetManaBonus>function(self) return Buffs['Item_Artifact_080'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Artifact_080'].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegenBonus>
+      <GetProcChance>function(self) return Ability['Item_Artifact_080_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <GetProcManaGain>function(self) return math.floor( Ability['Item_Artifact_080_WeaponProc'].EnergyReturnPercent * 100 ) end</GetProcManaGain>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Artifact_080</Name>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to gain [GetProcManaGain]% of your damage in Mana.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+          <Value>-[GetCooldownBonus]% to Ability Cooldowns</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_080</FromItem>
+          <Icon>NewIcons/Artifacts/Stormbringer</Icon>
+          <Name>Item_Artifact_080</Name>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>IARTSTORM</BuffType>
+              <Debuff>false</Debuff>
+              <Duration>-1</Duration>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Name>Item_Artifact_080</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Affects>
+                <MaxEnergy>
+                  <Add>2100</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Mult>.7</Mult>
+                </EnergyRegen>
+                <Cooldown>
+                  <Mult>-0.15</Mult>
+                </Cooldown>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <AbilityType>WeaponProc</AbilityType>
+          <EnergyReturnPercent>.1</EnergyReturnPercent>
+          <FromItem>Item_Artifact_080</FromItem>
+          <Name>Item_Artifact_080_WeaponProc</Name>
+          <WeaponProcChance>100</WeaponProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_090</Name>
+      <DisplayName>Girdle of the Giants</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Artifact_090'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetHealthRegen>function(self) return Buffs['Item_Artifact_090'].Affects.Regen.Add end</GetHealthRegen>
+      <GetDamageBonus>function(self) return Buffs['Item_Artifact_090'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetProcChance>function(self) return Ability['Item_Artifact_090_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/girdleofgiants</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to perform a cleaving attack, damaging nearby enemies.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetHealthRegen] Health Per Second</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_090</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_090</FromItem>
+          <Icon>NewIcons/Artifacts/girdleofgiants</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_090</Name>
+              <BuffType>IARTGIRDLE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>1600</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>20</Add>
+                </Regen>
+                <DamageRating>
+                  <Add>50</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_090_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Artifact_090</FromItem>
+          <Icon>NewIcons/Artifacts/girdleofgiants</Icon>
+          <WeaponProcChance>100</WeaponProcChance>
+          <WeaponProcChanceRanged>100</WeaponProcChanceRanged>
+          <CleaveSize>2.5</CleaveSize>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_100</Name>
+      <DisplayName>Ashkandor</DisplayName>
+      <GetLifeStealBonus>function(self) return math.floor( Buffs['Item_Artifact_100'].Affects.LifeSteal.Add * 100 ) end</GetLifeStealBonus>
+      <GetDamageBonus>function(self) return Buffs['Item_Artifact_100'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Artifact_100'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetCritChance>function(self) return Ability['Item_Artifact_100_Crit'].CritChance end</GetCritChance>
+      <GetCritDamage>function(self) return Ability['Item_Artifact_100_Crit'].CritMult end</GetCritDamage>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Artifact_100ARMY'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <GetMinionROFBonus>function(self) return math.floor( Buffs['Item_Artifact_100ARMY'].Affects.RateOfFire.Mult * 100 ) end</GetMinionROFBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/ashkandor</Icon>
+      <Tooltip>
+        <Passives>[GetCritChance]% chance deal a critical strike for [GetCritDamage]x damage.</Passives>
+        <Bonuses>
+          <Value>+[GetLifeStealBonus]% Life Steal</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+          <Value>+[GetMinionROFBonus]% Minion Attack Speed</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_100</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_100</FromItem>
+          <Icon>NewIcons/Artifacts/ashkandor</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_100</Name>
+              <BuffType>IARTRING</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Lifesteal02</Effects>
+              <Affects>
+                <LifeSteal>
+                  <Add>0.12</Add>
+                </LifeSteal>
+                <DamageRating>
+                  <Add>120</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>.25</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_100_Crit</Name>
+          <AbilityType>WeaponCrit</AbilityType>
+          <CritChance>10</CritChance>
+          <CritMult>4.0</CritMult>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_110</Name>
+      <DisplayName>Orb of Veiled Storms</DisplayName>
+      <Description>Use: Unleash a wave of pure force in an area, dealing [GetDamage] damage.</Description>
+      <GetHealthRegen>function(self) return Buffs['Item_Artifact_110_2'].Affects.Regen.Add end</GetHealthRegen>
+      <GetAttackSpeedBonus>function(self) return math.floor(Buffs['Item_Artifact_110_2'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetDamage>function(self) return Ability['Item_Artifact_110'].Damage end</GetDamage>
+      <GetMaxRange>function(self) return Ability['Item_Artifact_110'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Artifact_110'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Artifact_110'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Artifact_110'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/orbofveiledstorms</Icon>
+      <Useable>true</Useable>
+      <SlotLimit>1</SlotLimit>
+      <InventoryType>Clickables</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthRegen] Health Per Second</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_110</Name>
+          <FromItem>Item_Artifact_110</FromItem>
+          <AbilityType>Instant</AbilityType>
+          <InventoryType>Clickables</InventoryType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+          <AffectRadius>10</AffectRadius>
+          <Cooldown>45</Cooldown>
+          <Damage>500</Damage>
+          <DamageType>SpellForce</DamageType>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <Icon>NewIcons/Artifacts/orbofveiledstorms</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Artifact/snd_item_artifact_Item_Artifact_110</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <CasterEffect>
+            <Base>Items</Base>
+            <Group>Artifacts</Group>
+            <Template>ScathisForceNova01</Template>
+          </CasterEffect>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_110_2</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_110</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_110_2</Name>
+              <BuffType>IARTDAMAGE3</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Regen>
+                  <Add>24</Add>
+                </Regen>
+                <RateOfFire>
+                  <Mult>.25</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_120</Name>
+      <DisplayName>Bulwark of the Ages</DisplayName>
+      <GetArmorBonus>function(self) return Buffs['Item_Artifact_120'].Affects.Armor.Add end</GetArmorBonus>
+      <GetHealthBonus>function(self) return Buffs['Item_Artifact_120'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Artifact_120'].Affects.Regen.Add end</GetRegenBonus>
+      <GetDamageReduction>function(self) return math.floor( Buffs['Item_Artifact_120'].Affects.DamageTakenMult.Add * -100 ) end</GetDamageReduction>
+      <GetMinionHealthBonus>function(self) return Buffs['Item_Artifact_120_Minion'].Affects.MaxHealth.Add end</GetMinionHealthBonus>
+      <GetMinionArmorBonus>function(self) return Buffs['Item_Artifact_120_Minion'].Affects.Armor.Add end</GetMinionArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Artifacts/bulwarkoftheages</Icon>
+      <Tooltip>
+        <Passives>All damage reduced by [GetDamageReduction]%.</Passives>
+        <TargetAlliance>Ally</TargetAlliance>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetArmorBonus] Armor</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+          <Value>+[GetMinionArmorBonus] Minion Armor</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_120</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Artifact_120</FromItem>
+          <Icon>NewIcons/Artifacts/bulwarkoftheages</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_120</Name>
+              <Description>Bulwark of the Ages</Description>
+              <BuffType>IARTTHORNS</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Armor>
+                  <Add>1500</Add>
+                </Armor>
+                <MaxHealth>
+                  <Add>1000</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>20</Add>
+                </Regen>
+                <DamageTakenMult>
+                  <Add>-0.25</Add>
+                </DamageTakenMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Artifact_130</Name>
+      <DisplayName>All Father's Ring</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Artifact_130'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Artifact_130'].Affects.Regen.Add end</GetRegenBonus>
+      <GetManaBonus>function(self) return Buffs['Item_Artifact_130'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return Buffs['Item_Artifact_130'].Affects.EnergyRegen.Add end</GetManaRegenBonus>
+      <GetArmorBonus>function(self) return Buffs['Item_Artifact_130'].Affects.Armor.Add end</GetArmorBonus>
+      <GetDamageBonus>function(self) return Buffs['Item_Artifact_130'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Artifact_130'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetMovementBonus>function(self) return math.floor( Buffs['Item_Artifact_130'].Affects.MoveMult.Mult * 100 ) end</GetMovementBonus>
+      <GetDodgeBonus>function(self) return Buffs['Item_Artifact_130'].Affects.Evasion.Add end</GetDodgeBonus>
+      <GetMinionHealthBonus>function(self) return Buffs['Item_Artifact_130Army'].Affects.MaxHealth.Add end</GetMinionHealthBonus>
+      <GetMinionArmorBonus>function(self) return Buffs['Item_Artifact_130Army'].Affects.Armor.Add end</GetMinionArmorBonus>
+      <GetMinionDamageBonus>function(self) return Buffs['Item_Artifact_130Army'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <GetMinionROFBonus>function(self) return math.floor(Buffs['Item_Artifact_130Army'].Affects.RateOfFire.Mult * 100) end</GetMinionROFBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Ring/Ring6</Icon>
+      <Tooltip>
+        <TargetAlliance>Ally</TargetAlliance>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+          <Value>+[GetArmorBonus] Armor</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+          <Value>+[GetMovementBonus]% Movement Speed</Value>
+          <Value>+[GetDodgeBonus]% Dodge</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+          <Value>+[GetMinionArmorBonus] Minion Armor</Value>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+          <Value>+[GetMinionROFBonus]% Minion Attack Speed</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Artifact_130</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>NewIcons/Ring/Ring6</Icon>
+          <FromItem>Item_Artifact_130</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Artifact_130</Name>
+              <BuffType>IARTSTATSRING</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>SingleRing01</Effects>
+              <Affects>
+                <MaxHealth>
+                  <Add>1800</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>30</Add>
+                </Regen>
+                <MaxEnergy>
+                  <Add>2600</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Add>25</Add>
+                </EnergyRegen>
+                <Armor>
+                  <Add>1500</Add>
+                </Armor>
+                <DamageRating>
+                  <Add>50</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>.30</Mult>
+                </RateOfFire>
+                <MoveMult>
+                  <Mult>0.15</Mult>
+                </MoveMult>
+                <Evasion>
+                  <Add>10</Add>
+                </Evasion>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Artifact_010_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Artifact_010_Minion</Name>
+          <BuffType>ARTIFACT10MINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>NewIcons/Artifacts/braceletofrage</Icon>
+          <Affects>
+            <DamageRating>
+              <Add>10</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Artifact_050Army</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Artifact_050Army</Name>
+          <BuffType>IARTMOVEMENT</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <MoveMult>
+              <Mult>0.2</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Artifact_60ARMY</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Artifact_60ARMY</Name>
+          <BuffType>IARTCRIT2ARMY</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>10</Add>
+            </DamageRating>
+            <RateOfFire>
+              <Mult>.15</Mult>
+            </RateOfFire>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Artifact_100ARMY</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Artifact_100ARMY</Name>
+          <BuffType>IARTRINGARMY</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>15</Add>
+            </DamageRating>
+            <RateOfFire>
+              <Mult>.15</Mult>
+            </RateOfFire>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Artifact_120_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Artifact_120_Minion</Name>
+          <BuffType>ARTIFACT120MINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>NewIcons/Artifacts/bulwarkoftheages</Icon>
+          <Affects>
+            <MaxHealth>
+              <Add>250</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+            <Armor>
+              <Add>375</Add>
+            </Armor>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Artifact_130Army</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Artifact_130Army</Name>
+          <BuffType>IARTSTATSRING</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <MaxHealth>
+              <Add>450</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+            <Armor>
+              <Add>375</Add>
+            </Armor>
+            <DamageRating>
+              <Add>10</Add>
+            </DamageRating>
+            <RateOfFire>
+              <Mult>.15</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.1</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>Item_Artifact_020_Stun</Name>
+      <DisplayName>Mage Slayer</DisplayName>
+      <Description>Stunned.</Description>
+      <BuffType>IARTSTUN01STUN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>0.2</Duration>
+      <Effects>Stun01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <Stun>
+          <Add>0</Add>
+        </Stun>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Artifact_060_Flurry</Name>
+      <DisplayName>Unmaker</DisplayName>
+      <Description>Increased Attack Speed</Description>
+      <BuffType>IARTCRIT01FLURRY</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Effects>Haste01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>NewIcons/Artifacts/Unmaker</Icon>
+      <Affects>
+        <RateOfFire>
+          <Mult>0.3</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+</DemigodBlueprints>

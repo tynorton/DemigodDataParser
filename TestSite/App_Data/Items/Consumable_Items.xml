@@ -1,0 +1,2225 @@
+<DemigodBlueprints id="Consumable_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Health_Potion</Name>
+      <DisplayName>Combat Health Potion</DisplayName>
+      <Description>Use: Heal [GetHealAmount] Health.</Description>
+      <GetHealAmount>function(self) return Buffs['Item_Health_Potion'].Affects.Health.Add end</GetHealAmount>
+      <GetMaxRange>function(self) return Ability['Item_Health_Potion'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Health_Potion'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Health_Potion'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Health_Potion'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion1green</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Health_Potion</Name>
+          <DisplayName>Combat Health Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <InventoryType>Clickables</InventoryType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>HealthPotion</SharedCooldown>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Health_Potion</FromItem>
+          <Icon>NewIcons/potions/Potion1green</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Health_Potion</Name>
+              <BuffType>POTIONHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Health>
+                  <Add>750</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Health_Potion_FX</Name>
+              <BuffType>POTIONHEAL01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Heal02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Large_Health_Potion</Name>
+      <DisplayName>Robust Health Potion</DisplayName>
+      <Description>Use: Heal [GetHealAmount] Health.</Description>
+      <GetHealAmount>function(self) return Buffs['Item_Large_Health_Potion'].Affects.Health.Add end</GetHealAmount>
+      <GetMaxRange>function(self) return Ability['Item_Large_Health_Potion'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Large_Health_Potion'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Large_Health_Potion'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Large_Health_Potion'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion4green</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Large_Health_Potion</Name>
+          <DisplayName>Robust Health Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>HealthPotion</SharedCooldown>
+          <CastingTime>3</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <FromItem>Item_Large_Health_Potion</FromItem>
+          <Icon>NewIcons/potions/Potion4green</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Large_Health_Potion</Name>
+              <BuffType>POTIONHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Health>
+                  <Add>3000</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Large_Health_Potion_FX</Name>
+              <BuffType>POTIONHEAL01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Heal02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Mana_Potion</Name>
+      <DisplayName>Combat Mana Potion</DisplayName>
+      <Description>Use: Restore [GetManaAmount] Mana.</Description>
+      <GetManaAmount>function(self) return Buffs['Item_Mana_Potion'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Mana_Potion'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Mana_Potion'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Mana_Potion'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Mana_Potion'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion1Blue</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Mana_Potion</Name>
+          <DisplayName>Combat Mana Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>EnergyPotion</SharedCooldown>
+          <CastingTime>0.5</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Mana_Potion</FromItem>
+          <Icon>NewIcons/potions/Potion1Blue</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Mana_Potion</Name>
+              <BuffType>POTIONENERGY</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <Affects>
+                <Energy>
+                  <Add>1000</Add>
+                </Energy>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Mana_Potion_FX</Name>
+              <BuffType>POTIONENERGY01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Energize01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Large_Mana_Potion</Name>
+      <DisplayName>Robust Mana Potion</DisplayName>
+      <Description>Use: Restore [GetManaAmount] Mana.</Description>
+      <GetManaAmount>function(self) return Buffs['Item_Large_Mana_Potion'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Large_Mana_Potion'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Large_Mana_Potion'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Large_Mana_Potion'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Large_Mana_Potion'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion4Blue</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Large_Mana_Potion</Name>
+          <DisplayName>Robust Mana Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <CastingTime>2</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <SharedCooldown>EnergyPotion</SharedCooldown>
+          <FromItem>Item_Large_Mana_Potion</FromItem>
+          <Icon>NewIcons/potions/Potion4Blue</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Mana_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Large_Mana_Potion</Name>
+              <BuffType>POTIONENERGY</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <Affects>
+                <Energy>
+                  <Add>3750</Add>
+                </Energy>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Large_Mana_Potion_FX</Name>
+              <BuffType>POTIONENERGY01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Energize01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Rejuv_Elixir</Name>
+      <DisplayName>Rejuvenation Elixir</DisplayName>
+      <Description>Use: Restore [GetHealthAmount] Health and [GetManaAmount] Mana.</Description>
+      <GetHealthAmount>function(self) return Buffs['Item_Rejuv_Elixir'].Affects.Health.Add end</GetHealthAmount>
+      <GetManaAmount>function(self) return Buffs['Item_Rejuv_Elixir'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Rejuv_Elixir'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Rejuv_Elixir'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Rejuv_Elixir'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Rejuv_Elixir'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion1Purple</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Rejuv_Elixir</Name>
+          <DisplayName>Rejuvenation Elixir</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>RejuvenationPotion</SharedCooldown>
+          <CastingTime>1</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Rejuv_Elixir</FromItem>
+          <Icon>NewIcons/potions/Potion1Purple</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Rejuv_Elixir</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Rejuv_Elixir</Name>
+              <BuffType>POTIONREJUV</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Energy>
+                  <Add>750</Add>
+                </Energy>
+                <Health>
+                  <Add>560</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Rejuv_Elixir_FX</Name>
+              <BuffType>POTIONREJUVENATION01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>1</Duration>
+              <Effects>Rejuvenation02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Large_Rejuv_Elixir</Name>
+      <DisplayName>Robust Rejuvenation Elixir</DisplayName>
+      <Description>Use: Restore [GetHealthAmount] Health and [GetManaAmount] Mana.</Description>
+      <GetHealthAmount>function(self) return Buffs['Item_Large_Rejuv_Elixir'].Affects.Health.Add end</GetHealthAmount>
+      <GetManaAmount>function(self) return Buffs['Item_Large_Rejuv_Elixir'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Large_Rejuv_Elixir'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Large_Rejuv_Elixir'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Large_Rejuv_Elixir'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Large_Rejuv_Elixir'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion4Purple</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Large_Rejuv_Elixir</Name>
+          <DisplayName>Robust Rejuvenation Elixir</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>RejuvenationPotion</SharedCooldown>
+          <CastingTime>3</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <FromItem>Item_Large_Rejuv_Elixir</FromItem>
+          <Icon>NewIcons/potions/Potion4Purple</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Large_Rejuv_Elixir</Name>
+              <BuffType>POTIONREJUV</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Energy>
+                  <Add>2800</Add>
+                </Energy>
+                <Health>
+                  <Add>2250</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Large_Rejuv_Elixir_FX</Name>
+              <BuffType>POTIONREJUVENATION01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>1</Duration>
+              <Effects>Rejuvenation02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_010</Name>
+      <DisplayName>Scroll of Teleporting</DisplayName>
+      <Description>Use: Teleport yourself and your army to targeted friendly structure.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_010'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_010'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_010'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_010'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Scroll/Scroll3</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_010</Name>
+          <DisplayName>Scroll of Teleporting</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetingMethod>ALLYSTRUCTURE</TargetingMethod>
+          <EnergyCost>0</EnergyCost>
+          <RangeMax>5000</RangeMax>
+          <Cooldown>30</Cooldown>
+          <CastingTime>3</CastingTime>
+          <SharedCooldown>TeleportItems</SharedCooldown>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <WarpToLocation>true</WarpToLocation>
+          <WarpMinions>true</WarpMinions>
+          <IgnoreFacing>true</IgnoreFacing>
+          <FromItem>Item_Consumable_010</FromItem>
+          <Icon>NewIcons/Scroll/Scroll3</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_010</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <OnCastingEffects>
+            <Base>Items</Base>
+            <Group>Relics</Group>
+            <Template>PortalScroll01</Template>
+          </OnCastingEffects>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_020</Name>
+      <DisplayName>Totem of Revelation</DisplayName>
+      <Description>Use: Place an observer ward that can reveal cloaked enemies. Can also reveal mines.</Description>
+      <GetVisionBonus>function(self) return Buffs['Item_Consumable_Buff_020'].Affects.VisionRadius.Add end</GetVisionBonus>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_020'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_020'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_020'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_020'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Gadget/Totemofrevelation</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetVisionBonus] vision radius</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_020</Name>
+          <DisplayName>Totem of Revelation</DisplayName>
+          <AbilityType>TargetedArea</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Any</TargetAlliance>
+          <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>AREAARGETED</TargetingMethod>
+          <Icon>NewIcons/Gadget/Totemofrevelation</Icon>
+          <AffectRadius>8</AffectRadius>
+          <RangeMax>5</RangeMax>
+          <RangeMin>2</RangeMin>
+          <CastingTime>1</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <ErrorMessage>Cannot place that here.</ErrorMessage>
+          <ErrorVO>Noplace</ErrorVO>
+          <FromItem>Item_Consumable_020</FromItem>
+          <Reticule>AoE_Revelation</Reticule>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_020</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_030</Name>
+      <DisplayName>Capture Lock</DisplayName>
+      <Description>Use: Selected ally flag cannot be captured by the enemy for [GetDuration] seconds.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_030'].RangeMax end</GetMaxRange>
+      <GetDuration>function(self) return Buffs['Item_Consumable_030'].Duration end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_030'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_030'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_030'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Gadget/DefenseofVayikra</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <Consumable>true</Consumable>
+      <InventoryType>Clickables</InventoryType>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_030</Name>
+          <DisplayName>Capture Lock</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>FLAG</TargetCategory>
+          <TargetingMethod>ALLYSTRUCTURE</TargetingMethod>
+          <RangeMax>15</RangeMax>
+          <Cooldown>45</Cooldown>
+          <CastingTime>1</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Consumable_030</FromItem>
+          <Icon>NewIcons/Gadget/DefenseofVayikra</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_030</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_030</Name>
+              <DisplayName>Capture Lock</DisplayName>
+              <Description>Cannot be captured.</Description>
+              <BuffType>IUSESPRINT</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>45</Duration>
+              <Icon>NewIcons/Gadget/DefenseofVayikra</Icon>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_040</Name>
+      <DisplayName>Sludge Slinger</DisplayName>
+      <Description>Use: Decreases target's Attack Speed by [GetAttackSpeedReduction]% for [GetDuration] seconds.</Description>
+      <GetAttackSpeedReduction>function(self) return math.floor( Buffs['Item_Consumable_040'].Affects.RateOfFire.Mult * -100 ) end</GetAttackSpeedReduction>
+      <GetDuration>function(self) return Buffs['Item_Consumable_040'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_040'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_040'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_040'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_040'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Scroll/Scroll2</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_040</Name>
+          <DisplayName>Sludge Slinger</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+          <RangeMax>15</RangeMax>
+          <Cooldown>30</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Consumable_040</FromItem>
+          <Icon>NewIcons/Scroll/Scroll2</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_040</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_040</Name>
+              <DisplayName>Sludge Slinger</DisplayName>
+              <Description>Attack Speed reduced.</Description>
+              <BuffType>IUSESLOW</BuffType>
+              <Debuff>true</Debuff>
+              <CanBeDispelled>true</CanBeDispelled>
+              <EntityCategory>MOBILE</EntityCategory>
+              <Stacks>REPLACE</Stacks>
+              <Duration>7</Duration>
+              <Effects>Slow01</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Icon>NewIcons/Scroll/Scroll2</Icon>
+              <Affects>
+                <RateOfFire>
+                  <Mult>-0.3</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_050</Name>
+      <DisplayName>Wand of Speed</DisplayName>
+      <Description>Use: Increase Movement Speed by [GetMoveSpeedBonus]% for [GetDuration] seconds.</Description>
+      <GetMoveSpeedBonus>function(self) return math.floor( Buffs['Item_Consumable_050'].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBonus>
+      <GetDuration>function(self) return Buffs['Item_Consumable_050'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_050'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_050'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_050'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_050'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Wand/Wand1</Icon>
+      <Useable>true</Useable>
+      <InventoryType>Clickables</InventoryType>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_050</Name>
+          <DisplayName>Wand of Speed</DisplayName>
+          <AbilityType>PassiveAll</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <Cooldown>30</Cooldown>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Consumable_050</FromItem>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <Icon>NewIcons/Wand/Wand1</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_050</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_050</Name>
+              <DisplayName>Wand of Speed</DisplayName>
+              <Description>Movement Speed increased.</Description>
+              <BuffType>IUSESPRINT</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>8</Duration>
+              <Icon>Flash</Icon>
+              <Icon>NewIcons/Wand/Wand1</Icon>
+              <Affects>
+                <MoveMult>
+                  <Mult>0.25</Mult>
+                </MoveMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_060</Name>
+      <DisplayName>Targeting Dummy</DisplayName>
+      <Description>Use: Draws fire from towers of light when placed nearby.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_060'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_060'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_060'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_060'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Gadget/EclipsingStone</Icon>
+      <Consumable>true</Consumable>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_060</Name>
+          <DisplayName>Targeting Dummy</DisplayName>
+          <AbilityType>TargetedArea</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>LIGHTTOWER</TargetCategory>
+          <TargetingMethod>AREAARGETED</TargetingMethod>
+          <RangeMax>15</RangeMax>
+          <AffectRadius>15</AffectRadius>
+          <Cooldown>30</Cooldown>
+          <CastingTime>1</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Consumable_060</FromItem>
+          <Icon>NewIcons/Gadget/EclipsingStone</Icon>
+          <Reticule>AoE_Revelation</Reticule>
+          <Tooltip>
+            <CastingTime>1</CastingTime>
+            <Cooldown>30</Cooldown>
+            <TargetAlliance>Enemy</TargetAlliance>
+          </Tooltip>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_060</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_070</Name>
+      <DisplayName>Warpstone</DisplayName>
+      <Description>Use: Warp to a nearby location.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_070'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_070'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_070'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_070'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Gadget/Warpstone</Icon>
+      <Useable>true</Useable>
+      <InventoryType>Clickables</InventoryType>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_070</Name>
+          <DisplayName>Warpstone</DisplayName>
+          <AbilityType>TargetedArea</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>AREAARGETED</TargetingMethod>
+          <AffectRadius>4</AffectRadius>
+          <RangeMax>15</RangeMax>
+          <Cooldown>45</Cooldown>
+          <CastingTime>0.5</CastingTime>
+          <SharedCooldown>WarpItems</SharedCooldown>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <ErrorMessage>Cannot move there.</ErrorMessage>
+          <ErrorVO>Nomove</ErrorVO>
+          <FromItem>Item_Consumable_070</FromItem>
+          <Icon>NewIcons/Gadget/Warpstone</Icon>
+          <Reticule>AoE_Warp</Reticule>
+          <WarpToLocation>true</WarpToLocation>
+          <WarpMinions>false</WarpMinions>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_070</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <CasterEffect>
+            <Base>Items</Base>
+            <Group>Artifacts</Group>
+            <Template>ScrotusWarp01</Template>
+          </CasterEffect>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_080</Name>
+      <DisplayName>Universal Gadget</DisplayName>
+      <Description>Use: Heal an allied unit for [GetHealAmount] or damage an enemy unit for [GetDamageAmount].</Description>
+      <GetHealAmount>function(self) return Buffs['Item_Consumable_080_Heal'].Affects.Health.Add end</GetHealAmount>
+      <GetDamageAmount>function(self) return math.floor( Buffs['Item_Consumable_080_Damage'].Affects.Health.Add * -1 ) end</GetDamageAmount>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_070'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_080'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_080'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_080'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Gadget/UniversalGadget</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_080</Name>
+          <DisplayName>Universal Gadget</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <RangeMax>15</RangeMax>
+          <TargetAlliance>Any</TargetAlliance>
+          <TargetCategory>ALLUNITS -UNTARGETABLE</TargetCategory>
+          <Cooldown>10</Cooldown>
+          <CastingTime>2</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem2sec</CastAction>
+          <FromItem>Item_Consumable_080</FromItem>
+          <Icon>NewIcons/Gadget/UniversalGadget</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_080</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <OnCastingEffects>
+            <Base>Items</Base>
+            <Group>Relics</Group>
+            <Template>PortalScroll01</Template>
+          </OnCastingEffects>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_090</Name>
+      <DisplayName>Restorative Scroll</DisplayName>
+      <Description>Use: Any negative effects on your army are removed. The Demigod is not affected.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_090'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_090'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_090'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_090'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Scroll/Scroll1</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_090</Name>
+          <DisplayName>Restorative Scroll</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Any</TargetAlliance>
+          <TargetCategory>ALLUNITS -UNTARGETABLE</TargetCategory>
+          <Cooldown>20</Cooldown>
+          <CastingTime>0.25</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Consumable_090</FromItem>
+          <Icon>NewIcons/Scroll/Scroll1</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_080</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_100</Name>
+      <DisplayName>Hex Scroll</DisplayName>
+      <Description>Use: Weapon damage dealt by the targeted Demigod and their army reduced by [GetReduction]% for [GetDuration] seconds.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_090'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_090'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_090'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_090'].Cooldown end</GetCooldown>
+      <GetDuration>function(self) return Buffs['Item_Consumable_100_Minion'].Duration end</GetDuration>
+      <GetReduction>function(self) return math.floor( Buffs['Item_Consumable_100_Minion'].Affects.DamageBonus.Mult * -100 ) end</GetReduction>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Scroll/Scroll5</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_100</Name>
+          <DisplayName>Hex Scroll</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>HERO -UNTARGETABLE</TargetCategory>
+          <RangeMax>15</RangeMax>
+          <Cooldown>20</Cooldown>
+          <CastingTime>0.25</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Consumable_100</FromItem>
+          <Icon>NewIcons/Scroll/Scroll5</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_100</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_110</Name>
+      <DisplayName>Sigil of Vitality</DisplayName>
+      <Description>Use: Temporarily increase Maximum Health by [GetHealthBonus]% for [GetDuration] seconds.</Description>
+      <GetMinionHealthBonus>function(self) return math.floor( Buffs['Item_Consumable_110_Minion_Buff'].Affects.MaxHealth.Add ) end</GetMinionHealthBonus>
+      <GetHealthBonus>function(self) return math.floor( Buffs['Item_Consumable_110'].Affects.MaxHealth.Mult * 100 ) end</GetHealthBonus>
+      <GetDuration>function(self) return Buffs['Item_Consumable_110'].Duration end</GetDuration>
+      <GetCooldown>function(self) return Ability['Item_Consumable_110'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/Scroll/Scroll4</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Tooltip>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_110</Name>
+          <DisplayName>Sigil of Vitality</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <Cooldown>30</Cooldown>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Consumable_110</FromItem>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <Icon>NewIcons/Scroll/Scroll4</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_110</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_110</Name>
+              <DisplayName>Sigil of Vitality</DisplayName>
+              <Description>Maximum Health increased.</Description>
+              <BuffType>IUSEVITALITY</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <Duration>20</Duration>
+              <Icon>NewIcons/Scroll/Scroll4</Icon>
+              <Affects>
+                <MaxHealth>
+                  <Mult>0.5</Mult>
+                </MaxHealth>
+                <Mult>
+                  <AdjustHealth>true</AdjustHealth>
+                </Mult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_120</Name>
+      <DisplayName>Twig of Life</DisplayName>
+      <Description>Use: Your army restores [GetHealth]% of their maximum Health.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_120'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_120'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_120'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_120'].Cooldown end</GetCooldown>
+      <GetHealth>function(self) return math.floor( Ability['Item_Consumable_120'].RegenAmount * 100 ) end</GetHealth>
+      <GetMinionHealthBonus>function(self) return math.floor(Buffs['Item_Consumable_120_Minion'].Affects.MaxHealth.Add) end</GetMinionHealthBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Wand/Wand4</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_120</Name>
+          <DisplayName>Twig of Life</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO -UNTARGETABLE</TargetCategory>
+          <Cooldown>30</Cooldown>
+          <CastingTime>1</CastingTime>
+          <RegenAmount>.50</RegenAmount>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Consumable_120</FromItem>
+          <Icon>NewIcons/Wand/Wand4</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_120</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_130</Name>
+      <DisplayName>Warlord's Punisher</DisplayName>
+      <Description>Use: Cast a bolt of lightning at the target, dealing [GetHealth] damage and arcing to nearby enemies. Demigods struck also lose [GetMana] Mana.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_130'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_130'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_130'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_130'].Cooldown end</GetCooldown>
+      <GetHealth>function(self) return Ability['Item_Consumable_130'].DamageAmt end</GetHealth>
+      <GetMana>function(self) return Ability['Item_Consumable_130'].ManaDrainAmt end</GetMana>
+      <GetDamageBonus>function(self) return Buffs['Item_Consumable_130_Buff'].Affects.DamageRating.Add end</GetDamageBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Wand/Wand3</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_130</Name>
+          <DisplayName>Warlord's Punisher</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+          <FromItem>Item_Consumable_130</FromItem>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem2sec</CastAction>
+          <RangeMax>15</RangeMax>
+          <Cooldown>30</Cooldown>
+          <CastingTime>1</CastingTime>
+          <DamageAmt>300</DamageAmt>
+          <ManaDrainAmt>400</ManaDrainAmt>
+          <Chains>10</Chains>
+          <ChainTime>0.1</ChainTime>
+          <ChainAffectRadius>5</ChainAffectRadius>
+          <Icon>NewIcons/Wand/Wand3</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_130</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Effects>
+            <Base>Items</Base>
+            <Group>Runes</Group>
+            <Beams>LightningBeam01</Beams>
+          </Effects>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_130_Buff</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Consumable_130</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_130_Buff</Name>
+              <BuffType>PUNISHERDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>REPLACE</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>30</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_140</Name>
+      <DisplayName>Magus Rod</DisplayName>
+      <Description>Use: The cost of abilities is reduced by [GetReduction]% for [GetDuration] seconds.</Description>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Consumable_140_Buff'].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegenBonus>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_140'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_140'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_140'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_140'].Cooldown end</GetCooldown>
+      <GetReduction>function(self) return math.floor( Buffs['Item_Consumable_140'].Affects.SpellCostMult.Add * -100 ) end</GetReduction>
+      <GetDuration>function(self) return math.floor( Buffs['Item_Consumable_140'].Duration ) end</GetDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Wand/Wand2</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_140</Name>
+          <DisplayName>Magus Rod</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO -UNTARGETABLE</TargetCategory>
+          <Cooldown>15</Cooldown>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Consumable_140</FromItem>
+          <Icon>NewIcons/Wand/Wand2</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_140</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_140_Buff</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Consumable_140</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_140_Buff</Name>
+              <BuffType>MAGUSBUFF</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <EnergyRegen>
+                  <Mult>.5</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_150</Name>
+      <DisplayName>Orb of Defiance</DisplayName>
+      <Description>Use: Become invulnerable for [GetDuration] seconds. Cannot move, attack or use abilities.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_150_Use'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_150_Use'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_150_Use'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_150_Use'].Cooldown end</GetCooldown>
+      <GetArmor>function(self) return math.floor( Buffs['Item_Consumable_150'].Affects.Armor.Add ) end</GetArmor>
+      <GetHealth>function(self) return math.floor( Buffs['Item_Consumable_150'].Affects.MaxHealth.Add ) end</GetHealth>
+      <GetDuration>function(self) return math.floor( Buffs['Item_Consumable_150_Use'].Duration ) end</GetDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Orb/Orb1</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealth] Health</Value>
+          <Value>+[GetArmor] Armor</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_150_Use</Name>
+          <DisplayName>Orb of Defiance</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO -UNTARGETABLE</TargetCategory>
+          <Cooldown>35</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Consumable_150</FromItem>
+          <Icon>NewIcons/Orb/Orb1</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_150</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_150</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Consumable_150</FromItem>
+          <Icon>NewIcons/Orb/Orb1</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_150</Name>
+              <BuffType>DEFIANCEARMOR</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Armor>
+                  <Add>500</Add>
+                </Armor>
+                <MaxHealth>
+                  <Add>500</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_160</Name>
+      <DisplayName>Heart of Life</DisplayName>
+      <Description>Use: Restore [GetHealth] Health and [GetMana] Mana over [GetDuration] seconds. Any damage will break this effect.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_160_Use'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_160_Use'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_160_Use'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_160_Use'].Cooldown end</GetCooldown>
+      <GetHealthRegen>function(self) return math.floor( Buffs['Item_Consumable_160'].Affects.Regen.Add ) end</GetHealthRegen>
+      <GetManRegen>function(self) return math.floor( Buffs['Item_Consumable_160'].Affects.EnergyRegen.Mult * 100 ) end</GetManRegen>
+      <GetDuration>function(self) return math.floor( Buffs['Item_Consumable_160_Use'].Duration ) end</GetDuration>
+      <GetHealth>function(self) return math.floor( Buffs['Item_Consumable_160_Use'].Affects.Regen.Add * Buffs['Item_Consumable_160_Use'].Duration ) end</GetHealth>
+      <GetMana>function(self) return math.floor( Buffs['Item_Consumable_160_Use'].Affects.EnergyRegen.Add * Buffs['Item_Consumable_160_Use'].Duration ) end</GetMana>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Orb/Orb2</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthRegen] Health Per Second</Value>
+          <Value>+[GetManRegen]% Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_160_Use</Name>
+          <DisplayName>Heart of Life</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO -UNTARGETABLE</TargetCategory>
+          <Cooldown>60</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Consumable_160</FromItem>
+          <Icon>NewIcons/Orb/Orb2</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_160</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_160</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Consumable_160</FromItem>
+          <Icon>NewIcons/Orb/Orb2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_160</Name>
+              <BuffType>HEARTREGEN</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Regen>
+                  <Add>30</Add>
+                </Regen>
+                <EnergyRegen>
+                  <Mult>0.75</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Consumable_170</Name>
+      <DisplayName>Parasite Egg</DisplayName>
+      <Description>Use: Infest target Demigod with a parasite. Whenever you deal damage to that Demigod, their minions take damage as well. The effects lasts [GetDuration] seconds.</Description>
+      <GetMaxRange>function(self) return Ability['Item_Consumable_170_Use'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Consumable_170_Use'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Consumable_170_Use'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Consumable_170_Use'].Cooldown end</GetCooldown>
+      <GetWeaponDamage>function(self) return math.floor( Buffs['Item_Consumable_170'].Affects.DamageRating.Add ) end</GetWeaponDamage>
+      <GetROF>function(self) return math.floor( Buffs['Item_Consumable_170'].Affects.RateOfFire.Mult * 100 ) end</GetROF>
+      <GetDuration>function(self) return math.floor( Buffs['Item_Consumable_170_Use'].Duration ) end</GetDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Orb/Orb3</Icon>
+      <InventoryType>Clickables</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetWeaponDamage] Weapon Damage</Value>
+          <Value>+[GetROF]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_170_Use</Name>
+          <DisplayName>Parasite Egg</DisplayName>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>HERO -UNTARGETABLE</TargetCategory>
+          <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+          <RangeMax>15</RangeMax>
+          <Cooldown>30</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <InventoryType>Clickables</InventoryType>
+          <FromItem>Item_Consumable_170</FromItem>
+          <Icon>NewIcons/Orb/Orb3</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Consumable_170</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Consumable_170</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Consumable_170</FromItem>
+          <Icon>NewIcons/Orb/Orb2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Consumable_170</Name>
+              <BuffType>PARASITEDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>30</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>0.10</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Health_Potion_Art</Name>
+      <DisplayName>Enhanced Health Potion</DisplayName>
+      <Description>Use: Heal [GetHealAmount] Health.</Description>
+      <GetHealAmount>function(self) return Buffs['Item_Health_Potion_Art'].Affects.Health.Add end</GetHealAmount>
+      <GetMaxRange>function(self) return Ability['Item_Health_Potion_Art'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Health_Potion_Art'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Health_Potion_Art'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Health_Potion_Art'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion1green</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Health_Potion_Art</Name>
+          <DisplayName>Enhanced Health Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <InventoryType>Clickables</InventoryType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>HealthPotion</SharedCooldown>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Health_Potion_Art</FromItem>
+          <Icon>NewIcons/potions/Potion1green</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Health_Potion_Art</Name>
+              <BuffType>POTIONHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Health>
+                  <Add>2250</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Health_Potion_FX_Art</Name>
+              <BuffType>POTIONHEAL01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Heal02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Large_Health_Potion_Art</Name>
+      <DisplayName>Supreme Health Potion</DisplayName>
+      <Description>Use: Heal [GetHealAmount] Health.</Description>
+      <GetHealAmount>function(self) return Buffs['Item_Large_Health_Potion_Art'].Affects.Health.Add end</GetHealAmount>
+      <GetMaxRange>function(self) return Ability['Item_Large_Health_Potion_Art'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Large_Health_Potion_Art'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Large_Health_Potion_Art'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Large_Health_Potion_Art'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion4green</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Large_Health_Potion_Art</Name>
+          <DisplayName>Supreme Health Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>HealthPotion</SharedCooldown>
+          <CastingTime>3</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <FromItem>Item_Large_Health_Potion_Art</FromItem>
+          <Icon>NewIcons/potions/Potion4green</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Large_Health_Potion_Art</Name>
+              <BuffType>POTIONHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Health>
+                  <Add>6000</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Large_Health_Potion_FX_Art</Name>
+              <BuffType>POTIONHEAL01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Heal02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Mana_Potion_Art</Name>
+      <DisplayName>Enhanced Mana Potion</DisplayName>
+      <Description>Use: Restore [GetManaAmount] Mana.</Description>
+      <GetManaAmount>function(self) return Buffs['Item_Mana_Potion_Art'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Mana_Potion_Art'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Mana_Potion_Art'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Mana_Potion_Art'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Mana_Potion_Art'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion1Blue</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Mana_Potion_Art</Name>
+          <DisplayName>Enhanced Mana Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>EnergyPotion</SharedCooldown>
+          <CastingTime>0.5</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem1sec</CastAction>
+          <FromItem>Item_Mana_Potion_Art</FromItem>
+          <Icon>NewIcons/potions/Potion1Blue</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Mana_Potion_Art</Name>
+              <BuffType>POTIONENERGY</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <Affects>
+                <Energy>
+                  <Add>3000</Add>
+                </Energy>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Mana_Potion_FX_Art</Name>
+              <BuffType>POTIONENERGY01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Energize01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Large_Mana_Potion_Art</Name>
+      <DisplayName>Supreme Mana Potion</DisplayName>
+      <Description>Use: Restore [GetManaAmount] Mana.</Description>
+      <GetManaAmount>function(self) return Buffs['Item_Large_Mana_Potion_Art'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Large_Mana_Potion_Art'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Large_Mana_Potion_Art'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Large_Mana_Potion_Art'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Large_Mana_Potion_Art'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion4Blue</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Large_Mana_Potion_Art</Name>
+          <DisplayName>Supreme Mana Potion</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <CastingTime>2</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <SharedCooldown>EnergyPotion</SharedCooldown>
+          <FromItem>Item_Large_Mana_Potion_Art</FromItem>
+          <Icon>NewIcons/potions/Potion4Blue</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Mana_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Large_Mana_Potion_Art</Name>
+              <BuffType>POTIONENERGY</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <Affects>
+                <Energy>
+                  <Add>7500</Add>
+                </Energy>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Large_Mana_Potion_FX_Art</Name>
+              <BuffType>POTIONENERGY01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Energize01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Rejuv_Elixir_Art</Name>
+      <DisplayName>Revitalization Elixir</DisplayName>
+      <Description>Use: Restore [GetHealthAmount] Health and [GetManaAmount] Mana.</Description>
+      <GetHealthAmount>function(self) return Buffs['Item_Rejuv_Elixir_Art'].Affects.Health.Add end</GetHealthAmount>
+      <GetManaAmount>function(self) return Buffs['Item_Rejuv_Elixir_Art'].Affects.Energy.Add end</GetManaAmount>
+      <GetMaxRange>function(self) return Ability['Item_Rejuv_Elixir_Art'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['Item_Rejuv_Elixir_Art'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Rejuv_Elixir_Art'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Rejuv_Elixir_Art'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion1Purple</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Rejuv_Elixir_Art</Name>
+          <DisplayName>Revitalization Elixir</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>RejuvenationPotion</SharedCooldown>
+          <CastingTime>1</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <FromItem>Item_Rejuv_Elixir_Art</FromItem>
+          <Icon>NewIcons/potions/Potion1Purple</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Rejuv_Elixir</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Rejuv_Elixir_Art</Name>
+              <BuffType>POTIONREJUV</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Energy>
+                  <Add>2250</Add>
+                </Energy>
+                <Health>
+                  <Add>2250</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Rejuv_Elixir_FX_Art</Name>
+              <BuffType>POTIONREJUVENATION01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>1</Duration>
+              <Effects>Rejuvenation02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Large_Rejuv_Elixir_Art</Name>
+      <DisplayName>Supreme Revitalization Elixir</DisplayName>
+      <Description>Use: Restore [GetHealthAmount] Health and [GetManaAmount] Mana.</Description>
+      <GetHealthAmount>function(self) return Buffs['Item_Large_Rejuv_Elixir_Art'].Affects.Health.Add end</GetHealthAmount>
+      <GetManaAmount>function(self) return Buffs['Item_Large_Rejuv_Elixir_Art'].Affects.Energy.Add end</GetManaAmount>
+      <GetEnergyCost>function(self) return Ability['Item_Large_Rejuv_Elixir_Art'].EnergyCost end</GetEnergyCost>
+      <GetMaxRange>function(self) return Ability['Item_Large_Rejuv_Elixir_Art'].RangeMax end</GetMaxRange>
+      <GetCastTime>function(self) return Ability['Item_Large_Rejuv_Elixir_Art'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Large_Rejuv_Elixir_Art'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.1</MeshScale>
+      <Icon>NewIcons/potions/Potion4Purple</Icon>
+      <StacksPerSlot>3</StacksPerSlot>
+      <InventoryType>Clickables</InventoryType>
+      <Consumable>true</Consumable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Large_Rejuv_Elixir_Art</Name>
+          <DisplayName>Supreme Revitalization Elixir</DisplayName>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>8</Cooldown>
+          <SharedCooldown>RejuvenationPotion</SharedCooldown>
+          <CastingTime>3</CastingTime>
+          <InventoryType>Clickables</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <FromItem>Item_Large_Rejuv_Elixir_Art</FromItem>
+          <Icon>NewIcons/potions/Potion4Purple</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Consumable/snd_item_consumable_Item_Large_Health_Potion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Large_Rejuv_Elixir_Art</Name>
+              <BuffType>POTIONREJUV</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Affects>
+                <Energy>
+                  <Add>5625</Add>
+                </Energy>
+                <Health>
+                  <Add>5625</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+            <BuffBlueprint>
+              <Name>Item_Large_Rejuv_Elixir_FX_Art</Name>
+              <BuffType>POTIONREJUVENATION01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>1</Duration>
+              <Effects>Rejuvenation02</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>Item_Consumable_Buff_020</Name>
+      <BuffType>TOTEMVISION</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>ALLUNITS</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <VisionRadius>
+          <Add>5</Add>
+        </VisionRadius>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_080_Heal</Name>
+      <BuffType>CONSUMABLEHEAL</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>0</Duration>
+      <CanCrit>false</CanCrit>
+      <DamageSelf>true</DamageSelf>
+      <ArmorImmune>true</ArmorImmune>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanMagicResist>false</CanMagicResist>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Effects>Heal02</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <Health>
+          <Add>2000</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_080_Damage</Name>
+      <BuffType>CONSUMABLEDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>0</Duration>
+      <CanCrit>false</CanCrit>
+      <ArmorImmune>true</ArmorImmune>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanMagicResist>true</CanMagicResist>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Effects>Damage02</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <Health>
+          <Add>-650</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_100_Minion</Name>
+      <DisplayName>Hex Scroll</DisplayName>
+      <Description>Damage reduced.</Description>
+      <BuffType>HEXSCROLLMINIONDAMAGEREDUCTION</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>NewIcons/Scroll/Scroll5</Icon>
+      <Affects>
+        <DamageBonus>
+          <Mult>-0.30</Mult>
+        </DamageBonus>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_100_Demigod</Name>
+      <BuffType>HEXSCROLLDEMIGODDAMAGEREDUCTION</BuffType>
+      <DisplayName>Hex Scroll</DisplayName>
+      <Description>Damage reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>NewIcons/Scroll/Scroll5</Icon>
+      <Affects>
+        <DamageRating>
+          <Mult>-0.30</Mult>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_120</Name>
+      <BuffType>TWIGHEALTH</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>MINION</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Effects>Heal01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <Dummy>
+          <Add>1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_140</Name>
+      <DisplayName>Magus Rod</DisplayName>
+      <Description>Cost of abilities reduced.</Description>
+      <Icon>NewIcons/Wand/Wand2</Icon>
+      <BuffType>MAGUSROD</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Affects>
+        <SpellCostMult>
+          <Add>-.50</Add>
+        </SpellCostMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_150_Use</Name>
+      <DisplayName>Orb of Defiance</DisplayName>
+      <Description>Invulnerable. Cannot move, attack or use abilities.</Description>
+      <Icon>NewIcons/Orb/Orb1</Icon>
+      <BuffType>DEFIANCEUSE</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Affects>
+        <UnitImmobile>
+          <Bool>true</Bool>
+        </UnitImmobile>
+        <DisableAbilityUse>
+          <Bool>true</Bool>
+        </DisableAbilityUse>
+        <Invincible>
+          <Bool>true</Bool>
+        </Invincible>
+        <WeaponsEnable>
+          <Bool>false</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_160_Use</Name>
+      <DisplayName>Heart of Life</DisplayName>
+      <Description>Healing and Regenerating Mana.</Description>
+      <Icon>NewIcons/Orb/Orb2</Icon>
+      <BuffType>HEARTUSE</BuffType>
+      <Debuff>false</Debuff>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Affects>
+        <Regen>
+          <Add>450</Add>
+        </Regen>
+        <EnergyRegen>
+          <Add>450</Add>
+        </EnergyRegen>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Consumable_170_Use</Name>
+      <DisplayName>Parasite Egg</DisplayName>
+      <Description>Minions take damage when Parasite Egg's owner damages you.</Description>
+      <Icon>NewIcons/Orb/Orb3</Icon>
+      <BuffType>PARASITEUSE</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Affects>
+        <Dummy>
+          <Add>1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>TOLSinkTarget01</Name>
+      <DisplayName>Targeting Dummy</DisplayName>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>LIGHTTOWER</TargetCategory>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>TOLSinkTarget01</Name>
+          <DisplayName>Targeting Dummy</DisplayName>
+          <BuffType>TOLSINKTARGET</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Consumable_090</Name>
+      <DisplayName>Restorative Scroll</DisplayName>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Consumable_090</Name>
+          <BuffType>MINIONDEBUFFCLEAR</BuffType>
+          <Debuff>false</Debuff>
+          <EntityCategory>ALLUNITS - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Effects>Heal02</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Consumable_110_Minion_Buff</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Consumable_110_Minion_Buff</Name>
+          <BuffType>CHEST040MINIONHEALTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <MaxHealth>
+              <Add>100</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Consumable_120_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Consumable_120_Minion</Name>
+          <BuffType>CONSUMABLE120PASSIVE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <MaxHealth>
+              <Add>150</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

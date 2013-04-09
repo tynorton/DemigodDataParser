@@ -1,0 +1,1425 @@
+<DemigodBlueprints id="HOak_Abilities">
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HOAKShield01</Name>
+      <DisplayName>Shield I</DisplayName>
+      <Description>Oak grants a shield to a target, making them immune to damage for [GetBuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>400</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>35</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Shield</CastAction>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetBuffDuration>
+      <Icon>/DGOak/NewOakShield01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKShield01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Shield</DisplayName>
+          <Description>Invincible.</Description>
+          <BuffType>HOAKSHIELD</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <Effects>Shield01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakShield01</Icon>
+          <Affects>
+            <Invincible>
+              <Bool>true</Bool>
+            </Invincible>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKShield02</Name>
+      <DisplayName>Shield II</DisplayName>
+      <Description>Oak grants a shield to a target, making them immune to damage for [GetBuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>500</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>35</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Shield</CastAction>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetBuffDuration>
+      <Icon>/DGOak/NewOakShield01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKShield02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Shield</DisplayName>
+          <Description>Invincible.</Description>
+          <BuffType>HOAKSHIELD</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>4</Duration>
+          <Effects>Shield01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakShield01</Icon>
+          <Affects>
+            <Invincible>
+              <Bool>true</Bool>
+            </Invincible>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKShield03</Name>
+      <DisplayName>Shield III</DisplayName>
+      <Description>Oak grants a shield to a target, making them immune to damage for [GetBuffDuration] seconds. This more powerful variant of Shield also removes debuffs.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>600</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>35</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Shield</CastAction>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetBuffDuration>
+      <Icon>/DGOak/NewOakShield01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKShield03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Shield</DisplayName>
+          <Description>Invincible.</Description>
+          <BuffType>HOAKSHIELD</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <Effects>Shield01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakShield01</Icon>
+          <Affects>
+            <Invincible>
+              <Bool>true</Bool>
+            </Invincible>
+            <DebuffImmune>
+              <Bool>true</Bool>
+            </DebuffImmune>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKShield04</Name>
+      <DisplayName>Shield IV</DisplayName>
+      <Description>Oak grants a shield to a target, making them immune to damage [GetBuffDuration] seconds. Also, this powerful version of Shield removes debuffs and heals for [GetHealAmount].</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>700</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>35</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <HealAmt>600</HealAmt>
+      <CastAction>Shield</CastAction>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetBuffDuration>
+      <GetHealAmount>function(self) return math.floor( self.HealAmt ) end</GetHealAmount>
+      <Icon>/DGOak/NewOakShield01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKShield04</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Shield</DisplayName>
+          <Description>Invincible.</Description>
+          <BuffType>HOAKSHIELD</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <Effects>Shield01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakShield01</Icon>
+          <Affects>
+            <Invincible>
+              <Bool>true</Bool>
+            </Invincible>
+            <DebuffImmune>
+              <Bool>true</Bool>
+            </DebuffImmune>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOakPurity</Name>
+      <DisplayName>Purity</DisplayName>
+      <Description>When Oak uses Shield on an ally, all of his negative effects are removed, and he is immune to all negative effects for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKPenitence01</Name>
+      <DisplayName>Penitence I</DisplayName>
+      <Description>Oak fills a target with holy remorse, dealing [GetDamage] damage, reducing their Movement Speed by [GetMoveSpeedPercent]% and increasing all damage taken by [GetDamageIncPercent]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>450</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Penitence</CastAction>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <DamageAmt>200</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <GetMoveSpeedPercent>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetMoveSpeedPercent>
+      <GetDamageIncPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageTakenMult.Add * 100 ) end</GetDamageIncPercent>
+      <GetBuffDuration>function(self) return Buffs[self.Name].Duration end</GetBuffDuration>
+      <Icon>/DGOak/NewOakPenitence01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKPenitence01</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence</DisplayName>
+          <Description>Movement Speed reduced. All damage taken increased.</Description>
+          <BuffType>HOAKPENITENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakPenitence01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.07</Mult>
+            </MoveMult>
+            <DamageTakenMult>
+              <Add>0.07</Add>
+            </DamageTakenMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HOAKPenitenceInterrupt01</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence I</DisplayName>
+          <Description>Interrupted</Description>
+          <BuffType>HOAKPENITENCESTUN</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>0.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKPenitence02</Name>
+      <DisplayName>Penitence II</DisplayName>
+      <Description>Oak fills a target with holy remorse, dealing [GetDamage] damage, reducing their Movement Speed by [GetMoveSpeedPercent]% and increasing all damage taken by [GetDamageIncPercent]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>550</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Penitence</CastAction>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <DamageAmt>400</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <GetMoveSpeedPercent>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetMoveSpeedPercent>
+      <GetDamageIncPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageTakenMult.Add * 100 ) end</GetDamageIncPercent>
+      <GetBuffDuration>function(self) return Buffs[self.Name].Duration end</GetBuffDuration>
+      <Icon>/DGOak/NewOakPenitence01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKPenitence02</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence</DisplayName>
+          <Description>Movement Speed reduced. All damage taken increased.</Description>
+          <BuffType>HOAKPENITENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakPenitence01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.10</Mult>
+            </MoveMult>
+            <DamageTakenMult>
+              <Add>0.10</Add>
+            </DamageTakenMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HOAKPenitenceInterrupt02</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence II</DisplayName>
+          <Description>Interrupted</Description>
+          <BuffType>HOAKPENITENCESTUN</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>0.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKPenitence03</Name>
+      <DisplayName>Penitence III</DisplayName>
+      <Description>Oak fills a target with holy remorse, dealing [GetDamage] damage, reducing their Movement Speed by [GetMoveSpeedPercent]% and increasing all damage taken by [GetDamageIncPercent]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>650</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Penitence</CastAction>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <DamageAmt>600</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <GetMoveSpeedPercent>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetMoveSpeedPercent>
+      <GetDamageIncPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageTakenMult.Add * 100 ) end</GetDamageIncPercent>
+      <GetBuffDuration>function(self) return Buffs[self.Name].Duration end</GetBuffDuration>
+      <Icon>/DGOak/NewOakPenitence01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKPenitence03</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence</DisplayName>
+          <Description>Movement Speed reduced. All damage taken increased.</Description>
+          <BuffType>HOAKPENITENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakPenitence01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.13</Mult>
+            </MoveMult>
+            <DamageTakenMult>
+              <Add>0.13</Add>
+            </DamageTakenMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HOAKPenitenceInterrupt03</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence III</DisplayName>
+          <Description>Interrupted</Description>
+          <BuffType>HOAKPENITENCESTUN</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>0.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKPenitence04</Name>
+      <DisplayName>Penitence IV</DisplayName>
+      <Description>Oak fills a target with holy remorse, dealing [GetDamage] damage, reducing their Movement Speed by [GetMoveSpeedPercent]% and increasing all damage taken by [GetDamageIncPercent]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>750</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.7</FollowThroughTime>
+      <CastAction>Penitence</CastAction>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <DamageAmt>800</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <GetMoveSpeedPercent>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetMoveSpeedPercent>
+      <GetDamageIncPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageTakenMult.Add * 100 ) end</GetDamageIncPercent>
+      <GetBuffDuration>function(self) return Buffs[self.Name].Duration end</GetBuffDuration>
+      <Icon>/DGOak/NewOakPenitence01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKPenitence04</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence</DisplayName>
+          <Description>Movement Speed reduced. All damage taken increased.</Description>
+          <BuffType>HOAKPENITENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGOak/NewOakPenitence01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.16</Mult>
+            </MoveMult>
+            <DamageTakenMult>
+              <Add>0.16</Add>
+            </DamageTakenMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HOAKPenitenceInterrupt04</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Penitence IV</DisplayName>
+          <Description>Interrupted</Description>
+          <BuffType>HOAKPENITENCESTUN</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>0.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSurgeofFaith01</Name>
+      <DisplayName>Surge of Faith I</DisplayName>
+      <Description>Oak releases a wave of holy power, dealing [GetDamageAmt] damage to enemies. Increases allied unit Attack Speed by [GetAttackBuff]% and Movement Speed by [GetMovementBuff]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE - BENIGN</TargetCategory>
+      <EnergyCost>500</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>300</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Surge</CastAction>
+      <BuffName>SurgeofFaithBuff01</BuffName>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackBuff>function(self) return math.floor( Buffs[self.BuffName].Affects.RateOfFire.Mult * 100 ) end</GetAttackBuff>
+      <GetMovementBuff>function(self) return math.floor( Buffs[self.BuffName].Affects.MoveMult.Mult * 100 ) end</GetMovementBuff>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.BuffName].Duration ) end</GetBuffDuration>
+      <OnStartAbility>SurgeOfFaithFunction</OnStartAbility>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSurgeofFaith02</Name>
+      <DisplayName>Surge of Faith II</DisplayName>
+      <Description>Oak releases a wave of holy power, dealing [GetDamageAmt] damage to enemies. Increases allied unit Attack Speed by [GetAttackBuff]% and Movement Speed by [GetMovementBuff]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE - BENIGN</TargetCategory>
+      <EnergyCost>675</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>450</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Surge</CastAction>
+      <BuffName>SurgeofFaithBuff02</BuffName>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackBuff>function(self) return math.floor( Buffs[self.BuffName].Affects.RateOfFire.Mult * 100 ) end</GetAttackBuff>
+      <GetMovementBuff>function(self) return math.floor( Buffs[self.BuffName].Affects.MoveMult.Mult * 100 ) end</GetMovementBuff>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.BuffName].Duration ) end</GetBuffDuration>
+      <OnStartAbility>SurgeOfFaithFunction</OnStartAbility>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSurgeofFaith03</Name>
+      <DisplayName>Surge of Faith III</DisplayName>
+      <Description>Oak releases a wave of holy power, dealing [GetDamageAmt] damage to enemies. Increases allied unit Attack Speed by [GetAttackBuff]% and Movement Speed by [GetMovementBuff]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE - BENIGN</TargetCategory>
+      <EnergyCost>850</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>600</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Surge</CastAction>
+      <BuffName>SurgeofFaithBuff03</BuffName>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackBuff>function(self) return math.floor( Buffs[self.BuffName].Affects.RateOfFire.Mult * 100 ) end</GetAttackBuff>
+      <GetMovementBuff>function(self) return math.floor( Buffs[self.BuffName].Affects.MoveMult.Mult * 100 ) end</GetMovementBuff>
+      <GetBuffDuration>function(self) return math.floor( Buffs[self.BuffName].Duration ) end</GetBuffDuration>
+      <OnStartAbility>SurgeOfFaithFunction</OnStartAbility>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKRaiseDeadWard01</Name>
+      <DisplayName>Raise Dead Ward I</DisplayName>
+      <Description>Oak places a ward that attracts the souls of the fallen. Units that are slain near the ward have a [GetSpiritChance]% chance to be converted to a spirit under Oak's control.\n\nOak can have [GetMaxSpirits] spirits active.\n\nOak can maintain [GetMaxWards] ward.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>200</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <RangeMax>5</RangeMax>
+      <CastingTime>0.2</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>DeployWard</CastAction>
+      <AffectRadius>25</AffectRadius>
+      <WardMax>1</WardMax>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetSpiritChance>function(self) return math.floor( Buffs['HOAKSpiritOfWar01'].SpiritChance ) end</GetSpiritChance>
+      <GetMaxSpirits>function(self) return math.floor( Buffs['HOAKSpiritOfWar01'].SpiritMax ) end</GetMaxSpirits>
+      <GetMaxWards>function(self) return math.floor( self.WardMax ) end</GetMaxWards>
+      <Icon>/DGOak/NewOakRaiseDead01</Icon>
+      <Reticule>AoE_Spirit_Ward</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKRaiseDeadWard02</Name>
+      <DisplayName>Raise Dead Ward II</DisplayName>
+      <Description>Oak places a ward that attracts the souls of the fallen. Units that are slain near the ward have a [GetSpiritChance]% chance to be converted to a spirit under Oak's control.\n\nOak can have [GetMaxSpirits] spirits active.\n\nOak can maintain [GetMaxWards] wards.\n\nSpirits have +[GetMinionDamage] Weapon Damage and +[GetMinionHealth] Health.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>200</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <RangeMax>5</RangeMax>
+      <CastingTime>0.2</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>DeployWard</CastAction>
+      <AffectRadius>25</AffectRadius>
+      <WardMax>2</WardMax>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetSpiritChance>function(self) return math.floor( Buffs['HOAKSpiritOfWar02'].SpiritChance ) end</GetSpiritChance>
+      <GetMaxSpirits>function(self) return math.floor( Buffs['HOAKSpiritOfWar02'].SpiritMax ) end</GetMaxSpirits>
+      <GetMaxWards>function(self) return math.floor( self.WardMax ) end</GetMaxWards>
+      <GetMinionDamage>function(self) return math.floor( Buffs['HOakRaiseDeadWardBuffMinion02'].Affects.DamageRating.Add ) end</GetMinionDamage>
+      <GetMinionHealth>function(self) return math.floor( Buffs['HOakRaiseDeadWardBuffMinion02'].Affects.MaxHealth.Add ) end</GetMinionHealth>
+      <Icon>/DGOak/NewOakRaiseDead01</Icon>
+      <Reticule>AoE_Spirit_Ward</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKRaiseDeadWard03</Name>
+      <DisplayName>Raise Dead Ward III</DisplayName>
+      <Description>Oak places a ward that attracts the souls of the fallen. Units that are slain near the ward have a [GetSpiritChance]% chance to be converted to a spirit under Oak's control.\n\nOak can have [GetMaxSpirits] spirits active.\n\nOak can maintain [GetMaxWards] wards.\n\nSpirits have +[GetMinionDamage] Weapon Damage and +[GetMinionHealth] Health.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>200</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <RangeMax>5</RangeMax>
+      <CastingTime>0.2</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>DeployWard</CastAction>
+      <AffectRadius>25</AffectRadius>
+      <WardMax>3</WardMax>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetSpiritChance>function(self) return math.floor( Buffs['HOAKSpiritOfWar03'].SpiritChance ) end</GetSpiritChance>
+      <GetMaxSpirits>function(self) return math.floor( Buffs['HOAKSpiritOfWar03'].SpiritMax ) end</GetMaxSpirits>
+      <GetMaxWards>function(self) return math.floor( self.WardMax ) end</GetMaxWards>
+      <GetMinionDamage>function(self) return math.floor( Buffs['HOakRaiseDeadWardBuffMinion03'].Affects.DamageRating.Add ) end</GetMinionDamage>
+      <GetMinionHealth>function(self) return math.floor( Buffs['HOakRaiseDeadWardBuffMinion03'].Affects.MaxHealth.Add ) end</GetMinionHealth>
+      <Icon>/DGOak/NewOakRaiseDead01</Icon>
+      <Reticule>AoE_Spirit_Ward</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKRaiseDeadWard04</Name>
+      <DisplayName>Raise Dead Ward IV</DisplayName>
+      <Description>Oak places a ward that attracts the souls of the fallen. Units that are slain near the ward have a [GetSpiritChance]% chance to be converted to a spirit under Oak's control.\n\nOak can have [GetMaxSpirits] spirits active.\n\nOak can maintain [GetMaxWards] wards.\n\nSpirits have +[GetMinionDamage] Weapon Damage and +[GetMinionHealth] Health.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>200</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <RangeMax>5</RangeMax>
+      <CastingTime>0.2</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>DeployWard</CastAction>
+      <AffectRadius>25</AffectRadius>
+      <WardMax>4</WardMax>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <ErrorMessage>Cannot place that here.</ErrorMessage>
+      <ErrorVO>Noplace</ErrorVO>
+      <GetSpiritChance>function(self) return math.floor( Buffs['HOAKSpiritOfWar04'].SpiritChance ) end</GetSpiritChance>
+      <GetMaxSpirits>function(self) return math.floor( Buffs['HOAKSpiritOfWar04'].SpiritMax ) end</GetMaxSpirits>
+      <GetMaxWards>function(self) return math.floor( self.WardMax ) end</GetMaxWards>
+      <GetMinionDamage>function(self) return math.floor( Buffs['HOakRaiseDeadWardBuffMinion04'].Affects.DamageRating.Add ) end</GetMinionDamage>
+      <GetMinionHealth>function(self) return math.floor( Buffs['HOakRaiseDeadWardBuffMinion04'].Affects.MaxHealth.Add ) end</GetMinionHealth>
+      <Icon>/DGOak/NewOakRaiseDead01</Icon>
+      <Reticule>AoE_Spirit_Ward</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSpiritOfWar01</Name>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - HERO - SPIRIT</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Any</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSpiritOfWar01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Spirit of War</DisplayName>
+          <BuffType>HOAKSPIRITOFWAR</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>1</Duration>
+          <SpiritChance>30</SpiritChance>
+          <SpiritMax>3</SpiritMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSpiritOfWar02</Name>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - HERO - SPIRIT</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Any</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSpiritOfWar02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Spirit of War</DisplayName>
+          <BuffType>HOAKSPIRITOFWAR</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>1</Duration>
+          <SpiritChance>45</SpiritChance>
+          <SpiritMax>5</SpiritMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSpiritOfWar03</Name>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - HERO - SPIRIT</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Any</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSpiritOfWar03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Spirit of War</DisplayName>
+          <BuffType>HOAKSPIRITOFWAR</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>1</Duration>
+          <SpiritChance>60</SpiritChance>
+          <SpiritMax>7</SpiritMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKGuardianAura03</Name>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - NOBUFFS</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Ally</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKGuardianAura03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Guardian Aura</DisplayName>
+          <Description>+250 Armor</Description>
+          <BuffType>HOAKGUARDIANAURA</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/DGOak/NewOakRaiseDead01</Icon>
+          <Duration>1</Duration>
+          <Affects>
+            <Armor>
+              <Add>200</Add>
+            </Armor>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSpiritOfWar04</Name>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - HERO - SPIRIT</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Any</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSpiritOfWar04</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Spirit of War</DisplayName>
+          <BuffType>HOAKSPIRITOFWAR</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>1</Duration>
+          <SpiritChance>75</SpiritChance>
+          <SpiritMax>10</SpiritMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKGuardianAura04</Name>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - NOBUFFS</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Ally</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKGuardianAura04</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Guardian Aura</DisplayName>
+          <Description>+500 Armor</Description>
+          <BuffType>HOAKGUARDIANAURA</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/DGOak/NewOakRaiseDead01</Icon>
+          <Duration>1</Duration>
+          <Affects>
+            <Armor>
+              <Add>400</Add>
+            </Armor>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOakSoulFrenzy</Name>
+      <DisplayName>Soul Frenzy</DisplayName>
+      <Description>Oak has a [GetChance]% chance of inciting his Spirits into a berserker rage, increasing their attack speed by [GetAttackSpeedBuff]% and letting their attacks throw smaller units into the air. This effect lasts for [GetDuration] seconds.</Description>
+      <GetChance>function(self) return math.floor( self.WeaponProcChance ) end</GetChance>
+      <GetAttackSpeedBuff>function(self) return math.floor( Buffs['HOakSoulFrenzy'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBuff>
+      <GetDuration>function(self) return math.floor( Buffs['HOakSoulFrenzy'].Duration ) end</GetDuration>
+      <AbilityType>WeaponProc</AbilityType>
+      <WeaponProcChance>5</WeaponProcChance>
+      <Icon>/DGOak/NewOakSoulFrenzy01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKLastStand01</Name>
+      <DisplayName>Last Stand I</DisplayName>
+      <Description>The spirit of Oak refuses to leave a battle unfinished. Should he fall, he will enter an invincible berserker fury, increasing his damage, move speed and Attack Speed by [GetBerserkPercent]% for [GetDuration] seconds before finally dying.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetBerserkPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetBerserkPercent>
+      <GetDuration>function(self) return math.floor( self.LastStandDuration - 4 ) end</GetDuration>
+      <EnergyCost>0</EnergyCost>
+      <NoCastAnim>true</NoCastAnim>
+      <LastStandBuff>HOAKLastStand01</LastStandBuff>
+      <Icon>/DGOak/NewOakLastStand01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKLastStand02</Name>
+      <DisplayName>Last Stand II</DisplayName>
+      <Description>The spirit of Oak refuses to leave a battle unfinished. Should he fall, he will enter an invincible berserker fury, increasing his damage, move speed and Attack Speed by [GetBerserkPercent]% for [GetDuration] seconds before finally dying.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetBerserkPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetBerserkPercent>
+      <GetDuration>function(self) return math.floor( self.LastStandDuration - 4 ) end</GetDuration>
+      <EnergyCost>0</EnergyCost>
+      <NoCastAnim>true</NoCastAnim>
+      <LastStandBuff>HOAKLastStand02</LastStandBuff>
+      <Icon>/DGOak/NewOakLastStand01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKDivineJustice01</Name>
+      <DisplayName>Divine Justice I</DisplayName>
+      <Description>When Oak kills a target, he and his allies receive Health and Mana equal to [GetRegenPercent]% of the unit's maximum Health.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRegenPercent>function(self) return math.floor( Buffs['HOAKDivineJusticeSelf01'].RegenAmount * 100 ) end</GetRegenPercent>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Icon>/DGOak/NewOakDevineJustice01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKDivineJusticeSelf01</Name>
+          <DisplayName>Divine Justice I</DisplayName>
+          <Description>When Oak kills a target, he and his allies receive Health and Mana equal to [GetRegenPercent]% of the unit's maximum Health.</Description>
+          <GetRegenPercent>function(self) return math.floor( self.RegenAmount * 100 ) end</GetRegenPercent>
+          <BuffType>HOAKDIVINEJUSTICE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <RegenAmount>0.1</RegenAmount>
+          <AffectRadius>15</AffectRadius>
+          <Regeneration>DivineJusticeBuffFunction</Regeneration>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKDivineJustice02</Name>
+      <DisplayName>Divine Justice II</DisplayName>
+      <Description>When Oak kills a target, he and his allies receive Health and Mana equal to [GetRegenPercent]% of the unit's maximum Health.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRegenPercent>function(self) return math.floor( Buffs['HOAKDivineJusticeSelf02'].RegenAmount * 100 ) end</GetRegenPercent>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Icon>/DGOak/NewOakDevineJustice01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKDivineJusticeSelf02</Name>
+          <DisplayName>Divine Justice II</DisplayName>
+          <Description>When Oak kills a target, he and his allies receive Health and Mana equal to [GetRegenPercent]% of the unit's maximum Health.</Description>
+          <BuffType>HOAKDIVINEJUSTICE</BuffType>
+          <GetRegenPercent>function(self) return math.floor( self.RegenAmount * 100 ) end</GetRegenPercent>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <RegenAmount>0.15</RegenAmount>
+          <AffectRadius>15</AffectRadius>
+          <Regeneration>DivineJusticeBuffFunction</Regeneration>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKDivineJustice03</Name>
+      <DisplayName>Divine Justice III</DisplayName>
+      <Description>When Oak kills a target, he and his allies receive Health and Mana equal to [GetRegenPercent]% of the unit's maximum Health.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRegenPercent>function(self) return math.floor( Buffs['HOAKDivineJusticeSelf03'].RegenAmount * 100 ) end</GetRegenPercent>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Icon>/DGOak/NewOakDevineJustice01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKDivineJusticeSelf03</Name>
+          <DisplayName>Divine Justice III</DisplayName>
+          <Description>When Oak kills a target, he and his allies receive Health and Mana equal to [GetRegenPercent]% of the unit's maximum Health.</Description>
+          <BuffType>HOAKDIVINEJUSTICE</BuffType>
+          <GetRegenPercent>function(self) return math.floor( self.RegenAmount * 100 ) end</GetRegenPercent>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <RegenAmount>0.2</RegenAmount>
+          <AffectRadius>15</AffectRadius>
+          <Regeneration>DivineJusticeBuffFunction</Regeneration>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOakRally</Name>
+      <DisplayName>Rally</DisplayName>
+      <Description>When Oak kills a Demigod, he and his allies receive +[GetArmor] Armor and heal [GetAmount] Health over [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetArmor>function(self) return ( Buffs[self.Name].Affects.Armor.Add ) end</GetArmor>
+      <GetAmount>function(self) return math.floor( Buffs['HOakRallyHeal'].Affects.Health.Add * Buffs['HOakRallyHeal'].Duration ) end</GetAmount>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSoulPower01</Name>
+      <DisplayName>Soul Power I</DisplayName>
+      <Description>Oak's determination to his cause grows, increasing Weapon Damage by [GetDamageBoost]. Also, Oak gains additional Weapon Damage based on the number of spirits he has.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageBoost>function(self) return Buffs['HOAKSoulPower01Damage'].Affects.DamageRating.Add end</GetDamageBoost>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSoulPower01Damage</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Soul Power Damage I</DisplayName>
+          <BuffType>HOAKSoulPower01Damage</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>20</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSoulPower02</Name>
+      <DisplayName>Soul Power II</DisplayName>
+      <Description>Oak's determination to his cause grows, increasing Weapon Damage by [GetDamageBoost]. Also, Oak gains additional Weapon Damage based on the number of spirits he has.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageBoost>function(self) return Buffs['HOAKSoulPower02Damage'].Affects.DamageRating.Add end</GetDamageBoost>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSoulPower02Damage</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Soul Power Damage II</DisplayName>
+          <BuffType>HOAKSoulPower02Damage</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>40</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSoulPower03</Name>
+      <DisplayName>Soul Power III</DisplayName>
+      <Description>Oak's determination to his cause grows, increasing Weapon Damage by [GetDamageBoost]. Also, Oak gains additional Weapon Damage based on the number of spirits he has.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageBoost>function(self) return Buffs['HOAKSoulPower03Damage'].Affects.DamageRating.Add end</GetDamageBoost>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOAKSoulPower03Damage</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Soul Power Damage III</DisplayName>
+          <BuffType>HOAKSoulPower01Damage</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>60</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKDeath01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKShieldGrey01</Name>
+      <DisplayName>Shield I</DisplayName>
+      <Description>Oak grants a shield to a target, making them immune to damage [GetBuffDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HOAKShield01'].RangeMax end</GetMaxRange>
+      <GetBuffDuration>function(self) return math.floor( Buffs['HOAKShield01'].Duration ) end</GetBuffDuration>
+      <GetEnergyCost>function(self) return Ability['HOAKShield01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HOAKShield01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HOAKShield01'].Cooldown end</GetCooldown>
+      <Icon>/DGOak/NewOakShield01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKPenitenceGrey01</Name>
+      <DisplayName>Penitence I</DisplayName>
+      <Description>Oak fills a target with holy remorse, dealing [GetDamage] damage, reducing their Movement Speed by [GetMoveSpeedPercent]% and increasing all damage taken by [GetDamageIncPercent]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HOAKPenitence01'].RangeMax end</GetMaxRange>
+      <GetDamage>function(self) return Ability['HOAKPenitence01'].DamageAmt end</GetDamage>
+      <GetEnergyCost>function(self) return Ability['HOAKPenitence01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HOAKPenitence01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HOAKPenitence01'].Cooldown end</GetCooldown>
+      <GetMoveSpeedPercent>function(self) return math.floor( Buffs['HOAKPenitence01'].Affects.MoveMult.Mult * -100 ) end</GetMoveSpeedPercent>
+      <GetDamageIncPercent>function(self) return math.floor( Buffs['HOAKPenitence01'].Affects.DamageTakenMult.Add * 100 ) end</GetDamageIncPercent>
+      <GetBuffDuration>function(self) return Buffs['HOAKPenitence01'].Duration end</GetBuffDuration>
+      <Icon>/DGOak/NewOakPenitence01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKSurgeofFaithGrey01</Name>
+      <DisplayName>Surge of Faith I</DisplayName>
+      <Description>Oak releases a wave of holy power, dealing [GetDamageAmt] damage to enemies. Increases allied unit Attack Speed by [GetAttackBuff]% and Movement Speed by [GetMovementBuff]% for [GetBuffDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HOAKSurgeofFaith01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HOAKSurgeofFaith01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HOAKSurgeofFaith01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HOAKSurgeofFaith01'].Cooldown end</GetCooldown>
+      <GetDamageAmt>function(self) return math.floor( Ability['HOAKSurgeofFaith01'].DamageAmt ) end</GetDamageAmt>
+      <GetAttackBuff>function(self) return math.floor( Buffs['SurgeofFaithBuff01'].Affects.RateOfFire.Mult * 100 ) end</GetAttackBuff>
+      <GetMovementBuff>function(self) return math.floor( Buffs['SurgeofFaithBuff01'].Affects.MoveMult.Mult * 100 ) end</GetMovementBuff>
+      <GetBuffDuration>function(self) return math.floor( Buffs['SurgeofFaithBuff01'].Duration ) end</GetBuffDuration>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HOAKRaiseDeadWardGrey01</Name>
+      <DisplayName>Raise Dead Ward I</DisplayName>
+      <Description>Oak places a ward that attracts the souls of the fallen. Units that are slain near the ward have a [GetSpiritChance]% chance to be converted to a spirit under Oak's control.\n\nOak can have [GetMaxSpirits] spirits active.\n\nOak can maintain [GetMaxWards] ward.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HOAKSurgeofFaith01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HOAKSurgeofFaith01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HOAKSurgeofFaith01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HOAKSurgeofFaith01'].Cooldown end</GetCooldown>
+      <GetSpiritChance>function(self) return math.floor( Buffs['HOAKSpiritOfWar01'].SpiritChance ) end</GetSpiritChance>
+      <GetMaxSpirits>function(self) return math.floor( Buffs['HOAKSpiritOfWar01'].SpiritMax ) end</GetMaxSpirits>
+      <GetMaxWards>function(self) return math.floor( Ability['HOAKRaiseDeadWard01'].WardMax ) end</GetMaxWards>
+      <Icon>/DGOak/NewOakRaiseDead01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HOakPurity</Name>
+      <DisplayName>Purity</DisplayName>
+      <Description>Immune to all negative effects.</Description>
+      <BuffType>HOAKPURITY</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>6</Duration>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Debuff>false</Debuff>
+      <Effects>Shield01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGOak/NewOakPurity01</Icon>
+      <Affects>
+        <DebuffImmune>
+          <Bool>true</Bool>
+        </DebuffImmune>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>SurgeofFaithBuff01</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Surge of Faith</DisplayName>
+      <Description>Attack Speed and Movement Speed increased.</Description>
+      <BuffType>HOAKPSURGEOFFAITHBUFF</BuffType>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>7</Duration>
+      <Effects>SurgeFaithActivate01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>0.1</Mult>
+        </MoveMult>
+        <RateOfFire>
+          <Mult>0.10</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>SurgeofFaithBuff02</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Surge of Faith</DisplayName>
+      <Description>Attack Speed and Movement Speed increased.</Description>
+      <BuffType>HOAKPSURGEOFFAITHBUFF</BuffType>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>7</Duration>
+      <Effects>SurgeFaithActivate01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>0.15</Mult>
+        </MoveMult>
+        <RateOfFire>
+          <Mult>0.15</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>SurgeofFaithBuff03</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Surge of Faith</DisplayName>
+      <Description>Attack Speed and Movement Speed increased.</Description>
+      <BuffType>HOAKPSURGEOFFAITHBUFF</BuffType>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>7</Duration>
+      <Effects>SurgeFaithActivate01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/DGOak/NewOakSurgeofFaith01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>0.20</Mult>
+        </MoveMult>
+        <RateOfFire>
+          <Mult>0.20</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOAKLastStandTransition</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Last Stand Transition</DisplayName>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HOAKLASTSTANDTRANSITION</BuffType>
+      <Duration>-1</Duration>
+      <Affects>
+        <FiringRandomness>
+          <Add>20</Add>
+        </FiringRandomness>
+        <WeaponsEnable>
+          <Bool>false</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOAKLastStandCooldown</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Last Stand Cooldown</DisplayName>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HOAKLASTSTANDCOOLDOWN</BuffType>
+      <Duration>5</Duration>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOAKLastStand01</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Last Stand</DisplayName>
+      <Description>Invincible. Damage, Movement Speed and Attack Speed increased.</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HOAKLASTSTAND</BuffType>
+      <Icon>/DGOak/NewOakLastStand01</Icon>
+      <Affects>
+        <Invincible>
+          <Bool>true</Bool>
+        </Invincible>
+        <DamageRating>
+          <Mult>0.30</Mult>
+        </DamageRating>
+        <RateOfFire>
+          <Mult>0.30</Mult>
+        </RateOfFire>
+        <MoveMult>
+          <Mult>0.3</Mult>
+        </MoveMult>
+        <DebuffImmune>
+          <Bool>true</Bool>
+        </DebuffImmune>
+        <Silence>
+          <Bool>true</Bool>
+        </Silence>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOAKLastStand02</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Last Stand</DisplayName>
+      <Description>Invincible. Damage, Movement Speed and Attack Speed increased.</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HOAKLASTSTAND</BuffType>
+      <Icon>/DGOak/NewOakLastStand01</Icon>
+      <Affects>
+        <Invincible>
+          <Bool>true</Bool>
+        </Invincible>
+        <DamageRating>
+          <Mult>0.50</Mult>
+        </DamageRating>
+        <RateOfFire>
+          <Mult>0.50</Mult>
+        </RateOfFire>
+        <MoveMult>
+          <Mult>0.5</Mult>
+        </MoveMult>
+        <DebuffImmune>
+          <Bool>true</Bool>
+        </DebuffImmune>
+        <Silence>
+          <Bool>true</Bool>
+        </Silence>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakRally</Name>
+      <DisplayName>Rally</DisplayName>
+      <Description>Armor increased. Healing over time.</Description>
+      <BuffType>HOAKRALLY</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Debuff>false</Debuff>
+      <Icon>/DGOak/NewOakRally01</Icon>
+      <Affects>
+        <Armor>
+          <Add>500</Add>
+        </Armor>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakRallyHeal</Name>
+      <BuffType>HOAKRALLYHEAL</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <DurationPulse>5</DurationPulse>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <DamageSelf>true</DamageSelf>
+      <DamageFriendly>true</DamageFriendly>
+      <Affects>
+        <Health>
+          <Add>200</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakSoulPowerBuff01</Name>
+      <DisplayName>Soul Power</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HOAKSOULPOWERDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGOak/NewOakSoulPower01</Icon>
+      <Affects>
+        <DamageRating>
+          <Add>20</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakSoulPowerBuff02</Name>
+      <DisplayName>Soul Power</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HOAKSOULPOWERDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGOak/NewOakSoulPower01</Icon>
+      <Affects>
+        <DamageRating>
+          <Add>40</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakSoulPowerBuff03</Name>
+      <DisplayName>Soul Power</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HOAKSOULPOWERDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGOak/NewOakSoulPower01</Icon>
+      <Affects>
+        <DamageRating>
+          <Add>60</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakSoulPowerBuff04</Name>
+      <DisplayName>Soul Power</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HOAKSOULPOWERDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGOak/NewOakSoulPower01</Icon>
+      <Affects>
+        <DamageRating>
+          <Add>80</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakSoulPowerBuff05</Name>
+      <DisplayName>Soul Power</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HOAKSOULPOWERDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGOak/NewOakSoulPower01</Icon>
+      <Affects>
+        <DamageRating>
+          <Add>100</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HOakSoulPowerBuff06</Name>
+      <DisplayName>Soul Power</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HOAKSOULPOWERDAMAGE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/DGOak/NewOakSoulPower01</Icon>
+      <Affects>
+        <DamageRating>
+          <Add>120</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>HOakRaiseDeadWardBuffMinion02</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>SPIRIT</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOakRaiseDeadWardBuffMinion02</Name>
+          <BuffType>RAISEDEADMINIONS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>SPIRIT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>4</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>75</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HOakRaiseDeadWardBuffMinion03</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>SPIRIT</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOakRaiseDeadWardBuffMinion03</Name>
+          <BuffType>RAISEDEADMINIONS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>SPIRIT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>8</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>150</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HOakRaiseDeadWardBuffMinion04</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>SPIRIT</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOakRaiseDeadWardBuffMinion04</Name>
+          <BuffType>RAISEDEADMINIONS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>SPIRIT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>12</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>250</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HOakSoulFrenzy</Name>
+      <DisplayName>Soul Frenzy</DisplayName>
+      <Description>Attack speed increased. Attacks will knock away smaller units.</Description>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>SPIRIT</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HOakSoulFrenzy</Name>
+          <DisplayName>Soul Frenzy</DisplayName>
+          <Description>Attack speed increased. Attacks will knock away smaller units.</Description>
+          <BuffType>HOAKSOULFRENZY</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>10</Duration>
+          <Icon>/DGOak/NewOakSoulFrenzy01</Icon>
+          <Effects>Lifesteal02</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects>
+            <MetaAmount>
+              <Add>8</Add>
+            </MetaAmount>
+            <MetaRadius>
+              <Add>2</Add>
+            </MetaRadius>
+            <RateOfFire>
+              <Mult>0.25</Mult>
+            </RateOfFire>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

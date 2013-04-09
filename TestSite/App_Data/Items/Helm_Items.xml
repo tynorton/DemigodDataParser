@@ -1,0 +1,462 @@
+<DemigodBlueprints id="Helm_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Helm_010</Name>
+      <DisplayName>Scaled Helm</DisplayName>
+      <GetManaBonus>function(self) return Buffs['Item_Helm_010'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return Buffs['Item_Helm_010'].Affects.EnergyRegen.Add end</GetManaRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Helm/Helm5</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Helm_010</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_010</FromItem>
+          <Icon>NewIcons/Helm/Helm5</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_010</Name>
+              <BuffType>GLYPHMAGIC</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxEnergy>
+                  <Add>525</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Add>4</Add>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Helm_020</Name>
+      <DisplayName>Plate Visor</DisplayName>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Helm_020'].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Helm/Helm6</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Helm_020</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_020</FromItem>
+          <Icon>NewIcons/Helm/Helm6</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_020</Name>
+              <BuffType>GLYPHDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Damage01</Effects>
+              <Affects>
+                <EnergyRegen>
+                  <Mult>0.35</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Helm_030</Name>
+      <DisplayName>Plenor Battlecrown</DisplayName>
+      <GetManaBonus>function(self) return Buffs['Item_Helm_030'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return math.floor(Buffs['Item_Helm_030'].Affects.EnergyRegen.Mult * 100) end</GetManaRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Helm/Helm3</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Helm_030</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_030</FromItem>
+          <Icon>NewIcons/Helm/Helm3</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_030</Name>
+              <BuffType>GLYPHENERGY</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>SingleRing01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects>
+                <MaxEnergy>
+                  <Add>1575</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Mult>.70</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Helm_040</Name>
+      <DisplayName>Vlemish Faceguard</DisplayName>
+      <GetManaRegenBonus>function(self) return Buffs['Item_Helm_040'].Affects.EnergyRegen.Add end</GetManaRegenBonus>
+      <GetManaBonus>function(self) return Buffs['Item_Helm_040'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetRegenBonus>function(self) return string.format('%d',Buffs['Item_Helm_040_Aura'].Affects.EnergyRegen.Add) end</GetRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Tooltip>
+        <Auras>+[GetRegenBonus] Mana Per Second Aura</Auras>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Helm_040_Aura</Name>
+          <AbilityType>Aura</AbilityType>
+          <AffectRadius>20</AffectRadius>
+          <AuraPulseTime>2</AuraPulseTime>
+          <Icon>NewIcons/Helm/Helm1</Icon>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_040_Aura</Name>
+              <BuffType>IMAGMAGIC02AURA</BuffType>
+              <Debuff>false</Debuff>
+              <DisplayName>Vlemish Faceguard</DisplayName>
+              <Description>Increased Mana Per Second.</Description>
+              <DoNotPulseIcon>true</DoNotPulseIcon>
+              <Duration>5</Duration>
+              <Icon>NewIcons/Helm/Helm1</Icon>
+              <Stacks>REPLACE</Stacks>
+              <Affects>
+                <EnergyRegen>
+                  <Add>4</Add>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Helm_040</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_040</FromItem>
+          <Icon>NewIcons/Helm/Helm1</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_040</Name>
+              <BuffType>Buff_Item_Helm_040</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <EnergyRegen>
+                  <Add>11</Add>
+                </EnergyRegen>
+                <MaxEnergy>
+                  <Add>1050</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Helm_050</Name>
+      <DisplayName>Vinling Helmet</DisplayName>
+      <GetManaBonus>function(self) return Buffs['Item_Helm_050'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Helm_050'].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegenBonus>
+      <GetProcChance>function(self) return Ability['Item_Helm_050_WeaponProc'].ArmorProcChance end</GetProcChance>
+      <GetProcManaBonus>function(self) return Buffs['Item_Helm_050_Restore'].Affects.Energy.Add end</GetProcManaBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Helm/Helm2</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on being hit to restore [GetProcManaBonus] Mana.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Helm_050</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_050</FromItem>
+          <Icon>NewIcons/Helm/Helm2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_050</Name>
+              <BuffType>GLYPHCOOLDOWN</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>RunSpeed01</Effects>
+              <Affects>
+                <MaxEnergy>
+                  <Add>1050</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Mult>.70</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Helm_050_WeaponProc</Name>
+          <AbilityType>ArmorProc</AbilityType>
+          <FromItem>Item_Helm_050</FromItem>
+          <Icon>NewIcons/Helm/Helm2</Icon>
+          <ArmorProcChance>3</ArmorProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Hungarling's Crown</DisplayName>
+      <GetSpellCostBonus>function(self) return math.floor( Buffs['Item_Helm_060'].Affects.SpellCostMult.Add * 100 ) end</GetSpellCostBonus>
+      <GetManaBonus>function(self) return math.floor( Buffs['Item_Helm_060_Buff'].Affects.MaxEnergy.Add ) end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Helm_060_Buff'].Affects.EnergyRegen.Add ) end</GetManaRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Helm_060</Name>
+      <Tooltip>
+        <Auras>[GetSpellCostBonus]% Mana Cost Aura</Auras>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Aura</AbilityType>
+          <AffectRadius>20</AffectRadius>
+          <AuraPulseTime>5</AuraPulseTime>
+          <FromItem>Item_Helm_060</FromItem>
+          <Icon>NewIcons/Helm/Helm4</Icon>
+          <Name>Item_Helm_060</Name>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>IMAGENERGY</BuffType>
+              <Debuff>false</Debuff>
+              <DisplayName>Hungarling's Crown</DisplayName>
+              <Description>-25% Mana Cost</Description>
+              <Duration>5</Duration>
+              <EntityCategory>HERO</EntityCategory>
+              <Icon>NewIcons/Helm/Helm4</Icon>
+              <Name>Item_Helm_060</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Affects>
+                <SpellCostMult>
+                  <Add>-.25</Add>
+                </SpellCostMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Helm_060_Buff</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_060</FromItem>
+          <Icon>NewIcons/Helm/Helm2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_060_Buff</Name>
+              <BuffType>ITEM60BUFF</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>RunSpeed01</Effects>
+              <Affects>
+                <MaxEnergy>
+                  <Add>700</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Add>18</Add>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Helm_070</Name>
+      <DisplayName>Theurgist's Cap</DisplayName>
+      <GetRegenBonus>function(self) return Buffs['Item_Helm_070'].Affects.Regen.Add end</GetRegenBonus>
+      <GetManaRegenBonus>function(self) return math.floor( Buffs['Item_Helm_070'].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegenBonus>
+      <GetProcChance>function(self) return Ability['Item_Helm_070_WeaponProc'].WeaponProcChance end</GetProcChance>
+      <GetProcRegenDebuff>function(self) return math.floor(Buffs['Item_Helm_070_RegenDebuff'].Affects.Regen.Mult * -100) end</GetProcRegenDebuff>
+      <GetProcManaRegenDebuff>function(self) return math.floor( Buffs['Item_Helm_070_RegenDebuff'].Affects.EnergyRegen.Mult * -100 ) end</GetProcManaRegenDebuff>
+      <GetDuration>function(self) return math.floor( Buffs['Item_Helm_070_RegenDebuff'].Duration ) end</GetDuration>
+      <GetMinionHealthBonus>function(self) return Buffs['Item_Helm_070_Minion_Buff'].Affects.MaxHealth.Add end</GetMinionHealthBonus>
+      <GetMinionRegenBonus>function(self) return Buffs['Item_Helm_070_Minion_Buff'].Affects.Regen.Add end</GetMinionRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Helm/Helm7</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on being hit to reduce the target's Health Per Second by [GetProcRegenDebuff]% and Mana Per Second by [GetProcManaRegenDebuff]% for [GetDuration] seconds.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetManaRegenBonus]% Mana Per Second</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+          <Value>+[GetMinionRegenBonus] Minion Health Per Second</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Helm_070</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Helm_070</FromItem>
+          <Icon>NewIcons/Helm/Helm7</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Helm_070</Name>
+              <BuffType>THEURGIST</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>RunSpeed01</Effects>
+              <Affects>
+                <Regen>
+                  <Add>10</Add>
+                </Regen>
+                <EnergyRegen>
+                  <Mult>.35</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Helm_070_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Helm_070</FromItem>
+          <Icon>NewIcons/Helm/Helm7</Icon>
+          <WeaponProcChance>5</WeaponProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>Item_Helm_050_Restore</Name>
+      <BuffType>ITEM_HELM_050_RESTORE</BuffType>
+      <Debuff>true</Debuff>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Stacks>REPLACE</Stacks>
+      <Duration>0</Duration>
+      <Affects>
+        <Energy>
+          <Add>350</Add>
+        </Energy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Helm_070_RegenDebuff</Name>
+      <DisplayName>Theurgist's Cap</DisplayName>
+      <Description>Reduced Health Per Second. Reduced Mana Per Second.</Description>
+      <BuffType>ITEM_HELM_050_RESTORE</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>NewIcons/Helm/Helm7</Icon>
+      <Affects>
+        <Regen>
+          <Mult>-.50</Mult>
+        </Regen>
+        <EnergyRegen>
+          <Mult>-.50</Mult>
+        </EnergyRegen>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Helm_070_Minion_Buff</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Helm_070_Minion_Buff</Name>
+          <BuffType>HELM70MINIONHEALTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <MaxHealth>
+              <Add>200</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+            <Regen>
+              <Add>3</Add>
+            </Regen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

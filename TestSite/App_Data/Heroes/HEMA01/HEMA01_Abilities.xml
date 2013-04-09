@@ -1,0 +1,1808 @@
+<DemigodBlueprints id="HEMA01_Abilities">
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HEMA01FireAbilityDisable</Name>
+      <DisplayName>Fire Abilities Disabled</DisplayName>
+      <BuffType>HEMA01FIREABILITYDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01IceAbilityDisable</Name>
+      <DisplayName>Ice Abilities Disabled</DisplayName>
+      <BuffType>HEMA01ICEABILITYDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01IceWeaponDisable</Name>
+      <DisplayName>Ice Weapon Disabled</DisplayName>
+      <BuffType>MANUALWEAPONDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>-1</Duration>
+      <WeaponLabel>IceWeapon</WeaponLabel>
+      <Affects>
+        <WeaponsEnable>
+          <Bool>false</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01IceWeaponEnable</Name>
+      <DisplayName>Ice Weapon Enabled</DisplayName>
+      <BuffType>MANUALWEAPONDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>-1</Duration>
+      <WeaponLabel>IceWeapon</WeaponLabel>
+      <Affects>
+        <WeaponsEnable>
+          <Bool>true</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01FireWeaponDisable</Name>
+      <DisplayName>Fire Weapon Disabled</DisplayName>
+      <BuffType>MANUALWEAPONDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>-1</Duration>
+      <WeaponLabel>FireWeapon</WeaponLabel>
+      <Affects>
+        <WeaponsEnable>
+          <Bool>false</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01FireWeaponEnable</Name>
+      <DisplayName>Fire Weapon Enabled</DisplayName>
+      <BuffType>MANUALWEAPONDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>-1</Duration>
+      <WeaponLabel>FireWeapon</WeaponLabel>
+      <Affects>
+        <WeaponsEnable>
+          <Bool>true</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01FireAuraDamageBuff02</Name>
+      <DisplayName>Fire Aura</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HEMA01FIREAURADAMAGEBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <DoNotPulseIcon>true</DoNotPulseIcon>
+      <Affects>
+        <DamageRating>
+          <Add>15</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01FireAuraDamageBuff03</Name>
+      <DisplayName>Fire Aura</DisplayName>
+      <Description>Weapon Damage increased.</Description>
+      <BuffType>HEMA01FIREAURADAMAGEBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <DoNotPulseIcon>true</DoNotPulseIcon>
+      <Affects>
+        <DamageRating>
+          <Add>30</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlow01</Name>
+      <DisplayName>Rain of Ice I</DisplayName>
+      <Description>Attack Speed reduced.</Description>
+      <BuffType>SLOWUNITRAIN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>3</Duration>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Affects>
+        <RateOfFire>
+          <Mult>-0.10</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlowFx01</Name>
+      <BuffType>SLOWUNITFX</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>3</Duration>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects />
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlow02</Name>
+      <DisplayName>Rain of Ice II</DisplayName>
+      <Description>Attack Speed reduced.</Description>
+      <BuffType>SLOWUNITRAIN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Affects>
+        <RateOfFire>
+          <Mult>-0.20</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlowFx02</Name>
+      <BuffType>SLOWUNITFX</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects />
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlow03</Name>
+      <DisplayName>Rain of Ice III</DisplayName>
+      <Description>Attack Speed reduced.</Description>
+      <BuffType>SLOWUNITRAIN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>7</Duration>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Affects>
+        <RateOfFire>
+          <Mult>-0.30</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlowFx03</Name>
+      <BuffType>SLOWUNITFX</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>7</Duration>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects />
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlow04</Name>
+      <DisplayName>Rain of Ice IV</DisplayName>
+      <Description>Attack Speed reduced.</Description>
+      <BuffType>SLOWUNITRAIN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Affects>
+        <RateOfFire>
+          <Mult>-0.40</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01RainSlowFx04</Name>
+      <BuffType>SLOWUNITFX</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects />
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01ClarityBuff</Name>
+      <DisplayName>Biting Chill</DisplayName>
+      <Description>Health Per Second and Mana Per Second Reduced.</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HEMA01SOULCHILL</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Duration>10</Duration>
+      <Icon>/dgtorchbearer/NewTorchBearColdClarity01</Icon>
+      <Affects>
+        <Regen>
+          <Mult>-.75</Mult>
+        </Regen>
+        <EnergyRegen>
+          <Mult>-.75</Mult>
+        </EnergyRegen>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEMA01FrostDeathSlow01</Name>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <DisplayName>Tomb of Ice</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>TFROSTSLOW</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>6</Duration>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.25</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HEMA01SwitchFire</Name>
+      <DisplayName>Relive the Immolation</DisplayName>
+      <Description>The Torch Bearer relives his fiery death.\n\nMana Per Second briefly increased.\n\nFire abilities enabled.\nFrost abilities disabled.</Description>
+      <AbilityType>Instant</AbilityType>
+      <Cooldown>0.5</Cooldown>
+      <SharedCooldown>HEMA01ModeSwitch</SharedCooldown>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <NotSilenceable>true</NotSilenceable>
+      <Icon>/dgtorchbearer/NewTorchBearReliveImmolation01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01ReliveImmolation</Name>
+          <DisplayName>Soul of Ice</DisplayName>
+          <Description>+50% Mana Per Second</Description>
+          <BuffType>HEMA01SOULOFICE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>15</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearReliveImmolation01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <EnergyRegen>
+              <Mult>0.5</Mult>
+            </EnergyRegen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01SwitchIce</Name>
+      <DisplayName>Frozen Heart</DisplayName>
+      <Description>The Torch Bearer ends his suffering and returns to his normal form. For a brief time, his Weapon Damage is increased.\n\nIce abilities enabled.\nFire abilities disabled.</Description>
+      <AbilityType>Instant</AbilityType>
+      <Cooldown>0.5</Cooldown>
+      <SharedCooldown>HEMA01ModeSwitch</SharedCooldown>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <NotSilenceable>true</NotSilenceable>
+      <Icon>/dgtorchbearer/NewTorchBearFrozenheart01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrozenHeart</Name>
+          <DisplayName>Heart of Fire</DisplayName>
+          <Description>Weapon Damage increased.</Description>
+          <BuffType>HEMA01HEARTOFFIRE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>15</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFrozenheart01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <DamageRating>
+              <Add>75</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireAura01</Name>
+      <DisplayName>Fire Aura I</DisplayName>
+      <Description>Torch Bearer channels the energy of the flame around him, increasing the Attack Speed and Movement Speed of his allies.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireAura01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FireAura01</Name>
+          <DisplayName>Fire Aura</DisplayName>
+          <Description>Attack Speed and Movement Speed increased.</Description>
+          <BuffType>HEMA01FIREAURA</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFireAura01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.05</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.05</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FireAuraFx01</Name>
+          <DisplayName>Fire Aura I</DisplayName>
+          <BuffType>HEMA01FIREAURAFX</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>IGNORE</Stacks>
+          <Duration>4</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireAura02</Name>
+      <DisplayName>Fire Aura II</DisplayName>
+      <Description>Torch Bearer channels the energy of the flame around him, increasing the Attack Speed and Movement Speed of his allies.\n\nTorch Bearer's Weapon Damage is increased.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireAura01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FireAura02</Name>
+          <DisplayName>Fire Aura</DisplayName>
+          <Description>Attack Speed and Movement Speed increased.</Description>
+          <BuffType>HEMA01FIREAURA</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFireAura01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.1</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.1</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FireAuraFx02</Name>
+          <DisplayName>Fire Aura</DisplayName>
+          <BuffType>HEMA01FIREAURAFX</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>IGNORE</Stacks>
+          <Duration>4</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireAura03</Name>
+      <DisplayName>Fire Aura III</DisplayName>
+      <Description>Torch Bearer channels the energy of the flame around him, increasing the Attack Speed and Movement Speed of his allies.\n\nTorch Bearer's Weapon Damage is increased.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireAura01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FireAura03</Name>
+          <DisplayName>Fire Aura</DisplayName>
+          <Description>Attack Speed and Movement Speed increased.</Description>
+          <BuffType>HEMA01FIREAURA</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFireAura01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.15</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.15</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FireAuraFx03</Name>
+          <DisplayName>Fire Aura III</DisplayName>
+          <BuffType>HEMA01FIREAURAFX</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>IGNORE</Stacks>
+          <Duration>4</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01Fireball01</Name>
+      <DisplayName>Fireball I</DisplayName>
+      <Description>Hurls a fiery ball at a target dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>300</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <DamageAmt>300</DamageAmt>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastFireball</CastAction>
+      <CastingTime>1.0</CastingTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <FollowThroughTime>0.3</FollowThroughTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireball01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01Fireball02</Name>
+      <DisplayName>Fireball II</DisplayName>
+      <Description>Hurls a fiery ball at a target dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>380</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <DamageAmt>525</DamageAmt>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastFireball</CastAction>
+      <CastingTime>1.0</CastingTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <FollowThroughTime>0.3</FollowThroughTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireball01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01Fireball03</Name>
+      <DisplayName>Fireball III</DisplayName>
+      <Description>Hurls a fiery ball at a target dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>460</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <DamageAmt>850</DamageAmt>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastFireball</CastAction>
+      <CastingTime>1.0</CastingTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <FollowThroughTime>0.3</FollowThroughTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireball01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01Fireball04</Name>
+      <DisplayName>Fireball IV</DisplayName>
+      <Description>Hurls a fiery ball at a target dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>540</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>7</Cooldown>
+      <DamageAmt>1050</DamageAmt>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastFireball</CastAction>
+      <CastingTime>1.0</CastingTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <FollowThroughTime>0.3</FollowThroughTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireball01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireNova01</Name>
+      <DisplayName>Fire Nova I</DisplayName>
+      <Description>A wave a fire radiates outward from the Torch Bearer, dealing [GetDamageAmt] damage and throwing smaller units into the air.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>775</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>400</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <CastAction>CastFireNova</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireNova01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireNova02</Name>
+      <DisplayName>Fire Nova II</DisplayName>
+      <Description>A wave a fire radiates outward from the Torch Bearer, dealing [GetDamageAmt] damage and throwing smaller units into the air.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1075</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>600</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <CastAction>CastFireNova</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireNova01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireNova03</Name>
+      <DisplayName>Fire Nova III</DisplayName>
+      <Description>A wave a fire radiates outward from the Torch Bearer, dealing [GetDamageAmt] damage and throwing smaller units into the air.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1375</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>800</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <CastAction>CastFireNova</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFireNova01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RingOfFire01</Name>
+      <DisplayName>Circle of Fire I</DisplayName>
+      <Description>Torch Bearer conjures a circle of fire around him, burning anything that stands in it for [GetDamageAmt] damage over [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>450</EnergyCost>
+      <AffectRadius>10</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>60</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <Segments>32</Segments>
+      <Duration>10</Duration>
+      <CastAction>CastRingOfFire</CastAction>
+      <CastingTime>0.8</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt * self.Duration ) end</GetDamageAmt>
+      <GetDuration>function(self) return math.floor( self.Duration ) end</GetDuration>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRingofFire01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RingOfFire02</Name>
+      <DisplayName>Circle of Fire II</DisplayName>
+      <Description>Torch Bearer conjures a circle of fire around him, burning anything that stands in it for [GetDamageAmt] damage over [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>600</EnergyCost>
+      <AffectRadius>10</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>90</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <Segments>32</Segments>
+      <Duration>10</Duration>
+      <CastAction>CastRingOfFire</CastAction>
+      <CastingTime>0.8</CastingTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt * self.Duration ) end</GetDamageAmt>
+      <GetDuration>function(self) return math.floor( self.Duration ) end</GetDuration>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRingofFire01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RingOfFire03</Name>
+      <DisplayName>Circle of Fire III</DisplayName>
+      <Description>Torch Bearer conjures a circle of fire around him, burning anything that stands in it for [GetDamageAmt] damage over [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>700</EnergyCost>
+      <AffectRadius>10</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>120</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <Segments>32</Segments>
+      <Duration>10</Duration>
+      <CastAction>CastRingOfFire</CastAction>
+      <CastingTime>0.8</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt * self.Duration ) end</GetDamageAmt>
+      <GetDuration>function(self) return math.floor( self.Duration ) end</GetDuration>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRingofFire01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RingOfFire04</Name>
+      <DisplayName>Circle of Fire IV</DisplayName>
+      <Description>Torch Bearer conjures a circle of fire around him, burning anything that stands in it for [GetDamageAmt] damage over [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>800</EnergyCost>
+      <AffectRadius>10</AffectRadius>
+      <Cooldown>10</Cooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <DamageAmt>150</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <Segments>32</Segments>
+      <Duration>10</Duration>
+      <CastAction>CastRingOfFire</CastAction>
+      <CastingTime>0.8</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt * self.Duration ) end</GetDamageAmt>
+      <GetDuration>function(self) return math.floor( self.Duration ) end</GetDuration>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRingofFire01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01InspFlame</Name>
+      <DisplayName>Inspirational Flame</DisplayName>
+      <Description>Torch Bearer draws power from the flame, gaining [GetEnergy]% Mana and [GetEnergyRegen]% Mana Per Second.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetEnergy>function(self) return math.floor( Buffs[self.Name].Affects.MaxEnergy.Mult * 100 ) end</GetEnergy>
+      <GetEnergyRegen>function(self) return math.floor( Buffs[self.Name].Affects.EnergyRegen.Mult * 100) end</GetEnergyRegen>
+      <Icon>/dgtorchbearer/NewTorchBearInspirationalFlame01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01InspFlame</Name>
+          <DisplayName>Inspirational Flame</DisplayName>
+          <BuffType>HEMA01INSPFLAME</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <MaxEnergy>
+              <Mult>.15</Mult>
+            </MaxEnergy>
+            <Mult>
+              <AdjustEnergy>true</AdjustEnergy>
+            </Mult>
+            <EnergyRegen>
+              <Mult>2</Mult>
+            </EnergyRegen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostAura01</Name>
+      <DisplayName>Permafrost I</DisplayName>
+      <Description>Torch Bearer exudes an aura of extreme cold, reducing the Attack Speed and Movement Speed of nearby enemies.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAura01</Name>
+          <DisplayName>Permafrost</DisplayName>
+          <Description>Attack Speed and Movement Speed reduced.</Description>
+          <BuffType>HEMA01FROSTAURA</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-.03</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>-0.03</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAuraFx01</Name>
+          <DisplayName>Permafrost I</DisplayName>
+          <BuffType>HEMA01FROSTAURAFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostAura02</Name>
+      <DisplayName>Permafrost II</DisplayName>
+      <Description>Torch Bearer exudes an aura of extreme cold, reducing the Attack Speed and Movement Speed of nearby enemies.\n\nThe chill energizes his allies, increasing their Mana Per Second.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAura02</Name>
+          <DisplayName>Permafrost</DisplayName>
+          <Description>Attack Speed and Movement Speed reduced.</Description>
+          <BuffType>HEMA01FROSTAURA</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-0.10</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>-0.05</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAuraFx02</Name>
+          <DisplayName>Permafrost II</DisplayName>
+          <BuffType>HEMA01FROSTAURAFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostAuraFriendly02</Name>
+      <DisplayName>Permafrost</DisplayName>
+      <Description>Mana Per Second increased.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAuraFriendly02</Name>
+          <DisplayName>Permafrost</DisplayName>
+          <Description>Mana Per Second increased.</Description>
+          <BuffType>HEMA01FROSTAURAFRIENDLY</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+          <Affects>
+            <EnergyRegen>
+              <Add>4.5</Add>
+            </EnergyRegen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostAura03</Name>
+      <DisplayName>Permafrost III</DisplayName>
+      <Description>Torch Bearer exudes an aura of extreme cold, reducing the Attack Speed and Movement Speed of nearby enemies.\n\nThe chill energizes his allies, increasing their Mana Per Second.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAura03</Name>
+          <DisplayName>Permafrost</DisplayName>
+          <Description>Attack Speed and Movement Speed reduced.</Description>
+          <BuffType>HEMA01FROSTAURA</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-.15</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>-0.07</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAuraFx03</Name>
+          <DisplayName>Permafrost III</DisplayName>
+          <BuffType>HEMA01FROSTAURAFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostAuraFriendly03</Name>
+      <DisplayName>Permafrost</DisplayName>
+      <Description>Mana Per Second increased.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2</AuraPulseTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Tooltip>
+        <TargetAlliance>Ally</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostAuraFriendly03</Name>
+          <DisplayName>Permafrost</DisplayName>
+          <Description>Mana Per Second increased.</Description>
+          <BuffType>HEMA01FROSTAURAFRIENDLY</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Icon>/dgtorchbearer/NewTorchBearFrostAura01</Icon>
+          <Affects>
+            <EnergyRegen>
+              <Add>9</Add>
+            </EnergyRegen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FreezeStructure01</Name>
+      <DisplayName>Deep Freeze I</DisplayName>
+      <Description>Torch Bearer blasts a target with intense cold. Interrupts abilities and increases target's cooldown time by [GetCooldownBuff]%. Lasts for [GetDuration] seconds.\n\nIf the target is affected by Frost Nova or Rain of Ice, Deep Freeze consumes each effect and deals [GetDamage] damage for each effect.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>350</EnergyCost>
+      <RangeMax>18</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamagePerBuff>100</DamagePerBuff>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <GetCooldownBuff>function(self) return math.floor( (Buffs['HEMA01FreezeSlow01'].Affects.Cooldown.Mult )* 100 ) end</GetCooldownBuff>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01FreezeSlow01'].Duration  ) end</GetDuration>
+      <GetDamage>function(self) return self.DamagePerBuff end</GetDamage>
+      <CastAction>CastFreezeStructure</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01DeepFreeze01</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>HEMADEEPFREEZE01</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlow01</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <Description>Cooldowns increased. Attack and Movement Speed reduced.</Description>
+          <BuffType>SLOWUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+          <Affects>
+            <Cooldown>
+              <Mult>1.3</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlowFx01</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FreezeStructure02</Name>
+      <DisplayName>Deep Freeze II</DisplayName>
+      <Description>Torch Bearer blasts a target with intense cold. Interrupts abilities and increases target's cooldown time by [GetCooldownBuff]%. Lasts for [GetDuration] seconds.\n\nIf the target is affected by Frost Nova or Rain of Ice, Deep Freeze consumes each effect and deals [GetDamage] damage for each effect.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>475</EnergyCost>
+      <RangeMax>18</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamagePerBuff>175</DamagePerBuff>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>CastFreezeStructure</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <GetCooldownBuff>function(self) return math.floor( (Buffs['HEMA01FreezeSlow02'].Affects.Cooldown.Mult )* 100 ) end</GetCooldownBuff>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01FreezeSlow02'].Duration  ) end</GetDuration>
+      <GetDamage>function(self) return self.DamagePerBuff end</GetDamage>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01DeepFreeze02</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>HEMADEEPFREEZE02</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlow02</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <Description>Cooldowns increased. Attack and Movement Speed reduced.</Description>
+          <BuffType>SLOWUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+          <Affects>
+            <Cooldown>
+              <Mult>1.6</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlowFx02</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FreezeStructure03</Name>
+      <DisplayName>Deep Freeze III</DisplayName>
+      <Description>Torch Bearer blasts a target with intense cold. Interrupts abilities and increases target's cooldown time by [GetCooldownBuff]%. Lasts for [GetDuration] seconds.\n\nIf the target is affected by Frost Nova or Rain of Ice, Deep Freeze consumes each effect and deals [GetDamage] damage for each effect.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>600</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamagePerBuff>250</DamagePerBuff>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>CastFreezeStructure</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <GetCooldownBuff>function(self) return math.floor( (Buffs['HEMA01FreezeSlow03'].Affects.Cooldown.Mult )* 100 ) end</GetCooldownBuff>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01FreezeSlow03'].Duration  ) end</GetDuration>
+      <GetDamage>function(self) return self.DamagePerBuff end</GetDamage>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01DeepFreeze03</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>HEMADEEPFREEZE03</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlow03</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <Description>Cooldowns increased. Attack and Movement Speed reduced.</Description>
+          <BuffType>SLOWUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+          <Affects>
+            <Cooldown>
+              <Mult>1.9</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlowFx03</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FreezeStructure04</Name>
+      <DisplayName>Deep Freeze IV</DisplayName>
+      <Description>Torch Bearer blasts a target with intense cold. Interrupts abilities and increases target's cooldown time by [GetCooldownBuff]%. Lasts for [GetDuration] seconds.\n\nIf the target is affected by Frost Nova or Rain of Ice, Deep Freeze consumes each effect and deals [GetDamage] damage for each effect.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>725</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamagePerBuff>325</DamagePerBuff>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>CastFreezeStructure</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <GetCooldownBuff>function(self) return math.floor( (Buffs['HEMA01FreezeSlow04'].Affects.Cooldown.Mult )* 100 ) end</GetCooldownBuff>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01FreezeSlow04'].Duration  ) end</GetDuration>
+      <GetDamage>function(self) return self.DamagePerBuff end</GetDamage>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01DeepFreeze04</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>HEMADEEPFREEZE03</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>.1</Duration>
+          <Affects>
+            <Interrupt>
+              <Add>0</Add>
+            </Interrupt>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlow04</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <Description>Cooldowns increased. Attack and Movement Speed reduced.</Description>
+          <BuffType>SLOWUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+          <Affects>
+            <Cooldown>
+              <Mult>2.2</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FreezeSlowFx04</Name>
+          <DisplayName>Deep Freeze</DisplayName>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FireandIce</Name>
+      <DisplayName>Fire and Ice</DisplayName>
+      <Description>Torch Bearer weaves his elemental powers into a cataclysmic force. Fireball's damage is increased by [GetFireballDamage]. Deep Freeze deals [GetFreezeDamage] additional damage for each effect consumed.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <Icon>/dgtorchbearer/NewTorchBearFireandIce01</Icon>
+      <FireballDamage>300</FireballDamage>
+      <FreezeDamage>100</FreezeDamage>
+      <GetFireballDamage>function(self) return self.FireballDamage end</GetFireballDamage>
+      <GetFreezeDamage>function(self) return self.FreezeDamage end</GetFreezeDamage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostNova01</Name>
+      <DisplayName>Frost Nova I</DisplayName>
+      <Description>Releases a wave of frost, freezing all enemies around the Torch Bearer, stunning them for [GetStun] seconds. Demigods are stunned for [GetDemigodStun] seconds.\n\nAll units have [GetMovementSlow]% Movement Speed for [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>750</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastFrostNova</CastAction>
+      <CastingTime>0.9</CastingTime>
+      <FollowThroughTime>0.6</FollowThroughTime>
+      <GetStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetStun>
+      <GetDemigodStun>function(self) return math.floor( Buffs['HEMA01FrostNova01Hero'].Duration  ) end</GetDemigodStun>
+      <GetMovementSlow>function(self) return math.floor( Buffs['HEMA01NovaSlow01'].Affects.MoveMult.Mult * 100  ) end</GetMovementSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01NovaSlow01'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova01</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Frozen.</Description>
+          <BuffType>FREEZESTRUCTURE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>ALLUNITS - HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <Freeze>
+              <Add>0</Add>
+            </Freeze>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova01Hero</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Frozen.</Description>
+          <BuffType>FREEZEUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <Freeze>
+              <Add>0</Add>
+            </Freeze>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova01Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>12</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova01HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>2</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01NovaSlow01</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>SLOWUNITNOVA</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.10</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01NovaSlowFx01</Name>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostNova02</Name>
+      <AbilityType>Instant</AbilityType>
+      <DisplayName>Frost Nova II</DisplayName>
+      <Description>Releases a wave of frost, freezing all enemies around the Torch Bearer, stunning them for [GetStun] seconds. Demigods are stunned for [GetDemigodStun] seconds.\n\nAll units have [GetMovementSlow]% Movement Speed for [GetDuration] seconds.</Description>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1000</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastFrostNova</CastAction>
+      <CastingTime>0.9</CastingTime>
+      <FollowThroughTime>0.6</FollowThroughTime>
+      <GetStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetStun>
+      <GetDemigodStun>function(self) return math.floor( Buffs['HEMA01FrostNova02Hero'].Duration  ) end</GetDemigodStun>
+      <GetMovementSlow>function(self) return math.ceil( Buffs['HEMA01NovaSlow02'].Affects.MoveMult.Mult * 100  ) end</GetMovementSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01NovaSlow02'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova02</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Frozen.</Description>
+          <BuffType>FREEZESTRUCTURE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>ALLUNITS - HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>8</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <Freeze>
+              <Add>0</Add>
+            </Freeze>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova02Hero</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Frozen.</Description>
+          <BuffType>FREEZEUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>2</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <Freeze>
+              <Add>0</Add>
+            </Freeze>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova02Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>16</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova02HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>4</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01NovaSlow02</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>SLOWUNITNOVA</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.15</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01NovaSlowFx02</Name>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01FrostNova03</Name>
+      <AbilityType>Instant</AbilityType>
+      <DisplayName>Frost Nova III</DisplayName>
+      <Description>Releases a wave of frost, freezing all enemies around the Torch Bearer, stunning them for [GetStun] seconds. Demigods are stunned for [GetDemigodStun] seconds.\n\nAll units have [GetMovementSlow]% Movement Speed for [GetDuration] seconds.</Description>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1250</EnergyCost>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastFrostNova</CastAction>
+      <CastingTime>0.9</CastingTime>
+      <FollowThroughTime>0.6</FollowThroughTime>
+      <GetStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetStun>
+      <GetDemigodStun>function(self) return math.floor( Buffs['HEMA01FrostNova03Hero'].Duration  ) end</GetDemigodStun>
+      <GetMovementSlow>function(self) return math.ceil(( Buffs['HEMA01NovaSlow03'].Affects.MoveMult.Mult * 100)) end</GetMovementSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01NovaSlow03'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova03</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Frozen.</Description>
+          <BuffType>FREEZESTRUCTURE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>ALLUNITS - HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>10</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <Freeze>
+              <Add>0</Add>
+            </Freeze>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova03Hero</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Frozen.</Description>
+          <BuffType>FREEZEUNIT</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <Freeze>
+              <Add>0</Add>
+            </Freeze>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova03Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>20</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01FrostNova03HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>6</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01NovaSlow03</Name>
+          <DisplayName>Frost Nova</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>SLOWUNITNOVA</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <EntityCategory>MOBILE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.20</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HEMA01NovaSlowFx03</Name>
+          <BuffType>SLOWUNITFX</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>10</Duration>
+          <Effects>Slow01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RainIce01</Name>
+      <DisplayName>Rain of Ice I</DisplayName>
+      <Description>A maelstrom of hail and sleet pelts the target area dealing [GetDamageAmt] damage and slowing Attack Speed by [GetAttackSlow]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>500</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>14</Cooldown>
+      <DamageAmt>200</DamageAmt>
+      <AffectRadius>10</AffectRadius>
+      <NumFireBalls>5</NumFireBalls>
+      <NumWaves>1</NumWaves>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <Buff1>HEMA01RainSlow01</Buff1>
+      <Buff2>HEMA01FreezeSlowFx01</Buff2>
+      <CastAction>CastFreeze</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackSlow>function(self) return math.floor( Buffs['HEMA01RainSlow01'].Affects.RateOfFire.Mult * 100  ) end</GetAttackSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01RainSlow01'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Reticule>AoE_Ice</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RainIce02</Name>
+      <DisplayName>Rain of Ice II</DisplayName>
+      <Description>A maelstrom of hail and sleet pelts the target area dealing [GetDamageAmt] damage and slowing Attack Speed by [GetAttackSlow]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>700</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>14</Cooldown>
+      <DamageAmt>400</DamageAmt>
+      <AffectRadius>10</AffectRadius>
+      <NumFireBalls>5</NumFireBalls>
+      <NumWaves>1</NumWaves>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <Buff1>HEMA01RainSlow02</Buff1>
+      <Buff2>HEMA01FreezeSlowFx02</Buff2>
+      <CastAction>CastFreeze</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackSlow>function(self) return math.floor( Buffs['HEMA01RainSlow02'].Affects.RateOfFire.Mult * 100  ) end</GetAttackSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01RainSlow02'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Reticule>AoE_Ice</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RainIce03</Name>
+      <DisplayName>Rain of Ice III</DisplayName>
+      <Description>A maelstrom of hail and sleet pelts the target area dealing [GetDamageAmt] damage and slowing Attack Speed by [GetAttackSlow]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>900</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>14</Cooldown>
+      <DamageAmt>600</DamageAmt>
+      <AffectRadius>10</AffectRadius>
+      <NumFireBalls>5</NumFireBalls>
+      <NumWaves>1</NumWaves>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <Buff1>HEMA01RainSlow03</Buff1>
+      <Buff2>HEMA01FreezeSlowFx03</Buff2>
+      <CastAction>CastFreeze</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackSlow>function(self) return math.floor( Buffs['HEMA01RainSlow03'].Affects.RateOfFire.Mult * 100 + 1 ) end</GetAttackSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01RainSlow03'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Reticule>AoE_Ice</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01RainIce04</Name>
+      <DisplayName>Rain of Ice IV</DisplayName>
+      <Description>A maelstrom of hail and sleet pelts the target area dealing [GetDamageAmt] damage and slowing Attack Speed by [GetAttackSlow]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>1100</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>14</Cooldown>
+      <DamageAmt>800</DamageAmt>
+      <AffectRadius>10</AffectRadius>
+      <NumFireBalls>5</NumFireBalls>
+      <NumWaves>1</NumWaves>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastFreeze</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <FollowThroughTime>0.9</FollowThroughTime>
+      <Buff1>HEMA01RainSlow04</Buff1>
+      <Buff2>HEMA01FreezeSlowFx04</Buff2>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetAttackSlow>function(self) return math.floor( Buffs['HEMA01RainSlow04'].Affects.RateOfFire.Mult * 100  ) end</GetAttackSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01RainSlow04'].Duration  ) end</GetDuration>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+      <Reticule>AoE_Ice</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01Clarity</Name>
+      <DisplayName>Biting Chill</DisplayName>
+      <Description>Torch Bearer's chill cuts to the bone. Enemies affected by Rain of Ice have their Health Per Second and Mana Per Second reduced by [GetReduction]% for [GetDuration] seconds.\n\nThis effect can be consumed by Deep Freeze for additional damage.</Description>
+      <GetChance>function(self) return math.floor( self.WeaponProcChance ) end</GetChance>
+      <GetReduction>function(self) return math.floor( (Buffs['HEMA01ClarityBuff'].Affects.Regen.Mult) * -100) end</GetReduction>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01ClarityBuff'].Duration ) end</GetDuration>
+      <AbilityType>Quiet</AbilityType>
+      <Icon>/dgtorchbearer/NewTorchBearColdClarity01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEMA01Death01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+      <DamageAmt>200</DamageAmt>
+      <DamageType>SpellFire</DamageType>
+      <FrostDeathDebuff>HEMA01FrostDeathSlow01</FrostDeathDebuff>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HTorchFrostNovaGrey01</Name>
+      <DisplayName>Frost Nova I</DisplayName>
+      <Description>Releases a wave of frost, freezing all enemies around the Torch Bearer, stunning them for [GetStun] seconds. Demigods are stunned for [GetDemigodStun] seconds.\n\nAll units have [GetMovementSlow]% Movement Speed for [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEMA01FrostNova01'].RangeMax end</GetMaxRange>
+      <GetStun>function(self) return math.floor( Buffs['HEMA01FrostNova01'].Duration ) end</GetStun>
+      <GetDemigodStun>function(self) return math.floor( Buffs['HEMA01FrostNova01Hero'].Duration  ) end</GetDemigodStun>
+      <GetMovementSlow>function(self) return math.floor( Buffs['HEMA01NovaSlow01'].Affects.MoveMult.Mult * 100  ) end</GetMovementSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01NovaSlow01'].Duration  ) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HEMA01FrostNova01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEMA01FrostNova01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEMA01FrostNova01'].Cooldown end</GetCooldown>
+      <Icon>/dgtorchbearer/NewTorchBearFrostNova01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HTorchRainIceGrey01</Name>
+      <DisplayName>Rain of Ice I</DisplayName>
+      <Description>A maelstrom of hail and sleet pelts the target area dealing [GetDamageAmt] damage and slowing Attack Speed by [GetAttackSlow]% for [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEMA01RainIce01'].RangeMax end</GetMaxRange>
+      <GetDamageAmt>function(self) return math.floor( Ability['HEMA01RainIce01'].DamageAmt ) end</GetDamageAmt>
+      <GetAttackSlow>function(self) return math.floor( Buffs['HEMA01RainSlow01'].Affects.RateOfFire.Mult * 100  ) end</GetAttackSlow>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01RainSlow01'].Duration  ) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HEMA01RainIce01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEMA01RainIce01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEMA01RainIce01'].Cooldown end</GetCooldown>
+      <Icon>/dgtorchbearer/NewTorchBearRainofIce01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HTorchFreezeGrey01</Name>
+      <DisplayName>Deep Freeze I</DisplayName>
+      <Description>Torch Bearer blasts a target with intense cold. Interrupts abilities and increases target's cooldown time by [GetCooldownBuff]%. Lasts for [GetDuration] seconds.\n\nIf the target is affected by Frost Nova or Rain of Ice, Deep Freeze consumes each effect and deals [GetDamage] damage for each effect.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <AbilityCategory>HEMA01ICE</AbilityCategory>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEMA01FreezeSlow01'].RangeMax end</GetMaxRange>
+      <GetCooldownBuff>function(self) return math.floor( (Buffs['HEMA01FreezeSlow01'].Affects.Cooldown.Mult ) * 100 ) end</GetCooldownBuff>
+      <GetDuration>function(self) return math.floor( Buffs['HEMA01FreezeSlow01'].Duration  ) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HEMA01FreezeStructure01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEMA01FreezeStructure01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEMA01FreezeStructure01'].Cooldown end</GetCooldown>
+      <GetDamage>function(self) return Ability['HEMA01FreezeStructure01'].DamagePerBuff end</GetDamage>
+      <Icon>/dgtorchbearer/NewTorchBearFreezeStructure01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HTorchFireBallGrey01</Name>
+      <DisplayName>Fireball I</DisplayName>
+      <Description>Hurls a fiery ball at a target dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEMA01Fireball01'].RangeMax end</GetMaxRange>
+      <GetDamageAmt>function(self) return math.floor( Ability['HEMA01Fireball01'].DamageAmt ) end</GetDamageAmt>
+      <GetEnergyCost>function(self) return Ability['HEMA01Fireball01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEMA01Fireball01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEMA01Fireball01'].Cooldown end</GetCooldown>
+      <Icon>/dgtorchbearer/NewTorchBearFireball01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HTorchFireNovaGrey01</Name>
+      <DisplayName>Fire Nova I</DisplayName>
+      <Description>A wave a fire radiates outward from the Torch Bearer, dealing [GetDamageAmt] damage and throwing smaller units into the air.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEMA01FireNova01'].RangeMax end</GetMaxRange>
+      <GetDamageAmt>function(self) return math.floor( Ability['HEMA01FireNova01'].DamageAmt ) end</GetDamageAmt>
+      <GetEnergyCost>function(self) return Ability['HEMA01FireNova01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEMA01FireNova01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEMA01FireNova01'].Cooldown end</GetCooldown>
+      <Icon>/dgtorchbearer/NewTorchBearFireNova01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HTorchFireRingGrey01</Name>
+      <DisplayName>Circle of Fire I</DisplayName>
+      <Description>Torch Bearer conjures a circle of fire around him, burning anything that stands in it for [GetDamageAmt] damage over [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <AbilityCategory>HEMA01FIRE</AbilityCategory>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEMA01RingOfFire01'].RangeMax end</GetMaxRange>
+      <GetDamageAmt>function(self) return math.floor( Ability['HEMA01RingOfFire01'].DamageAmt * Ability['HEMA01RingOfFire01'].Duration ) end</GetDamageAmt>
+      <GetDuration>function(self) return math.floor( Ability['HEMA01RingOfFire01'].Duration ) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HEMA01RingOfFire01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEMA01RingOfFire01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEMA01RingOfFire01'].Cooldown end</GetCooldown>
+      <Icon>/dgtorchbearer/NewTorchBearRingofFire01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+</DemigodBlueprints>

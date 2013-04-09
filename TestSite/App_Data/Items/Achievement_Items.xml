@@ -1,0 +1,1743 @@
+<DemigodBlueprints id="Achievement_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>AchievementMovement</Name>
+      <DisplayName>Saam-el's Cloak</DisplayName>
+      <GetMovementProtection>function(self) return math.floor( Buffs['AchievementMovement'].Affects.MoveSlowCap.Mult * -100 ) end</GetMovementProtection>
+      <GetMoveSpeedBonus>function(self) return math.floor( Buffs['AchievementMovement'].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/JekimsPegasusCloak</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Passives>Movement Speed cannot be reduced by more than [GetMovementProtection]%.</Passives>
+        <Bonuses>
+          <Value>+[GetMoveSpeedBonus]% Movement Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMovement</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/JekimsPegasusCloak</Icon>
+          <FromItem>AchievementMovement</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMovement</Name>
+              <BuffType>ACHIEVEMENTMOVEMENT</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MoveSlowCap>
+                  <Mult>-0.25</Mult>
+                </MoveSlowCap>
+                <MoveMult>
+                  <Mult>0.05</Mult>
+                </MoveMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementHealth</Name>
+      <DisplayName>Blood of the Fallen</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['AchievementHealth'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['AchievementHealth'].Affects.Regen.Add end</GetRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/BloodoftheFallen</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementHealth</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/BloodoftheFallen</Icon>
+          <FromItem>AchievementHealth</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementHealth</Name>
+              <BuffType>ACHIEVEMENTHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>800</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+                <Regen>
+                  <Add>5</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMana</Name>
+      <DisplayName>Staff of the Warmage</DisplayName>
+      <GetManaBonus>function(self) return Buffs['AchievementMana'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetDamageBonus>function(self) return Buffs['AchievementMana'].Affects.DamageRating.Add end</GetDamageBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/StaffoftheWarmage</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMana</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/StaffoftheWarmage</Icon>
+          <FromItem>AchievementMana</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMana</Name>
+              <BuffType>ACHIEVEMENTMANA</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxEnergy>
+                  <Add>700</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+                <DamageRating>
+                  <Add>15</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementRunSpeed</Name>
+      <DisplayName>Swift Anklet</DisplayName>
+      <GetMovementBonus>function(self) return math.floor( Buffs['AchievementRunSpeed'].Affects.MoveMult.Mult * 100 ) end</GetMovementBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/SwiftAnklet</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetMovementBonus]% Movement Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementRunSpeed</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/SwiftAnklet</Icon>
+          <FromItem>AchievementRunSpeed</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementRunSpeed</Name>
+              <BuffType>ACHIEVEMENTRUNSPEED</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MoveMult>
+                  <Mult>0.15</Mult>
+                </MoveMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementCooldown</Name>
+      <DisplayName>Diamond Pendant</DisplayName>
+      <GetManaBonus>function(self) return Buffs['AchievementCooldown'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetCooldownBonus>function(self) return math.floor( Buffs['AchievementCooldown'].Affects.Cooldown.Mult * 100 ) end</GetCooldownBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/DiamondEncrustedPendant</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>[GetCooldownBonus]% to ability cooldowns</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementCooldown</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/DiamondEncrustedPendant</Icon>
+          <FromItem>AchievementCooldown</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementCooldown</Name>
+              <BuffType>ACHIEVEMENTCOOLDOWN</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Cooldown>
+                  <Mult>-0.10</Mult>
+                </Cooldown>
+                <MaxEnergy>
+                  <Add>250</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementVision</Name>
+      <DisplayName>Bejeweled Goggles</DisplayName>
+      <GetVisionBonus>function(self) return Buffs['AchievementVision'].Affects.VisionRadius.Add end</GetVisionBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/PolishedCrystalGoggles</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Passives>Can detect normally invisible objects.</Passives>
+        <Bonuses>
+          <Value>+[GetVisionBonus] vision radius</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementVision</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/PolishedCrystalGoggles</Icon>
+          <FromItem>AchievementVision</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementVision</Name>
+              <BuffType>ACHIEVEMENTVISION</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <OmniRadius>
+                  <Add>32</Add>
+                </OmniRadius>
+                <VisionRadius>
+                  <Add>12</Add>
+                </VisionRadius>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementPure</Name>
+      <DisplayName>Symbol of Purity</DisplayName>
+      <Description>Use: Purge all negative effects. Cannot use while stunned or frozen.</Description>
+      <GetHealthBonus>function(self) return Buffs['AchievementPure_Buff'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/HolysymbolofPurity</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <GetMaxRange>function(self) return Ability['AchievementPure'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementPure'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementPure'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementPure'].Cooldown end</GetCooldown>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementPure</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <Cooldown>30</Cooldown>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <EnergyCost>0</EnergyCost>
+          <NotSilenceable>true</NotSilenceable>
+          <InventoryType>Achievement</InventoryType>
+          <FromItem>AchievementPure</FromItem>
+          <Icon>/NewIcons/AchievementRewards/HolysymbolofPurity</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementPure</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementPure_Buff</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementPure</FromItem>
+          <Icon>NewIcons/Hand/Hand1</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementPure_Buff</Name>
+              <BuffType>PURITYBUFF</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>250</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementTeleport</Name>
+      <DisplayName>Amulet of Teleportation</DisplayName>
+      <Description>Use: Teleport yourself and your army to targeted friendly structure.</Description>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/AmuletofTeleportation</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <GetMaxRange>function(self) return Ability['AchievementTeleport'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementTeleport'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementTeleport'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementTeleport'].Cooldown end</GetCooldown>
+      <Useable>true</Useable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementTeleport</Name>
+          <AbilityType>TargetedUnit</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetingMethod>ALLYSTRUCTURE</TargetingMethod>
+          <EnergyCost>0</EnergyCost>
+          <RangeMax>5000</RangeMax>
+          <Cooldown>45</Cooldown>
+          <CastingTime>3</CastingTime>
+          <InventoryType>Achievement</InventoryType>
+          <CastAction>CastItem3sec</CastAction>
+          <SharedCooldown>TeleportItems</SharedCooldown>
+          <WarpToLocation>true</WarpToLocation>
+          <WarpMinions>true</WarpMinions>
+          <IgnoreFacing>true</IgnoreFacing>
+          <FromItem>AchievementTeleport</FromItem>
+          <Icon>/NewIcons/AchievementRewards/AmuletofTeleportation</Icon>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementTeleport</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <OnCastingEffects>
+            <Base>Items</Base>
+            <Group>Relics</Group>
+            <Template>PortalScroll01</Template>
+          </OnCastingEffects>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementPotion</Name>
+      <DisplayName>Dark Crimson Vial</DisplayName>
+      <Description>Use: Heal [GetHealthBonus]% of your maximum Health.</Description>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/DarkChrimsonVial</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <GetHealthBonus>function(self) return math.floor(Ability['AchievementPotion'].RegenAmount * 100) end</GetHealthBonus>
+      <GetMaxRange>function(self) return Ability['AchievementPotion'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementPotion'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementPotion'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementPotion'].Cooldown end</GetCooldown>
+      <Useable>true</Useable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementPotion</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>45</Cooldown>
+          <CastingTime>2</CastingTime>
+          <EnergyCost>0</EnergyCost>
+          <RegenAmount>0.33</RegenAmount>
+          <InventoryType>Achievement</InventoryType>
+          <CastAction>CastItem2sec</CastAction>
+          <Icon>/NewIcons/AchievementRewards/DarkChrimsonVial</Icon>
+          <FromItem>AchievementPotion</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementPotion</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementPotionFX</Name>
+              <BuffType>POTIONHEAL01FX</BuffType>
+              <Debuff>false</Debuff>
+              <Stacks>REPLACE</Stacks>
+              <EntityCategory>HERO</EntityCategory>
+              <Duration>3</Duration>
+              <Effects>Heal02</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementAEMana</Name>
+      <DisplayName>Cape of Plentiful Mana</DisplayName>
+      <Description>Use: +[GetRegenBonus]% Mana Per Second Aura for [GetDuration] seconds.</Description>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/CapeofPlentifulMana</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <GetRegenBonus>function(self) return math.floor( Buffs['AchievementAEMana'].Affects.EnergyRegen.Mult * 100 ) end</GetRegenBonus>
+      <GetDuration>function(self) return Buffs['AchievementAEMana'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['AchievementAEMana'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementAEMana'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementAEMana'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementAEMana'].Cooldown end</GetCooldown>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementAEMana</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <InventoryType>Achievement</InventoryType>
+          <CastingTime>0</CastingTime>
+          <CanCastWhileMoving>true</CanCastWhileMoving>
+          <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+          <Cooldown>45</Cooldown>
+          <AffectRadius>8</AffectRadius>
+          <EnergyCost>0</EnergyCost>
+          <Icon>/NewIcons/AchievementRewards/CapeofPlentifulMana</Icon>
+          <FromItem>AchievementAEMana</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementAEMana</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementAEMana</Name>
+              <BuffType>ACHIEVEMENTAEMana</BuffType>
+              <DisplayName>Cape of Plentiful Mana</DisplayName>
+              <Description>Increased Mana Per Second</Description>
+              <Icon>/NewIcons/AchievementRewards/CapeofPlentifulMana</Icon>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>10</Duration>
+              <Effects>Energize01</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects>
+                <EnergyRegen>
+                  <Mult>4</Mult>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementDeathReduction</Name>
+      <DisplayName>Charm of Life</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['AchievementDeathReduction'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['AchievementDeathReduction'].Affects.Regen.Add end</GetRegenBonus>
+      <GetDeathBonus>function(self) return math.floor( Buffs['AchievementDeathReduction'].Affects.DeathPenaltyMult.Add * -100 ) end</GetDeathBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/CharmofLife</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Passives>Death Penalty time reduced by [GetDeathBonus]%.</Passives>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementDeathReduction</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/CharmofLife</Icon>
+          <FromItem>AchievementDeathReduction</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementDeathReduction</Name>
+              <BuffType>ACHIEVEMENTDEATHREDUCTION</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>400</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+                <Regen>
+                  <Add>5</Add>
+                </Regen>
+                <DeathPenaltyMult>
+                  <Add>-0.1</Add>
+                </DeathPenaltyMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementAERegen</Name>
+      <DisplayName>Wings of the Seraphim</DisplayName>
+      <Description>Use: +[GetRegenBonus] Health Per Second Aura for [GetDuration] seconds. Any damage will break this effect.\n\nThe effect works only on Demigods.</Description>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/RegenerationoftheSeraphim</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <GetRegenBonus>function(self) return Buffs['AchievementAERegen'].Affects.Regen.Add end</GetRegenBonus>
+      <GetDuration>function(self) return Buffs['AchievementAERegen'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['AchievementAERegen'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementAERegen'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementAERegen'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementAERegen'].Cooldown end</GetCooldown>
+      <Useable>true</Useable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementAERegen</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <InventoryType>Achievement</InventoryType>
+          <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <AffectRadius>8</AffectRadius>
+          <Icon>/NewIcons/AchievementRewards/RegenerationoftheSeraphim</Icon>
+          <FromItem>AchievementAERegen</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_regen_seraphim</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementAERegen</Name>
+              <DisplayName>Wings of the Seraphim</DisplayName>
+              <Description>Increased Health Per Second.</Description>
+              <BuffType>ACHIEVEMENTAEREGEN</BuffType>
+              <Icon>/NewIcons/AchievementRewards/RegenerationoftheSeraphim</Icon>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>10</Duration>
+              <Effects>Heal02</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects>
+                <Regen>
+                  <Add>200</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementGoldIncome</Name>
+      <DisplayName>Magical Coin Pouch</DisplayName>
+      <GetCostBonus>function(self) return math.floor( Buffs['AchievementGoldIncome'].Affects.ItemCost.Add * -100 )end</GetCostBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/MagicalCoinPouch</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Passives>Decreases cost of items by [GetCostBonus]%.</Passives>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementGoldIncome</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/MagicalCoinPouch</Icon>
+          <FromItem>AchievementGoldIncome</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementGoldIncome</Name>
+              <BuffType>ACHIEVEMENTGOLDINCOME</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <ItemCost>
+                  <Add>-0.1</Add>
+                </ItemCost>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementXPIncome</Name>
+      <DisplayName>Brilliant Bauble</DisplayName>
+      <GetExperienceBonus>function(self) return math.floor( Buffs['AchievementXPIncome'].Affects.Experience.Add * 100 )end</GetExperienceBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/BrilliantBauble</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Passives>Increases experience gained by [GetExperienceBonus]%.</Passives>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementXPIncome</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/BrilliantBauble</Icon>
+          <FromItem>AchievementXPIncome</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementXPIncome</Name>
+              <BuffType>ACHIEVEMENTXPINCOME</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Experience>
+                  <Add>0.1</Add>
+                </Experience>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementDamage</Name>
+      <DisplayName>Mard's Hammer</DisplayName>
+      <GetDmageBonus>function(self) return Buffs['AchievementDamage'].Affects.DamageRating.Add end</GetDmageBonus>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['AchievementDamage'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/HammerofDestruction</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDmageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementDamage</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/HammerofDestruction</Icon>
+          <FromItem>AchievementDamage</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementDamage</Name>
+              <BuffType>ACHIEVEMENTDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>40</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>0.05</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementRefreshCooldowns</Name>
+      <DisplayName>Staff of Renewal</DisplayName>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/StaffofRenewal</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <GetCooldownBonus>function(self) return math.floor(Buffs['AchievementRefreshCooldownsPassive'].Affects.Cooldown.Mult * 100) end</GetCooldownBonus>
+      <GetHealthBonus>function(self) return Buffs['AchievementRefreshCooldownsPassive'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetManaBonus>function(self) return Buffs['AchievementRefreshCooldownsPassive'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>[GetCooldownBonus]% to ability cooldowns</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementRefreshCooldownsPassive</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementRefreshCooldowns</FromItem>
+          <Icon>/NewIcons/AchievementRewards/StaffofRenewal</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementRefreshCooldownsPassive</Name>
+              <BuffType>ACHIEVEMENTCOOLDOWNPASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>200</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+                <MaxEnergy>
+                  <Add>175</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+                <Cooldown>
+                  <Mult>-0.20</Mult>
+                </Cooldown>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementManaLeech</Name>
+      <DisplayName>Blade of the Serpent</DisplayName>
+      <Description>Use: 100% chance on hit to gain [GetRegenBonus]% of your damage in Mana for [GetDuration] seconds.</Description>
+      <GetRegenBonus>function(self) return math.floor( Buffs['AchievementManaLeech'].EnergyReturnPercent * 100 ) end</GetRegenBonus>
+      <GetDuration>function(self) return Buffs['AchievementManaLeech'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['AchievementManaLeech'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementManaLeech'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementManaLeech'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementManaLeech'].Cooldown end</GetCooldown>
+      <GetDamageBonus>function(self) return Buffs['AchievementManaLeechPassive'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetManaBonus>function(self) return Buffs['AchievementManaLeechPassive'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/BladeoftheSerpent</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Name>AchievementManaLeech</Name>
+          <FromItem>AchievementManaLeech</FromItem>
+          <Name>AchievementManaLeech</Name>
+          <Icon>/NewIcons/AchievementRewards/BladeoftheSerpent</Icon>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_blade_of_the_serpent</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>BLADEOFTHESERPENTLEECH</BuffType>
+              <DisplayName>Blade of the Serpent</DisplayName>
+              <Description>Attacks return Mana.</Description>
+              <Debuff>false</Debuff>
+              <Duration>10</Duration>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <EnergyReturnPercent>0.75</EnergyReturnPercent>
+              <Name>AchievementManaLeech</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Icon>/NewIcons/AchievementRewards/BladeoftheSerpent</Icon>
+              <Effects>Energize01</Effects>
+              <EffectsBone>-2</EffectsBone>
+              <Affects />
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementManaLeechPassive</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementManaLeech</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementManaLeechPassive</Name>
+              <BuffType>ACHIEVEMENTMANALEECHPASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>25</Add>
+                </DamageRating>
+                <MaxEnergy>
+                  <Add>400</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementFreeSpells</Name>
+      <DisplayName>Essence of Magic</DisplayName>
+      <Description>Use: The cost of all abilities is reduced to 0 for [GetDuration] seconds.</Description>
+      <GetDuration>function(self) return Buffs['AchievementFreeSpells'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['AchievementFreeSpells'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementFreeSpells'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementFreeSpells'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementFreeSpells'].Cooldown end</GetCooldown>
+      <GetManaRegenBonus>function(self) return Buffs['AchievementFreeSpellsPassive'].Affects.EnergyRegen.Add end</GetManaRegenBonus>
+      <GetManaBonus>function(self) return Buffs['AchievementFreeSpellsPassive'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/PurifiedEssenceofMagic</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementFreeSpells</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <Icon>/NewIcons/AchievementRewards/PurifiedEssenceofMagic</Icon>
+          <FromItem>AchievementFreeSpells</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementFreeSpells</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementFreeSpells</Name>
+              <BuffType>ACHIEVEMENTFREESPELLS</BuffType>
+              <DisplayName>Essence of Magic</DisplayName>
+              <Description>Abilities have no Mana cost.</Description>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>3</Duration>
+              <Icon>/NewIcons/AchievementRewards/PurifiedEssenceofMagic</Icon>
+              <Affects>
+                <SpellCostMult>
+                  <Add>-1</Add>
+                </SpellCostMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementFreeSpellsPassive</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementFreeSpells</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementFreeSpellsPassive</Name>
+              <BuffType>ACHIEVEMENTFREESPELLSPASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <EnergyRegen>
+                  <Add>7</Add>
+                </EnergyRegen>
+                <MaxEnergy>
+                  <Add>210</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementSnare</Name>
+      <DisplayName>Poisoned Dagger</DisplayName>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['AchievementSnarePassive'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetProcChance>function(self) return Ability['AchievementSnare'].WeaponProcChance end</GetProcChance>
+      <GetMovementSpeedReduction>function(self) return math.floor( Buffs['AchievementSnareSlow'].Affects.MoveMult.Mult * -100 ) end</GetMovementSpeedReduction>
+      <GetDuration>function(self) return Buffs['AchievementSnareSlow'].Duration end</GetDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/PoisonedDaggerofHate</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to reduce Movement Speed by [GetMovementSpeedReduction]% for [GetDuration] seconds.</ChanceOnHit>
+        <TargetAlliance>Enemy</TargetAlliance>
+        <Bonuses>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementSnare</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/PoisonedDaggerofHate</Icon>
+          <FromItem>AchievementSnare</FromItem>
+          <WeaponProcChance>20</WeaponProcChance>
+          <WeaponProcChanceRanged>13</WeaponProcChanceRanged>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementSnarePassive</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementSnare</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementSnarePassive</Name>
+              <BuffType>ACHIEVEMENTSNAREPASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <RateOfFire>
+                  <Mult>.05</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementFinger</Name>
+      <DisplayName>Heaven's Wrath</DisplayName>
+      <Description>Use: Fire a beam of searing light at the targeted location, dealing [GetDamage] damage and throwing smaller units into the air.</Description>
+      <GetMaxRange>function(self) return Ability['AchievementFinger'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementFinger'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementFinger'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementFinger'].Cooldown end</GetCooldown>
+      <GetDamage>function(self) return Ability['AchievementFinger'].DamageAmount end</GetDamage>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <InventoryType>Achievement</InventoryType>
+      <Icon>/NewIcons/AchievementRewards/FingerofGod</Icon>
+      <Useable>true</Useable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementFinger</Name>
+          <AbilityType>TargetedArea</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <TargetingMethod>AREAARGETED</TargetingMethod>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <Reticule>AoE_Finger_of_God</Reticule>
+          <AffectRadius>7</AffectRadius>
+          <Icon>/NewIcons/AchievementRewards/FingerofGod</Icon>
+          <MetaImpactRadius>10</MetaImpactRadius>
+          <MetaImpactAmount>8</MetaImpactAmount>
+          <DamageAmount>250</DamageAmount>
+          <FromItem>AchievementFinger</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementFinger</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Effects>
+            <Base>FingerOfGod</Base>
+            <Beams>Beam01</Beams>
+            <Impact>Impact01</Impact>
+            <Muzzle>Muzzle01</Muzzle>
+            <Charge>Charge01</Charge>
+          </Effects>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementFlurry</Name>
+      <DisplayName>Furious Blade</DisplayName>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['AchievementFlurryPassive'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetHealthBonus>function(self) return ( Buffs['AchievementFlurryPassive'].Affects.MaxHealth.Add ) end</GetHealthBonus>
+      <GetProcChance>function(self) return Ability['AchievementFlurry'].WeaponProcChance end</GetProcChance>
+      <GetMovementSpeedReduction>function(self) return math.floor( Buffs['AchievementFlurryBuff'].Affects.RateOfFire.Mult * 100 ) end</GetMovementSpeedReduction>
+      <GetDuration>function(self) return Buffs['AchievementFlurryBuff'].Duration end</GetDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/SwordofaThousandBlows</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to increase Attack Speed by [GetMovementSpeedReduction]% for [GetDuration] seconds.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementFlurry</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/SwordofaThousandBlows</Icon>
+          <FromItem>AchievementFlurry</FromItem>
+          <WeaponProcChance>15</WeaponProcChance>
+          <WeaponProcChanceRanged>10</WeaponProcChanceRanged>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementFlurryPassive</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementFlurry</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementFlurryPassive</Name>
+              <BuffType>ACHIEVEMENTFLURRYPASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>100</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+                <RateOfFire>
+                  <Mult>.05</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMinionDamage</Name>
+      <DisplayName>Totem of War</DisplayName>
+      <GetMinionDamageBonus>function(self) return math.floor( Buffs['AchievementMinionDamageBuff'].Affects.DamageRating.Add ) end</GetMinionDamageBonus>
+      <GetDamageBonus>function(self) return Buffs['AchievementMinionDamage'].Affects.DamageRating.Add end</GetDamageBonus>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['AchievementMinionDamage'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/CharredTotemofWar</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDamageBonus] Weapon Damage</Value>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMinionDamage</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/CharredTotemofWar</Icon>
+          <FromItem>AchievementMinionDamage</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMinionDamage</Name>
+              <BuffType>ACHIEVEMENTMINIONDAMAGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>15</Add>
+                </DamageRating>
+                <RateOfFire>
+                  <Mult>0.05</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMinionHealth</Name>
+      <DisplayName>Tome of Endurance</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['AchievementMinionHealth'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['AchievementMinionHealth'].Affects.Regen.Add end</GetRegenBonus>
+      <GetMinionHealthBonus>function(self) return math.floor( Buffs['AchievementMinionHealthBuff'].Affects.MaxHealth.Add ) end</GetMinionHealthBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/TomeofEndurance</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMinionHealth</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/TomeofEndurance</Icon>
+          <FromItem>AchievementMinionHealth</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMinionHealth</Name>
+              <BuffType>ACHIEVEMENTMINIONHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>400</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+                <Regen>
+                  <Add>5</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMinionEvasion</Name>
+      <DisplayName>Pendant of Grace</DisplayName>
+      <GetDodgeBuff>function(self) return Buffs['AchievementMinionEvasionBuff'].Affects.Evasion.Add end</GetDodgeBuff>
+      <GetDodgeBonus>function(self) return Buffs['AchievementMinionDodge'].Affects.Evasion.Add end</GetDodgeBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/PendantofConservation</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDodgeBonus]% Dodge</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetDodgeBuff]% Minion Dodge</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMinionEvasion</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>/NewIcons/AchievementRewards/PendantofConservation</Icon>
+          <FromItem>AchievementMinionEvasion</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMinionDodge</Name>
+              <BuffType>ACHIEVEMENTMINIONDODGE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Evasion>
+                  <Add>10</Add>
+                </Evasion>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMinionMeta</Name>
+      <DisplayName>Ring of Divine Might</DisplayName>
+      <Description>Use: Minions are infused with divine power, allowing them to knock away smaller units for 10 seconds.</Description>
+      <GetMaxRange>function(self) return Ability['AchievementMinionMeta'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementMinionMeta'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementMinionMeta'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementMinionMeta'].Cooldown end</GetCooldown>
+      <GetDamageBonusSelf>function(self) return Buffs['AchievementMinionMetaPassives'].Affects.DamageRating.Add end</GetDamageBonusSelf>
+      <GetMinionDamageBonus>function(self) return Buffs['AchievementMinionMetaPassive'].Affects.DamageRating.Add end</GetMinionDamageBonus>
+      <Mesh>/meshes/items/rings/ring01_mesh</Mesh>
+      <Animation>/meshes/items/rings/Animations/ring01_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/RingoftheGeneral</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetDamageBonusSelf] Weapon Damage</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionDamageBonus] Minion Damage</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMinionMeta</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <Icon>/NewIcons/AchievementRewards/RingoftheGeneral</Icon>
+          <FromItem>AchievementMinionMeta</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementMinionMeta</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementMinionMetaPassives</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementMinionMeta</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMinionMetaPassives</Name>
+              <BuffType>ACHIEVEMENTMINIONMETAPASSIVE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <DamageRating>
+                  <Add>15</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMinionBuff</Name>
+      <DisplayName>Horn of Battle</DisplayName>
+      <Description>Use: Minions gain +[GetRegenBuff] Health Per Second for [GetDuration] seconds.</Description>
+      <GetRegenBonus>function(self) return Buffs['AchievementMinionBuffSelf'].Affects.Regen.Add end</GetRegenBonus>
+      <GetRegenBuff>function(self) return Buffs['AchievementMinionInvulnBuff'].Affects.Regen.Add end</GetRegenBuff>
+      <GetDuration>function(self) return Buffs['AchievementMinionInvulnBuff'].Duration end</GetDuration>
+      <GetMaxRange>function(self) return Ability['AchievementMinionBuff'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementMinionBuff'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementMinionBuff'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementMinionBuff'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/AvesheonsHornofBattle</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMinionBuff</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+          <Cooldown>45</Cooldown>
+          <EnergyCost>0</EnergyCost>
+          <Icon>/NewIcons/AchievementRewards/AvesheonsHornofBattle</Icon>
+          <FromItem>AchievementMinionBuff</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementMinionBuff</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementMinionBuffSelf</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementMinionBuff</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMinionBuffSelf</Name>
+              <BuffType>ACHIEVEMENTMINIONBUFFSELF</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Regen>
+                  <Add>10</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementAEHeal</Name>
+      <DisplayName>Blood Soaked Wand</DisplayName>
+      <Description>Use: Heal self and all nearby allies for [GetHealthBuff].</Description>
+      <GetHealthBuff>function(self) return Buffs['AchievementAEHeal'].Affects.Health.Add end</GetHealthBuff>
+      <GetMaxRange>function(self) return Ability['AchievementAEHeal'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementAEHeal'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementAEHeal'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementAEHeal'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/BloodSoakedWand</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementAEHeal</Name>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <Cooldown>45</Cooldown>
+          <CastingTime>2</CastingTime>
+          <CastAction>CastItem2sec</CastAction>
+          <EnergyCost>0</EnergyCost>
+          <AffectRadius>15</AffectRadius>
+          <Icon>/NewIcons/AchievementRewards/BloodSoakedWand</Icon>
+          <FromItem>AchievementAEHeal</FromItem>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementAEHeal</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementAEHeal</Name>
+              <BuffType>ACHIEVEMENTAEHEAL</BuffType>
+              <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>0</Duration>
+              <DamageSelf>true</DamageSelf>
+              <DamageFriendly>true</DamageFriendly>
+              <CanCrit>false</CanCrit>
+              <ArmorImmune>true</ArmorImmune>
+              <CanBackFire>false</CanBackFire>
+              <CanBeEvaded>false</CanBeEvaded>
+              <CanMagicResist>false</CanMagicResist>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Duration>-1</Duration>
+              <Affects>
+                <Health>
+                  <Add>1000</Add>
+                </Health>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>AchievementMinionInvis</Name>
+      <DisplayName>Cloak of Night</DisplayName>
+      <Description>Use: Warp to a targeted location, dealing [GetDamage] damage upon entry.</Description>
+      <GetManaBonus>function(self) return Buffs['AchievementMinionInvisSelf'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <GetManaRegenBonus>function(self) return Buffs['AchievementMinionInvisSelf'].Affects.EnergyRegen.Add end</GetManaRegenBonus>
+      <GetDamage>function(self) return Ability['AchievementMinionInvis'].DamageAmt end</GetDamage>
+      <GetMaxRange>function(self) return Ability['AchievementMinionInvis'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['AchievementMinionInvis'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['AchievementMinionInvis'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['AchievementMinionInvis'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>/NewIcons/AchievementRewards/CloakofNight</Icon>
+      <InventoryType>Achievement</InventoryType>
+      <Useable>true</Useable>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+          <Value>+[GetManaRegenBonus] Mana Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>AchievementMinionInvis</Name>
+          <AbilityType>TargetedArea</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <TargetAlliance>Enemy</TargetAlliance>
+          <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+          <AffectRadius>10</AffectRadius>
+          <RangeMax>15</RangeMax>
+          <Cooldown>60</Cooldown>
+          <SharedCooldown>WarpItems</SharedCooldown>
+          <EnergyCost>0</EnergyCost>
+          <DamageAmt>100</DamageAmt>
+          <FromItem>AchievementMinionInvis</FromItem>
+          <Icon>/NewIcons/AchievementRewards/CloakofNight</Icon>
+          <WarpToLocation>true</WarpToLocation>
+          <WarpMinions>false</WarpMinions>
+          <Icon>NewIcons/Artifacts/cloakofelfinkind</Icon>
+          <Reticule>AoE_Warp</Reticule>
+          <CasterEffect>
+            <Base>Items</Base>
+            <Group>Artifacts</Group>
+            <Template>ScrotusWarp01</Template>
+          </CasterEffect>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/Achievement/snd_item_achievement_AchievementMinionInvis</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>AchievementMinionInvisSelf</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>AchievementMinionInvis</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>AchievementMinionInvisSelf</Name>
+              <BuffType>ACHIEVEMENTMINIONINVISSELF</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxEnergy>
+                  <Add>280</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+                <EnergyRegen>
+                  <Add>4</Add>
+                </EnergyRegen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>AchievementSnareSlow</Name>
+      <DisplayName>Poisoned Dagger</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>ACHIEVEMENTSNARESLOW</BuffType>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>8</Duration>
+      <Icon>/NewIcons/AchievementRewards/PoisonedDaggerofHate</Icon>
+      <Effects>Slow01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.25</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>AchievementFlurryBuff</Name>
+      <DisplayName>Furious Blade</DisplayName>
+      <Description>Increased Attack Speed</Description>
+      <BuffType>ACHIEVEMENTFLURRYBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/NewIcons/AchievementRewards/SwordofaThousandBlows</Icon>
+      <Effects>Rage01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <RateOfFire>
+          <Mult>0.3</Mult>
+        </RateOfFire>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>AchievementMinionMetaBuff</Name>
+      <DisplayName>Ring of Divine Might</DisplayName>
+      <Description>Attacks will knock away smaller units.</Description>
+      <BuffType>ACHIEVEMENTMINIONMETABUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>/NewIcons/AchievementRewards/RingoftheGeneral</Icon>
+      <Effects>Lifesteal02</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <MetaAmount>
+          <Add>8</Add>
+        </MetaAmount>
+        <MetaRadius>
+          <Add>2</Add>
+        </MetaRadius>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>AchievementMinionInvulnBuff</Name>
+      <DisplayName>Horn of Battle</DisplayName>
+      <Description>Increased Health Per Second.</Description>
+      <BuffType>ACHIEVEMENTMINIONHEALTHBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>/NewIcons/AchievementRewards/AvesheonsHornofBattle</Icon>
+      <Effects>Heal01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <Regen>
+          <Add>200</Add>
+        </Regen>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>AchievementMinionDamageBuff</Name>
+      <DisplayName>Totem of War</DisplayName>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <InventoryType>Achievement</InventoryType>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>AchievementMinionDamageBuff</Name>
+          <DisplayName>Totem of War</DisplayName>
+          <Description>Increased Damage.</Description>
+          <BuffType>ACHIEVEMENTMINIONDAMAGEBUFF</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>/NewIcons/AchievementRewards/CharredTotemofWar</Icon>
+          <Affects>
+            <DamageRating>
+              <Add>5</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>AchievementMinionHealthBuff</Name>
+      <DisplayName>Tome of Endurance</DisplayName>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <InventoryType>Achievement</InventoryType>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>AchievementMinionHealthBuff</Name>
+          <DisplayName>Tome of Endurance</DisplayName>
+          <Description>
+          </Description>
+          <BuffType>ACHIEVEMENTMINIONHEALTHBUFF</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Tooltip>
+            <Passives>Increased Health.</Passives>
+          </Tooltip>
+          <Affects>
+            <MaxHealth>
+              <Add>130</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>AchievementMinionEvasionBuff</Name>
+      <DisplayName>Pendant of Grace</DisplayName>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <InventoryType>Achievement</InventoryType>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>AchievementMinionEvasionBuff</Name>
+          <DisplayName>Pendant of Grace</DisplayName>
+          <Description>Increased Dodge</Description>
+          <BuffType>ACHIEVEMENTMINIONEVASIONBUFF</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Icon>/NewIcons/AchievementRewards/PendantofConservation</Icon>
+          <Affects>
+            <Evasion>
+              <Add>15</Add>
+            </Evasion>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>AchievementMinionMetaPassive</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <InventoryType>Achievement</InventoryType>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>AchievementMinionMetaPassive</Name>
+          <BuffType>ACHIEVEMENTMINIONMETAPASSIVEBUFF</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Icon>/NewIcons/AchievementRewards/PendantofConservation</Icon>
+          <Affects>
+            <DamageRating>
+              <Add>10</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

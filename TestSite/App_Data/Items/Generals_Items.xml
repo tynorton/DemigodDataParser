@@ -1,0 +1,578 @@
+<DemigodBlueprints id="Generals_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <DisplayName>Minotaur Berserker Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Minotaur Berserkers. Can have a maximum of [GetSummonMax] Minotaur Berserkers.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Minotaur_Captain_010'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Minotaur_Captain_010'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Minotaur_Captain_010'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Minotaur_Captain_010'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Minotaur_Captain_010'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot1</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Soldiers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Minotaur_Captain_010</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>200</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Minotaur_Captain_010</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/MinotaurCaptain_01</Icon>
+          <Name>Item_Minotaur_Captain_010</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>minotaurcaptain01</SummonType>
+          <SharedCooldown>MCaptainItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Minotaur_Captain_010</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Minotaur Captain Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Minotaur Captains. Can have a maximum of [GetSummonMax] Minotaur Captains. Minotaur Captains are more powerful than Minotaur Berserkers.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Minotaur_Captain_020'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Minotaur_Captain_020'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Minotaur_Captain_020'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Minotaur_Captain_020'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Minotaur_Captain_020'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot1</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Soldiers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Minotaur_Captain_020</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>250</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Minotaur_Captain_020</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/MinotaurCaptain_02</Icon>
+          <Name>Item_Minotaur_Captain_020</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>minotaurcaptain02</SummonType>
+          <SharedCooldown>MCaptainItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Minotaur_Captain_020</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Minotaur Royal Guard Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Minotaur Royal Guards. Can have a maximum of [GetSummonMax] Minotaur Royal Guards. Minotaur Royal Guards are more powerful than Minotaur Captains.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Minotaur_Captain_030'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Minotaur_Captain_030'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Minotaur_Captain_030'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Minotaur_Captain_030'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Minotaur_Captain_030'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot1</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Soldiers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Minotaur_Captain_030</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>300</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Minotaur_Captain_030</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/MinotaurCaptain_03</Icon>
+          <Name>Item_Minotaur_Captain_030</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>minotaurcaptain03</SummonType>
+          <SharedCooldown>MCaptainItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Minotaur_Captain_030</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Minotaur High King Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Minotaur High Kings. Can have a maximum of [GetSummonMax] Minotaur High Kings. Minotaur High Kings are more powerful than Minotaur Royal Guard.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Minotaur_Captain_040'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Minotaur_Captain_040'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Minotaur_Captain_040'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Minotaur_Captain_040'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Minotaur_Captain_040'].Cooldown end</GetCooldown>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Icon>NewIcons/Boots/Boot1</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Soldiers</SubInventoryType>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Minotaur_Captain_040</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>350</EnergyCost>
+          <FromItem>Item_Minotaur_Captain_040</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/MinotaurCaptain_04</Icon>
+          <Name>Item_Minotaur_Captain_040</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>minotaurcaptain04</SummonType>
+          <SharedCooldown>MCaptainItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Minotaur_Captain_040</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Siege Archer Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Siege Archers. Can have a maximum of [GetSummonMax] Siege Archers.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Siege_Archer_010'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Siege_Archer_010'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Siege_Archer_010'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Siege_Archer_010'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Siege_Archer_010'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot3</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Archers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Siege_Archer_010</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>200</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Siege_Archer_010</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/SiegeArcher_01</Icon>
+          <Name>Item_Siege_Archer_010</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>siegearcher01</SummonType>
+          <SharedCooldown>SArcherItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Siege_Archer_010</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Siege Gunner Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Siege Gunners. Can have a maximum of [GetSummonMax] Siege Gunners. Siege Gunners are more powerful than Siege Archer.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Siege_Archer_020'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Siege_Archer_020'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Siege_Archer_020'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Siege_Archer_020'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Siege_Archer_020'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot3</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Archers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Siege_Archer_020</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>250</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Siege_Archer_020</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/SiegeArcher_02</Icon>
+          <Name>Item_Siege_Archer_020</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>siegearcher02</SummonType>
+          <SharedCooldown>SArcherItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Siege_Archer_020</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Siege Cannoneer Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Siege Cannoneers. Can have a maximum of [GetSummonMax] Siege Cannoneers. Siege Cannoneers are more powerful than Siege Gunners.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Siege_Archer_030'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Siege_Archer_030'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Siege_Archer_030'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Siege_Archer_030'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Siege_Archer_030'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot3</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Archers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Siege_Archer_030</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>300</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Siege_Archer_030</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/SiegeArcher_03</Icon>
+          <Name>Item_Siege_Archer_030</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>siegearcher03</SummonType>
+          <SharedCooldown>SArcherItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Siege_Archer_030</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Siege Demolisher Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Siege Demolishers. Can have a maximum of [GetSummonMax] Siege Demolishers. Siege Demolishers are more powerful than Siege Cannoneers.</Description>
+      <GetSummonCount>function(self) return Ability['Item_Siege_Archer_040'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_Siege_Archer_040'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_Siege_Archer_040'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_Siege_Archer_040'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_Siege_Archer_040'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot3</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Archers</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Siege_Archer_040</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>350</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_Siege_Archer_040</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/SiegeArcher_04</Icon>
+          <Name>Item_Siege_Archer_040</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>siegearcher04</SummonType>
+          <SharedCooldown>SArcherItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_Siege_Archer_040</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Monk Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Monks. Can have a maximum of [GetSummonMax] Monks.</Description>
+      <GetSummonCount>function(self) return Ability['Item_High_Priest_010'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_High_Priest_010'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_High_Priest_010'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_High_Priest_010'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_High_Priest_010'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot7</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Priests</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_High_Priest_010</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>200</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_High_Priest_010</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/HighPriest_01</Icon>
+          <Name>Item_High_Priest_010</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>highpriest01</SummonType>
+          <SharedCooldown>PriestItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_High_Priest_010</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Cleric Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Clerics. Can have a maximum of [GetSummonMax] Clerics. Clerics are more powerful than Monks.</Description>
+      <GetSummonCount>function(self) return Ability['Item_High_Priest_020'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_High_Priest_020'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_High_Priest_020'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_High_Priest_020'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_High_Priest_020'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot7</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Priests</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_High_Priest_020</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>250</EnergyCost>
+          <FromItem>Item_High_Priest_020</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/HighPriest_02</Icon>
+          <Name>Item_High_Priest_020</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>highpriest02</SummonType>
+          <SharedCooldown>PriestItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_High_Priest_020</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>High Priest Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] High Priests. Can have a maximum of [GetSummonMax] High Priests. High Priests are more powerful than Clerics.</Description>
+      <GetSummonCount>function(self) return Ability['Item_High_Priest_030'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_High_Priest_030'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_High_Priest_030'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_High_Priest_030'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_High_Priest_030'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot7</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Priests</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_High_Priest_030</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>300</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_High_Priest_030</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/HighPriest_03</Icon>
+          <Name>Item_High_Priest_030</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>highpriest03</SummonType>
+          <SharedCooldown>PriestItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_High_Priest_030</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Bishop Idol</DisplayName>
+      <Description>Use: Summons [GetSummonCount] Bishops. Can have a maximum of [GetSummonMax] Bishops. Bishops are more powerful than High Priests.</Description>
+      <GetSummonCount>function(self) return Ability['Item_High_Priest_040'].SummonCount end</GetSummonCount>
+      <GetSummonMax>function(self) return Ability['Item_High_Priest_040'].MaxUnits end</GetSummonMax>
+      <GetEnergyCost>function(self) return Ability['Item_High_Priest_040'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['Item_High_Priest_040'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['Item_High_Priest_040'].Cooldown end</GetCooldown>
+      <Icon>NewIcons/Boots/Boot7</Icon>
+      <InventoryType>Generals</InventoryType>
+      <SubInventoryType>Priests</SubInventoryType>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_High_Priest_040</Name>
+      <Useable>true</Useable>
+      <PurchaseCategory>GENERAL</PurchaseCategory>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Instant</AbilityType>
+          <AbilityCategory>USABLEITEM</AbilityCategory>
+          <CastingTime>0.5</CastingTime>
+          <CastAction>CastItem1sec</CastAction>
+          <Cooldown>30</Cooldown>
+          <EnergyCost>350</EnergyCost>
+          <InventoryType>Generals</InventoryType>
+          <FromItem>Item_High_Priest_040</FromItem>
+          <Icon>NewIcons/SuperGruntIcons/HighPriest_04</Icon>
+          <Name>Item_High_Priest_040</Name>
+          <NoAbortText>true</NoAbortText>
+          <SummonCount>2</SummonCount>
+          <SummonType>highpriest04</SummonType>
+          <SharedCooldown>PriestItems</SharedCooldown>
+          <MaxUnits>2</MaxUnits>
+          <Audio>
+            <OnStartCasting>
+              <Sound>Forge/ITEMS/snd_item_conjure</Sound>
+            </OnStartCasting>
+            <OnFinishCasting>
+              <Sound>Forge/ITEMS/General/snd_item_general_Item_High_Priest_040</Sound>
+            </OnFinishCasting>
+            <OnAbortCasting>
+              <Sound>Forge/ITEMS/snd_item_abort</Sound>
+            </OnAbortCasting>
+          </Audio>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+</DemigodBlueprints>

@@ -1,0 +1,474 @@
+<DemigodBlueprints id="Boot_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Boot_010</Name>
+      <DisplayName>Footman's Sabatons</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Boot_010'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetManaBonus>function(self) return Buffs['Item_Boot_010'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot1</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetManaBonus] Mana</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_010</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Boot_010</FromItem>
+          <Icon>NewIcons/Boots/Boot1</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Boot_010</Name>
+              <BuffType>BOOTEVADE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>200</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <MaxEnergy>
+                  <Add>260</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Boot_020</Name>
+      <DisplayName>Boots of Speed</DisplayName>
+      <GetMoveSpeedBonus>function(self) return math.floor( Buffs['Item_Boot_020'].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot2</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetMoveSpeedBonus]% Movement Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_020</Name>
+          <AbilityType>PassiveAll</AbilityType>
+          <FromItem>Item_Boot_020</FromItem>
+          <Icon>NewIcons/Boots/Boot2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Boot_020</Name>
+              <Debuff>false</Debuff>
+              <BuffType>BOOTSPEED</BuffType>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>RunSpeed01</Effects>
+              <Affects>
+                <MoveMult>
+                  <Mult>0.10</Mult>
+                </MoveMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Boot_030</Name>
+      <DisplayName>Assassin's Footguards</DisplayName>
+      <GetAttackSpeedBonus>function(self) return math.floor( Buffs['Item_Boot_030'].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBonus>
+      <GetDodgeBonus>function(self) return Buffs['Item_Boot_030'].Affects.Evasion.Add end</GetDodgeBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot7</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetAttackSpeedBonus]% Attack Speed</Value>
+          <Value>+[GetDodgeBonus]% Dodge</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_030</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Boot_030</FromItem>
+          <Icon>NewIcons/Boots/Boot7</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Boot_030</Name>
+              <BuffType>BOOTEVADE2</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Protection01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects>
+                <RateOfFire>
+                  <Mult>0.05</Mult>
+                </RateOfFire>
+                <Evasion>
+                  <Add>10</Add>
+                </Evasion>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Boot_040</Name>
+      <DisplayName>Unbreakable Boots</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Boot_040'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Boot_040'].Affects.Regen.Add end</GetRegenBonus>
+      <GetManaBonus>function(self) return Buffs['Item_Boot_040'].Affects.MaxEnergy.Add end</GetManaBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot5</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetManaBonus] Mana</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_040</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Boot_040</FromItem>
+          <Icon>NewIcons/Boots/Boot5</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Boot_040</Name>
+              <BuffType>BOOTARMOR</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>RunSpeed01</Effects>
+              <Affects>
+                <MaxHealth>
+                  <Add>600</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>5</Add>
+                </Regen>
+                <MaxEnergy>
+                  <Add>800</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Boot_050</Name>
+      <DisplayName>Journeyman Treads</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Boot_050'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetMoveSpeedBonus>function(self) return math.floor( Buffs['Item_Boot_050'].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBonus>
+      <GetProcChance>function(self) return Ability['Item_Boot_050_WeaponProc'].ArmorProcChance end</GetProcChance>
+      <GetProcMoveSpeedBonus>function(self) return math.floor( Buffs['Item_Boot_050_Wind'].Affects.MoveMult.Mult * 100 ) end</GetProcMoveSpeedBonus>
+      <GetProcDuration>function(self) return Buffs['Item_Boot_050_Wind'].Duration end</GetProcDuration>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot3</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetMoveSpeedBonus]% Movement Speed</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_050</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Boot_050</FromItem>
+          <Icon>NewIcons/Boots/Boot3</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Boot_050</Name>
+              <BuffType>RUNESPEED</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>400</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <MoveMult>
+                  <Mult>0.15</Mult>
+                </MoveMult>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Boot_050_WeaponProc</Name>
+          <DisplayName>Journeyman Treads</DisplayName>
+          <AbilityType>ArmorProc</AbilityType>
+          <FromItem>Item_Boot_050</FromItem>
+          <Icon>NewIcons/Boots/Boot3</Icon>
+          <ArmorProcChance>5</ArmorProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Boot_060</Name>
+      <DisplayName>Desperate Boots</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Boot_060'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetManaBonus>function(self) return math.floor( Buffs['Item_Boot_060'].Affects.MaxEnergy.Add ) end</GetManaBonus>
+      <GetTriggerPercent>function(self) return math.floor(Ability['Item_Boot_060_Desperation'].HealthPercentTrigger * 100) end</GetTriggerPercent>
+      <GetEvasionPercent>function(self) return math.floor( Buffs['Item_Boot_060_Desperation'].Affects.Evasion.Add ) end</GetEvasionPercent>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot6</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetManaBonus] Mana</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_060</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Boot_060</FromItem>
+          <Icon>NewIcons/Boots/Boot6</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Boot_060</Name>
+              <BuffType>ITEM_BOOT_060_BASE</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>400</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <MaxEnergy>
+                  <Add>350</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Boot_060_Desperation</Name>
+          <AbilityType>Aura</AbilityType>
+          <AffectRadius>1</AffectRadius>
+          <AuraPulseTime>1</AuraPulseTime>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO</TargetCategory>
+          <HealthPercentTrigger>.30</HealthPercentTrigger>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Boot_070</Name>
+      <DisplayName>Ironwalkers</DisplayName>
+      <GetMinionArmorBonus>function(self) return Buffs['Item_Boot_070_Minion_Armor'].Affects.Armor.Add end</GetMinionArmorBonus>
+      <GetMinionRegenBonus>function(self) return Buffs['Item_Boot_070_Minion_Armor'].Affects.Regen.Add end</GetMinionRegenBonus>
+      <GetTriggerAmount>function(self) return math.floor(Ability['Item_Boot_070'].TriggerAmount) end</GetTriggerAmount>
+      <GetArmorBonus>function(self) return math.floor( Buffs['Item_Boot_070_Armor'].Affects.Armor.Add ) end</GetArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Boots/Boot4</Icon>
+      <Tooltip>
+        <ChanceOnHit>Whenever Movement Speed is under [GetTriggerAmount], Armor is increased by [GetArmorBonus].</ChanceOnHit>
+        <MBonuses>
+          <Value>+[GetMinionRegenBonus] Minion Health Per Second</Value>
+          <Value>+[GetMinionArmorBonus] Minion Armor</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Boot_070</Name>
+          <AbilityType>Aura</AbilityType>
+          <AffectRadius>1</AffectRadius>
+          <AuraPulseTime>1</AuraPulseTime>
+          <TargetAlliance>Ally</TargetAlliance>
+          <TargetCategory>HERO</TargetCategory>
+          <TriggerAmount>5.5</TriggerAmount>
+          <Icon>NewIcons/Boots/Boot4</Icon>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Boot_020Army</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Boot_020Army</Name>
+          <BuffType>BOOTSPEED</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <MoveMult>
+              <Mult>0.10</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Boot_050Army</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Boot_050Army</Name>
+          <BuffType>RUNESPEED</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <MoveMult>
+              <Mult>0.15</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Boot_050_WindArmy</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Boot_050_WindArmy</Name>
+          <BuffType>ITEM_BOOT_050_WIND</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>10</Duration>
+          <Affects>
+            <MoveMult>
+              <Mult>0.5</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Boot_070_Minion_Armor</Name>
+      <DisplayName>Ironwalkers</DisplayName>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Boot_070_Minion_Armor</Name>
+          <BuffType>CHEST040MINIONHEALTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>NewIcons/Boots/Boot4</Icon>
+          <Affects>
+            <Regen>
+              <Add>3</Add>
+            </Regen>
+            <Armor>
+              <Add>275</Add>
+            </Armor>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>Item_Boot_050_Wind</Name>
+      <DisplayName>Journeyman Treads</DisplayName>
+      <Description>Movement Speed increased.</Description>
+      <BuffType>ITEM_BOOT_050_WIND</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Effects>Haste01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>NewIcons/Boots/Boot3</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>0.5</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Boot_060_Desperation</Name>
+      <DisplayName>Desperate Boots</DisplayName>
+      <Description>Evasion increased.</Description>
+      <BuffType>ITEM_BOOT_060_EVASION</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Effects>Haste01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Icon>NewIcons/Boots/Boot6</Icon>
+      <Affects>
+        <Evasion>
+          <Add>20</Add>
+        </Evasion>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Boot_070_Armor</Name>
+      <DisplayName>Ironwalkers</DisplayName>
+      <Description>Armor increased.</Description>
+      <BuffType>ITEM_BOOT_070_ARMOR</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>NewIcons/Boots/Boot4</Icon>
+      <Affects>
+        <Armor>
+          <Add>1000</Add>
+        </Armor>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+</DemigodBlueprints>

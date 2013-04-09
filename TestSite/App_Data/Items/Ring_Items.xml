@@ -1,0 +1,342 @@
+<DemigodBlueprints id="Ring_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Ring_020</Name>
+      <DisplayName>Bloodstone Ring</DisplayName>
+      <GetLifestealBonus>function(self) return math.floor( Buffs['Item_Ring_020'].Affects.LifeSteal.Add * 100 ) end</GetLifestealBonus>
+      <GetHealthBonus>function(self) return Buffs['Item_Ring_020'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Ring/Ring1</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetLifestealBonus]% Life Steal</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Ring_020</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Ring_020</FromItem>
+          <Icon>NewIcons/Ring/Ring1</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Ring_020</Name>
+              <BuffType>ENCHANTLIFESTEAL</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Lifesteal02</Effects>
+              <Affects>
+                <MaxHealth>
+                  <Add>400</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <LifeSteal>
+                  <Add>0.03</Add>
+                </LifeSteal>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Ring_030</Name>
+      <DisplayName>Nature's Reckoning</DisplayName>
+      <GetProcChance>function(self) return math.floor( Ability['Item_Ring_030_WeaponProc'].WeaponProcChance ) end</GetProcChance>
+      <GetDamageBonus>function(self) return math.floor( Ability['Item_Ring_030_WeaponProc'].DamageAmt ) end</GetDamageBonus>
+      <GetManaBonus>function(self) return math.floor( Buffs['Item_Ring_030'].Affects.MaxEnergy.Add ) end</GetManaBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Ring/Ring2</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on hit to strike nearby enemies with lightning for [GetDamageBonus] damage</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetManaBonus] Mana</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Ring_030</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Ring_030</FromItem>
+          <Icon>NewIcons/Ring/Ring2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Ring_030</Name>
+              <BuffType>LIGHTNINGRING</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxEnergy>
+                  <Add>600</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Ring_030_WeaponProc</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Ring_030</FromItem>
+          <Icon>NewIcons/Ring/Ring2</Icon>
+          <WeaponProcChance>15</WeaponProcChance>
+          <WeaponProcChanceRanged>10</WeaponProcChanceRanged>
+          <Chains>10</Chains>
+          <ChainTime>0.1</ChainTime>
+          <ChainAffectRadius>5</ChainAffectRadius>
+          <DamageAmt>250</DamageAmt>
+          <Effects>
+            <Base>Items</Base>
+            <Group>Runes</Group>
+            <Beams>LightningBeam01</Beams>
+          </Effects>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <DisplayName>Ring of the Ancients</DisplayName>
+      <GetArmorBonus>function(self) return Buffs['Item_Ring_040'].Affects.Armor.Add end</GetArmorBonus>
+      <GetWeaponDamageBonus>function(self) return Buffs['Item_Ring_040'].Affects.DamageRating.Add end</GetWeaponDamageBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Name>Item_Ring_040</Name>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetArmorBonus] Armor</Value>
+          <Value>+[GetWeaponDamageBonus] Weapon Damage</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <AbilityType>Quiet</AbilityType>
+          <DisplayName>Ring of the Ancients</DisplayName>
+          <FromItem>Item_Ring_040</FromItem>
+          <Icon>NewIcons/Ring/Ring5</Icon>
+          <Name>Item_Ring_040</Name>
+          <Buffs>
+            <BuffBlueprint>
+              <BuffType>IRNGSTATSRING02</BuffType>
+              <Debuff>false</Debuff>
+              <Duration>-1</Duration>
+              <EntityCategory>HERO</EntityCategory>
+              <Name>Item_Ring_040</Name>
+              <Stacks>ALWAYS</Stacks>
+              <Effects>SingleRing01</Effects>
+              <Affects>
+                <Armor>
+                  <Add>400</Add>
+                </Armor>
+                <DamageRating>
+                  <Add>30</Add>
+                </DamageRating>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Ring_050</Name>
+      <DisplayName>Narmoth's Ring</DisplayName>
+      <GetLifeStealBonus>function(self) return math.floor( Buffs['Item_Ring_050'].Affects.LifeSteal.Add * 100 ) end</GetLifeStealBonus>
+      <GetThorns>function(self) return Buffs['Item_Ring_050'].Affects.DamageReturn.Add end</GetThorns>
+      <GetHealthBonus>function(self) return Buffs['Item_Ring_050'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Ring_050'].Affects.Regen.Add end</GetRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Ring/Ring4</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetLifeStealBonus]% Life Steal</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Ring_050</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Ring_050</FromItem>
+          <Icon>NewIcons/Ring/Ring4</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Ring_050</Name>
+              <BuffType>RINGLIFESTEAL</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Lifesteal02</Effects>
+              <Affects>
+                <LifeSteal>
+                  <Add>0.08</Add>
+                </LifeSteal>
+                <MaxHealth>
+                  <Add>750</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>20</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Ring_060</Name>
+      <DisplayName>Forest Band</DisplayName>
+      <GetProcChance>function(self) return Ability['Item_Ring_060'].WeaponProcChance end</GetProcChance>
+      <GetHealth>function(self) return math.floor(Buffs['Item_Ring_060_Minion_Buff'].Affects.Health.Add) end</GetHealth>
+      <GetMinionArmorBonus>function(self) return math.floor(Buffs['Item_Ring_060_Minion'].Affects.Armor.Add) end</GetMinionArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Ring/Ring3</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% on attack to heal your army for [GetHealth] health.</ChanceOnHit>
+        <MBonuses>
+          <Value>+[GetMinionArmorBonus] Minion Armor</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Ring_060</Name>
+          <AbilityType>WeaponProc</AbilityType>
+          <FromItem>Item_Ring_060</FromItem>
+          <Icon>NewIcons/Ring/Ring3</Icon>
+          <WeaponProcChance>15</WeaponProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>EricsRing</Name>
+      <DisplayName>Eric's Ring</DisplayName>
+      <Description>Never gonna give you up, never gonna let you down.</Description>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Ring/Ring6</Icon>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>EricsRing</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>EricsRing</FromItem>
+          <Icon>NewIcons/Ring/Ring6</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>EricsRing</Name>
+              <BuffType>ERICSRING</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Cooldown>
+                  <Mult>-3</Mult>
+                </Cooldown>
+                <MaxHealth>
+                  <Add>10000</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustHealth>true</AdjustHealth>
+                </Add>
+                <MaxEnergy>
+                  <Add>10000</Add>
+                </MaxEnergy>
+                <Add>
+                  <AdjustEnergy>true</AdjustEnergy>
+                </Add>
+                <MoveMult>
+                  <Mult>2</Mult>
+                </MoveMult>
+                <Armor>
+                  <Add>500</Add>
+                </Armor>
+                <DamageRating>
+                  <Add>2000</Add>
+                </DamageRating>
+                <Regen>
+                  <Add>500</Add>
+                </Regen>
+                <EnergyRegen>
+                  <Add>500</Add>
+                </EnergyRegen>
+                <RateOfFire>
+                  <Mult>5</Mult>
+                </RateOfFire>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Ring_060_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Ring_060_Minion</Name>
+          <BuffType>RING60MINIONPASSIVEBUFF</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Affects>
+            <Armor>
+              <Add>200</Add>
+            </Armor>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Ring_060_Minion_Buff</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Ring_060_Minion_Buff</Name>
+          <BuffType>RING06MINIONBUFF</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <DamageSelf>true</DamageSelf>
+          <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+          <CanBeEvaded>false</CanBeEvaded>
+          <CanBackfire>false</CanBackfire>
+          <DamageFriendly>true</DamageFriendly>
+          <ArmorImmune>true</ArmorImmune>
+          <CanCrit>false</CanCrit>
+          <CanMagicResist>false</CanMagicResist>
+          <Duration>0</Duration>
+          <Affects>
+            <Health>
+              <Add>250</Add>
+            </Health>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

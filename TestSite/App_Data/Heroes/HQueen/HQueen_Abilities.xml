@@ -1,0 +1,1568 @@
+<DemigodBlueprints id="HQueen_Abilities">
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HQueenUnpackedAbilityDisable</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Packed</DisplayName>
+      <BuffType>HQUEENUNPACKEDABILITYDISABLED</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenAbilityDisable</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Unpacked</DisplayName>
+      <BuffType>HQUEENPACKEDABILITYDISABLED</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenPackedBuffs</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Closed</DisplayName>
+      <Description>Armor increased.\nMana Per Second increased.\nHealth Per Second increased.</Description>
+      <BuffType>HQUEENREGEN</BuffType>
+      <Stacks>IGNORE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenClose</Icon>
+      <Affects>
+        <Armor>
+          <Mult>0.1</Mult>
+        </Armor>
+        <EnergyRegen>
+          <Mult>0.5</Mult>
+        </EnergyRegen>
+        <Regen>
+          <Add>10</Add>
+        </Regen>
+        <RateOfFire>
+          <Mult>0</Mult>
+        </RateOfFire>
+        <MoveMult>
+          <Mult>0</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenConsumeShamblerBuff01</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Mulch Shambler Buff</DisplayName>
+      <Description>Mulched a Shambler for additional Health.</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HQUEENCONSUME</BuffType>
+      <DamageFriendly>true</DamageFriendly>
+      <DamageSelf>true</DamageSelf>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <ArmorImmune>true</ArmorImmune>
+      <Affects>
+        <Health>
+          <Add>750</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenConsumeShamblerBuff02</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Mulch Shambler Buff</DisplayName>
+      <Description>Mulched a Shambler for additional Health.</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HQUEENCONSUME</BuffType>
+      <DamageFriendly>true</DamageFriendly>
+      <DamageSelf>true</DamageSelf>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <ArmorImmune>true</ArmorImmune>
+      <Affects>
+        <Health>
+          <Add>1500</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenConsumeShamblerBuff03</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Mulch Shambler Buff</DisplayName>
+      <Description>Mulched a Shambler for additional Health.</Description>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HQUEENCONSUME</BuffType>
+      <DamageFriendly>true</DamageFriendly>
+      <DamageSelf>true</DamageSelf>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <ArmorImmune>true</ArmorImmune>
+      <Affects>
+        <Health>
+          <Add>2250</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenEntourageBuff01</Name>
+      <BuffType>HQUEENENTOURAGEBUFF</BuffType>
+      <DisplayName>Entourage I</DisplayName>
+      <Description>Health and Weapon Damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <Affects>
+        <DamageRating>
+          <Add>10</Add>
+        </DamageRating>
+        <MaxHealth>
+          <Add>250</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenEntourageBuff02</Name>
+      <BuffType>HQUEENENTOURAGEBUFF</BuffType>
+      <DisplayName>Entourage II</DisplayName>
+      <Description>Health and Weapon Damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <Affects>
+        <DamageRating>
+          <Add>20</Add>
+        </DamageRating>
+        <MaxHealth>
+          <Add>500</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenEntourageBuff03</Name>
+      <BuffType>HQUEENENTOURAGEBUFF</BuffType>
+      <DisplayName>Entourage III</DisplayName>
+      <Description>Health and Weapon Damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <Affects>
+        <DamageRating>
+          <Add>30</Add>
+        </DamageRating>
+        <MaxHealth>
+          <Add>750</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenGroundSpikes01</Name>
+      <BuffType>HQUEENGROUNDSPIKEDEBUFF</BuffType>
+      <DisplayName>Ground Spikes I</DisplayName>
+      <Description>Armor reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <Affects>
+        <Armor>
+          <Add>-375</Add>
+        </Armor>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenGroundSpikes02</Name>
+      <BuffType>HQUEENGROUNDSPIKEDEBUFF</BuffType>
+      <DisplayName>Ground Spikes II</DisplayName>
+      <Description>Armor reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <Affects>
+        <Armor>
+          <Add>-750</Add>
+        </Armor>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenGroundSpikes03</Name>
+      <BuffType>HQUEENGROUNDSPIKEDEBUFF</BuffType>
+      <DisplayName>Ground Spikes III</DisplayName>
+      <Description>Armor reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <Affects>
+        <Armor>
+          <Add>-1125</Add>
+        </Armor>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenGroundSpikes04</Name>
+      <BuffType>HQUEENGROUNDSPIKEDEBUFF</BuffType>
+      <DisplayName>Ground Spikes IV</DisplayName>
+      <Description>Armor reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <Affects>
+        <Armor>
+          <Add>-1500</Add>
+        </Armor>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenCompostPowerBuff01</Name>
+      <BuffType>HQUEENCOMPOSTQUEENBUFF</BuffType>
+      <DisplayName>Compost</DisplayName>
+      <Description>Shambler Weapon Damage and Health increased. Uproot damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenCompost01_01</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0.1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenCompostPowerBuff02</Name>
+      <BuffType>HQUEENCOMPOSTQUEENBUFF</BuffType>
+      <DisplayName>Compost</DisplayName>
+      <Description>Shambler Weapon Damage and Health increased. Uproot damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenCompost01_02</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0.1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenCompostPowerBuff03</Name>
+      <BuffType>HQUEENCOMPOSTQUEENBUFF</BuffType>
+      <DisplayName>Compost</DisplayName>
+      <Description>Shambler Weapon Damage and Health increased. Uproot damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenCompost01_03</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0.1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenCompostPowerBuff04</Name>
+      <BuffType>HQUEENCOMPOSTQUEENBUFF</BuffType>
+      <DisplayName>Compost</DisplayName>
+      <Description>Shambler Weapon Damage and Health increased. Uproot damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenCompost01_03</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0.1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenCompostPowerBuff05</Name>
+      <BuffType>HQUEENCOMPOSTQUEENBUFF</BuffType>
+      <DisplayName>Compost</DisplayName>
+      <Description>Shambler Weapon Damage and Health increased. Uproot damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenCompost01_03</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0.1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenCompostPowerBuff06</Name>
+      <BuffType>HQUEENCOMPOSTQUEENBUFF</BuffType>
+      <DisplayName>Compost</DisplayName>
+      <Description>Shambler Weapon Damage and Health increased. Uproot damage increased.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Icon>/dgqueenofthorns/NewQueenCompost01_03</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0.1</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenSpikeWave01</Name>
+      <BuffType>HQUEENSPIKEWAVEDEBUFF</BuffType>
+      <DisplayName>Spike Wave I</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+      <Effects>Slow03</Effects>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.15</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenSpikeWave02</Name>
+      <BuffType>HQUEENSPIKEWAVEDEBUFF</BuffType>
+      <DisplayName>Spike Wave II</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+      <Effects>Slow03</Effects>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.2</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenSpikeWave03</Name>
+      <BuffType>HQUEENSPIKEWAVEDEBUFF</BuffType>
+      <DisplayName>Spike Wave III</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>5</Duration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+      <Effects>Slow03</Effects>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.25</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenGoddessofThornsQueen</Name>
+      <DisplayName>Goddess of Thorns</DisplayName>
+      <Description>Damage taken reduced.</Description>
+      <BuffType>HQUEENGODDESSQUEEN</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>/dgqueenofthorns/NewQueenGoddessofThorns01</Icon>
+      <Affects>
+        <DamageTakenMult>
+          <Add>-0.15</Add>
+        </DamageTakenMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenDeathDebuff01</Name>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <DisplayName>Ensnared</DisplayName>
+      <Description>Movement Speed reduced, taking damage over time.</Description>
+      <BuffType>HQQUEENDEATHDEBUFF01</BuffType>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>5</Duration>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <EntityCategory>MOBILE -UNTARGETABLE</EntityCategory>
+      <Icon>/dgqueenofthorns/NewQueenCompost01</Icon>
+      <Effects>Slow02</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.25</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HQueenDeathDebuff02</Name>
+      <DisplayName>Ensnared DoT</DisplayName>
+      <Description>Taking damage over time</Description>
+      <BuffType>HQQUEENDEATHDEBUFF02</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>ALWAYS</Stacks>
+      <DamageSelf>true</DamageSelf>
+      <Duration>10</Duration>
+      <DurationPulse>10</DurationPulse>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <EntityCategory>MOBILE -UNTARGETABLE</EntityCategory>
+      <Affects>
+        <Health>
+          <Add>-10</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HQueenPack</Name>
+      <DisplayName>Close</DisplayName>
+      <Description>Queen of Thorns sinks into her flower, granting her new abilities as well as enhanced Armor, Mana Per Second, Health Per Second, and splash damage.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>0</EnergyCost>
+      <Cooldown>1</Cooldown>
+      <SharedCooldown>HQueenPackSwitch</SharedCooldown>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CanCastWhileMoving>true</CanCastWhileMoving>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <NotSilenceable>true</NotSilenceable>
+      <Icon>/dgqueenofthorns/NewQueenClose</Icon>
+      <Tooltip>
+        <EnergyCost>0</EnergyCost>
+        <Cooldown>1</Cooldown>
+      </Tooltip>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenUnpack</Name>
+      <DisplayName>Open</DisplayName>
+      <Description>Queen of Thorns comes out of her flower, granting her new abilities.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>0</EnergyCost>
+      <Cooldown>1</Cooldown>
+      <SharedCooldown>HQueenPackSwitch</SharedCooldown>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CanCastWhileMoving>true</CanCastWhileMoving>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <NotSilenceable>true</NotSilenceable>
+      <Icon>/dgqueenofthorns/NewQueenOpen01</Icon>
+      <Tooltip>
+        <EnergyCost>0</EnergyCost>
+        <Cooldown>1</Cooldown>
+      </Tooltip>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenShambler01</Name>
+      <DisplayName>Summon Shambler I</DisplayName>
+      <Description>Queen of Thorns summons [GetShamblersSummoned] Shamblers from her thorns to protect her. She may have [GetMaxShamblers] Shamblers active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>450</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NumShamblers>1</NumShamblers>
+      <MaxShamblers>2</MaxShamblers>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>Summon</CastAction>
+      <FollowThroughTime>0.1</FollowThroughTime>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenSummonShambler01</Icon>
+      <GetShamblersSummoned>function(self) return math.floor( self.NumShamblers ) end</GetShamblersSummoned>
+      <GetMaxShamblers>function(self) return math.floor( self.MaxShamblers ) end</GetMaxShamblers>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenShambler02</Name>
+      <DisplayName>Summon Shambler II</DisplayName>
+      <Description>Queen of Thorns summons [GetShamblersSummoned] Shamblers from her thorns to protect her. She may have [GetMaxShamblers] Shamblers active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>625</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NumShamblers>2</NumShamblers>
+      <MaxShamblers>2</MaxShamblers>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>Summon</CastAction>
+      <FollowThroughTime>0.1</FollowThroughTime>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <GetShamblersSummoned>function(self) return math.floor( self.NumShamblers ) end</GetShamblersSummoned>
+      <GetMaxShamblers>function(self) return math.floor( self.MaxShamblers ) end</GetMaxShamblers>
+      <Icon>/dgqueenofthorns/NewQueenSummonShambler01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenShambler03</Name>
+      <DisplayName>Summon Shambler III</DisplayName>
+      <Description>Queen of Thorns summons [GetShamblersSummoned] Shamblers from her thorns to protect her. She may have [GetMaxShamblers] Shamblers active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>625</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NumShamblers>2</NumShamblers>
+      <MaxShamblers>4</MaxShamblers>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>Summon</CastAction>
+      <FollowThroughTime>0.1</FollowThroughTime>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenSummonShambler01</Icon>
+      <GetShamblersSummoned>function(self) return math.floor( self.NumShamblers ) end</GetShamblersSummoned>
+      <GetMaxShamblers>function(self) return math.floor( self.MaxShamblers ) end</GetMaxShamblers>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenShambler04</Name>
+      <DisplayName>Summon Shambler IV</DisplayName>
+      <Description>Queen of Thorns summons [GetShamblersSummoned] Shamblers from her thorns to protect her. She may have [GetMaxShamblers] Shamblers active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>975</EnergyCost>
+      <Cooldown>5</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NumShamblers>4</NumShamblers>
+      <MaxShamblers>4</MaxShamblers>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>Summon</CastAction>
+      <FollowThroughTime>0.1</FollowThroughTime>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenSummonShambler01</Icon>
+      <GetShamblersSummoned>function(self) return math.floor( self.NumShamblers ) end</GetShamblersSummoned>
+      <GetMaxShamblers>function(self) return math.floor( self.MaxShamblers ) end</GetMaxShamblers>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenConsumeShambler01</Name>
+      <DisplayName>Mulch Shambler I</DisplayName>
+      <Description>Queen of Thorns absorbs an allied Shambler, killing it and restoring [GetHealthRestored] Health. Enemies near the Shambler take [GetDamage] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ENT</TargetCategory>
+      <TargetingMethod>OWNMINION</TargetingMethod>
+      <EnergyCost>250</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>5000</RangeMax>
+      <DamageAmt>250</DamageAmt>
+      <DamageArea>8</DamageArea>
+      <IgnoreFacing>true</IgnoreFacing>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <CastingTime>0.1</CastingTime>
+      <CastAction>Mulch</CastAction>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <RegenBuffName>HQueenConsumeShamblerBuff01</RegenBuffName>
+      <Icon>/dgqueenofthorns/NewQueenConsumeShambler01</Icon>
+      <GetHealthRestored>function(self) return math.floor( Buffs['HQueenConsumeShamblerBuff01'].Affects.Health.Add ) end</GetHealthRestored>
+      <GetDamage>function(self) return self.DamageAmt end</GetDamage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenConsumeShambler02</Name>
+      <DisplayName>Mulch Shambler II</DisplayName>
+      <Description>Queen of Thorns absorbs an allied Shambler, killing it and restoring [GetHealthRestored] Health. Enemies near the Shambler take [GetDamage] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ENT</TargetCategory>
+      <TargetingMethod>OWNMINION</TargetingMethod>
+      <EnergyCost>250</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>5000</RangeMax>
+      <DamageAmt>500</DamageAmt>
+      <DamageArea>8</DamageArea>
+      <IgnoreFacing>true</IgnoreFacing>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>Mulch</CastAction>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <CastingTime>0.1</CastingTime>
+      <RegenBuffName>HQueenConsumeShamblerBuff02</RegenBuffName>
+      <Icon>/dgqueenofthorns/NewQueenConsumeShambler01</Icon>
+      <GetHealthRestored>function(self) return math.floor( Buffs['HQueenConsumeShamblerBuff02'].Affects.Health.Add ) end</GetHealthRestored>
+      <GetDamage>function(self) return self.DamageAmt end</GetDamage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenConsumeShambler03</Name>
+      <DisplayName>Mulch Shambler III</DisplayName>
+      <Description>Queen of Thorns absorbs an allied Shambler, killing it and restoring [GetHealthRestored] Health. Enemies near the Shambler take [GetDamage] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ENT</TargetCategory>
+      <TargetingMethod>OWNMINION</TargetingMethod>
+      <EnergyCost>250</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>5000</RangeMax>
+      <DamageAmt>750</DamageAmt>
+      <DamageArea>8</DamageArea>
+      <IgnoreFacing>true</IgnoreFacing>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>Mulch</CastAction>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <CastingTime>0.1</CastingTime>
+      <RegenBuffName>HQueenConsumeShamblerBuff03</RegenBuffName>
+      <Icon>/dgqueenofthorns/NewQueenConsumeShambler01</Icon>
+      <GetHealthRestored>function(self) return math.floor( Buffs['HQueenConsumeShamblerBuff03'].Affects.Health.Add ) end</GetHealthRestored>
+      <GetDamage>function(self) return self.DamageAmt end</GetDamage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenEntourage01</Name>
+      <AbilityType>Quiet</AbilityType>
+      <DisplayName>Entourage I</DisplayName>
+      <Description>Increases Shambler Health by [GetShamblerHealth] and damage by [GetShamblerDamage].</Description>
+      <GetShamblerHealth>function(self) return math.floor( Buffs['HQueenEntourageBuff01'].Affects.MaxHealth.Add ) end</GetShamblerHealth>
+      <GetShamblerDamage>function(self) return math.floor( Buffs['HQueenEntourageBuff01'].Affects.DamageRating.Add ) end</GetShamblerDamage>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <Icon>/dgqueenofthorns/NewQueenEntourage01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenEntourage02</Name>
+      <Description>Increases Shambler Health by [GetShamblerHealth] and damage by [GetShamblerDamage].</Description>
+      <GetShamblerHealth>function(self) return math.floor( Buffs['HQueenEntourageBuff02'].Affects.MaxHealth.Add ) end</GetShamblerHealth>
+      <GetShamblerDamage>function(self) return math.floor( Buffs['HQueenEntourageBuff02'].Affects.DamageRating.Add ) end</GetShamblerDamage>
+      <AbilityType>Quiet</AbilityType>
+      <DisplayName>Entourage II</DisplayName>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <Icon>/dgqueenofthorns/NewQueenEntourage01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenEntourage03</Name>
+      <Description>Increases Shambler Health by [GetShamblerHealth] and damage by [GetShamblerDamage].</Description>
+      <GetShamblerHealth>function(self) return math.floor( Buffs['HQueenEntourageBuff03'].Affects.MaxHealth.Add ) end</GetShamblerHealth>
+      <GetShamblerDamage>function(self) return math.floor( Buffs['HQueenEntourageBuff03'].Affects.DamageRating.Add ) end</GetShamblerDamage>
+      <AbilityType>Quiet</AbilityType>
+      <DisplayName>Entourage III</DisplayName>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <Icon>/dgqueenofthorns/NewQueenEntourage01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenTribute</Name>
+      <DisplayName>Tribute</DisplayName>
+      <Description>Queen of Thorns demands tribute from her subjects. Gold production increased by [GetGoldBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetGoldBuff>function(self) return Buffs[self.Name].Affects.GoldProduction.Add end</GetGoldBuff>
+      <Icon>/dgqueenofthorns/NewQueenTribute01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenTribute</Name>
+          <DisplayName>Tribute</DisplayName>
+          <Description>Gold production increased.</Description>
+          <BuffType>HQUEENTRIBUTE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <GoldProduction>
+              <Add>4</Add>
+            </GoldProduction>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenUproot01</Name>
+      <DisplayName>Uproot I</DisplayName>
+      <Description>Queen of Thorns sends her vines deep beneath the earth to destroy target structure's foundation, dealing [GetDamage] damage over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILESTRUCTURE</TargetingMethod>
+      <EnergyCost>425</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>20</RangeMax>
+      <DamageAmt>50</DamageAmt>
+      <IgnoreFacing>true</IgnoreFacing>
+      <Pulses>10</Pulses>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>Uproot</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+      <GetDamage>function(self) return math.floor( self.DamageAmt * self.Pulses ) end</GetDamage>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenUproot01</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>false</CanBeDispelled>
+          <DisplayName>Uproot</DisplayName>
+          <Description>Taking severe damage.</Description>
+          <BuffType>UPROOTDUMMY</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+          <Duration>10</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenUproot02</Name>
+      <DisplayName>Uproot II</DisplayName>
+      <Description>Queen of Thorns sends her vines deep beneath the earth to destroy target structure's foundation, dealing [GetDamage] damage over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILESTRUCTURE</TargetingMethod>
+      <EnergyCost>585</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>20</RangeMax>
+      <DamageAmt>100</DamageAmt>
+      <IgnoreFacing>true</IgnoreFacing>
+      <Pulses>10</Pulses>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Uproot</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.5</CastingTime>
+      <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+      <GetDamage>function(self) return math.floor( self.DamageAmt * self.Pulses ) end</GetDamage>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenUproot02</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>false</CanBeDispelled>
+          <DisplayName>Uproot</DisplayName>
+          <Description>Taking severe damage.</Description>
+          <BuffType>UPROOTDUMMY</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+          <Duration>10</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenUproot03</Name>
+      <DisplayName>Uproot III</DisplayName>
+      <Description>Queen of Thorns sends her vines deep beneath the earth to destroy target structure's foundation, dealing [GetDamage] damage over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILESTRUCTURE</TargetingMethod>
+      <EnergyCost>745</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>20</RangeMax>
+      <DamageAmt>150</DamageAmt>
+      <IgnoreFacing>true</IgnoreFacing>
+      <Pulses>10</Pulses>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Uproot</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.5</CastingTime>
+      <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+      <GetDamage>function(self) return math.floor( self.DamageAmt * self.Pulses ) end</GetDamage>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenUproot03</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>false</CanBeDispelled>
+          <DisplayName>Uproot</DisplayName>
+          <Description>Taking severe damage.</Description>
+          <BuffType>UPROOTDUMMY</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+          <Duration>10</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenUproot04</Name>
+      <DisplayName>Uproot IV</DisplayName>
+      <Description>Queen of Thorns sends her vines deep beneath the earth to destroy target structure's foundation, dealing [GetDamage] damage over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILESTRUCTURE</TargetingMethod>
+      <EnergyCost>905</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>20</RangeMax>
+      <DamageAmt>200</DamageAmt>
+      <IgnoreFacing>true</IgnoreFacing>
+      <Pulses>10</Pulses>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Uproot</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.5</CastingTime>
+      <ViolentSiegeAmt>100</ViolentSiegeAmt>
+      <ViolentSiegeRadius>8</ViolentSiegeRadius>
+      <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+      <GetDamage>function(self) return math.floor( self.DamageAmt * self.Pulses ) end</GetDamage>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenUproot04</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>false</CanBeDispelled>
+          <DisplayName>Uproot</DisplayName>
+          <Description>Taking severe damage.</Description>
+          <BuffType>UPROOTDUMMY</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+          <Duration>10</Duration>
+          <Affects />
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenViolentSiege</Name>
+      <DisplayName>Violent Siege</DisplayName>
+      <Description>When Queen of Thorns uses Uproot, the force shakes loose debris from the structure. Enemies standing near the structure take [GetDamage] damage while Uproot is active.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamage>function(self) return math.floor( Ability['HQueenUproot04'].ViolentSiegeAmt ) end</GetDamage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenGroundSpikes01</Name>
+      <DisplayName>Ground Spikes I</DisplayName>
+      <Description>Queen of Thorns radiates a forest of spikes around her, dealing [GetDamageAmt] damage and reducing armor by [GetArmorReduction] for [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>500</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>GroundSpikes</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <AffectRadius>15</AffectRadius>
+      <DamageAmt>250</DamageAmt>
+      <ProjectileLifetime>0.2</ProjectileLifetime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetArmorReduction>function(self) return Buffs[self.Name].Affects.Armor.Add * -1 end</GetArmorReduction>
+      <GetDuration>function(self) return Buffs[self.Name].Duration end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenGroundSpikes02</Name>
+      <DisplayName>Ground Spikes II</DisplayName>
+      <Description>Queen of Thorns radiates a forest of spikes around her, dealing [GetDamageAmt] damage and reducing armor by [GetArmorReduction] for [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>500</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>GroundSpikes</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <AffectRadius>15</AffectRadius>
+      <DamageAmt>375</DamageAmt>
+      <ProjectileLifetime>0.2</ProjectileLifetime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetArmorReduction>function(self) return Buffs[self.Name].Affects.Armor.Add * -1 end</GetArmorReduction>
+      <GetDuration>function(self) return Buffs[self.Name].Duration end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenGroundSpikes03</Name>
+      <DisplayName>Ground Spikes III</DisplayName>
+      <Description>Queen of Thorns radiates a forest of spikes around her, dealing [GetDamageAmt] damage and reducing armor by [GetArmorReduction] for [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>675</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>GroundSpikes</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <AffectRadius>15</AffectRadius>
+      <DamageAmt>500</DamageAmt>
+      <ProjectileLifetime>0.2</ProjectileLifetime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetArmorReduction>function(self) return Buffs[self.Name].Affects.Armor.Add * -1 end</GetArmorReduction>
+      <GetDuration>function(self) return Buffs[self.Name].Duration end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenGroundSpikes04</Name>
+      <DisplayName>Ground Spikes IV</DisplayName>
+      <Description>Queen of Thorns radiates a forest of spikes around her, dealing [GetDamageAmt] damage and reducing armor by [GetArmorReduction] for [GetDuration] seconds.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>750</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <CastAction>GroundSpikes</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <AffectRadius>15</AffectRadius>
+      <DamageAmt>625</DamageAmt>
+      <ProjectileLifetime>0.2</ProjectileLifetime>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetArmorReduction>function(self) return Buffs[self.Name].Affects.Armor.Add * -1 end</GetArmorReduction>
+      <GetDuration>function(self) return Buffs[self.Name].Duration end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenCompost01</Name>
+      <Description>As nearby enemies die, their bodies nourish Queen of Thorns. For every 3 enemies killed, Uproot increases in damage. Her Shamblers gain Weapon Damage and Health. The effects cap at 9 enemies killed, and the effects diminish over time.</Description>
+      <DisplayName>Compost I</DisplayName>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <DecayTime>7</DecayTime>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostBuff01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Compost</DisplayName>
+          <Description>Will be composted if killed.</Description>
+          <BuffType>HQUEENCOMPOSTENEMYDEBUFF</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenCompost02</Name>
+      <Description>As nearby enemies die, their bodies nourish Queen of Thorns. For every 3 enemies killed, Uproot increases in damage. Her Shamblers gain Weapon Damage and Health. The effects cap at 9 enemies killed, and the effects diminish over time.</Description>
+      <DisplayName>Compost II</DisplayName>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <DecayTime>7</DecayTime>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostBuff02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Compost</DisplayName>
+          <Description>Will be composted if killed.</Description>
+          <BuffType>HQUEENCOMPOSTENEMYDEBUFF</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenCompost03</Name>
+      <Description>As nearby enemies die, their bodies nourish Queen of Thorns. For every 3 enemies killed, Uproot increases in damage. Her Shamblers gain Weapon Damage and Health. The effects cap at 9 enemies killed, and the effects diminish over time.</Description>
+      <DisplayName>Compost III</DisplayName>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <DecayTime>7</DecayTime>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostBuff03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Compost</DisplayName>
+          <Description>Will be composted if killed.</Description>
+          <BuffType>HQUEENCOMPOSTENEMYDEBUFF</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenSpikeWave01</Name>
+      <DisplayName>Spike Wave I</DisplayName>
+      <Description>Queen of Thorns sends out a powerful wave of spikes, dealing [GetDamageAmt] damage to anyone skewered and slowing enemies by [GetSlowAmount]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>750</EnergyCost>
+      <RangeMax>20</RangeMax>
+      <Cooldown>10</Cooldown>
+      <DamageAmt>350</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <AffectRadius>5</AffectRadius>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.4</CastingTime>
+      <CastAction>SpikeWave</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetSlowAmount>function(self) return math.floor( Buffs['HQueenSpikeWave01'].Affects.MoveMult.Mult * -100 ) end</GetSlowAmount>
+      <GetDuration>function(self) return ( Buffs['HQueenSpikeWave01'].Duration ) end</GetDuration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+      <Reticule>AoE_Spike_Wave</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenSpikeWave02</Name>
+      <DisplayName>Spike Wave II</DisplayName>
+      <Description>Queen of Thorns sends out a powerful wave of spikes, dealing [GetDamageAmt] damage to anyone skewered and slowing enemies by [GetSlowAmount]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1000</EnergyCost>
+      <RangeMax>25</RangeMax>
+      <Cooldown>10</Cooldown>
+      <DamageAmt>500</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <AffectRadius>5</AffectRadius>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.4</CastingTime>
+      <CastAction>SpikeWave</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetSlowAmount>function(self) return math.floor( Buffs['HQueenSpikeWave02'].Affects.MoveMult.Mult * -100 ) end</GetSlowAmount>
+      <GetDuration>function(self) return ( Buffs['HQueenSpikeWave02'].Duration ) end</GetDuration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+      <Reticule>AoE_Spike_Wave</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenSpikeWave03</Name>
+      <DisplayName>Spike Wave III</DisplayName>
+      <Description>Queen of Thorns sends out a powerful wave of spikes, dealing [GetDamageAmt] damage to anyone skewered and slowing enemies by [GetSlowAmount]% for [GetDuration] seconds.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1250</EnergyCost>
+      <RangeMax>30</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>650</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <AffectRadius>5</AffectRadius>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <CastingTime>0.4</CastingTime>
+      <CastAction>SpikeWave</CastAction>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetSlowAmount>function(self) return math.floor( Buffs['HQueenSpikeWave03'].Affects.MoveMult.Mult * -100 ) end</GetSlowAmount>
+      <GetDuration>function(self) return ( Buffs['HQueenSpikeWave03'].Duration ) end</GetDuration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+      <Reticule>AoE_Spike_Wave</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenBrambleShield01</Name>
+      <DisplayName>Bramble Shield I</DisplayName>
+      <Description>Thorns form a shield around an allied unit, absorbing [GetAbsorbAmt] damage.\nOnly one absorption effect per unit may be active at a time.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <EnergyCost>400</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Shield</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+      <GetAbsorbAmt>function(self) return math.floor( Buffs['HQueenBrambleShield01'].Affects.Absorption.Add ) end</GetAbsorbAmt>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenBrambleShield01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bramble Shield</DisplayName>
+          <Description>Protected from damage.</Description>
+          <BuffType>ABSORB</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+          <Duration>30</Duration>
+          <SoundLoop>Forge/DEMIGODS/QueenOfThorns/snd_dg_qothorns_brambleshield</SoundLoop>
+          <Effects>Bramble01</Effects>
+          <Affects>
+            <Absorption>
+              <Add>700</Add>
+            </Absorption>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenBrambleShield02</Name>
+      <DisplayName>Bramble Shield II</DisplayName>
+      <Description>Thorns form a shield around an allied unit, absorbing [GetAbsorbAmt] damage.\nOnly one absorption effect per unit may be active at a time.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <EnergyCost>560</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Shield</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+      <GetAbsorbAmt>function(self) return math.floor( Buffs['HQueenBrambleShield02'].Affects.Absorption.Add ) end</GetAbsorbAmt>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenBrambleShield02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bramble Shield</DisplayName>
+          <Description>Protected from damage.</Description>
+          <BuffType>ABSORB</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+          <Duration>30</Duration>
+          <SoundLoop>Forge/DEMIGODS/QueenOfThorns/snd_dg_qothorns_brambleshield</SoundLoop>
+          <Effects>Bramble01</Effects>
+          <Affects>
+            <Absorption>
+              <Add>950</Add>
+            </Absorption>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenBrambleShield03</Name>
+      <DisplayName>Bramble Shield III</DisplayName>
+      <Description>Thorns form a shield around an allied unit, absorbing [GetAbsorbAmt] damage.\nOnly one absorption effect per unit may be active at a time.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <EnergyCost>720</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Shield</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+      <GetAbsorbAmt>function(self) return math.floor( Buffs['HQueenBrambleShield03'].Affects.Absorption.Add ) end</GetAbsorbAmt>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenBrambleShield03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bramble Shield</DisplayName>
+          <Description>Protected from damage.</Description>
+          <BuffType>ABSORB</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+          <Duration>30</Duration>
+          <SoundLoop>Forge/DEMIGODS/QueenOfThorns/snd_dg_qothorns_brambleshield</SoundLoop>
+          <Effects>Bramble01</Effects>
+          <Affects>
+            <Absorption>
+              <Add>1200</Add>
+            </Absorption>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenBrambleShield04</Name>
+      <DisplayName>Bramble Shield IV</DisplayName>
+      <Description>Thorns form a shield around an allied unit, absorbing [GetAbsorbAmt] damage.\nOnly one absorption effect per unit may be active at a time.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <EnergyCost>840</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastAction>Shield</CastAction>
+      <FollowThroughTime>1.5</FollowThroughTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+      <GetAbsorbAmt>function(self) return math.floor( Buffs['HQueenBrambleShield04'].Affects.Absorption.Add ) end</GetAbsorbAmt>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenBrambleShield04</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bramble Shield</DisplayName>
+          <Description>Protected from damage.</Description>
+          <BuffType>ABSORB</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+          <Duration>30</Duration>
+          <SoundLoop>Forge/DEMIGODS/QueenOfThorns/snd_dg_qothorns_brambleshield</SoundLoop>
+          <Effects>Bramble01</Effects>
+          <Affects>
+            <Absorption>
+              <Add>1450</Add>
+            </Absorption>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenGoddessofThorns</Name>
+      <DisplayName>Goddess of Thorns</DisplayName>
+      <Description>Queen of Thorns gains further mastery over nature. When she uses Ground Spikes, thorns encircle her, reducing damage taken by [GetReduction]% for [GetDuration] seconds. Whenever she uses Bramble Shield, thorns encircle her and her army, dealing [GetThorns] damage to attackers for [GetDurationThorns] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetReduction>function(self) return math.floor( Buffs['HQueenGoddessofThornsQueen'].Affects.DamageTakenMult.Add * -100 ) end</GetReduction>
+      <GetDuration>function(self) return math.floor( Buffs['HQueenGoddessofThornsQueen'].Duration ) end</GetDuration>
+      <GetThorns>function(self) return math.floor( Buffs['HQueenGoddessofThornsArmy'].Affects.DamageReturn.Add ) end</GetThorns>
+      <GetDurationThorns>function(self) return math.floor( Buffs['HQueenGoddessofThornsArmy'].Duration ) end</GetDurationThorns>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenDeath01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+      <EnemyDeathDebuff01>HQueenDeathDebuff01</EnemyDeathDebuff01>
+      <EnemyDeathDebuff02>HQueenDeathDebuff02</EnemyDeathDebuff02>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenShamblerGrey01</Name>
+      <DisplayName>Summon Shambler I</DisplayName>
+      <Description>Queen of Thorns summons [GetShamblersSummoned] Shamblers from her thorns to protect her. She may have [GetMaxShamblers] Shamblers active.</Description>
+      <AbilityType>Passive</AbilityType>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HQueenShambler01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HQueenShambler01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HQueenShambler01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HQueenShambler01'].Cooldown end</GetCooldown>
+      <GetShamblersSummoned>function(self) return math.floor( Ability['HQueenShambler01'].NumShamblers ) end</GetShamblersSummoned>
+      <GetMaxShamblers>function(self) return math.floor( Ability['HQueenShambler01'].MaxShamblers ) end</GetMaxShamblers>
+      <Icon>/dgqueenofthorns/NewQueenSummonShambler01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenBrambleShieldGrey01</Name>
+      <DisplayName>Bramble Shield I</DisplayName>
+      <Description>Thorns form a shield around an allied unit, absorbing [GetAbsorbAmt] damage.\nOnly one absorption effect per unit may be active at a time.</Description>
+      <AbilityType>Passive</AbilityType>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HQueenBrambleShield01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HQueenBrambleShield01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HQueenBrambleShield01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HQueenBrambleShield01'].Cooldown end</GetCooldown>
+      <GetAbsorbAmt>function(self) return math.floor( Buffs['HQueenBrambleShield01'].Affects.Absorption.Add ) end</GetAbsorbAmt>
+      <Icon>/dgqueenofthorns/NewQueenBrambleShield01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenSpikeWaveGrey01</Name>
+      <DisplayName>Spike Wave I</DisplayName>
+      <Description>Queen of Thorns sends out a powerful wave of spikes, dealing [GetDamageAmt] damage to anyone skewered and slowing enemies by [GetSlowAmount]% for [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HQueenSpikeWave01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HQueenSpikeWave01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HQueenSpikeWave01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HQueenSpikeWave01'].Cooldown end</GetCooldown>
+      <GetDamageAmt>function(self) return math.floor( Ability['HQueenSpikeWave01'].DamageAmt ) end</GetDamageAmt>
+      <GetSlowAmount>function(self) return math.floor( Buffs['HQueenSpikeWave01'].Affects.MoveMult.Mult * -100 ) end</GetSlowAmount>
+      <GetDuration>function(self) return ( Buffs['HQueenSpikeWave01'].Duration ) end</GetDuration>
+      <Icon>/dgqueenofthorns/NewQueenSpikeWave01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenConsumeShamblerGrey01</Name>
+      <DisplayName>Mulch Shambler I</DisplayName>
+      <Description>Queen of Thorns absorbs an allied Shambler, killing it and restoring [GetHealthRestored] Health. Enemies near the Shambler take [GetDamage] damage.</Description>
+      <AbilityType>Passive</AbilityType>
+      <AbilityCategory>HQUEENPACKED</AbilityCategory>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HQueenConsumeShambler01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HQueenConsumeShambler01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HQueenConsumeShambler01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HQueenConsumeShambler01'].Cooldown end</GetCooldown>
+      <GetDamage>function(self) return Ability['HQueenConsumeShambler01'].DamageAmt end</GetDamage>
+      <GetHealthRestored>function(self) return math.floor( Buffs['HQueenConsumeShamblerBuff01'].Affects.Health.Add ) end</GetHealthRestored>
+      <Icon>/dgqueenofthorns/NewQueenConsumeShambler01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenUprootGrey01</Name>
+      <DisplayName>Uproot I</DisplayName>
+      <Description>Queen of Thorns sends her vines deep beneath the earth to destroy target structure's foundation, dealing [GetDamage] damage over [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HQueenUproot01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HQueenUproot01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HQueenUproot01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HQueenUproot01'].Cooldown end</GetCooldown>
+      <GetDamage>function(self) return math.floor( Ability['HQueenUproot01'].DamageAmt * Ability['HQueenUproot01'].Pulses ) end</GetDamage>
+      <GetDuration>function(self) return math.floor( Ability['HQueenUproot01'].Pulses ) end</GetDuration>
+      <Icon>/dgqueenofthorns/NewQueenUproot01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HQueenGroundSpikesGrey01</Name>
+      <DisplayName>Ground Spikes I</DisplayName>
+      <Description>Queen of Thorns radiates a forest of spikes around her, dealing [GetDamageAmt] damage and reducing armor by [GetArmorReduction] for [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <AbilityCategory>HQUEENUNPACKED</AbilityCategory>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HQueenGroundSpikes01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HQueenGroundSpikes01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HQueenGroundSpikes01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HQueenGroundSpikes01'].Cooldown end</GetCooldown>
+      <GetDamageAmt>function(self) return math.floor( Ability['HQueenGroundSpikes01'].DamageAmt ) end</GetDamageAmt>
+      <GetArmorReduction>function(self) return Buffs['HQueenGroundSpikes01'].Affects.Armor.Add * -1 end</GetArmorReduction>
+      <GetDuration>function(self) return Buffs['HQueenGroundSpikes01'].Duration end</GetDuration>
+      <Icon>/dgqueenofthorns/NewQueenGroundSpikes01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>HQueenCompostPowerBuffMinion01</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>ENT</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostPowerBuffMinion01</Name>
+          <BuffType>COMPOSTMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>ENT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>4</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>60</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HQueenCompostPowerBuffMinion02</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>ENT</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostPowerBuffMinion02</Name>
+          <BuffType>COMPOSTMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>ENT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>6</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>120</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HQueenCompostPowerBuffMinion03</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>ENT</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostPowerBuffMinion03</Name>
+          <BuffType>COMPOSTMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>ENT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>8</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>180</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HQueenCompostPowerBuffMinion04</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>ENT</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostPowerBuffMinion04</Name>
+          <BuffType>COMPOSTMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>ENT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>10</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>240</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HQueenCompostPowerBuffMinion05</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>ENT</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostPowerBuffMinion05</Name>
+          <BuffType>COMPOSTMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>ENT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>12</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>300</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HQueenCompostPowerBuffMinion06</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>ENT</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenCompostPowerBuffMinion06</Name>
+          <BuffType>COMPOSTMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>ENT</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <DamageRating>
+              <Add>14</Add>
+            </DamageRating>
+            <MaxHealth>
+              <Add>360</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HQueenGoddessofThornsArmy</Name>
+      <DisplayName>Goddess of Thorns</DisplayName>
+      <Description>Dealing damage to attackers.</Description>
+      <ApplyArmies>Single</ApplyArmies>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HQueenGoddessofThornsArmy</Name>
+          <DisplayName>Goddess of Thorns</DisplayName>
+          <Description>Dealing damage to attackers.</Description>
+          <BuffType>HQUEENGODDESSARMY</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>20</Duration>
+          <Icon>/dgqueenofthorns/NewQueenGoddessofThorns01</Icon>
+          <Affects>
+            <DamageReturn>
+              <Add>35</Add>
+            </DamageReturn>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

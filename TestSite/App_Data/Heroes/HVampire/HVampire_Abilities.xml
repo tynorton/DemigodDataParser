@@ -1,0 +1,1160 @@
+<DemigodBlueprints id="HVampire_Abilities">
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HVampireBatSwarm01</Name>
+      <DisplayName>Bat Swarm I</DisplayName>
+      <Description>Lord Erebus transforms into a swarm of bats, teleporting him to a new location and doing [GetDamageAmt] damage to everything in his path. Range of [GetRange].</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetRange>function(self) return math.floor( self.RangeMax ) end</GetRange>
+      <RangeMax>20</RangeMax>
+      <Cooldown>15</Cooldown>
+      <EnergyCost>750</EnergyCost>
+      <AffectRadius>4</AffectRadius>
+      <DamageAmt>300</DamageAmt>
+      <DamageRadius>3</DamageRadius>
+      <DamageType>Spell</DamageType>
+      <MetaImpactAmount>7</MetaImpactAmount>
+      <MetaImpactRadius>3</MetaImpactRadius>
+      <MetaImpactDamageFriendly>false</MetaImpactDamageFriendly>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastAction>Bats</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <MaterializeWarpDelay>0.2</MaterializeWarpDelay>
+      <ErrorMessage>Cannot move there.</ErrorMessage>
+      <ErrorVO>Nomove</ErrorVO>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVamplord/NewVamplordBatSwarm01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBatSwarm02</Name>
+      <DisplayName>Bat Swarm II</DisplayName>
+      <Description>Lord Erebus transforms into a swarm of bats, teleporting him to a new location and doing [GetDamageAmt] damage to everything in his path. Range of [GetRange].</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetRange>function(self) return math.floor( self.RangeMax ) end</GetRange>
+      <RangeMax>30</RangeMax>
+      <Cooldown>15</Cooldown>
+      <EnergyCost>925</EnergyCost>
+      <AffectRadius>4</AffectRadius>
+      <DamageAmt>450</DamageAmt>
+      <DamageRadius>3</DamageRadius>
+      <DamageType>Spell</DamageType>
+      <MetaImpactAmount>7</MetaImpactAmount>
+      <MetaImpactRadius>3</MetaImpactRadius>
+      <MetaImpactDamageFriendly>false</MetaImpactDamageFriendly>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastAction>Bats</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <MaterializeWarpDelay>0.2</MaterializeWarpDelay>
+      <ErrorMessage>Cannot move there.</ErrorMessage>
+      <ErrorVO>Nomove</ErrorVO>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVamplord/NewVamplordBatSwarm01</Icon>
+      <Reticule>AoE_Bat_Swarm</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBatSwarm03</Name>
+      <DisplayName>Bat Swarm III</DisplayName>
+      <Description>Lord Erebus transforms into a swarm of bats, teleporting him to a new location and doing [GetDamageAmt] damage to everything in his path. Range of [GetRange].</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <GetRange>function(self) return math.floor( self.RangeMax ) end</GetRange>
+      <RangeMax>30</RangeMax>
+      <Cooldown>15</Cooldown>
+      <EnergyCost>1275</EnergyCost>
+      <AffectRadius>4</AffectRadius>
+      <DamageAmt>600</DamageAmt>
+      <DamageRadius>3</DamageRadius>
+      <DamageType>Spell</DamageType>
+      <MetaImpactAmount>7</MetaImpactAmount>
+      <MetaImpactRadius>3</MetaImpactRadius>
+      <MetaImpactDamageFriendly>false</MetaImpactDamageFriendly>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastAction>Bats</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <MaterializeWarpDelay>0.2</MaterializeWarpDelay>
+      <ErrorMessage>Cannot move there.</ErrorMessage>
+      <ErrorVO>Nomove</ErrorVO>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVamplord/NewVamplordBatSwarm01</Icon>
+      <Reticule>AoE_Bat_Swarm</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBite01</Name>
+      <DisplayName>Bite I</DisplayName>
+      <Description>Lord Erebus bites a target, draining [GetAmount] Health. For [GetDuration] seconds after the bite, the target's Armor is reduced by [GetArmorBuff] and Movement Speed is decreased by [GetMovementBuff]%.</Description>
+      <GetAmount>function(self) return math.floor( self.Amount ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Buffs['HVampireBiteTarget01'].Duration ) end</GetDuration>
+      <GetMovementBuff>function(self) return math.floor( Buffs['HVampireBiteTarget01'].Affects.MoveMult.Mult * -100 ) end</GetMovementBuff>
+      <GetArmorBuff>function(self) return math.floor( Buffs['HVampireBiteTarget01'].Affects.Armor.Add * -1 ) end</GetArmorBuff>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>350</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>8</RangeMax>
+      <Amount>250</Amount>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>Bite</CastAction>
+      <CastingTime>0</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <TargetBuff>HVampireBiteTarget01</TargetBuff>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVampLord/NewVamplordBite01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireBiteTarget01</Name>
+          <DisplayName>Bite</DisplayName>
+          <Description>Armor and Movement Speed reduced.</Description>
+          <BuffType>HVAMPIREBITETARGET</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>3</Duration>
+          <DamageSelf>true</DamageSelf>
+          <CanBeEvaded>false</CanBeEvaded>
+          <CanBackfire>false</CanBackfire>
+          <DamageFriendly>true</DamageFriendly>
+          <ArmorImmune>true</ArmorImmune>
+          <CanCrit>false</CanCrit>
+          <CanMagicResist>false</CanMagicResist>
+          <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+          <Icon>/DGVampLord/NewVamplordBite01</Icon>
+          <Affects>
+            <Armor>
+              <Add>-250</Add>
+            </Armor>
+            <MoveMult>
+              <Mult>-0.15</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBite02</Name>
+      <DisplayName>Bite II</DisplayName>
+      <Description>Lord Erebus bites a target, draining [GetAmount] Health. For [GetDuration] seconds after the bite, the target's Armor is reduced by [GetArmorBuff] and Movement Speed is decreased by [GetMovementBuff]%.</Description>
+      <GetAmount>function(self) return math.floor( self.Amount ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Buffs['HVampireBiteTarget02'].Duration ) end</GetDuration>
+      <GetMovementBuff>function(self) return math.floor( Buffs['HVampireBiteTarget02'].Affects.MoveMult.Mult * -100 ) end</GetMovementBuff>
+      <GetArmorBuff>function(self) return math.floor( Buffs['HVampireBiteTarget02'].Affects.Armor.Add * -1 ) end</GetArmorBuff>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>500</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>8</RangeMax>
+      <Amount>425</Amount>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>Bite</CastAction>
+      <CastingTime>0</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <TargetBuff>HVampireBiteTarget02</TargetBuff>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVampLord/NewVamplordBite01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireBiteTarget02</Name>
+          <DisplayName>Bite</DisplayName>
+          <Description>Armor and Movement Speed reduced.</Description>
+          <BuffType>HVAMPIREBITETARGET</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>3</Duration>
+          <DamageSelf>true</DamageSelf>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanBeEvaded>false</CanBeEvaded>
+          <CanBackfire>false</CanBackfire>
+          <DamageFriendly>true</DamageFriendly>
+          <ArmorImmune>true</ArmorImmune>
+          <CanCrit>false</CanCrit>
+          <CanMagicResist>false</CanMagicResist>
+          <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+          <Icon>/DGVampLord/NewVamplordBite01</Icon>
+          <Affects>
+            <Armor>
+              <Add>-400</Add>
+            </Armor>
+            <MoveMult>
+              <Mult>-0.20</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBite03</Name>
+      <DisplayName>Bite III</DisplayName>
+      <Description>Lord Erebus bites a target, draining [GetAmount] Health. For [GetDuration] seconds after the bite, the target's Armor is reduced by [GetArmorBuff] and Movement Speed is decreased by [GetMovementBuff]%.</Description>
+      <GetAmount>function(self) return math.floor( self.Amount ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Buffs['HVampireBiteTarget03'].Duration ) end</GetDuration>
+      <GetMovementBuff>function(self) return math.floor( Buffs['HVampireBiteTarget03'].Affects.MoveMult.Mult * -100 ) end</GetMovementBuff>
+      <GetArmorBuff>function(self) return math.floor( Buffs['HVampireBiteTarget03'].Affects.Armor.Add * -1 ) end</GetArmorBuff>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>650</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <Amount>600</Amount>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>Bite</CastAction>
+      <CastingTime>0</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVampLord/NewVamplordBite01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireBiteTarget03</Name>
+          <DisplayName>Bite</DisplayName>
+          <Description>Armor and Movement Speed reduced.</Description>
+          <BuffType>HVAMPIREBITETARGET</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>3</Duration>
+          <DamageSelf>true</DamageSelf>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanBeEvaded>false</CanBeEvaded>
+          <CanBackfire>false</CanBackfire>
+          <DamageFriendly>true</DamageFriendly>
+          <ArmorImmune>true</ArmorImmune>
+          <CanCrit>false</CanCrit>
+          <CanMagicResist>false</CanMagicResist>
+          <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+          <Icon>/DGVampLord/NewVamplordBite01</Icon>
+          <Affects>
+            <Armor>
+              <Add>-550</Add>
+            </Armor>
+            <MoveMult>
+              <Mult>-0.25</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBite04</Name>
+      <DisplayName>Bite IV</DisplayName>
+      <Description>Lord Erebus bites a target, draining [GetAmount] Health. For [GetDuration] seconds after the bite, the target's Armor is reduced by [GetArmorBuff] and Movement Speed is decreased by [GetMovementBuff]%.</Description>
+      <GetAmount>function(self) return math.floor( self.Amount ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Buffs['HVampireBiteTarget04'].Duration ) end</GetDuration>
+      <GetMovementBuff>function(self) return math.floor( Buffs['HVampireBiteTarget04'].Affects.MoveMult.Mult * -100 ) end</GetMovementBuff>
+      <GetArmorBuff>function(self) return math.floor( Buffs['HVampireBiteTarget04'].Affects.Armor.Add * -1 ) end</GetArmorBuff>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>800</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <Amount>775</Amount>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>Bite</CastAction>
+      <CastingTime>0</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Icon>/DGVampLord/NewVamplordBite01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireBiteTarget04</Name>
+          <DisplayName>Bite</DisplayName>
+          <Description>Armor and Movement Speed reduced.</Description>
+          <BuffType>HVAMPIREBITETARGET</BuffType>
+          <Stacks>ALWAYS</Stacks>
+          <Duration>3</Duration>
+          <DamageSelf>true</DamageSelf>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanBeEvaded>false</CanBeEvaded>
+          <CanBackfire>false</CanBackfire>
+          <DamageFriendly>true</DamageFriendly>
+          <ArmorImmune>true</ArmorImmune>
+          <CanCrit>false</CanCrit>
+          <CanMagicResist>false</CanMagicResist>
+          <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+          <Icon>/DGVampLord/NewVamplordBite01</Icon>
+          <Affects>
+            <Armor>
+              <Add>-700</Add>
+            </Armor>
+            <MoveMult>
+              <Mult>-0.3</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireConversion00</Name>
+      <DisplayName>Vampire Conversion</DisplayName>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2.5</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - NOBUFFS - VAMPIRE</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Any</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireConversion00</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Vampire Conversion</DisplayName>
+          <BuffType>HVAMPIRECONVERSION</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <VampireChance>35</VampireChance>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireConversion01</Name>
+      <DisplayName>Improved Conversion Aura I</DisplayName>
+      <Description>Lord Erebus has a [GetVampireChance]% chance to convert infantry into Night Walkers when they die. His Night Walkers have +[GetHealthBonus] Health.</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2.5</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - NOBUFFS - VAMPIRE</TargetCategory>
+      <GetVampireChance>function(self) return math.floor( Buffs[self.Name].VampireChance ) end</GetVampireChance>
+      <GetHealthBonus>function(self) return math.floor( Buffs['HVampireConversionTarget01'].Affects.MaxHealth.Add ) end</GetHealthBonus>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireConversion01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Night Walker Conversion</DisplayName>
+          <BuffType>HVAMPIRECONVERSION</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <VampireChance>50</VampireChance>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireConversion02</Name>
+      <DisplayName>Improved Conversion Aura II</DisplayName>
+      <Description>Lord Erebus has a [GetVampireChance]% chance to convert infantry into Night Walkers when they die. His Night Walkers have +[GetHealthBonus] Health.</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2.5</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - NOBUFFS - VAMPIRE</TargetCategory>
+      <GetVampireChance>function(self) return math.floor( Buffs[self.Name].VampireChance ) end</GetVampireChance>
+      <GetHealthBonus>function(self) return math.floor( Buffs['HVampireConversionTarget02'].Affects.MaxHealth.Add ) end</GetHealthBonus>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireConversion02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Night Walker Conversion</DisplayName>
+          <BuffType>HVAMPIRECONVERSION</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <VampireChance>65</VampireChance>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireConversion03</Name>
+      <DisplayName>Improved Conversion Aura III</DisplayName>
+      <Description>Lord Erebus has a [GetVampireChance]% chance to convert infantry into Night Walkers when they die. His Night Walkers have +[GetHealthBonus] Health.</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>20</AffectRadius>
+      <AuraPulseTime>2.5</AuraPulseTime>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE - NOBUFFS - VAMPIRE</TargetCategory>
+      <GetVampireChance>function(self) return math.floor( Buffs[self.Name].VampireChance ) end</GetVampireChance>
+      <GetHealthBonus>function(self) return math.floor( Buffs['HVampireConversionTarget03'].Affects.MaxHealth.Add ) end</GetHealthBonus>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireConversion03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Night Walker Conversion</DisplayName>
+          <BuffType>HVAMPIRECONVERSION</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <VampireChance>80</VampireChance>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireCoven00</Name>
+      <DisplayName>Coven</DisplayName>
+      <Description>Can control up to 2 Night Walkers.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireCoven00</Name>
+          <DisplayName>Coven</DisplayName>
+          <Description>Can control up to 2 Night Walkers.</Description>
+          <BuffType>HVAMPIRECOVEN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <VampireMax>2</VampireMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireCoven01</Name>
+      <DisplayName>Coven I</DisplayName>
+      <Description>Lord Erebus's control over his coven increases, allowing him to control up to [GetVampireMax] Night Walkers with their damage increased by [GetVampireBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <GetVampireMax>function(self) return math.floor( Buffs[self.Name].VampireMax ) end</GetVampireMax>
+      <GetVampireBuff>function(self) return math.floor( Buffs['HVampireCovenTarget01'].Affects.DamageRating.Add ) end</GetVampireBuff>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireCoven01</Name>
+          <DisplayName>Coven I</DisplayName>
+          <Description>Lord Erebus's control over his coven increases, allowing him to control up to 4 Night Walkers and their damage increased by 8.</Description>
+          <BuffType>HVAMPIRECOVEN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <VampireMax>6</VampireMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireCoven02</Name>
+      <DisplayName>Coven II</DisplayName>
+      <Description>Lord Erebus's control over his coven increases, allowing him to control up to [GetVampireMax] Night Walkers with their damage increased by [GetVampireBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <GetVampireMax>function(self) return math.floor( Buffs[self.Name].VampireMax ) end</GetVampireMax>
+      <GetVampireBuff>function(self) return math.floor( Buffs['HVampireCovenTarget02'].Affects.DamageRating.Add ) end</GetVampireBuff>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireCoven02</Name>
+          <DisplayName>Coven II</DisplayName>
+          <Description>Lord Erebus's control over his coven increases, allowing him to control up to 6 Night Walkers and their damage increased by 16.</Description>
+          <BuffType>HVAMPIRECOVEN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <VampireMax>8</VampireMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireCoven03</Name>
+      <DisplayName>Coven III</DisplayName>
+      <Description>Lord Erebus's control over his coven increases, allowing him to control up to [GetVampireMax] Night Walkers with their damage increased by [GetVampireBuff].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <GetVampireMax>function(self) return math.floor( Buffs[self.Name].VampireMax ) end</GetVampireMax>
+      <GetVampireBuff>function(self) return math.floor( Buffs['HVampireCovenTarget03'].Affects.DamageRating.Add ) end</GetVampireBuff>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireCoven03</Name>
+          <DisplayName>Coven III</DisplayName>
+          <Description>Lord Erebus's control over his coven increases, allowing him to up to control 8 Night Walkers and their damage increased by 24.</Description>
+          <BuffType>HVAMPIRECOVEN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <VampireMax>10</VampireMax>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireArmyoftheNight</Name>
+      <DisplayName>Army of the Night</DisplayName>
+      <Description>Lord Erebus leads his Night Walkers as a bloodthirsty pack. Their Attack Speed is increased by [GetAttackBonus]% and their attacks drain life.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetAttackBonus>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * 100 ) end</GetAttackBonus>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMassCharm01</Name>
+      <DisplayName>Mass Charm I</DisplayName>
+      <Description>Stuns enemies around Lord Erebus for [GetMistStun] seconds. Demigods are stunned for [GetHeroMistStun] seconds.</Description>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>15</AffectRadius>
+      <CastAction>Charm</CastAction>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <Cooldown>20</Cooldown>
+      <EnergyCost>450</EnergyCost>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <GetMistStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetMistStun>
+      <GetHeroMistStun>function(self) return ( Buffs['HVampireMassCharm01Hero'].Duration ) end</GetHeroMistStun>
+      <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm01</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM</BuffType>
+          <EntityCategory>ALLUNITS - UNTARGETABLE - HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm01Hero</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM_HERO</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm01Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>6</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm01HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>2</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMassCharm02</Name>
+      <DisplayName>Mass Charm II</DisplayName>
+      <Description>Stuns enemies around Lord Erebus for [GetMistStun] seconds. Demigods are stunned for [GetHeroMistStun] seconds.</Description>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>15</AffectRadius>
+      <CastAction>Charm</CastAction>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <Cooldown>20</Cooldown>
+      <EnergyCost>600</EnergyCost>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <GetMistStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetMistStun>
+      <GetHeroMistStun>function(self) return string.format("%.1f", Buffs['HVampireMassCharm02Hero'].Duration) end</GetHeroMistStun>
+      <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm02</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM</BuffType>
+          <EntityCategory>ALLUNITS - UNTARGETABLE - HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm02Hero</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM_HERO</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1.5</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm02Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>10</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm02HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>3</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMassCharm03</Name>
+      <DisplayName>Mass Charm III</DisplayName>
+      <Description>Stuns enemies around Lord Erebus for [GetMistStun] seconds. Demigods are stunned for [GetHeroMistStun] seconds.</Description>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>15</AffectRadius>
+      <CastAction>Charm</CastAction>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <Cooldown>20</Cooldown>
+      <EnergyCost>750</EnergyCost>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <GetMistStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetMistStun>
+      <GetHeroMistStun>function(self) return ( Buffs['HVampireMassCharm03Hero'].Duration ) end</GetHeroMistStun>
+      <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm03</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM</BuffType>
+          <EntityCategory>ALLUNITS - UNTARGETABLE - HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm03Hero</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM_HERO</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>2</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm03Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>14</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm03HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>IGNORE</Stacks>
+          <Duration>4</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMassCharm04</Name>
+      <DisplayName>Mass Charm IV</DisplayName>
+      <Description>Stuns enemies around Lord Erebus for [GetMistStun] seconds. Demigods are stunned for [GetHeroMistStun] seconds.</Description>
+      <AbilityCategory>HVAMPIREMISTOFF</AbilityCategory>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>15</AffectRadius>
+      <CastAction>Charm</CastAction>
+      <CastingTime>1</CastingTime>
+      <FollowThroughTime>1.0</FollowThroughTime>
+      <Cooldown>20</Cooldown>
+      <EnergyCost>900</EnergyCost>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <GetMistStun>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetMistStun>
+      <GetHeroMistStun>function(self) return ( Buffs['HVampireMassCharm04Hero'].Duration ) end</GetHeroMistStun>
+      <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm04</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM</BuffType>
+          <EntityCategory>ALLUNITS - UNTARGETABLE - HERO</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>9</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm04Hero</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Mass Charm</DisplayName>
+          <Description>Stunned.</Description>
+          <BuffType>HVAMPIREMASSCHARM_HERO</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <TriggersStunImmune>true</TriggersStunImmune>
+          <Icon>/DGVampLord/NewVamplordCharm01</Icon>
+          <Affects>
+            <Stun>
+              <Add>0</Add>
+            </Stun>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm04Immune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>MINION</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>18</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HVampireMassCharm04HeroImmune</Name>
+          <Debuff>false</Debuff>
+          <BuffType>STUNIMMUNE</BuffType>
+          <EntityCategory>HERO - UNTARGETABLE</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Duration>6</Duration>
+          <Affects>
+            <StunImmune>
+              <Bool>true</Bool>
+            </StunImmune>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMuddle</Name>
+      <DisplayName>Muddle</DisplayName>
+      <Description>Mass Charm leaves lingering effects on Demigods. Any Demigod affected by Mass Charm has their cooldowns increased by [GetCooldownMult]% for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetCooldownMult>function(self) return math.floor( Buffs[self.Name].Affects.Cooldown.Mult * 100 ) end</GetCooldownMult>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireDeath01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+      <FriendlyDeathBuff>HVampireDeathLifeLeechBuff01</FriendlyDeathBuff>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBiteGrey01</Name>
+      <DisplayName>Bite I</DisplayName>
+      <Description>Lord Erebus bites a target, draining [GetAmount] Health. For [GetDuration] seconds after the bite, the target's Armor is reduced by [GetArmorBuff] and Movement Speed is decreased by [GetMovementBuff]%.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetMaxRange>function(self) return Ability['HVampireBite01'].RangeMax end</GetMaxRange>
+      <GetAmount>function(self) return math.floor( Ability['HVampireBite01'].Amount ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Buffs['HVampireBiteTarget01'].Duration ) end</GetDuration>
+      <GetMovementBuff>function(self) return math.floor( Buffs['HVampireBiteTarget01'].Affects.MoveMult.Mult * -100 ) end</GetMovementBuff>
+      <GetArmorBuff>function(self) return math.floor( Buffs['HVampireBiteTarget01'].Affects.Armor.Add * -1 ) end</GetArmorBuff>
+      <GetEnergyCost>function(self) return Ability['HVampireBite01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HVampireBite01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HVampireBite01'].Cooldown end</GetCooldown>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <Icon>/DGVampLord/NewVamplordBite01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMistGrey01</Name>
+      <DisplayName>Mist Form</DisplayName>
+      <Description>Lord Erebus transforms into mist, draining [GetDamage] life per second his foes while they are in the mist and transferring it to his allies.\n\n While Mist is active Lord Erebus loses [GetSelfMana] Mana per second and cannot move, capture flags, be healed or use abilities.\n\nEntering Mist removes all negative effects.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetMaxRange>function(self) return Ability['HVampireMist01'].RangeMax end</GetMaxRange>
+      <GetDamage>function(self) return math.floor( Buffs['HVampireMist01'].Affects.Health.Add * -1 ) end</GetDamage>
+      <GetRegen>function(self) return math.floor( Buffs['HVampireMistAlly01'].Affects.Regen.Add ) end</GetRegen>
+      <GetSelfDamage>function(self) return ( Buffs['HVampireMistSelf01'].Affects.Health.Add * -1 ) end</GetSelfDamage>
+      <GetSelfMana>function(self) return ( Buffs['HVampireMistSelf01'].Affects.Energy.Add * -1 ) end</GetSelfMana>
+      <GetEnergyCost>function(self) return Ability['HVampireMistOn'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HVampireMistOn'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HVampireMistOn'].Cooldown end</GetCooldown>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <Icon>/DGVampLord/NewVamplordMist01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireMassCharmGrey01</Name>
+      <DisplayName>Mass Charm I</DisplayName>
+      <Description>Stuns enemies around Lord Erebus for [GetMistStun] seconds. Demigods are stunned for [GetHeroMistStun] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetMaxRange>function(self) return Ability['HVampireMassCharm01'].RangeMax end</GetMaxRange>
+      <GetMistStun>function(self) return math.floor( Buffs['HVampireMassCharm01'].Duration ) end</GetMistStun>
+      <GetHeroMistStun>function(self) return ( Buffs['HVampireMassCharm01Hero'].Duration ) end</GetHeroMistStun>
+      <GetEnergyCost>function(self) return Ability['HVampireMassCharm01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HVampireMassCharm01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HVampireMassCharm01'].Cooldown end</GetCooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <Icon>/DGVampLord/NewVamplordcharm01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HVampireBatSwarmGrey01</Name>
+      <DisplayName>Bat Swarm I</DisplayName>
+      <Description>Lord Erebus transforms into a swarm of bats, teleporting him to a new location and doing [GetDamageAmt] damage to everything in his path. Range of [GetRange].</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetMaxRange>function(self) return Ability['HVampireBatSwarm01'].RangeMax end</GetMaxRange>
+      <GetDamageAmt>function(self) return math.floor( Ability['HVampireBatSwarm01'].DamageAmt ) end</GetDamageAmt>
+      <GetRange>function(self) return math.floor( Ability['HVampireBatSwarm01'].RangeMax ) end</GetRange>
+      <GetEnergyCost>function(self) return Ability['HVampireBatSwarm01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HVampireBatSwarm01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HVampireBatSwarm01'].Cooldown end</GetCooldown>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <Icon>/DGVamplord/NewVamplordBatSwarm01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HVampireBatSwarm01</Name>
+      <Debuff>false</Debuff>
+      <BuffType>HVAMPIREBATSWARM</BuffType>
+      <EntityCategory>MAKEVAMPIRES</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <Cloak>
+          <Bool>true</Bool>
+        </Cloak>
+        <DisableAbilityUse>
+          <Bool>true</Bool>
+        </DisableAbilityUse>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <BuffType>HVAMPIRECONVERSIONSELF</BuffType>
+      <Debuff>false</Debuff>
+      <DisplayName>Conversion Aura</DisplayName>
+      <Description>Lord Erebus has a 20% chance to convert infantry into Vampires when they die.</Description>
+      <Duration>-1</Duration>
+      <Name>HVampireConversionSelf00</Name>
+      <Stacks>REPLACE</Stacks>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <BuffType>HVAMPIRECONVERSIONSELF</BuffType>
+      <Debuff>false</Debuff>
+      <DisplayName>Improved Conversion Aura I</DisplayName>
+      <Description>Lord Erebus has a 35% chance to convert infantry into  Night Walkers when they die.</Description>
+      <Duration>-1</Duration>
+      <Name>HVampireConversionSelf01</Name>
+      <Stacks>REPLACE</Stacks>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireConversionTarget01</Name>
+      <BuffType>HVAMPIRECONVERSIONVAMPBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <MaxHealth>
+          <Add>100</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <BuffType>HVAMPIRECONVERSIONSELF</BuffType>
+      <Debuff>false</Debuff>
+      <DisplayName>Improved Conversion Aura II</DisplayName>
+      <Description>Lord Erebus has a 50% chance to convert infantry into Night Walkers when they die.</Description>
+      <Duration>-1</Duration>
+      <Name>HVampireConversionSelf02</Name>
+      <Stacks>REPLACE</Stacks>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireConversionTarget02</Name>
+      <BuffType>HVAMPIRECONVERSIONVAMPBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <MaxHealth>
+          <Add>250</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <BuffType>HVAMPIRECONVERSIONSELF</BuffType>
+      <Debuff>false</Debuff>
+      <DisplayName>Improved Conversion Aura III</DisplayName>
+      <Description>Lord Erebus has a 65% chance to convert infantry into Night Walkers when they die.</Description>
+      <Duration>-1</Duration>
+      <Name>HVampireConversionSelf03</Name>
+      <Stacks>REPLACE</Stacks>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireConversionTarget03</Name>
+      <BuffType>HVAMPIRECONVERSIONVAMPBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <MaxHealth>
+          <Add>400</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireCovenTarget01</Name>
+      <DisplayName>Coven</DisplayName>
+      <Description>Damage and Health increased.</Description>
+      <BuffType>HVAMPIRECOVENTARGET</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <DamageRating>
+          <Add>6</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireCovenTarget02</Name>
+      <DisplayName>Coven</DisplayName>
+      <Description>Damage and Health increased.</Description>
+      <BuffType>HVAMPIRECOVENTARGET</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <DamageRating>
+          <Add>12</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireCovenTarget03</Name>
+      <DisplayName>Coven</DisplayName>
+      <Description>Damage and Health increased.</Description>
+      <BuffType>HVAMPIRECOVENTARGET</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <DamageRating>
+          <Add>18</Add>
+        </DamageRating>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireMuddle</Name>
+      <DisplayName>Muddle</DisplayName>
+      <Description>Cooldown times increased.</Description>
+      <BuffType>HVAMPIREMUDDLE</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>7</Duration>
+      <Icon>/DGVampLord/NewVamplordMuddle01</Icon>
+      <Affects>
+        <Cooldown>
+          <Mult>1.0</Mult>
+        </Cooldown>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireMistOnDisable</Name>
+      <Debuff>false</Debuff>
+      <DisplayName>Mist On Abilities Disabled</DisplayName>
+      <BuffType>HVAMPIREMISTONDISABLE</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <Affects>
+        <Silence>
+          <Bool>true</Bool>
+        </Silence>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireMistImmobilize</Name>
+      <BuffType>HVAMPIREMISTIMOBILE</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Debuff>false</Debuff>
+      <Duration>-1</Duration>
+      <Affects>
+        <UnitImmobile>
+          <Bool>true</Bool>
+        </UnitImmobile>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireMistImmunity</Name>
+      <BuffType>HVAMPIREMISTIMMUNITY</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Debuff>false</Debuff>
+      <Duration>-1</Duration>
+      <Affects>
+        <DebuffImmune>
+          <Bool>true</Bool>
+        </DebuffImmune>
+        <Regen>
+          <Mult>-1</Mult>
+        </Regen>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HVampireDeathLifeLeechBuff01</Name>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <DisplayName>Blood Lust</DisplayName>
+      <Description>Life Steal increased.</Description>
+      <BuffType>HVAMPIREDEATHLIFESTEAL</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>15</Duration>
+      <Icon>/DGVampLord/NewVamplordVampiricAura01</Icon>
+      <Effects>Lifesteal01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <LifeSteal>
+          <Add>0.10</Add>
+        </LifeSteal>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>HVampireArmyoftheNight</Name>
+      <DisplayName>Army of the Night</DisplayName>
+      <Description>Lord Erebus leads his Night Walkers as a bloodthirsty pack. Their Attack Speed is increased by [GetAttackBonus] and their attacks drain life.</Description>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>VAMPIRE</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HVampireArmyoftheNight</Name>
+          <DisplayName>Army of the Night</DisplayName>
+          <Description>Attack speed increased. Attacks drain life.</Description>
+          <BuffType>HVAMPIREARMYOFTHENIGHT</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Icon>/DGVampLord/NewVamplordArmyoftheNight01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.05</Mult>
+            </RateOfFire>
+            <LifeSteal>
+              <Add>0.10</Add>
+            </LifeSteal>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

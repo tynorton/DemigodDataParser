@@ -1,0 +1,977 @@
+<DemigodBlueprints id="HSedna_Abilities">
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HSednaPounce01</Name>
+      <DisplayName>Pounce I</DisplayName>
+      <Description>Sedna commands her cat to pounce on an enemy, interrupting them and dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>400</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>9</RangeMax>
+      <DamageAmt>400</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.3</CastingTime>
+      <FollowThroughTime>1.2</FollowThroughTime>
+      <CastAction>Pounce</CastAction>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <Icon>/DGSedna/NewSednaPounce01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaPounce02</Name>
+      <DisplayName>Pounce II</DisplayName>
+      <Description>Sedna commands her cat to pounce on an enemy, interrupting them and dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>525</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>9</RangeMax>
+      <DamageAmt>600</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.3</CastingTime>
+      <FollowThroughTime>1.2</FollowThroughTime>
+      <CastAction>Pounce</CastAction>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <Icon>/DGSedna/NewSednaPounce01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaPounce03</Name>
+      <DisplayName>Pounce III</DisplayName>
+      <Description>Sedna commands her cat to pounce on an enemy, interrupting them and dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>650</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>9</RangeMax>
+      <DamageAmt>800</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.3</CastingTime>
+      <FollowThroughTime>1.2</FollowThroughTime>
+      <CastAction>Pounce</CastAction>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <Icon>/DGSedna/NewSednaPounce01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaPounce04</Name>
+      <DisplayName>Pounce IV</DisplayName>
+      <Description>Sedna commands her cat to pounce on an enemy, interrupting them and dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>775</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>9</RangeMax>
+      <DamageAmt>1000</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastingTime>0.3</CastingTime>
+      <FollowThroughTime>1.2</FollowThroughTime>
+      <CastAction>Pounce</CastAction>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <Icon>/DGSedna/NewSednaPounce01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaInspiringRoar</Name>
+      <DisplayName>Inspiring Roar</DisplayName>
+      <Description>When Sedna uses Pounce, her army's Movement Speed is increased by [GetMoveIncrease]% and their Evasion is increased by [GetEvasionIncrease]% for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetMoveIncrease>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveIncrease>
+      <GetEvasionIncrease>function(self) return ( Buffs[self.Name].Affects.Evasion.Add ) end</GetEvasionIncrease>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaYeti01</Name>
+      <DisplayName>Horn of the Yeti I</DisplayName>
+      <Description>Sedna summons a Yeti to defend her. She may have [GetMaxYeti] Yeti active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>550</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <NumYetis>1</NumYetis>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <MaxYeti>2</MaxYeti>
+      <CastAction>Summon</CastAction>
+      <GetMaxYeti>function(self) return math.floor( self.MaxYeti ) end</GetMaxYeti>
+      <Icon>/DGSedna/NewSednaYeti01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaYeti02</Name>
+      <DisplayName>Horn of the Yeti II</DisplayName>
+      <Description>Sedna summons [GetNumYetis] Yetis to defend her. Yetis are more powerful than Horn of the Yeti I. She may have [GetMaxYeti] Yeti active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>750</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <NumYetis>2</NumYetis>
+      <YetiBuff>HSednaYetiBuff02</YetiBuff>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <MaxYeti>2</MaxYeti>
+      <CastAction>Summon</CastAction>
+      <GetNumYetis>function(self) return math.floor( self.NumYetis ) end</GetNumYetis>
+      <GetMaxYeti>function(self) return math.floor( self.MaxYeti ) end</GetMaxYeti>
+      <Icon>/DGSedna/NewSednaYeti01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaYeti03</Name>
+      <DisplayName>Horn of the Yeti III</DisplayName>
+      <Description>Sedna summons [GetNumYetis] mighty Yeti to defend her. Yetis are more powerful than Horn of the Yeti II. She may have [GetMaxYeti] Yeti active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>950</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <NumYetis>2</NumYetis>
+      <YetiBuff>HSednaYetiBuff03</YetiBuff>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <MaxYeti>4</MaxYeti>
+      <CastAction>Summon</CastAction>
+      <GetNumYetis>function(self) return math.floor( self.NumYetis ) end</GetNumYetis>
+      <GetMaxYeti>function(self) return math.floor( self.MaxYeti ) end</GetMaxYeti>
+      <Icon>/DGSedna/NewSednaYeti01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaYeti04</Name>
+      <DisplayName>Horn of the Yeti IV</DisplayName>
+      <Description>Sedna summons [GetNumYetis] mighty Yeti to defend her. Yetis are more powerful than Horn of the Yeti III. She may have [GetMaxYeti] Yeti active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <EnergyCost>1150</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <NumYetis>4</NumYetis>
+      <YetiBuff>HSednaYetiBuff03</YetiBuff>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <MaxYeti>4</MaxYeti>
+      <CastAction>Summon</CastAction>
+      <GetNumYetis>function(self) return math.floor( self.NumYetis ) end</GetNumYetis>
+      <GetMaxYeti>function(self) return math.floor( self.MaxYeti ) end</GetMaxYeti>
+      <Icon>/DGSedna/NewSednaYeti01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaWildSwings</Name>
+      <DisplayName>Wild Swings</DisplayName>
+      <Description>Sedna's Yetis strike with wide swings, damaging nearby enemies for [GetDamageMult]% damage.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageMult>function(self) return math.floor( Buffs[self.Name].Affects.DamageSplash.Mult * 100 + 100 ) end</GetDamageMult>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHeal01</Name>
+      <DisplayName>Heal I</DisplayName>
+      <Description>Sedna heals a friendly target for [GetHealAmt] Health.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>375</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <HealAmt>600</HealAmt>
+      <DamageType>Spell</DamageType>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Heal</CastAction>
+      <GetHealAmt>function(self) return math.floor( self.HealAmt ) end</GetHealAmt>
+      <Icon>/DGSedna/NewSednaHeal01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHeal02</Name>
+      <DisplayName>Heal II</DisplayName>
+      <Description>Sedna heals a friendly target for [GetHealAmt] Health.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>500</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <HealAmt>900</HealAmt>
+      <DamageType>Spell</DamageType>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Heal</CastAction>
+      <GetHealAmt>function(self) return math.floor( self.HealAmt ) end</GetHealAmt>
+      <Icon>/DGSedna/NewSednaHeal01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHeal03</Name>
+      <DisplayName>Heal III</DisplayName>
+      <Description>Sedna heals a friendly target for [GetHealAmt] Health and cleanses their negative effects.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>625</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <HealAmt>1200</HealAmt>
+      <DebuffClear>false</DebuffClear>
+      <DamageType>Spell</DamageType>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Heal</CastAction>
+      <GetHealAmt>function(self) return math.floor( self.HealAmt ) end</GetHealAmt>
+      <Icon>/DGSedna/NewSednaHeal01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHeal04</Name>
+      <DisplayName>Heal IV</DisplayName>
+      <Description>Sedna heals a friendly target for [GetHealAmt] Health, cleanses their negative effects, and damages nearby enemies for [GetDamageAmt] damage.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>ALLYMOBILE</TargetingMethod>
+      <EnergyCost>750</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>20</RangeMax>
+      <HealAmt>1500</HealAmt>
+      <DebuffClear>false</DebuffClear>
+      <DamageAmt>200</DamageAmt>
+      <DamageRadius>15</DamageRadius>
+      <DamageType>Spell</DamageType>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <CastAction>Heal</CastAction>
+      <GetHealAmt>function(self) return math.floor( self.HealAmt ) end</GetHealAmt>
+      <GetDamageAmt>function(self) return math.floor( self.DamageAmt ) end</GetDamageAmt>
+      <Icon>/DGSedna/NewSednaHeal01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaLifesChild</Name>
+      <AbilityType>Aura</AbilityType>
+      <DisplayName>Life's Child</DisplayName>
+      <Description>The forces of life guard Sedna. Whenever she is under [GetTriggerPercent]% health, her Health Per Second increases by [GetHealthRegen].</Description>
+      <GetTriggerPercent>function(self) return math.floor( self.HealthPercentTrigger * 100 ) end</GetTriggerPercent>
+      <GetHealthRegen>function(self) return math.floor( Buffs[self.Name].Affects.Regen.Add ) end</GetHealthRegen>
+      <AffectRadius>1</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>HERO</TargetCategory>
+      <HealthPercentTrigger>.30</HealthPercentTrigger>
+      <Icon>/DGSedna/NewSednaLifesChild01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaInnerGrace01</Name>
+      <DisplayName>Inner Grace I</DisplayName>
+      <Description>Sedna focuses her divine grace.\n\n+[GetMoveBuff]% Movement Speed\n+[GetRegenBuff] Health Per Second</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRegenBuff>function(self) return math.floor( Buffs[self.Name].Affects.Regen.Add ) end</GetRegenBuff>
+      <GetMoveBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveBuff>
+      <Icon>/DGSedna/NewSednaInnerGrace01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaInnerGrace01</Name>
+          <DisplayName>Inner Grace I</DisplayName>
+          <Description>+10% Movement Speed.\n+5 Health Per Second.</Description>
+          <BuffType>HSEDNAINNERGRACE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Regen>
+              <Add>10</Add>
+            </Regen>
+            <MoveMult>
+              <Mult>0.05</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaInnerGrace02</Name>
+      <DisplayName>Inner Grace II</DisplayName>
+      <Description>Sedna focuses her divine grace.\n\n+[GetMoveBuff]% Movement Speed\n+[GetRegenBuff] Health Per Second</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRegenBuff>function(self) return math.floor( Buffs[self.Name].Affects.Regen.Add ) end</GetRegenBuff>
+      <GetMoveBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveBuff>
+      <Icon>/DGSedna/NewSednaInnerGrace01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaInnerGrace02</Name>
+          <DisplayName>Inner Grace II</DisplayName>
+          <Description>+20% Movement Speed.\n+10 Health Per Second.</Description>
+          <BuffType>HSEDNAINNERGRACE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Regen>
+              <Add>15</Add>
+            </Regen>
+            <MoveMult>
+              <Mult>0.1</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaInnerGrace03</Name>
+      <DisplayName>Inner Grace III</DisplayName>
+      <Description>Sedna focuses her divine grace.\n\n+[GetMoveBuff]% Movement Speed\n+[GetRegenBuff] Health Per Second</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetRegenBuff>function(self) return math.floor( Buffs[self.Name].Affects.Regen.Add ) end</GetRegenBuff>
+      <GetMoveBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveBuff>
+      <Icon>/DGSedna/NewSednaInnerGrace01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaInnerGrace03</Name>
+          <DisplayName>Inner Grace III</DisplayName>
+          <Description>+30% Movement Speed.\n+15 Health Per Second.</Description>
+          <BuffType>HSEDNAINNERGRACE</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Regen>
+              <Add>20</Add>
+            </Regen>
+            <MoveMult>
+              <Mult>0.15</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaMagnificentPresence01</Name>
+      <DisplayName>Magnificent Presence I</DisplayName>
+      <Description>Sedna's presence inspires nearby allies. Ability cooldown time reduced by [GetCooldownBuff]%.\n\n+[GetMinionHealth] Minion Health\n+[GetMinionROF]% Minion Attack Speed</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>5</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <GetCooldownBuff>function(self) return math.floor( Buffs[self.Name].Affects.Cooldown.Mult * -100 ) end</GetCooldownBuff>
+      <GetMinionHealth>function(self) return math.floor( Buffs['HSednaMagnificentPresence01_Minion'].Affects.MaxHealth.Add ) end</GetMinionHealth>
+      <GetMinionROF>function(self) return math.floor( Buffs['HSednaMagnificentPresence01_Minion'].Affects.RateOfFire.Mult * 100 ) end</GetMinionROF>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaMagnificentPresence01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Magnificent Presence</DisplayName>
+          <Description>Ability cooldown time reduced.</Description>
+          <BuffType>HSEDNAMAGNIFICENTPRESENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaMagnificentPresence01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <Cooldown>
+              <Mult>-0.07</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaMagnificentPresence02</Name>
+      <DisplayName>Magnificent Presence II</DisplayName>
+      <Description>Sedna's presence inspires nearby allies. Ability cooldown time reduced by [GetCooldownBuff]%.\n\n+[GetMinionHealth] Minion Health\n+[GetMinionROF]% Minion Attack Speed</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>5</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <GetCooldownBuff>function(self) return math.floor( Buffs[self.Name].Affects.Cooldown.Mult * -100 ) end</GetCooldownBuff>
+      <GetMinionHealth>function(self) return math.floor( Buffs['HSednaMagnificentPresence02_Minion'].Affects.MaxHealth.Add ) end</GetMinionHealth>
+      <GetMinionROF>function(self) return math.floor( Buffs['HSednaMagnificentPresence02_Minion'].Affects.RateOfFire.Mult * 100 ) end</GetMinionROF>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaMagnificentPresence02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Magnificent Presence</DisplayName>
+          <Description>Ability cooldown time reduced.</Description>
+          <BuffType>HSEDNAMAGNIFICENTPRESENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaMagnificentPresence01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <Cooldown>
+              <Mult>-0.12</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaMagnificentPresence03</Name>
+      <DisplayName>Magnificent Presence III</DisplayName>
+      <Description>Sedna's presence inspires nearby allies. Ability cooldown time reduced by [GetCooldownBuff]%.\n\n+[GetMinionHealth] Minion Health\n+[GetMinionROF]% Minion Attack Speed</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>5</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <GetCooldownBuff>function(self) return math.floor( Buffs[self.Name].Affects.Cooldown.Mult * -100 ) end</GetCooldownBuff>
+      <GetMinionHealth>function(self) return math.floor( Buffs['HSednaMagnificentPresence03_Minion'].Affects.MaxHealth.Add ) end</GetMinionHealth>
+      <GetMinionROF>function(self) return math.floor( Buffs['HSednaMagnificentPresence03_Minion'].Affects.RateOfFire.Mult * 100 ) end</GetMinionROF>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaMagnificentPresence03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Magnificent Presence</DisplayName>
+          <Description>Ability cooldown time reduced.</Description>
+          <BuffType>HSEDNAMAGNIFICENTPRESENCE</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaMagnificentPresence01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <Cooldown>
+              <Mult>-0.17</Mult>
+            </Cooldown>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHealingWind01</Name>
+      <DisplayName>Healing Wind I</DisplayName>
+      <Description>A soothing wind washes over nearby allies.\n\n+[GetRegenBuff] Health Per Second Aura.</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>5</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <GetRegenBuff>function(self) return math.floor( Buffs[self.Name].Affects.Regen.Add ) end</GetRegenBuff>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaHealingWind01</Name>
+          <Debuff>false</Debuff>
+          <Duration>5</Duration>
+          <DisplayName>Healing Wind</DisplayName>
+          <Description>Health Per Second increased.</Description>
+          <BuffType>HSEDNAHEALINGWIND</BuffType>
+          <Icon>/DGSedna/NewSednaHealingWind01</Icon>
+          <Stacks>REPLACE</Stacks>
+          <DamageSelf>true</DamageSelf>
+          <CanBeEvaded>false</CanBeEvaded>
+          <Affects>
+            <Regen>
+              <Add>12</Add>
+            </Regen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHealingWind02</Name>
+      <DisplayName>Healing Wind II</DisplayName>
+      <Description>A soothing wind washes over nearby allies and nearby priests have increased healing power.\n\n+[GetRegenBuff] Health Per Second Aura.</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>5</AuraPulseTime>
+      <TargetAlliance>Ally</TargetAlliance>
+      <GetRegenBuff>function(self) return math.floor( Buffs[self.Name].Affects.Regen.Add ) end</GetRegenBuff>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaHealingWind02</Name>
+          <Debuff>false</Debuff>
+          <Duration>5</Duration>
+          <DisplayName>Healing Wind</DisplayName>
+          <Description>Health Per Second increased.</Description>
+          <BuffType>HSEDNAHEALINGWIND</BuffType>
+          <Icon>/DGSedna/NewSednaHealingWind01</Icon>
+          <Stacks>REPLACE</Stacks>
+          <DamageSelf>true</DamageSelf>
+          <CanBeEvaded>false</CanBeEvaded>
+          <Affects>
+            <Regen>
+              <Add>24</Add>
+            </Regen>
+          </Affects>
+        </BuffBlueprint>
+        <BuffBlueprint>
+          <Name>HSednaHealingWindPriest02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Healing Wind</DisplayName>
+          <Description>Healing power increased.</Description>
+          <EntityCategory>PRIEST</EntityCategory>
+          <BuffType>HSEDNAPRIESTHEALBUFF</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaHealingWind01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaCounterHealing01</Name>
+      <DisplayName>Counter Healing</DisplayName>
+      <Description>Sedna's presence counters enemy healing. Enemy priests are unable to heal when they are near Sedna.</Description>
+      <AbilityType>Aura</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <AuraPulseTime>5</AuraPulseTime>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>PRIEST</TargetCategory>
+      <Tooltip>
+        <TargetAlliance>Enemy</TargetAlliance>
+      </Tooltip>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaCounterHealing01</Name>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Counter Healing</DisplayName>
+          <Description>Unable to heal.</Description>
+          <BuffType>HSEDNACOUNTERHEALING</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaCounterhealing01</Icon>
+          <DoNotPulseIcon>true</DoNotPulseIcon>
+          <Effects>CounterHeal01</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Affects>
+            <AbilityEnable>
+              <Bool>true</Bool>
+            </AbilityEnable>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <AbilityType>Instant</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <DisplayName>Silence I</DisplayName>
+      <Description>Howling winds erupt around Sedna, preventing enemy Demigods from casting in the area for [GetDuration] seconds.</Description>
+      <EnergyCost>800</EnergyCost>
+      <HotKey>4</HotKey>
+      <CastAction>Silence</CastAction>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <Icon>/DGSedna/NewSednaSilence01</Icon>
+      <Name>HSednaSilence01</Name>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration) end</GetDuration>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <UISlot>4</UISlot>
+      <Buffs>
+        <BuffBlueprint>
+          <BuffType>HSEDNASILENCE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Silenced</DisplayName>
+          <Description>Unable to activate abilities or items.</Description>
+          <Duration>3</Duration>
+          <Icon>/DGSedna/NewSednaSilence01</Icon>
+          <Name>HSednaSilence01</Name>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Silence>
+              <Bool>true</Bool>
+            </Silence>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <AbilityType>Instant</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <DisplayName>Silence II</DisplayName>
+      <Description>Howling winds erupt around Sedna, preventing enemy Demigods from casting in the area for [GetDuration] seconds.</Description>
+      <EnergyCost>900</EnergyCost>
+      <HotKey>4</HotKey>
+      <CastAction>Silence</CastAction>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <Icon>/DGSedna/NewSednaSilence01</Icon>
+      <Name>HSednaSilence02</Name>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration) end</GetDuration>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <UISlot>4</UISlot>
+      <Buffs>
+        <BuffBlueprint>
+          <BuffType>HSEDNASilence</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Silenced</DisplayName>
+          <Description>Unable to activate abilities or items.</Description>
+          <Duration>4</Duration>
+          <Icon>/DGSedna/NewSednaSilence01</Icon>
+          <Name>HSednaSilence02</Name>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Silence>
+              <Bool>true</Bool>
+            </Silence>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <AbilityType>Instant</AbilityType>
+      <AffectRadius>15</AffectRadius>
+      <Cooldown>15</Cooldown>
+      <DisplayName>Silence III</DisplayName>
+      <Description>Howling winds erupt around Sedna, preventing enemy Demigods from casting in the area for [GetDuration] seconds.</Description>
+      <EnergyCost>1000</EnergyCost>
+      <HotKey>4</HotKey>
+      <CastAction>Silence</CastAction>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <Icon>/DGSedna/NewSednaSilence01</Icon>
+      <Name>HSednaSilence03</Name>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration) end</GetDuration>
+      <TargetCategory>HERO - UNTARGETABLE</TargetCategory>
+      <UISlot>4</UISlot>
+      <Buffs>
+        <BuffBlueprint>
+          <BuffType>HSEDNASILENCE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <DisplayName>Silenced</DisplayName>
+          <Description>Unable to activate abilities or items.</Description>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaSilence01</Icon>
+          <Name>HSednaSilence03</Name>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Silence>
+              <Bool>true</Bool>
+            </Silence>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaDeath01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+      <HealAmt>300</HealAmt>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaPounceGrey01</Name>
+      <DisplayName>Pounce I</DisplayName>
+      <Description>Sedna commands her cat to pounce on an enemy, interrupting them and dealing [GetDamageAmt] damage.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HSednaPounce01'].RangeMax end</GetMaxRange>
+      <GetDamageAmt>function(self) return math.floor( Ability['HSednaPounce01'].DamageAmt ) end</GetDamageAmt>
+      <GetEnergyCost>function(self) return Ability['HSednaPounce01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HSednaPounce01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HSednaPounce01'].Cooldown end</GetCooldown>
+      <Icon>/DGSedna/NewSednaPounce01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaYetiGrey01</Name>
+      <DisplayName>Horn of the Yeti I</DisplayName>
+      <Description>Sedna summons a Yeti to defend her. She may have [GetMaxYeti] Yeti active.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HSednaYeti01'].RangeMax end</GetMaxRange>
+      <GetYetiLifetime>function(self) return math.floor( Ability['HSednaYeti01'].YetiLifetime ) end</GetYetiLifetime>
+      <GetMaxYeti>function(self) return math.floor( Ability['HSednaYeti01'].MaxYeti ) end</GetMaxYeti>
+      <GetEnergyCost>function(self) return Ability['HSednaYeti01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HSednaYeti01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HSednaYeti01'].Cooldown end</GetCooldown>
+      <Icon>/DGSedna/NewSednaYeti01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaHealGrey01</Name>
+      <DisplayName>Heal I</DisplayName>
+      <Description>Sedna heals a friendly target for [GetHealAmt] Health.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HSednaHeal01'].RangeMax end</GetMaxRange>
+      <GetHealAmt>function(self) return math.floor( Ability['HSednaHeal01'].HealAmt ) end</GetHealAmt>
+      <GetEnergyCost>function(self) return Ability['HSednaHeal01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HSednaHeal01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HSednaHeal01'].Cooldown end</GetCooldown>
+      <Icon>/DGSedna/NewSednaHeal01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HSednaSilenceGrey01</Name>
+      <DisplayName>Silence I</DisplayName>
+      <Description>Howling winds erupt around Sedna, preventing enemy Demigods from casting in the area for [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HSednaSilence01'].RangeMax end</GetMaxRange>
+      <GetDuration>function(self) return math.floor( Buffs['HSednaSilence01'].Duration) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HSednaSilence01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HSednaSilence01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HSednaSilence01'].Cooldown end</GetCooldown>
+      <Icon>/DGSedna/NewSednaSilence01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HSednaPounceDebuff</Name>
+      <BuffType>HSEDNAPOUNCEDEBUFF</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>0.1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <Affects>
+        <Interrupt>
+          <Add>0</Add>
+        </Interrupt>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HSednaYetiBuff02</Name>
+      <BuffType>HSEDNAYETIBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <Affects>
+        <DamageRating>
+          <Add>7</Add>
+        </DamageRating>
+        <MaxHealth>
+          <Add>300</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HSednaYetiBuff03</Name>
+      <BuffType>HSEDNAYETIBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <Affects>
+        <DamageRating>
+          <Add>14</Add>
+        </DamageRating>
+        <MaxHealth>
+          <Add>600</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HSednaYetiBuff04</Name>
+      <BuffType>HSEDNAYETIBUFF</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <NoFloatText>true</NoFloatText>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <Affects>
+        <DamageRating>
+          <Add>21</Add>
+        </DamageRating>
+        <MaxHealth>
+          <Add>900</Add>
+        </MaxHealth>
+        <Add>
+          <AdjustHealth>true</AdjustHealth>
+        </Add>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HSednaLifesChild</Name>
+      <DisplayName>Life's Child</DisplayName>
+      <Description>Health Per Second increased.</Description>
+      <BuffType>HSEDNALIFECHILD</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Icon>/DGSedna/NewSednaLifesChild01</Icon>
+      <Affects>
+        <Regen>
+          <Add>50</Add>
+        </Regen>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>HSednaInspiringRoar</Name>
+      <DisplayName>Inspiring Roar</DisplayName>
+      <Description>Movement Speed and Evasion increased.</Description>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaInspiringRoar</Name>
+          <DisplayName>Inspiring Roar</DisplayName>
+          <Description>Movement Speed and Evasion increased.</Description>
+          <BuffType>HSEDNAINSPIRINGROAR</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>5</Duration>
+          <Icon>/DGSedna/NewSednaInspiringRoar01</Icon>
+          <Affects>
+            <Evasion>
+              <Add>15</Add>
+            </Evasion>
+            <MoveMult>
+              <Mult>0.15</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HSednaWildSwings</Name>
+      <DisplayName>Wild Swings</DisplayName>
+      <Description>Sedna's Yetis strike with wide swings, damaging nearby enemies for [GetDamageMult]% damage.</Description>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>YETI</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaWildSwings</Name>
+          <DisplayName>Wild Swings</DisplayName>
+          <Description>Attacks deal damage to nearby enemies.</Description>
+          <BuffType>HSEDNAWILDSWINGS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Duration>-1</Duration>
+          <Icon>/DGSedna/NewSednaWildSwings01</Icon>
+          <Affects>
+            <DamageRadius>
+              <Add>2</Add>
+            </DamageRadius>
+            <DamageSplash>
+              <Mult>-0.25</Mult>
+            </DamageSplash>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HSednaMagnificentPresence01_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaMagnificentPresence01_Minion</Name>
+          <BuffType>MAGPRESENCEMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.05</Mult>
+            </RateOfFire>
+            <MaxHealth>
+              <Add>100</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HSednaMagnificentPresence02_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaMagnificentPresence02_Minion</Name>
+          <BuffType>MAGPRESENCEMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.10</Mult>
+            </RateOfFire>
+            <MaxHealth>
+              <Add>150</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>HSednaMagnificentPresence03_Minion</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HSednaMagnificentPresence03_Minion</Name>
+          <BuffType>MAGPRESENCEMINION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.15</Mult>
+            </RateOfFire>
+            <MaxHealth>
+              <Add>200</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustHealth>true</AdjustHealth>
+            </Add>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

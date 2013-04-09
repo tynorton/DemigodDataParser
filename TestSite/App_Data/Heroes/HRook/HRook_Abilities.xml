@@ -1,0 +1,754 @@
+<DemigodBlueprints id="HRook_Abilities">
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HRookHammerSlam01</Name>
+      <DisplayName>Hammer Slam I</DisplayName>
+      <Description>The Rook slams his hammer, dealing [GetSmallRadDamageAmt] damage in a small radius and [GetLargeRadDamageAmt] damage in a larger radius.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>360</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>9</RangeMax>
+      <RangeMin>3</RangeMin>
+      <MetaAmt>8</MetaAmt>
+      <DamageRadius>3</DamageRadius>
+      <AffectRadius>8</AffectRadius>
+      <DamageType>Spell</DamageType>
+      <SplashDamage>100</SplashDamage>
+      <SplashRadius>8</SplashRadius>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastHammerSlam</CastAction>
+      <CastingTime>1.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetSmallRadDamageAmt>function(self) return math.floor( self.DamageAmt + self.SplashDamage ) end</GetSmallRadDamageAmt>
+      <GetLargeRadDamageAmt>function(self) return math.floor( self.SplashDamage ) end</GetLargeRadDamageAmt>
+      <Icon>/DGRookAbilities/NewRookHammerslam01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookHammerSlam02</Name>
+      <DisplayName>Hammer Slam II</DisplayName>
+      <Description>The Rook slams his hammer, dealing [GetSmallRadDamageAmt] damage in a small radius and [GetLargeRadDamageAmt] damage in a larger radius.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>520</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>9</RangeMax>
+      <RangeMin>3</RangeMin>
+      <MetaAmt>8</MetaAmt>
+      <DamageRadius>3</DamageRadius>
+      <AffectRadius>8</AffectRadius>
+      <DamageType>Spell</DamageType>
+      <SplashDamage>200</SplashDamage>
+      <SplashRadius>8</SplashRadius>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastHammerSlam</CastAction>
+      <CastingTime>1.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetSmallRadDamageAmt>function(self) return math.floor( self.DamageAmt + self.SplashDamage ) end</GetSmallRadDamageAmt>
+      <GetLargeRadDamageAmt>function(self) return math.floor( self.SplashDamage ) end</GetLargeRadDamageAmt>
+      <Icon>/DGRookAbilities/NewRookHammerslam01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookHammerSlam03</Name>
+      <DisplayName>Hammer Slam III</DisplayName>
+      <Description>The Rook slams his hammer, dealing [GetSmallRadDamageAmt] damage in a small radius and [GetLargeRadDamageAmt] damage in a larger radius.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>680</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>9</RangeMax>
+      <RangeMin>3</RangeMin>
+      <MetaAmt>8</MetaAmt>
+      <DamageRadius>3</DamageRadius>
+      <AffectRadius>8</AffectRadius>
+      <DamageType>Spell</DamageType>
+      <SplashDamage>300</SplashDamage>
+      <SplashRadius>8</SplashRadius>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastHammerSlam</CastAction>
+      <CastingTime>1.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetSmallRadDamageAmt>function(self) return math.floor( self.DamageAmt + self.SplashDamage ) end</GetSmallRadDamageAmt>
+      <GetLargeRadDamageAmt>function(self) return math.floor( self.SplashDamage ) end</GetLargeRadDamageAmt>
+      <Icon>/DGRookAbilities/NewRookHammerslam01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookHammerSlam04</Name>
+      <DisplayName>Hammer Slam IV</DisplayName>
+      <Description>The Rook slams his hammer, dealing [GetSmallRadDamageAmt] damage in a small radius and [GetLargeRadDamageAmt] damage in a larger radius.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>840</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>9</RangeMax>
+      <RangeMin>3</RangeMin>
+      <MetaAmt>8</MetaAmt>
+      <DamageRadius>3</DamageRadius>
+      <AffectRadius>8</AffectRadius>
+      <DamageType>Spell</DamageType>
+      <SplashDamage>400</SplashDamage>
+      <SplashRadius>8</SplashRadius>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <CastAction>CastHammerSlam</CastAction>
+      <CastingTime>1.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetSmallRadDamageAmt>function(self) return math.floor( self.DamageAmt + self.SplashDamage ) end</GetSmallRadDamageAmt>
+      <GetLargeRadDamageAmt>function(self) return math.floor( self.SplashDamage ) end</GetLargeRadDamageAmt>
+      <Icon>/DGRookAbilities/NewRookHammerslam01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookDizzyingForce</Name>
+      <DisplayName>Dizzying Force</DisplayName>
+      <Description>Enemies that survive The Rook's Hammer Slam are dazed, their Movement Speed reduced by [GetSlow]% for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetSlow>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSlow>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookArchers01</Name>
+      <DisplayName>Archer Tower</DisplayName>
+      <Description>A squad of archers man The Rook's left shoulder, independently firing down upon enemies.</Description>
+      <AbilityType>Quiet</AbilityType>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookTowerOfLight01</Name>
+      <DisplayName>Tower Of Light</DisplayName>
+      <Description>The Rook installs a Tower of Light on his shoulder, independently firing upon enemies.\n\nThe damage of The Rook's Archer Tower is increased.</Description>
+      <AbilityType>Quiet</AbilityType>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookTrebuchet01</Name>
+      <DisplayName>Trebuchet</DisplayName>
+      <Description>The Rook builds a trebuchet on his head, which sieges independently from long range.\n\nThe damage of The Rook's Tower of Light is increased.</Description>
+      <AbilityType>Quiet</AbilityType>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookPoison</Name>
+      <DisplayName>Poisoned Arrows</DisplayName>
+      <Description>The Rook's archers dip their arrows in poison. They have a [GetChance]% chance to slow their target by [GetSlowBuff]% for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <GetChance>function(self) return ( self.TriggerChance ) end</GetChance>
+      <GetSlowBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSlowBuff>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TriggerChance>15</TriggerChance>
+      <TargetBuffs>
+        <BuffBlueprint>
+          <Name>HRookPoison</Name>
+          <DisplayName>Poisoned Arrow</DisplayName>
+          <Description>Movement Speed reduced.</Description>
+          <BuffType>HROOKPOISON</BuffType>
+          <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <Stacks>REPLACE</Stacks>
+          <Duration>3</Duration>
+          <Effects>Slow03</Effects>
+          <EffectsBone>-2</EffectsBone>
+          <Icon>/DGRookAbilities/NewRookPoisonArrow01</Icon>
+          <Affects>
+            <MoveMult>
+              <Mult>-0.1</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </TargetBuffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookStructuralTransfer01</Name>
+      <DisplayName>Structural Transfer I</DisplayName>
+      <Description>The Rook tears a structure apart, draining [GetAmount] Health over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>STRUCTURE</TargetingMethod>
+      <EnergyCost>265</EnergyCost>
+      <Cooldown>20</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>10</Pulses>
+      <Amount>80</Amount>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <GetAmount>function(self) return math.floor( self.Amount * self.Pulses ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewRookStructuralTransferNew01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookStructuralTransfer02</Name>
+      <DisplayName>Structural Transfer II</DisplayName>
+      <Description>The Rook tears a structure apart, draining [GetAmount] Health over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>STRUCTURE</TargetingMethod>
+      <EnergyCost>375</EnergyCost>
+      <Cooldown>20</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>10</Pulses>
+      <Amount>120</Amount>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <GetAmount>function(self) return math.floor( self.Amount * self.Pulses ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewRookStructuralTransferNew01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookStructuralTransfer03</Name>
+      <DisplayName>Structural Transfer III</DisplayName>
+      <Description>The Rook tears a structure apart, draining [GetAmount] Health over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>STRUCTURE</TargetingMethod>
+      <EnergyCost>490</EnergyCost>
+      <Cooldown>20</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>10</Pulses>
+      <Amount>160</Amount>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <GetAmount>function(self) return math.floor( self.Amount * self.Pulses ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewRookStructuralTransferNew01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookStructuralTransfer04</Name>
+      <DisplayName>Structural Transfer IV</DisplayName>
+      <Description>The Rook tears a structure apart, draining [GetAmount] Health over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <TargetCategory>STRUCTURE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>STRUCTURE</TargetingMethod>
+      <EnergyCost>610</EnergyCost>
+      <Cooldown>20</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>10</Pulses>
+      <Amount>200</Amount>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <GetAmount>function(self) return math.floor( self.Amount * self.Pulses ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( self.Pulses ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewRookStructuralTransferNew01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookEnergizer</Name>
+      <DisplayName>Energizer</DisplayName>
+      <Description>The Rook drains the energy of structures. When he uses Structural Transfer, his Mana Per Second is increased by [GetManaRegen]% for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetManaRegen>function(self) return math.floor( Buffs[self.Name].Affects.EnergyRegen.Mult * 100 ) end</GetManaRegen>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookBoulderRoll01</Name>
+      <DisplayName>Boulder Roll I</DisplayName>
+      <Description>The Rook rips a chunk of the earth and hurls it at enemies ahead of him, dealing [GetAmount] damage, stunning for [GetDuration] seconds, and throwing smaller units into the air.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>560</EnergyCost>
+      <RangeMax>35</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>200</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <AffectRadius>2.5</AffectRadius>
+      <MetaImpactAmount>7</MetaImpactAmount>
+      <MetaImpactRadius>2.5</MetaImpactRadius>
+      <BoulderScale>1.5</BoulderScale>
+      <TargetBuff>HRookBoulderRoll01</TargetBuff>
+      <TargetImmuneBuff>HRookBoulderRoll01Immune</TargetImmuneBuff>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastAction>Bowl</CastAction>
+      <CastingTime>0.4</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetAmount>function(self) return math.floor( self.DamageAmt ) end</GetAmount>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookBoulderRoll02</Name>
+      <DisplayName>Boulder Roll II</DisplayName>
+      <Description>The Rook rips a chunk of the earth and hurls it at enemies ahead of him, dealing [GetAmount] damage, stunning for [GetDuration] seconds, and throwing smaller units into the air.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>800</EnergyCost>
+      <RangeMax>35</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>300</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <AffectRadius>2.5</AffectRadius>
+      <MetaImpactAmount>7</MetaImpactAmount>
+      <MetaImpactRadius>2.5</MetaImpactRadius>
+      <BoulderScale>1.5</BoulderScale>
+      <TargetBuff>HRookBoulderRoll02</TargetBuff>
+      <TargetImmuneBuff>HRookBoulderRoll02Immune</TargetImmuneBuff>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastAction>Bowl</CastAction>
+      <CastingTime>0.4</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetAmount>function(self) return math.floor( self.DamageAmt ) end</GetAmount>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookBoulderRoll03</Name>
+      <DisplayName>Boulder Roll III</DisplayName>
+      <Description>The Rook rips a chunk of the earth and hurls it at enemies ahead of him, dealing [GetAmount] damage, stunning for [GetDuration] seconds, and throwing smaller units into the air.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>1064</EnergyCost>
+      <RangeMax>35</RangeMax>
+      <Cooldown>15</Cooldown>
+      <DamageAmt>400</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <AffectRadius>2.5</AffectRadius>
+      <MetaImpactAmount>7</MetaImpactAmount>
+      <MetaImpactRadius>2.5</MetaImpactRadius>
+      <BoulderScale>1.5</BoulderScale>
+      <TargetBuff>HRookBoulderRoll03</TargetBuff>
+      <TargetImmuneBuff>HRookBoulderRoll03Immune</TargetImmuneBuff>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <CastAction>Bowl</CastAction>
+      <CastingTime>0.4</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetAmount>function(self) return math.floor( self.DamageAmt ) end</GetAmount>
+      <GetDuration>function(self) return ( Buffs[self.Name].Duration ) end</GetDuration>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+      <Reticule>AoE_Boulder_Roll</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookTower01</Name>
+      <DisplayName>Power of the Tower I</DisplayName>
+      <Description>The Rook pulls a Tower of Light from the ground to defend the area.\n\nUp to [GetMaxTowers] of these towers may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>400</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>5</RangeMax>
+      <CastAction>CastBuild</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <AffectRadius>2</AffectRadius>
+      <TowerMax>2</TowerMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <ErrorMessage>Cannot build that here.</ErrorMessage>
+      <ErrorVO>Nobuild</ErrorVO>
+      <GetMaxTowers>function(self) return math.floor( self.TowerMax ) end</GetMaxTowers>
+      <Icon>/DGRookAbilities/NewRookPowerofTower01</Icon>
+      <Reticule>AoE_Power_of_the_Tower</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookTower02</Name>
+      <DisplayName>Power of the Tower II</DisplayName>
+      <Description>The Rook pulls a Tower of Light from the ground to defend the area. This tower is more powerful than the one made by Power of the Tower I.\n\nUp to [GetMaxTowers] of these towers may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>400</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>5</RangeMax>
+      <AffectRadius>2</AffectRadius>
+      <CastAction>CastBuild</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <TowerMax>4</TowerMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <ErrorMessage>Cannot build that here.</ErrorMessage>
+      <ErrorVO>Nobuild</ErrorVO>
+      <GetMaxTowers>function(self) return math.floor( self.TowerMax ) end</GetMaxTowers>
+      <Icon>/DGRookAbilities/NewRookPowerofTower01</Icon>
+      <Reticule>AoE_Power_of_the_Tower</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookTower03</Name>
+      <DisplayName>Power of the Tower III</DisplayName>
+      <Description>The Rook pulls a Tower of Light from the ground to defend the area. This tower is more powerful than the one made by Power of the Tower II.\n\nUp to [GetMaxTowers] of these towers may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>400</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>5</RangeMax>
+      <AffectRadius>2</AffectRadius>
+      <CastAction>CastBuild</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <TowerMax>6</TowerMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <ErrorMessage>Cannot build that here.</ErrorMessage>
+      <ErrorVO>Nobuild</ErrorVO>
+      <GetMaxTowers>function(self) return math.floor( self.TowerMax ) end</GetMaxTowers>
+      <Icon>/DGRookAbilities/NewRookPowerofTower01</Icon>
+      <Reticule>AoE_Power_of_the_Tower</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookTower04</Name>
+      <DisplayName>Power of the Tower IV</DisplayName>
+      <Description>The Rook pulls a Tower of Light from the ground to defend the area. This tower is more powerful than the one made by Power of the Tower III.\n\nUp to [GetMaxTowers] of these towers may be active at a time.</Description>
+      <AbilityType>TargetedArea</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>AREAARGETED</TargetingMethod>
+      <EnergyCost>200</EnergyCost>
+      <Cooldown>10</Cooldown>
+      <RangeMax>5</RangeMax>
+      <AffectRadius>2</AffectRadius>
+      <CastAction>CastBuild</CastAction>
+      <CastingTime>0.1</CastingTime>
+      <TowerMax>8</TowerMax>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <ErrorMessage>Cannot build that here.</ErrorMessage>
+      <ErrorVO>Nobuild</ErrorVO>
+      <GetMaxTowers>function(self) return math.floor( self.TowerMax ) end</GetMaxTowers>
+      <Icon>/DGRookAbilities/NewRookPowerofTower01</Icon>
+      <Reticule>AoE_Power_of_the_Tower</Reticule>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookGodStrength01</Name>
+      <DisplayName>God Strength I</DisplayName>
+      <Description>The Rook calls upon divine strength, increasing Weapon Damage by [GetDamageBonus].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageBonus>function(self) return Buffs[self.Name].Affects.DamageRating.Add end</GetDamageBonus>
+      <Icon>/DGRookAbilities/NewRookPowerofTower01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HRookGodStrength01</Name>
+          <DisplayName>God Strength I</DisplayName>
+          <Description>The Rook calls upon divine strength, increasing Weapon Damage.</Description>
+          <BuffType>HROOKGODSTRENGTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <DamageRating>
+              <Add>50</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookGodStrength02</Name>
+      <DisplayName>God Strength II</DisplayName>
+      <Description>The Rook calls upon divine strength, increasing Weapon Damage by [GetDamageBonus].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageBonus>function(self) return Buffs[self.Name].Affects.DamageRating.Add end</GetDamageBonus>
+      <Icon>/DGRookAbilities/NewRookPowerofGodsNew01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HRookGodStrength02</Name>
+          <DisplayName>God Strength II</DisplayName>
+          <Description>The Rook calls upon divine strength, increasing Weapon Damage.</Description>
+          <BuffType>HROOKGODSTRENGTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <DamageRating>
+              <Add>100</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookGodStrength03</Name>
+      <DisplayName>God Strength III</DisplayName>
+      <Description>The Rook calls upon divine strength, increasing Weapon Damage by [GetDamageBonus].</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamageBonus>function(self) return Buffs[self.Name].Affects.DamageRating.Add end</GetDamageBonus>
+      <Icon>/DGRookAbilities/NewRookPowerofGodsNew01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HRookGodStrength03</Name>
+          <DisplayName>God Strength III</DisplayName>
+          <Description>The Rook calls upon divine strength, increasing Weapon Damage.</Description>
+          <BuffType>HROOKGODSTRENGTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <DamageRating>
+              <Add>150</Add>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRook01Death01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <AffectRadius>10</AffectRadius>
+      <DamageAmt>200</DamageAmt>
+      <DamageType>Normal</DamageType>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookHammerSlamGrey01</Name>
+      <DisplayName>Hammer Slam I</DisplayName>
+      <Description>The Rook slams his hammer, dealing [GetSmallRadDamageAmt] damage in a small radius and [GetLargeRadDamageAmt] damage in a larger radius.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HRookHammerSlam01'].RangeMax end</GetMaxRange>
+      <GetSmallRadDamageAmt>function(self) return math.floor( Ability['HRookHammerSlam01'].DamageAmt + Ability['HRookHammerSlam01'].SplashDamage ) end</GetSmallRadDamageAmt>
+      <GetLargeRadDamageAmt>function(self) return math.floor( Ability['HRookHammerSlam01'].SplashDamage ) end</GetLargeRadDamageAmt>
+      <GetEnergyCost>function(self) return Ability['HRookHammerSlam01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HRookHammerSlam01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HRookHammerSlam01'].Cooldown end</GetCooldown>
+      <Icon>/DGRookAbilities/NewRookHammerslam01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookStructuralTransferGrey01</Name>
+      <DisplayName>Structural Transfer I</DisplayName>
+      <Description>The Rook tears a structure apart, draining [GetAmount] Health over [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Any</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HRookStructuralTransfer01'].RangeMax end</GetMaxRange>
+      <GetAmount>function(self) return math.floor( Ability['HRookStructuralTransfer01'].Amount * Ability['HRookStructuralTransfer01'].Pulses ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Ability['HRookStructuralTransfer01'].Pulses ) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HRookStructuralTransfer01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HRookStructuralTransfer01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HRookStructuralTransfer01'].Cooldown end</GetCooldown>
+      <Icon>/DGRookAbilities/NewRookStructuralTransferNew01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookPowerTowerGrey01</Name>
+      <DisplayName>Power of the Tower I</DisplayName>
+      <Description>The Rook pulls a Tower of Light from the ground to defend the area.\n\nUp to [GetMaxTowers] of these towers may be active at a time.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HRookTower01'].RangeMax end</GetMaxRange>
+      <GetMaxTowers>function(self) return math.floor( Ability['HRookTower01'].TowerMax ) end</GetMaxTowers>
+      <GetEnergyCost>function(self) return Ability['HRookTower01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HRookTower01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HRookTower01'].Cooldown end</GetCooldown>
+      <Icon>/DGRookAbilities/NewRookPowerofTower01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HRookBoulderRollGrey01</Name>
+      <DisplayName>Boulder Roll I</DisplayName>
+      <Description>The Rook rips a chunk of the earth and hurls it at enemies ahead of him, dealing [GetAmount] damage, stunning for [GetDuration] seconds, and throwing smaller units into the air.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HRookBoulderRoll01'].RangeMax end</GetMaxRange>
+      <GetAmount>function(self) return math.floor( Ability['HRookBoulderRoll01'].DamageAmt ) end</GetAmount>
+      <GetDuration>function(self) return math.floor( Buffs['HRookBoulderRoll01'].Duration ) end</GetDuration>
+      <GetEnergyCost>function(self) return Ability['HRookBoulderRoll01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HRookBoulderRoll01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HRookBoulderRoll01'].Cooldown end</GetCooldown>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HRookDizzyingForce</Name>
+      <DisplayName>Dizzying Force</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HROOKDIZZY</BuffType>
+      <Stacks>REPLACE</Stacks>
+      <Duration>3</Duration>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Icon>/DGRookAbilities/NewRookDizzyingForce01</Icon>
+      <Effects>Slow03</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.50</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookWeaponDisablePrimary</Name>
+      <DisplayName>PRIMARY Weapon Disabled</DisplayName>
+      <BuffType>MANUALWEAPONDISABLE</BuffType>
+      <Debuff>true</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>-1</Duration>
+      <WeaponLabel>MeleeWeapon</WeaponLabel>
+      <Affects>
+        <WeaponsEnable>
+          <Bool>false</Bool>
+        </WeaponsEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookEnergizer</Name>
+      <DisplayName>Energizer</DisplayName>
+      <Description>Mana Per Second increased.</Description>
+      <BuffType>HROOKENERGIZER</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>10</Duration>
+      <Icon>/DGRookAbilities/NewRookEnergizer01</Icon>
+      <Affects>
+        <EnergyRegen>
+          <Mult>1.5</Mult>
+        </EnergyRegen>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookBoulderRoll01</Name>
+      <DisplayName>Boulder Roll</DisplayName>
+      <Description>Stunned.</Description>
+      <BuffType>HROOKBOULDERSTUN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Duration>1.5</Duration>
+      <TriggersStunImmune>true</TriggersStunImmune>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+      <Affects>
+        <Stun>
+          <Add>0</Add>
+        </Stun>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookBoulderRoll01Immune</Name>
+      <Debuff>false</Debuff>
+      <BuffType>STUNIMMUNE</BuffType>
+      <EntityCategory>HERO</EntityCategory>
+      <Stacks>IGNORE</Stacks>
+      <Duration>3</Duration>
+      <Affects>
+        <StunImmune>
+          <Bool>true</Bool>
+        </StunImmune>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookBoulderRoll02</Name>
+      <DisplayName>Boulder Roll</DisplayName>
+      <Description>Stunned.</Description>
+      <BuffType>HROOKBOULDERSTUN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Duration>2</Duration>
+      <TriggersStunImmune>true</TriggersStunImmune>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+      <Affects>
+        <Stun>
+          <Add>0</Add>
+        </Stun>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookBoulderRoll02Immune</Name>
+      <Debuff>false</Debuff>
+      <BuffType>STUNIMMUNE</BuffType>
+      <EntityCategory>HERO</EntityCategory>
+      <Stacks>IGNORE</Stacks>
+      <Duration>4</Duration>
+      <Affects>
+        <StunImmune>
+          <Bool>true</Bool>
+        </StunImmune>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookBoulderRoll03</Name>
+      <DisplayName>Boulder Roll</DisplayName>
+      <Description>Stunned.</Description>
+      <BuffType>HROOKBOULDERSTUN</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Duration>2.5</Duration>
+      <TriggersStunImmune>true</TriggersStunImmune>
+      <Icon>/DGRookAbilities/NewBoulderRoll01</Icon>
+      <Affects>
+        <Stun>
+          <Add>0</Add>
+        </Stun>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HRookBoulderRoll03Immune</Name>
+      <Debuff>false</Debuff>
+      <BuffType>STUNIMMUNE</BuffType>
+      <EntityCategory>HERO</EntityCategory>
+      <Stacks>IGNORE</Stacks>
+      <Duration>5</Duration>
+      <Affects>
+        <StunImmune>
+          <Bool>true</Bool>
+        </StunImmune>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>HRookTOLDamageBoost</Name>
+      <ApplyArmies>Team</ApplyArmies>
+      <UnitCategory>UPGRADE * LIGHTTOWER - DEFENSETOWER</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HRookTOLDamageBoost</Name>
+          <BuffType>SHOULDERTOLBOOST</BuffType>
+          <Debuff>false</Debuff>
+          <EntityCategory>UPGRADE * LIGHTTOWER - DEFENSETOWER</EntityCategory>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <DamageBonus>
+              <Add>1</Add>
+            </DamageBonus>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+</DemigodBlueprints>

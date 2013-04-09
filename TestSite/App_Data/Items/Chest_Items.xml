@@ -1,0 +1,580 @@
+<DemigodBlueprints id="Chest_Items">
+  <ItemBlueprints>
+    <ItemBlueprint>
+      <Name>Item_Chest_010</Name>
+      <DisplayName>Scalemail</DisplayName>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_010'].Affects.Armor.Add end</GetArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest4</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetArmorBonus] Armor</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_010</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_010</FromItem>
+          <Icon>NewIcons/Chest/Chest4</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_010</Name>
+              <BuffType>CHESTARMOR</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Protection01</Effects>
+              <Affects>
+                <Armor>
+                  <Add>600</Add>
+                </Armor>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_020</Name>
+      <DisplayName>Banded Armor</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Chest_020'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Chest_020'].Affects.Regen.Add end</GetRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest1</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_020</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>NewIcons/Chest/Chest1</Icon>
+          <FromItem>Item_Chest_020</FromItem>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_020</Name>
+              <BuffType>CHESTHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>400</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>5</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_030</Name>
+      <DisplayName>Nimoth Chest Armor</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Chest_030'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_030'].Affects.Armor.Add end</GetArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest8</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetArmorBonus] Armor</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_030</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_030</FromItem>
+          <Icon>NewIcons/Chest/Chest8</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_030</Name>
+              <BuffType>CHESTEVASION</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>500</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Armor>
+                  <Add>750</Add>
+                </Armor>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_040</Name>
+      <DisplayName>Hauberk of Life</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Chest_040'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Chest_040'].Affects.Regen.Add end</GetRegenBonus>
+      <GetMinionHealthBonus>function(self) return Buffs['Item_Chest_040_Minion_Buff'].Affects.MaxHealth.Add end</GetMinionHealthBonus>
+      <GetMinionRegenBonus>function(self) return Buffs['Item_Chest_040_Minion_Buff'].Affects.Regen.Add end</GetMinionRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest3</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+          <Value>+[GetMinionRegenBonus] Minion Health Per Second</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_040</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_040</FromItem>
+          <Icon>NewIcons/Chest/Chest3</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_040</Name>
+              <BuffType>CHESTHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>SingleRing01</Effects>
+              <EffectsBone>-1</EffectsBone>
+              <Affects>
+                <MaxHealth>
+                  <Add>600</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Regen>
+                  <Add>10</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Chest_040_Minion</Name>
+          <AbilityType>Quiet</AbilityType>
+          <Icon>NewIcons/Chest/Chest3</Icon>
+          <FromItem>Item_Chest_040</FromItem>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_050</Name>
+      <DisplayName>Armor of Vengeance</DisplayName>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_050'].Affects.Armor.Add end</GetArmorBonus>
+      <GetThorns>function(self) return Buffs['Item_Chest_050'].Affects.DamageReturn.Add end</GetThorns>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest2</Icon>
+      <Tooltip>
+        <Passives>When struck by melee and ranged attacks, wearers of this mystical armor reflect [GetThorns] damage back to the attacker.</Passives>
+        <Bonuses>
+          <Value>+[GetArmorBonus] Armor</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_050</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_050</FromItem>
+          <Icon>NewIcons/Chest/Chest2</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_050</Name>
+              <BuffType>ENCHANTPOWER</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Armor>
+                  <Add>1050</Add>
+                </Armor>
+                <DamageReturn>
+                  <Add>35</Add>
+                </DamageReturn>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_060</Name>
+      <DisplayName>Platemail of the Crusader</DisplayName>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_060'].Affects.Armor.Add end</GetArmorBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Chest_060'].Affects.Regen.Add end</GetRegenBonus>
+      <GetProcChance>function(self) return Ability['Item_Chest_060_WeaponProc'].ArmorProcChance end</GetProcChance>
+      <GetHealthProc>function(self) return Buffs['Item_Chest_060_Heal'].Affects.Health.Add end</GetHealthProc>
+      <GetMinionHealthBonus>function(self) return Buffs['Item_Chest_060_Minion_Buff'].Affects.MaxHealth.Add end</GetMinionHealthBonus>
+      <GetMinionRegenBonus>function(self) return Buffs['Item_Chest_060_Minion_Buff'].Affects.Regen.Add end</GetMinionRegenBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest6</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetProcChance]% chance on being hit to heal [GetHealthProc] Health</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+          <Value>+[GetArmorBonus] Armor</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+          <Value>+[GetMinionRegenBonus] Minion Health Per Second</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_060</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_060</FromItem>
+          <Icon>NewIcons/Chest/Chest6</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_060</Name>
+              <Debuff>false</Debuff>
+              <BuffType>RINGARMOR</BuffType>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Effects>Protection01</Effects>
+              <Affects>
+                <Armor>
+                  <Add>1000</Add>
+                </Armor>
+                <Regen>
+                  <Add>20</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Chest_060_WeaponProc</Name>
+          <AbilityType>ArmorProc</AbilityType>
+          <FromItem>Item_Chest_060</FromItem>
+          <Icon>NewIcons/Chest/Chest6</Icon>
+          <ArmorProcChance>1</ArmorProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_070</Name>
+      <DisplayName>Groffling Warplate</DisplayName>
+      <GetArmorProcRate>function(self) return Ability['Item_Chest_070_WeaponProc'].ArmorProcChance end</GetArmorProcRate>
+      <GetArmorProcDuration>function(self) return Buffs['Item_Chest_070_Invincible'].Duration end</GetArmorProcDuration>
+      <GetArmorProcBuff>function(self) return Buffs['Item_Chest_070_Invincible'].Affects.Absorption.Add end</GetArmorProcBuff>
+      <GetHealthBonus>function(self) return Buffs['Item_Chest_070'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_070'].Affects.Armor.Add end</GetArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest7</Icon>
+      <Tooltip>
+        <ChanceOnHit>[GetArmorProcRate]% chance on being hit to gain a shield that absorbs [GetArmorProcBuff] damage for [GetArmorProcDuration] seconds.\n\nOnly one absorption effect may be active at a time.</ChanceOnHit>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetArmorBonus] Armor</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_070</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_070</FromItem>
+          <Icon>NewIcons/Chest/Chest7</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_070</Name>
+              <BuffType>ENCHANTHEALTH</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>675</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Armor>
+                  <Add>1200</Add>
+                </Armor>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Chest_070_WeaponProc</Name>
+          <AbilityType>ArmorProc</AbilityType>
+          <FromItem>Item_Chest_070</FromItem>
+          <Icon>NewIcons/Chest/Chest7</Icon>
+          <ArmorProcChance>1</ArmorProcChance>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_080</Name>
+      <DisplayName>Godplate</DisplayName>
+      <GetHealthBonus>function(self) return Buffs['Item_Chest_080'].Affects.MaxHealth.Add end</GetHealthBonus>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_080'].Affects.Armor.Add end</GetArmorBonus>
+      <GetRegenBonus>function(self) return Buffs['Item_Chest_080'].Affects.Regen.Add end</GetRegenBonus>
+      <GetMinionHealthBonus>function(self) return Buffs['Item_Chest_080_Minion_Buff'].Affects.MaxHealth.Add end</GetMinionHealthBonus>
+      <GetMinionArmorBonus>function(self) return Buffs['Item_Chest_080_Minion_Buff'].Affects.Armor.Add end</GetMinionArmorBonus>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest9</Icon>
+      <Tooltip>
+        <Bonuses>
+          <Value>+[GetHealthBonus] Health</Value>
+          <Value>+[GetArmorBonus] Armor</Value>
+          <Value>+[GetRegenBonus] Health Per Second</Value>
+        </Bonuses>
+        <MBonuses>
+          <Value>+[GetMinionHealthBonus] Minion Health</Value>
+          <Value>+[GetMinionArmorBonus] Minion Armor</Value>
+        </MBonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_080</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_080</FromItem>
+          <Icon>NewIcons/Chest/Chest9</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_080</Name>
+              <BuffType>ENCHANTRETRIBUTION</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <MaxHealth>
+                  <Add>1050</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+                <Armor>
+                  <Add>1200</Add>
+                </Armor>
+                <Regen>
+                  <Add>20</Add>
+                </Regen>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+    <ItemBlueprint>
+      <Name>Item_Chest_090</Name>
+      <DisplayName>Duelist's Cuirass</DisplayName>
+      <GetArmorBonus>function(self) return Buffs['Item_Chest_090'].Affects.Armor.Add end</GetArmorBonus>
+      <MaxHealth>function(self) return Buffs['Item_Chest_090'].Affects.MaxHealth.Add end</MaxHealth>
+      <GetCritChance>function(self) return Ability['Item_Chest_090_Crit'].CritChance end</GetCritChance>
+      <GetCritDamage>function(self) return Ability['Item_Chest_090_Crit'].CritMult end</GetCritDamage>
+      <Mesh>/meshes/items/chest/chest_mesh</Mesh>
+      <Animation>/meshes/items/chest/Animations/chest_Idle_anim.gr2</Animation>
+      <MeshScale>0.10</MeshScale>
+      <Icon>NewIcons/Chest/Chest5</Icon>
+      <Tooltip>
+        <Passives>[GetCritChance]% chance deal a critical strike for [GetCritDamage]x damage.</Passives>
+        <Bonuses>
+          <Value>+[MaxHealth] Armor</Value>
+          <Value>+[GetArmorBonus] Health</Value>
+        </Bonuses>
+      </Tooltip>
+      <Abilities>
+        <AbilityBlueprint>
+          <Name>Item_Chest_090</Name>
+          <AbilityType>Quiet</AbilityType>
+          <FromItem>Item_Chest_090</FromItem>
+          <Icon>NewIcons/Chest/Chest5</Icon>
+          <Buffs>
+            <BuffBlueprint>
+              <Name>Item_Chest_090</Name>
+              <BuffType>ENCHANTPOWER</BuffType>
+              <Debuff>false</Debuff>
+              <EntityCategory>ALLUNITS</EntityCategory>
+              <Stacks>ALWAYS</Stacks>
+              <Duration>-1</Duration>
+              <Affects>
+                <Armor>
+                  <Add>500</Add>
+                </Armor>
+                <MaxHealth>
+                  <Add>350</Add>
+                </MaxHealth>
+                <Add>
+                  <AdjustEnergy>false</AdjustEnergy>
+                </Add>
+              </Affects>
+            </BuffBlueprint>
+          </Buffs>
+        </AbilityBlueprint>
+        <AbilityBlueprint>
+          <Name>Item_Chest_090_Crit</Name>
+          <AbilityType>WeaponCrit</AbilityType>
+          <CritChance>5</CritChance>
+          <CritMult>1.5</CritMult>
+        </AbilityBlueprint>
+      </Abilities>
+    </ItemBlueprint>
+  </ItemBlueprints>
+  <ArmyBonusBlueprints>
+    <ArmyBonusBlueprint>
+      <Name>Item_Chest_040_Minion_Buff</Name>
+      <DisplayName>Hauberk of Life</DisplayName>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Chest_040_Minion_Buff</Name>
+          <BuffType>CHEST040MINIONHEALTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Icon>NewIcons/Chest/Chest3</Icon>
+          <Affects>
+            <MaxHealth>
+              <Add>200</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+            <Regen>
+              <Add>3</Add>
+            </Regen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Chest_060_Minion_Buff</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Chest_060_Minion_Buff</Name>
+          <BuffType>CHEST060MINIONHEALTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <MaxHealth>
+              <Add>250</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+            <Regen>
+              <Add>4</Add>
+            </Regen>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+    <ArmyBonusBlueprint>
+      <Name>Item_Chest_080_Minion_Buff</Name>
+      <ApplyArmies>Single</ApplyArmies>
+      <UnitCategory>MINION</UnitCategory>
+      <RemoveOnUnitDeath>true</RemoveOnUnitDeath>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>Item_Chest_080_Minion_Buff</Name>
+          <BuffType>CHEST080MINIONHEALTH</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <EntityCategory>MINION</EntityCategory>
+          <Duration>-1</Duration>
+          <Affects>
+            <MaxHealth>
+              <Add>275</Add>
+            </MaxHealth>
+            <Add>
+              <AdjustEnergy>false</AdjustEnergy>
+            </Add>
+            <Armor>
+              <Add>300</Add>
+            </Armor>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </ArmyBonusBlueprint>
+  </ArmyBonusBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>Item_Chest_060_Heal</Name>
+      <BuffType>ITEM_CHEST_060_HEAL</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <DamageSelf>true</DamageSelf>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <DamageFriendly>true</DamageFriendly>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>false</CanMagicResist>
+      <Duration>0</Duration>
+      <Affects>
+        <Health>
+          <Add>300</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>Item_Chest_070_Invincible</Name>
+      <DisplayName>Groffling Warplate</DisplayName>
+      <Description>Absorbing damage.</Description>
+      <BuffType>ITEM_CHEST_070_INVINCIBLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>10</Duration>
+      <Icon>NewIcons/Chest/Chest7</Icon>
+      <Affects>
+        <Absorption>
+          <Add>300</Add>
+        </Absorption>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+</DemigodBlueprints>

@@ -1,0 +1,1247 @@
+<DemigodBlueprints id="HEPA01_Abilities">
+  <AbilityBlueprints>
+    <AbilityBlueprint>
+      <Name>HEPA01SpeedIncrease01</Name>
+      <DisplayName>Inner Beast I</DisplayName>
+      <Description>Unclean Beast taps into its latent power, increasing Attack Speed by [GetAttackSpeedBuff]% and Movement Speed by [GetMoveSpeedBuff]%.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetAttackSpeedBuff>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBuff>
+      <GetMoveSpeedBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBuff>
+      <Icon>/DGUncleanBeast/NewUncleanInnerBeast01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01SpeedIncrease01</Name>
+          <DisplayName>Inner Beast I</DisplayName>
+          <Description>Attack Speed and Movement Speed increased.</Description>
+          <BuffType>HEPA01SKIN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.03</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.03</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01SpeedIncrease02</Name>
+      <DisplayName>Inner Beast II</DisplayName>
+      <Description>Unclean Beast taps into its latent power, increasing Attack Speed by [GetAttackSpeedBuff]% and Movement Speed by [GetMoveSpeedBuff]%.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetAttackSpeedBuff>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBuff>
+      <GetMoveSpeedBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBuff>
+      <Icon>/DGUncleanBeast/NewUncleanInnerBeast01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01SpeedIncrease02</Name>
+          <DisplayName>Inner Beast II</DisplayName>
+          <Description>Attack Speed and Movement Speed increased.</Description>
+          <BuffType>HEPA01SKIN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.07</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.07</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01SpeedIncrease03</Name>
+      <DisplayName>Inner Beast III</DisplayName>
+      <Description>Unclean Beast taps into its latent power, increasing Attack Speed by [GetAttackSpeedBuff]% and Movement Speed by [GetMoveSpeedBuff]%.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetAttackSpeedBuff>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * 100 ) end</GetAttackSpeedBuff>
+      <GetMoveSpeedBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * 100 ) end</GetMoveSpeedBuff>
+      <Icon>/DGUncleanBeast/NewUncleanInnerBeast01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01SpeedIncrease03</Name>
+          <DisplayName>Inner Beast III</DisplayName>
+          <Description>Attack Speed and Movement Speed increased.</Description>
+          <BuffType>HEPA01SKIN</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <RateOfFire>
+              <Mult>0.10</Mult>
+            </RateOfFire>
+            <MoveMult>
+              <Mult>0.10</Mult>
+            </MoveMult>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Acclimation</Name>
+      <DisplayName>Acclimation</DisplayName>
+      <Description>Unclean Beast becomes more resistant to heavy blows. When an enemy deals [GetDamage] or more damage to Unclean Beast, it takes [GetReductionPercent]% less damage for [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDamage>function(self) return Buffs['HEPA01AcclimationSelf'].DamageThreshold end</GetDamage>
+      <GetReductionPercent>function(self) return math.floor( Buffs[self.Name].Affects.DamageTakenMult.Add * -100 ) end</GetReductionPercent>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <Icon>/DGUncleanBeast/NewUncleanBeastAcclimation01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01AcclimationSelf</Name>
+          <BuffType>HEPA01ACCLIMATION</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <DamageThreshold>500</DamageThreshold>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01VenomSpit01</Name>
+      <DisplayName>Venom Spit I</DisplayName>
+      <Description>Spews a corrosive venom at its target, dealing [GetInitialDamage] damage and an additional [GetDebuffDamage] damage over [GetDebuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>500</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>15</RangeMax>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>50</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <GetDebuffDamage>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT01'].Affects.Health.Add * Buffs['HEPA01VenomSpitDoT01'].DurationPulse * -1 ) end</GetDebuffDamage>
+      <GetDebuffDuration>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT01'].DurationPulse ) end</GetDebuffDuration>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <CastAction>CastVenomSpit</CastAction>
+      <CastingTime>0.3</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01VenomSpit02</Name>
+      <DisplayName>Venom Spit II</DisplayName>
+      <Description>Spews a corrosive venom at its target, dealing [GetInitialDamage] damage and an additional [GetDebuffDamage] damage over [GetDebuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>650</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>15</RangeMax>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>100</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <GetDebuffDamage>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT02'].Affects.Health.Add * Buffs['HEPA01VenomSpitDoT02'].DurationPulse * -1 ) end</GetDebuffDamage>
+      <GetDebuffDuration>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT02'].DurationPulse ) end</GetDebuffDuration>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <CastAction>CastVenomSpit</CastAction>
+      <CastingTime>0.3</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01VenomSpit03</Name>
+      <DisplayName>Venom Spit III</DisplayName>
+      <Description>Spews a corrosive venom at its target, dealing [GetInitialDamage] damage and an additional [GetDebuffDamage] damage over [GetDebuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>800</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>15</RangeMax>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>150</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <CastAction>CastVenomSpit</CastAction>
+      <CastingTime>0.3</CastingTime>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <GetDebuffDamage>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT03'].Affects.Health.Add * Buffs['HEPA01VenomSpitDoT03'].DurationPulse * -1 ) end</GetDebuffDamage>
+      <GetDebuffDuration>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT03'].DurationPulse ) end</GetDebuffDuration>
+      <FollowThroughTime>0.5</FollowThroughTime>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01VenomSpit04</Name>
+      <DisplayName>Venom Spit IV</DisplayName>
+      <Description>Spews a corrosive venom at its target, dealing [GetInitialDamage] damage and an additional [GetDebuffDamage] damage over [GetDebuffDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILETARGETED</TargetingMethod>
+      <EnergyCost>950</EnergyCost>
+      <Cooldown>7</Cooldown>
+      <RangeMax>15</RangeMax>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <DamageAmt>150</DamageAmt>
+      <DamageType>Spell</DamageType>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <CastAction>CastVenomSpit</CastAction>
+      <CastingTime>0.3</CastingTime>
+      <GetInitialDamage>function(self) return math.floor( self.DamageAmt ) end</GetInitialDamage>
+      <GetDebuffDamage>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT04'].Affects.Health.Add * Buffs['HEPA01VenomSpitDoT04'].DurationPulse * -1 ) end</GetDebuffDamage>
+      <GetDebuffDuration>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT04'].DurationPulse ) end</GetDebuffDuration>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <Audio>
+        <OnFinishCasting>
+          <Sound>Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_special_ability</Sound>
+        </OnFinishCasting>
+      </Audio>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01PutridFlow</Name>
+      <DisplayName>Putrid Flow</DisplayName>
+      <Description>When Venom Spit lands, it leaves a toxic pool around the victim, dealing [GetDamage] over [GetDuration] seconds.</Description>
+      <Damage>100</Damage>
+      <Duration>5</Duration>
+      <Radius>6</Radius>
+      <GetDamage>function(self) return math.floor(self.Damage * self.Duration) end</GetDamage>
+      <GetDuration>function(self) return self.Duration end</GetDuration>
+      <AbilityType>Quiet</AbilityType>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01OozeOn</Name>
+      <DisplayName>Ooze</DisplayName>
+      <Description>Oozes virulent bodily fluids. Enemies in range take damage per second and their Attack Speed is slowed.\n\nUnclean Beast loses Health while Ooze is active.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <Cooldown>1</Cooldown>
+      <SharedCooldown>HEPA01OozeSwitch</SharedCooldown>
+      <EnergyCost>0</EnergyCost>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <AffectRadius>8</AffectRadius>
+      <AbilityCategory>HEPA01OOZEON</AbilityCategory>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+      <Tooltip>
+        <TargetAlliance>Enemy</TargetAlliance>
+        <Cooldown>1</Cooldown>
+        <EnergyCost>0</EnergyCost>
+      </Tooltip>
+      <Audio>
+        <OnStartCasting>
+          <Sound>Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_ooze_start</Sound>
+        </OnStartCasting>
+      </Audio>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01OozeOff</Name>
+      <DisplayName>Stop Ooze</DisplayName>
+      <Description>Stop oozing bodily fluids.</Description>
+      <AbilityType>Instant</AbilityType>
+      <Cooldown>1</Cooldown>
+      <SharedCooldown>HEPA01OozeSwitch</SharedCooldown>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NotSilenceable>true</NotSilenceable>
+      <AbilityCategory>HEPA01OOZEOFF</AbilityCategory>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOozeOff01</Icon>
+      <Audio>
+        <OnStartCasting>
+          <Sound>Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_ooze_end</Sound>
+        </OnStartCasting>
+      </Audio>
+      <Tooltip>
+        <Cooldown>1</Cooldown>
+      </Tooltip>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Ooze01</Name>
+      <DisplayName>Ooze I</DisplayName>
+      <Description>Unclean Beast oozes virulent bodily fluids. While active, nearby enemies take [GetDebuffDamage] damage per second and their Attack Speed is slowed by [GetDebuffSlow]%.\n\nUnclean Beast loses [GetDebuffSelfDamage] Health per second.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>8</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <EnergyCost>0</EnergyCost>
+      <AbilityCategory>HEPA01OOZE</AbilityCategory>
+      <GetDebuffDamage>function(self) return math.floor( Buffs[self.Name].Affects.Health.Add * -1 ) end</GetDebuffDamage>
+      <GetDebuffSlow>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * -100 ) end</GetDebuffSlow>
+      <GetDebuffSelfDamage>function(self) return math.floor( Buffs['HEPA01OozeSelf01'].Affects.Health.Add * -1 ) end</GetDebuffSelfDamage>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOozeOff01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01Ooze01</Name>
+          <DisplayName>Ooze</DisplayName>
+          <Description>Taking poison damage. Attack Speed reduced.</Description>
+          <BuffType>HEPA01OOZE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanCrit>false</CanCrit>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-0.10</Mult>
+            </RateOfFire>
+            <Health>
+              <Add>-35</Add>
+            </Health>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Ooze02</Name>
+      <DisplayName>Ooze II</DisplayName>
+      <Description>Unclean Beast oozes virulent bodily fluids. While active, nearby enemies take [GetDebuffDamage] damage per second and their Attack Speed is slowed by [GetDebuffSlow]%.\n\nUnclean Beast loses [GetDebuffSelfDamage] Health per second.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>8</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <EnergyCost>0</EnergyCost>
+      <AbilityCategory>HEPA01OOZE</AbilityCategory>
+      <GetDebuffDamage>function(self) return math.floor( Buffs[self.Name].Affects.Health.Add * -1 ) end</GetDebuffDamage>
+      <GetDebuffSlow>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * -100 ) end</GetDebuffSlow>
+      <GetDebuffSelfDamage>function(self) return math.floor( Buffs['HEPA01OozeSelf02'].Affects.Health.Add * -1 ) end</GetDebuffSelfDamage>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOozeOff01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01Ooze02</Name>
+          <DisplayName>Ooze</DisplayName>
+          <Description>Taking poison damage. Attack Speed reduced.</Description>
+          <BuffType>HEPA01OOZE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanCrit>false</CanCrit>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-0.20</Mult>
+            </RateOfFire>
+            <Health>
+              <Add>-70</Add>
+            </Health>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Ooze03</Name>
+      <DisplayName>Ooze III</DisplayName>
+      <Description>Unclean Beast oozes virulent bodily fluids. While active, nearby enemies take [GetDebuffDamage] damage per second and their Attack Speed is slowed by [GetDebuffSlow]%.\n\nUnclean Beast loses [GetDebuffSelfDamage] Health per second.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>8</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <EnergyCost>0</EnergyCost>
+      <AbilityCategory>HEPA01OOZE</AbilityCategory>
+      <GetDebuffDamage>function(self) return math.floor( Buffs[self.Name].Affects.Health.Add * -1 ) end</GetDebuffDamage>
+      <GetDebuffSlow>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * -100 ) end</GetDebuffSlow>
+      <GetDebuffSelfDamage>function(self) return math.floor( Buffs['HEPA01OozeSelf03'].Affects.Health.Add * -1 ) end</GetDebuffSelfDamage>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOozeOff01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01Ooze03</Name>
+          <DisplayName>Ooze</DisplayName>
+          <Description>Taking poison damage. Attack Speed reduced.</Description>
+          <BuffType>HEPA01OOZE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanCrit>false</CanCrit>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-0.30</Mult>
+            </RateOfFire>
+            <Health>
+              <Add>-105</Add>
+            </Health>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Ooze04</Name>
+      <DisplayName>Ooze IV</DisplayName>
+      <Description>Unclean Beast oozes virulent bodily fluids. While active, nearby enemies take [GetDebuffDamage] damage per second and their Attack Speed is slowed by [GetDebuffSlow]%.\n\nUnclean Beast loses [GetDebuffSelfDamage] Health per second.</Description>
+      <AbilityType>Aura</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <AffectRadius>8</AffectRadius>
+      <AuraPulseTime>1</AuraPulseTime>
+      <EnergyCost>0</EnergyCost>
+      <AbilityCategory>HEPA01OOZE</AbilityCategory>
+      <GetDebuffDamage>function(self) return math.floor( Buffs[self.Name].Affects.Health.Add * -1 ) end</GetDebuffDamage>
+      <GetDebuffSlow>function(self) return math.floor( Buffs[self.Name].Affects.RateOfFire.Mult * -100 ) end</GetDebuffSlow>
+      <GetDebuffSelfDamage>function(self) return math.floor( Buffs['HEPA01OozeSelf04'].Affects.Health.Add * -1 ) end</GetDebuffSelfDamage>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOozeOff01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01Ooze04</Name>
+          <DisplayName>Ooze</DisplayName>
+          <Description>Taking poison damage. Attack Speed reduced.</Description>
+          <BuffType>HEPA01OOZE</BuffType>
+          <Debuff>true</Debuff>
+          <CanBeDispelled>true</CanBeDispelled>
+          <CanCrit>false</CanCrit>
+          <Stacks>REPLACE</Stacks>
+          <Duration>1</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+          <Affects>
+            <RateOfFire>
+              <Mult>-0.40</Mult>
+            </RateOfFire>
+            <Health>
+              <Add>-140</Add>
+            </Health>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01BestialWrath01</Name>
+      <DisplayName>Bestial Wrath I</DisplayName>
+      <Description>Unclean Beast enters a frenzy for [GetDuration] seconds.\n\nWeapon Damage increased by [GetDamageBuff]%.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <EnergyCost>550</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastWrath</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageBuff>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetDamageBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01BestialWrath01</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bestial Wrath I</DisplayName>
+          <Description>Weapon Damage increased.</Description>
+          <BuffType>HEPABESTIALWRATH</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+          <Affects>
+            <DamageRating>
+              <Mult>0.25</Mult>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01BestialWrath02</Name>
+      <DisplayName>Bestial Wrath II</DisplayName>
+      <Description>Unclean Beast enters a frenzy for [GetDuration] seconds.\n\nWeapon Damage increased by [GetDamageBuff]%.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <EnergyCost>700</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastWrath</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageBuff>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetDamageBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01BestialWrath02</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bestial Wrath II</DisplayName>
+          <Description>Weapon Damage increased.</Description>
+          <BuffType>HEPABESTIALWRATH</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+          <Affects>
+            <DamageRating>
+              <Mult>0.35</Mult>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01BestialWrath03</Name>
+      <DisplayName>Bestial Wrath III</DisplayName>
+      <Description>Unclean Beast enters a frenzy for [GetDuration] seconds.\n\nWeapon Damage increased by [GetDamageBuff]%.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <EnergyCost>850</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastWrath</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageBuff>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetDamageBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01BestialWrath03</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bestial Wrath III</DisplayName>
+          <Description>Weapon Damage increased.</Description>
+          <BuffType>HEPABESTIALWRATH</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+          <Affects>
+            <DamageRating>
+              <Mult>0.45</Mult>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01BestialWrath04</Name>
+      <DisplayName>Bestial Wrath IV</DisplayName>
+      <Description>Unclean Beast enters a frenzy for [GetDuration] seconds.\n\nWeapon Damage increased by [GetDamageBuff]%.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1000</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastWrath</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageBuff>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetDamageBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01BestialWrath04</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Bestial Wrath IV</DisplayName>
+          <Description>Weapon Damage increased.</Description>
+          <BuffType>HEPABESTIALWRATH</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>7</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+          <Affects>
+            <DamageRating>
+              <Mult>0.55</Mult>
+            </DamageRating>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01BestialWrath05</Name>
+      <DisplayName>Unrelenting Wrath</DisplayName>
+      <Description>Unclean Beast enters a frenzy for [GetDuration] seconds.\n\nWeapon Damage increased by [GetDamageBuff]%. His movement speed cannot be reduced in this state.</Description>
+      <AbilityType>Instant</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <EnergyCost>1000</EnergyCost>
+      <Cooldown>20</Cooldown>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <CastAction>CastWrath</CastAction>
+      <CastingTime>0.5</CastingTime>
+      <FollowThroughTime>0.5</FollowThroughTime>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageBuff>function(self) return math.floor( Buffs[self.Name].Affects.DamageRating.Mult * 100 ) end</GetDamageBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBeastUnrelentingWrath01</Icon>
+      <Audio>
+        <OnFinishCasting>
+          <Sound>Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_special_ability</Sound>
+        </OnFinishCasting>
+      </Audio>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01BestialWrath05</Name>
+          <Debuff>false</Debuff>
+          <DisplayName>Unrelenting Wrath</DisplayName>
+          <Description>Weapon Damage increased. Unaffected by slows.</Description>
+          <BuffType>HEPABESTIALWRATH</BuffType>
+          <Stacks>REPLACE</Stacks>
+          <Duration>10</Duration>
+          <Icon>/DGUncleanBeast/NewUncleanBeastUnrelentingWrath01</Icon>
+          <Affects>
+            <DamageRating>
+              <Mult>0.65</Mult>
+            </DamageRating>
+            <MoveSlowCap>
+              <Mult>0.0</Mult>
+            </MoveSlowCap>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01DiseasedClaws01</Name>
+      <DisplayName>Diseased Claws I</DisplayName>
+      <Description>Unclean Beast's claws reduce the target's Movement Speed by [GetSplashMultBuff]%.\n\nLasts [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetSplashMultBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSplashMultBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBeastDiseasedclaw01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01DiseasedClawsSelf01</Name>
+          <DisplayName>Diseased Claws I</DisplayName>
+          <Description>Unclean Beast's claws reduce the target's Movement Speed.</Description>
+          <BuffType>HEPA01CLAWS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01DiseasedClaws02</Name>
+      <DisplayName>Diseased Claws II</DisplayName>
+      <Description>Unclean Beast's claws reduce the target's Movement Speed by [GetSplashMultBuff]%.\n\nLasts [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetSplashMultBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSplashMultBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBeastDiseasedclaw01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01DiseasedClawsSelf02</Name>
+          <DisplayName>Diseased Claws II</DisplayName>
+          <Description>Unclean Beast's claws reduce the target's Movement Speed.</Description>
+          <BuffType>HEPA01CLAWS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01DiseasedClaws03</Name>
+      <DisplayName>Diseased Claws III</DisplayName>
+      <Description>Unclean Beast's claws reduce the target's Movement Speed by [GetSplashMultBuff]%.\n\nLasts [GetDuration] seconds.</Description>
+      <AbilityType>Quiet</AbilityType>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetSplashMultBuff>function(self) return math.floor( Buffs[self.Name].Affects.MoveMult.Mult * -100 ) end</GetSplashMultBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBeastDiseasedclaw01</Icon>
+      <Buffs>
+        <BuffBlueprint>
+          <Name>HEPA01DiseasedClawsSelf03</Name>
+          <DisplayName>Diseased Claws III</DisplayName>
+          <Description>Unclean Beast's claws reduce the target's Movement Speed.</Description>
+          <BuffType>HEPA01CLAWS</BuffType>
+          <Debuff>false</Debuff>
+          <Stacks>REPLACE</Stacks>
+          <Affects>
+            <Dummy>
+              <Add>0.1</Add>
+            </Dummy>
+          </Affects>
+        </BuffBlueprint>
+      </Buffs>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01PostMortem01</Name>
+      <DisplayName>Post Mortem</DisplayName>
+      <Description>When Unclean Beast attacks, enemies are afflicted with a disease. When they die, they will explode, dealing 150 damage and sending smaller units into the air.</Description>
+      <AbilityType>WeaponProc</AbilityType>
+      <ProcType>PreDamage</ProcType>
+      <WeaponProcChance>100</WeaponProcChance>
+      <Icon>/DGUncleanBeast/NewUncleanPostMortem01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Plague01</Name>
+      <DisplayName>Plague I</DisplayName>
+      <Description>When Unclean Beast deals damage, it has a chance to start a plague, dealing [GetDamageAmt] damage over [GetDuration] seconds and spreading to nearby units.\n\nAnything that survives the plague becomes immune to it for [GetImmuneDuration] seconds.</Description>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageAmt>function(self) return math.floor( Buffs[self.Name].Affects.Health.Add * Buffs[self.Name].DurationPulse * -1 ) end</GetDamageAmt>
+      <GetImmuneDuration>function(self) return math.floor( Buffs['HEPA01PlagueImmune'].Duration ) end</GetImmuneDuration>
+      <AbilityType>Quiet</AbilityType>
+      <Icon>/DGUncleanBeast/NewUncleanPlague01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Plague02</Name>
+      <DisplayName>Plague II</DisplayName>
+      <Description>When Unclean Beast deals damage, it has a chance to start a plague, dealing [GetDamageAmt] damage over [GetDuration] seconds and spreading to nearby units.\n\nAnything that survives the plague becomes immune to it for [GetImmuneDuration] seconds.</Description>
+      <GetDuration>function(self) return math.floor( Buffs[self.Name].Duration ) end</GetDuration>
+      <GetDamageAmt>function(self) return math.floor( Buffs[self.Name].Affects.Health.Add * Buffs[self.Name].DurationPulse * -1 ) end</GetDamageAmt>
+      <GetImmuneDuration>function(self) return math.floor( Buffs['HEPA01PlagueImmune'].Duration ) end</GetImmuneDuration>
+      <AbilityType>Quiet</AbilityType>
+      <Icon>/DGUncleanBeast/NewUncleanPlague01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01FoulGrasp01</Name>
+      <DisplayName>Foul Grasp I</DisplayName>
+      <Description>Unclean Beast clutches a target in its claws, stunning them and draining [GetDamageAmt] life over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>800</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>4</Pulses>
+      <UISlot>4</UISlot>
+      <Amount>83</Amount>
+      <HotKey>4</HotKey>
+      <GetDuration>function(self) return math.floor( self.Pulses * 0.5 ) end</GetDuration>
+      <GetDamageAmt>function(self) return math.floor( self.Pulses * self.Amount ) end</GetDamageAmt>
+      <Icon>/DGUncleanBeast/NewUncleanFoulGrasp01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01FoulGrasp02</Name>
+      <DisplayName>Foul Grasp II</DisplayName>
+      <Description>Unclean Beast clutches a target in its claws, stunning them and draining [GetDamageAmt] life over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>1100</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>4</Pulses>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <Amount>125</Amount>
+      <GetDuration>function(self) return math.floor( self.Pulses * 0.5 ) end</GetDuration>
+      <GetDamageAmt>function(self) return math.floor( self.Pulses * self.Amount ) end</GetDamageAmt>
+      <Icon>/DGUncleanBeast/NewUncleanFoulGrasp01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01FoulGrasp03</Name>
+      <DisplayName>Foul Grasp III</DisplayName>
+      <Description>Unclean Beast clutches a target in its claws, stunning them and draining [GetDamageAmt] life over [GetDuration] seconds.</Description>
+      <AbilityType>TargetedUnit</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>MOBILE - UNTARGETABLE</TargetCategory>
+      <TargetingMethod>HOSTILEMOBILE</TargetingMethod>
+      <EnergyCost>1400</EnergyCost>
+      <Cooldown>15</Cooldown>
+      <RangeMax>10</RangeMax>
+      <Pulses>4</Pulses>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <Amount>166</Amount>
+      <GetDuration>function(self) return math.floor( self.Pulses * 0.5 ) end</GetDuration>
+      <GetDamageAmt>function(self) return math.floor( self.Pulses * self.Amount ) end</GetDamageAmt>
+      <Icon>/DGUncleanBeast/NewUncleanFoulGrasp01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HEPA01Death01</Name>
+      <DisplayName>Death</DisplayName>
+      <AbilityType>Quiet</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <TargetCategory>ALLUNITS - UNTARGETABLE</TargetCategory>
+      <NoCastAnim>true</NoCastAnim>
+      <PulseDuration>1</PulseDuration>
+      <Pulses>15</Pulses>
+      <DamageAmt>20</DamageAmt>
+      <Damage>
+        <Radius>9</Radius>
+        <Type>Spell</Type>
+        <DamageSelf>false</DamageSelf>
+        <CanBeEvaded>false</CanBeEvaded>
+        <CanBackfire>false</CanBackfire>
+        <CanDamageReturn>false</CanDamageReturn>
+        <DamageFriendly>false</DamageFriendly>
+        <ArmorImmune>true</ArmorImmune>
+        <CanCrit>false</CanCrit>
+        <CanMagicResist>true</CanMagicResist>
+        <Group>"UNITS"</Group>
+      </Damage>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HUncleanVenomSpitGrey01</Name>
+      <DisplayName>Venom Spit I</DisplayName>
+      <Description>Spews a corrosive venom at its target, dealing [GetInitialDamage] damage and an additional [GetDebuffDamage] damage over [GetDebuffDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>1</UISlot>
+      <HotKey>1</HotKey>
+      <GetMaxRange>function(self) return Ability['HEPA01VenomSpit01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HEPA01VenomSpit01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEPA01VenomSpit01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEPA01VenomSpit01'].Cooldown end</GetCooldown>
+      <GetInitialDamage>function(self) return math.floor( Ability['HEPA01VenomSpit01'].DamageAmt ) end</GetInitialDamage>
+      <GetDebuffDamage>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT01'].Affects.Health.Add * Buffs['HEPA01VenomSpitDoT01'].DurationPulse * -1 ) end</GetDebuffDamage>
+      <GetDebuffDuration>function(self) return math.floor( Buffs['HEPA01VenomSpitDoT01'].DurationPulse ) end</GetDebuffDuration>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HUncleanBestialWrathGrey01</Name>
+      <DisplayName>Bestial Wrath I</DisplayName>
+      <Description>Unclean Beast enters a frenzy for [GetDuration] seconds.\n\nWeapon Damage increased by [GetDamageBuff]%.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Ally</TargetAlliance>
+      <UISlot>2</UISlot>
+      <HotKey>2</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEPA01BestialWrath01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HEPA01BestialWrath01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEPA01BestialWrath01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEPA01BestialWrath01'].Cooldown end</GetCooldown>
+      <GetDuration>function(self) return math.floor( Buffs['HEPA01BestialWrath01'].Duration ) end</GetDuration>
+      <GetDamageBuff>function(self) return math.floor( Buffs['HEPA01BestialWrath01'].Affects.DamageRating.Mult * 100 ) end</GetDamageBuff>
+      <Icon>/DGUncleanBeast/NewUncleanBestialWrath01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HUncleanOozeGrey01</Name>
+      <DisplayName>Ooze</DisplayName>
+      <Description>Unclean Beast oozes virulent bodily fluids. While active, nearby enemies take [GetDebuffDamage] damage per second and their Attack Speed is slowed by [GetDebuffSlow]%.\n\nUnclean Beast loses [GetDebuffSelfDamage] Health per second.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>3</UISlot>
+      <HotKey>3</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEPA01OozeOn'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HEPA01OozeOn'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEPA01OozeOn'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEPA01OozeOn'].Cooldown end</GetCooldown>
+      <GetDebuffDamage>function(self) return math.floor( Buffs['HEPA01Ooze01'].Affects.Health.Add * -1 ) end</GetDebuffDamage>
+      <GetDebuffSlow>function(self) return math.floor( Buffs['HEPA01Ooze01'].Affects.RateOfFire.Mult * -100 ) end</GetDebuffSlow>
+      <GetDebuffSelfDamage>function(self) return math.floor( Buffs['HEPA01OozeSelf01'].Affects.Health.Add * -1 ) end</GetDebuffSelfDamage>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+    </AbilityBlueprint>
+    <AbilityBlueprint>
+      <Name>HUncleanFoulGraspGrey01</Name>
+      <DisplayName>Foul Grasp I</DisplayName>
+      <Description>Unclean Beast clutches a target in its claws, stunning them and draining [GetDamageAmt] life over [GetDuration] seconds.</Description>
+      <AbilityType>Passive</AbilityType>
+      <TargetAlliance>Enemy</TargetAlliance>
+      <UISlot>4</UISlot>
+      <HotKey>4</HotKey>
+      <NoCastAnim>true</NoCastAnim>
+      <Placeholder>true</Placeholder>
+      <GetMaxRange>function(self) return Ability['HEPA01FoulGrasp01'].RangeMax end</GetMaxRange>
+      <GetEnergyCost>function(self) return Ability['HEPA01FoulGrasp01'].EnergyCost end</GetEnergyCost>
+      <GetCastTime>function(self) return Ability['HEPA01FoulGrasp01'].CastingTime end</GetCastTime>
+      <GetCooldown>function(self) return Ability['HEPA01FoulGrasp01'].Cooldown end</GetCooldown>
+      <GetDuration>function(self) return math.floor( Ability['HEPA01FoulGrasp01'].Pulses * 0.5 ) end</GetDuration>
+      <GetDamageAmt>function(self) return math.floor( Ability['HEPA01FoulGrasp01'].Pulses * Ability['HEPA01FoulGrasp01'].Amount ) end</GetDamageAmt>
+      <Icon>/DGUncleanBeast/NewUncleanFoulGrasp01</Icon>
+    </AbilityBlueprint>
+  </AbilityBlueprints>
+  <BuffBlueprints>
+    <BuffBlueprint>
+      <Name>HEPA01Acclimation</Name>
+      <DisplayName>Acclimation</DisplayName>
+      <Description>All damage taken reduced.</Description>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <BuffType>HEPA01ACCLIMATIONPROC</BuffType>
+      <Duration>5</Duration>
+      <Icon>/DGUncleanBeast/NewUncleanBeastAcclimation01</Icon>
+      <Affects>
+        <DamageTakenMult>
+          <Add>-0.40</Add>
+        </DamageTakenMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01VenomSpitDoT01</Name>
+      <DisplayName>Venom Spit</DisplayName>
+      <Description>Taking poison damage.</Description>
+      <BuffType>HEPA01VENOMSPIT</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>10</Duration>
+      <DurationPulse>10</DurationPulse>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <Effects>Disease01</Effects>
+      <EffectsBone>-1</EffectsBone>
+      <Affects>
+        <Health>
+          <Add>-45</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01VenomSpitDoT02</Name>
+      <DisplayName>Venom Spit</DisplayName>
+      <Description>Taking poison damage.</Description>
+      <BuffType>HEPA01VENOMSPIT</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>10</Duration>
+      <DurationPulse>10</DurationPulse>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <Effects>Disease01</Effects>
+      <EffectsBone>-1</EffectsBone>
+      <Affects>
+        <Health>
+          <Add>-80</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01VenomSpitDoT03</Name>
+      <DisplayName>Venom Spit</DisplayName>
+      <Description>Taking poison damage.</Description>
+      <BuffType>HEPA01VENOMSPIT</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>10</Duration>
+      <DurationPulse>10</DurationPulse>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <Effects>Disease01</Effects>
+      <EffectsBone>-1</EffectsBone>
+      <Affects>
+        <Health>
+          <Add>-115</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01VenomSpitDoT04</Name>
+      <DisplayName>Venom Spit</DisplayName>
+      <Description>Taking poison damage.</Description>
+      <BuffType>HEPA01VENOMSPIT</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>10</Duration>
+      <DurationPulse>10</DurationPulse>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanBackfire>false</CanBackfire>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <Icon>/DGUncleanBeast/NewUncleanVenomSpit01</Icon>
+      <Effects>Disease01</Effects>
+      <EffectsBone>-1</EffectsBone>
+      <Affects>
+        <Health>
+          <Add>-150</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01OozeOnDisable</Name>
+      <DisplayName>Ooze On Abilities Disabled</DisplayName>
+      <BuffType>HEPA01OOZEONDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HEPA01OOZEON</AbilityCategory>
+      <SoundLoop>Forge/DEMIGODS/Unclean_Beast/snd_dg_unclean_ooze_lp</SoundLoop>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01OozeOffDisable</Name>
+      <DisplayName>Ooze Off Abilities Disabled</DisplayName>
+      <BuffType>HEPA01OOZEOFFDISABLE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>-1</Duration>
+      <AbilityCategory>HEPA01OOZEOFF</AbilityCategory>
+      <Affects>
+        <AbilityEnable>
+          <Bool>true</Bool>
+        </AbilityEnable>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01OozeSelf01</Name>
+      <DisplayName>Ooze</DisplayName>
+      <Description>Ooze is active. Taking poison damage.</Description>
+      <Duration>1</Duration>
+      <BuffType>HEPA01OOZESELF</BuffType>
+      <Debuff>true</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <DamageSelf>true</DamageSelf>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <CanDamageReturn>false</CanDamageReturn>
+      <DamageFriendly>true</DamageFriendly>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>false</CanMagicResist>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+      <Affects>
+        <Health>
+          <Add>-20</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01OozeSelf02</Name>
+      <DisplayName>Ooze</DisplayName>
+      <Description>Ooze is active. Taking poison damage.</Description>
+      <Duration>1</Duration>
+      <BuffType>HEPA01OOZESELF</BuffType>
+      <Debuff>true</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <DamageSelf>true</DamageSelf>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <CanDamageReturn>false</CanDamageReturn>
+      <DamageFriendly>true</DamageFriendly>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>false</CanMagicResist>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+      <Affects>
+        <Health>
+          <Add>-30</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01OozeSelf03</Name>
+      <DisplayName>Ooze</DisplayName>
+      <Description>Ooze is active. Taking poison damage.</Description>
+      <Duration>1</Duration>
+      <BuffType>HEPA01OOZESELF</BuffType>
+      <Debuff>true</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <DamageSelf>true</DamageSelf>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <CanDamageReturn>false</CanDamageReturn>
+      <DamageFriendly>true</DamageFriendly>
+      <ArmorImmune>true</ArmorImmune>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>false</CanMagicResist>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+      <Affects>
+        <Health>
+          <Add>-40</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01OozeSelf04</Name>
+      <DisplayName>Ooze</DisplayName>
+      <Description>Ooze is active. Taking poison damage.</Description>
+      <Duration>1</Duration>
+      <BuffType>HEPA01OOZESELF</BuffType>
+      <Debuff>true</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <DamageSelf>true</DamageSelf>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <CanDamageReturn>false</CanDamageReturn>
+      <DamageFriendly>true</DamageFriendly>
+      <ArmorImmune>true</ArmorImmune>
+      <IgnoreDamageRangePercent>true</IgnoreDamageRangePercent>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>false</CanMagicResist>
+      <Icon>/DGUncleanBeast/NewUncleanBeastOoze01</Icon>
+      <Affects>
+        <Health>
+          <Add>-50</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01DiseasedClaws01</Name>
+      <DisplayName>Diseased Claws</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HEPA01DISEASED</BuffType>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>4</Duration>
+      <Icon>/DGUncleanBeast/NewUncleanBeastDiseasedclaw01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.05</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01DiseasedClaws02</Name>
+      <DisplayName>Diseased Claws</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HEPA01DISEASED</BuffType>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>4</Duration>
+      <Icon>/DGUncleanBeast/NewUncleanBeastDiseasedclaw01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.07</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01DiseasedClaws03</Name>
+      <DisplayName>Diseased Claws</DisplayName>
+      <Description>Movement Speed reduced.</Description>
+      <BuffType>HEPA01DISEASED</BuffType>
+      <EntityCategory>MOBILE</EntityCategory>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <Stacks>REPLACE</Stacks>
+      <Duration>4</Duration>
+      <Icon>/DGUncleanBeast/NewUncleanBeastDiseasedclaw01</Icon>
+      <Affects>
+        <MoveMult>
+          <Mult>-0.1</Mult>
+        </MoveMult>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01PostMortemEnemy01</Name>
+      <DisplayName>Post Mortem</DisplayName>
+      <Description>Will explode when killed.</Description>
+      <BuffType>HEPA01POSTMORTEMENEMY</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Stacks>REPLACE</Stacks>
+      <CallbackDuration>30</CallbackDuration>
+      <Effects>PostMortem01</Effects>
+      <EffectsBone>-1</EffectsBone>
+      <Icon>/DGUncleanBeast/NewUncleanPostMortem01</Icon>
+      <Affects>
+        <Dummy>
+          <Add>0</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01Plague01</Name>
+      <DisplayName>Plague</DisplayName>
+      <Description>Taking poison damage. Spreads to allies.</Description>
+      <BuffType>HEPA01PLAGUE</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Stacks>IGNORE</Stacks>
+      <Duration>30</Duration>
+      <DurationPulse>30</DurationPulse>
+      <Effects>Plague01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <DamageSelf>true</DamageSelf>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <CanDamageReturn>false</CanDamageReturn>
+      <DamageFriendly>true</DamageFriendly>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>true</CanMagicResist>
+      <AffectRadius>10</AffectRadius>
+      <AffectChance>100</AffectChance>
+      <Icon>/DGUncleanBeast/NewUncleanPlague01</Icon>
+      <Affects>
+        <Health>
+          <Add>-10</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01Plague02</Name>
+      <DisplayName>Plague</DisplayName>
+      <Description>Taking poison damage. Spreads to allies.</Description>
+      <BuffType>HEPA01PLAGUE</BuffType>
+      <Debuff>true</Debuff>
+      <CanBeDispelled>true</CanBeDispelled>
+      <EntityCategory>MOBILE - UNTARGETABLE</EntityCategory>
+      <Stacks>IGNORE</Stacks>
+      <Duration>30</Duration>
+      <DurationPulse>30</DurationPulse>
+      <Effects>Plague01</Effects>
+      <EffectsBone>-2</EffectsBone>
+      <DamageSelf>true</DamageSelf>
+      <CanBeEvaded>false</CanBeEvaded>
+      <CanBackfire>false</CanBackfire>
+      <CanDamageReturn>false</CanDamageReturn>
+      <DamageFriendly>true</DamageFriendly>
+      <ArmorImmune>true</ArmorImmune>
+      <CanCrit>false</CanCrit>
+      <CanMagicResist>true</CanMagicResist>
+      <AffectRadius>10</AffectRadius>
+      <AffectChance>100</AffectChance>
+      <Icon>/DGUncleanBeast/NewUncleanPlague01</Icon>
+      <Affects>
+        <Health>
+          <Add>-15</Add>
+        </Health>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01PlagueImmune</Name>
+      <DisplayName>Plague Immune</DisplayName>
+      <Description>You are immune to the Unclean Beasts's plague.</Description>
+      <BuffType>HEPA01PLAGUE</BuffType>
+      <Debuff>false</Debuff>
+      <Stacks>REPLACE</Stacks>
+      <Duration>180</Duration>
+      <Affects>
+        <Dummy>
+          <Add>67</Add>
+        </Dummy>
+      </Affects>
+    </BuffBlueprint>
+    <BuffBlueprint>
+      <Name>HEPA01FoulGraspStun01</Name>
+      <DisplayName>Foul Grasp</DisplayName>
+      <Description>Stunned.</Description>
+      <BuffType>HEPA01FOULGRASPSTUN</BuffType>
+      <Debuff>true</Debuff>
+      <Stacks>ALWAYS</Stacks>
+      <Duration>2</Duration>
+      <Icon>/DGUncleanBeast/NewUncleanFoulGrasp01</Icon>
+      <Affects>
+        <Stun>
+          <Add>0</Add>
+        </Stun>
+      </Affects>
+    </BuffBlueprint>
+  </BuffBlueprints>
+</DemigodBlueprints>

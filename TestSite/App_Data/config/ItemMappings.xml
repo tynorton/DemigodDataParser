@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ItemMappingsConfig>
+    <ItemGroups>
+        <ItemGroup name="Artifacts">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Artifact_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Artifact Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="Boots">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Boot_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Boot Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="Chest">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Chest_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Breastplate Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="All Favor">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Achievement_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Common Achievement Shop" />
+                <Shop name="General Achievement Shop" />
+                <Shop name="Assassin Achievement Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="Assassin&#39;s Favor" inherit="All Favor">
+            <ExcludeItems>
+                <ExcludeItem>Totem of War</ExcludeItem>
+                <ExcludeItem>Tome of Endurance</ExcludeItem>
+                <ExcludeItem>Pendant of Grace</ExcludeItem>
+                <ExcludeItem>Horn of Battle</ExcludeItem>
+                <ExcludeItem>Ring of Divine Might</ExcludeItem>
+                <ExcludeItem>Blood Soaked Wand</ExcludeItem>
+                <ExcludeItem>Cloak of Night</ExcludeItem>
+            </ExcludeItems>
+            <IncludedShops>
+                <Shop name="Common Achievement Shop" />
+                <Shop name="Assassin Achievement Shop" />
+            </IncludedShops>
+            <Tags>
+                <Tag>Favor</Tag>
+            </Tags>
+        </ItemGroup>
+        <ItemGroup name="General&#39;s Favor" inherit="All Favor">
+            <ExcludeItems>
+                <ExcludeItem>Blade of the Serpent</ExcludeItem>
+                <ExcludeItem>Poisoned Dagger</ExcludeItem>
+                <ExcludeItem>Mard&#39;s Hammer</ExcludeItem>
+                <ExcludeItem>Staff of Renewal</ExcludeItem>
+                <ExcludeItem>Essence of Magic</ExcludeItem>
+                <ExcludeItem>Furious Blade</ExcludeItem>
+                <ExcludeItem>Heaven&#39;s Wrath</ExcludeItem>
+            </ExcludeItems>
+            <IncludedShops>
+                <Shop name="Common Achievement Shop" />
+                <Shop name="General Achievement Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="General&#39;s Minions">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Generals_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Generals&#39; Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="Gloves">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Glove_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Glove Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="Helm">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Helm_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <IncludedShops>
+                <Shop name="Helm Shop" />
+            </IncludedShops>
+        </ItemGroup>
+        <ItemGroup name="Shop">
+            <VirtualPaths>
+                <VirtualPath>~/App_Data/Items/Consumable_Items.xml</VirtualPath>
+                <VirtualPath>~/App_Data/Items/Ring_Items.xml</VirtualPath>
+            </VirtualPaths>
+            <!-- These items are appearantly bogus data that are not used in the real game -->
+            <ExcludeItems>
+                <ExcludeItem>Eric&#39;s Ring</ExcludeItem>
+                <ExcludeItem>Targeting Dummy</ExcludeItem>
+            </ExcludeItems>
+            <IncludedShops>
+                <Shop name="Consumable Shop" />
+                <Shop name="Trinket Shop" />
+                <Shop name="Item Shop" />
+            </IncludedShops>
+        </ItemGroup>
+    </ItemGroups>
+    <Characters>
+        <CharacterMappings>
+            <CharacterMapping name="Sedna" key="HSedna" levelupkey="SednaLevelUp" class="General" />
+            <CharacterMapping name="Oak" key="HOak" levelupkey="OakLevelUp" class="General" />
+            <CharacterMapping name="Queen of Thorns" levelupkey="QueenLevelUp" key="HQueen" class="General" />
+            <CharacterMapping name="Lord Erebus" key="HVampire" levelupkey="VampireLordLevelUp" class="General" />
+            <CharacterMapping name="Unclean Beast" key="HEPA01" levelupkey="UncleanBeastLevelUp" class="Assassin" />
+            <CharacterMapping name="The Rook" key="HRook" levelupkey="RookLevelUp" class="Assassin" />
+            <CharacterMapping name="Torch Bearer" key="HEMA01" levelupkey="TorchbearerLevelUp" class="Assassin" />
+            <CharacterMapping name="Regulus" key="HGSA01" levelupkey="RegulusLevelUp" class="Assassin" />
+        </CharacterMappings>
+        <ClassDefinitions>
+            <CharacterClass name="General" inherit="Common">
+                <ItemGroupNames>
+                    <ItemGroupName>General&#39;s Favor</ItemGroupName>
+                    <ItemGroupName>General&#39;s Minions</ItemGroupName>
+                </ItemGroupNames>
+            </CharacterClass>
+            <CharacterClass name="Assassin" inherit="Common">
+                <ItemGroupNames>
+                    <ItemGroupName>Assassin&#39;s Favor</ItemGroupName>
+                </ItemGroupNames>
+            </CharacterClass>
+            <CharacterClass name="Common">
+                <ItemGroupNames>
+                    <ItemGroupName>Artifacts</ItemGroupName>
+                    <ItemGroupName>Boots</ItemGroupName>
+                    <ItemGroupName>Chest</ItemGroupName>
+                    <ItemGroupName>Gloves</ItemGroupName>
+                    <ItemGroupName>Helm</ItemGroupName>
+                    <ItemGroupName>Shop</ItemGroupName>
+                </ItemGroupNames>
+            </CharacterClass>
+        </ClassDefinitions>
+    </Characters>
+    <ShopMappings>
+        <ShopMapping name="Item Shop" virtualPath="~/App_Data/Shops/ugbshop01/UGBShop01_uni.xml" />
+        <ShopMapping name="Breastplate Shop" virtualPath="~/App_Data/Shops/ugbshop02/UGBShop02_uni.xml" />
+        <ShopMapping name="Glove Shop" virtualPath="~/App_Data/Shops/ugbshop03/UGBShop03_uni.xml" />
+        <ShopMapping name="Helm Shop" virtualPath="~/App_Data/Shops/ugbshop04/UGBShop04_uni.xml" />
+        <ShopMapping name="Artifact Shop" virtualPath="~/App_Data/Shops/ugbshop05/UGBShop05_uni.xml" />
+        <ShopMapping name="Trinket Shop" virtualPath="~/App_Data/Shops/ugbshop06/UGBShop06_uni.xml" />
+        <ShopMapping name="Consumable Shop" virtualPath="~/App_Data/Shops/ugbshop07/UGBShop07_uni.xml" />
+        <ShopMapping name="Common Achievement Shop" virtualPath="~/App_Data/Shops/ugbshop08/UGBShop08_uni.xml" />
+        <ShopMapping name="General Achievement Shop" virtualPath="~/App_Data/Shops/ugbshop08/UGBShop08_General_uni.xml" />
+        <ShopMapping name="Assassin Achievement Shop" virtualPath="~/App_Data/Shops/ugbshop08/UGBShop08_Assassin_uni.xml" />
+        <ShopMapping name="Generals' Shop" virtualPath="~/App_Data/Shops/ugbshop09/UGBShop09_uni.xml" />
+        <ShopMapping name="Boot Shop" virtualPath="~/App_Data/Shops/ugbshop10/UGBShop10_uni.xml" />
+    </ShopMappings>
+</ItemMappingsConfig>
